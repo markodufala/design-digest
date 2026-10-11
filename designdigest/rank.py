@@ -38,6 +38,7 @@ RECYCLE = {"retro"}
 
 # How much an AI score (0..1) weighs against the source-popularity score.
 AI_WEIGHT = 0.7
+UNRATED = 0.3
 
 
 def score(items: list[Item], taste=None, ai: dict | None = None) -> None:
@@ -57,8 +58,9 @@ def score(items: list[Item], taste=None, ai: dict | None = None) -> None:
             it.score = pct * SOURCE_WEIGHT.get(source, 1.0)
             if taste:
                 it.score *= taste.boost(it)
-            if ai and it.id in ai:
-                it.score = (1 - AI_WEIGHT) * it.score + AI_WEIGHT * ai[it.id]
+            if ai:
+                # items the curator never saw count as below average, so rated ones win
+                it.score = (1 - AI_WEIGHT) * min(it.score, 1.0) + AI_WEIGHT * ai.get(it.id, UNRATED)
             it.score = round(it.score, 4)
 
 

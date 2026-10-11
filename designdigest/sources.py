@@ -30,7 +30,11 @@ def client() -> httpx.AsyncClient:
 
 
 async def get(c: httpx.AsyncClient, url: str) -> str:
-    r = await c.get(url)
+    try:
+        r = await c.get(url)
+    except httpx.TransportError:
+        # some sites silently drop datacenter IPs — a real browser often still gets through
+        return await browser_get(url)
     if r.status_code in (403, 429, 503):
         # Cloudflare often blocks datacenter IPs (GitHub Actions) for plain HTTP
         return await browser_get(url)
