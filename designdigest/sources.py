@@ -25,6 +25,7 @@ def client() -> httpx.AsyncClient:
         headers={"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"},
         timeout=30,
         follow_redirects=True,
+        transport=httpx.AsyncHTTPTransport(retries=2),  # retries connect errors/timeouts
     )
 
 
