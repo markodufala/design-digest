@@ -22,22 +22,6 @@
     "id": "awwwards:nick-ho"
    },
    {
-    "source": "landbook",
-    "key": "100901",
-    "title": "AI Agents for Enterprise Customer Service | Parloa",
-    "url": "https://land-book.com/websites/100901-ai-agents-for-enterprise-customer-service-parloa",
-    "image": "https://cdn.land-book.com/image/0x0:3840x5760/600x0/website/100901/ff486e31f2256f04-screenshot.webp?signature=b2efd095a1c22c6dcaf949ac4b143230451226fba20fe0e59d3414c9757b943c",
-    "section": "web",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 0,
-    "tags": [],
-    "note": "",
-    "score": 1.0,
-    "id": "landbook:100901"
-   },
-   {
     "source": "minimalgallery",
     "key": "https://minimal.gallery/?p=28352",
     "title": "Odyssee",
@@ -97,22 +81,6 @@
     "id": "awwwards:lpas"
    },
    {
-    "source": "landbook",
-    "key": "100924",
-    "title": "Nossara | Imabari Towels, Made in Japan",
-    "url": "https://land-book.com/websites/100924-nossara-imabari-towels-made-in-japan",
-    "image": "https://cdn.land-book.com/image/0x0:2880x4320/600x0/filters:format(webp)/website/100924/584f2495fae52e60-screenshot.jpg?signature=d9604392379c836c1de88da7c255b5ad3949c21600926c73d46dabd2a4914dc2",
-    "section": "web",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 1,
-    "tags": [],
-    "note": "",
-    "score": 0.9474,
-    "id": "landbook:100924"
-   },
-   {
     "source": "minimalgallery",
     "key": "https://minimal.gallery/?p=28373",
     "title": "Flowlife",
@@ -153,6 +121,45 @@
     "note": "",
     "score": 0.8444,
     "id": "onepagelove:https://onepagelove.com/?p=88951"
+   },
+   {
+    "source": "awwwards",
+    "key": "maria-vasilyeva-portfolio",
+    "title": "Maria Vasilyeva Portfolio",
+    "url": "https://www.awwwards.com/sites/maria-vasilyeva-portfolio",
+    "image": "https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2026/08/6a87093710758900048487.png",
+    "section": "web",
+    "author": "Maria Vasilyeva",
+    "link": "https://www.mariavasilyeva.com/",
+    "popularity": null,
+    "position": 2,
+    "tags": [
+     "DEV",
+     "SOTD"
+    ],
+    "note": "DEV · SOTD",
+    "score": 1.0733,
+    "id": "awwwards:maria-vasilyeva-portfolio"
+   },
+   {
+    "source": "minimalgallery",
+    "key": "https://minimal.gallery/?p=28267",
+    "title": "GRNDWRK STUDIO",
+    "url": "https://minimal.gallery/grndwrk-studio/",
+    "image": "https://minimal.gallery/wp-content/uploads/2026/08/grndwrk.studio.jpg",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 2,
+    "tags": [
+     "Uncategorized",
+     "Agency",
+     "Production Studio"
+    ],
+    "note": "",
+    "score": 0.7389,
+    "id": "minimalgallery:https://minimal.gallery/?p=28267"
    }
   ],
   "visual": [
@@ -168,7 +175,7 @@
     "popularity": 279.0,
     "position": 17,
     "tags": [],
-    "note": "♥ 279 · 👁 20.9k",
+    "note": "♥ 279 · 👁 21.1k",
     "score": 1.1,
     "id": "dribbble:27797984"
    },
@@ -200,7 +207,7 @@
     "popularity": 264.0,
     "position": 21,
     "tags": [],
-    "note": "♥ 264 · 👁 13.9k",
+    "note": "♥ 264 · 👁 14k",
     "score": 1.0522,
     "id": "dribbble:27798006"
    },
@@ -232,7 +239,7 @@
     "popularity": 199.0,
     "position": 19,
     "tags": [],
-    "note": "♥ 199 · 👁 26.5k",
+    "note": "♥ 199 · 👁 26.7k",
     "score": 1.0043,
     "id": "dribbble:27797019"
    },
@@ -327,97 +334,46 @@
     "id": "21st:minhxthanh/shader-background"
    }
   ],
-  "retro": [
-   {
-    "source": "webdesignmuseum",
-    "key": "mozilla-firefox-1-0-2004",
-    "title": "Mozilla Firefox 1.0",
-    "url": "https://www.webdesignmuseum.org/web-design-history/mozilla-firefox-1-0-2004",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/mozilla-firefox-1-0-preview.png",
-    "section": "retro",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 27,
-    "tags": [],
-    "note": "2004 · história webu",
-    "score": 1.0,
-    "id": "webdesignmuseum:mozilla-firefox-1-0-2004"
-   },
-   {
-    "source": "webdesignmuseum",
-    "key": "reddit-2005",
-    "title": "Reddit",
-    "url": "https://www.webdesignmuseum.org/web-design-history/reddit-2005",
-    "image": "https://www.webdesignmuseum.org/uploaded/preview/reddit-2005-preview.png",
-    "section": "retro",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 73,
-    "tags": [],
-    "note": "2005 · história webu",
-    "score": 0.9944,
-    "id": "webdesignmuseum:reddit-2005"
-   },
-   {
-    "source": "webdesignmuseum",
-    "key": "http-v0-9-1991",
-    "title": "HTTP v0.9",
-    "url": "https://www.webdesignmuseum.org/web-design-history/http-v0-9-1991",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/http-v0-9-preview.png",
-    "section": "retro",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 88,
-    "tags": [],
-    "note": "1991 · história webu",
-    "score": 0.9887,
-    "id": "webdesignmuseum:http-v0-9-1991"
-   }
-  ]
+  "retro": []
  },
  "health": {
+  "landbook": {
+   "ok": false,
+   "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://land-book.com'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+  },
   "onepagelove": {
    "ok": true,
    "count": 10,
-   "secs": 0.2
-  },
-  "webdesignmuseum": {
-   "ok": true,
-   "count": 178,
-   "secs": 0.3
-  },
-  "landbook": {
-   "ok": true,
-   "count": 20,
-   "secs": 0.4
-  },
-  "godly": {
-   "ok": true,
-   "count": 20,
-   "secs": 1.0
-  },
-  "minimalgallery": {
-   "ok": true,
-   "count": 10,
-   "secs": 1.1
+   "secs": 0.7
   },
   "21st": {
    "ok": true,
    "count": 429,
-   "secs": 3.1
+   "secs": 1.5
   },
-  "dribbble": {
+  "godly": {
    "ok": true,
-   "count": 24,
-   "secs": 4.1
+   "count": 20,
+   "secs": 1.8
   },
   "awwwards": {
    "ok": true,
    "count": 31,
-   "secs": 8.2
+   "secs": 2.3
+  },
+  "webdesignmuseum": {
+   "ok": false,
+   "error": "RuntimeError: no items parsed (blocked?)"
+  },
+  "dribbble": {
+   "ok": true,
+   "count": 24,
+   "secs": 4.6
+  },
+  "minimalgallery": {
+   "ok": true,
+   "count": 10,
+   "secs": 4.9
   }
  }
 }
