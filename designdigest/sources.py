@@ -30,8 +30,27 @@ def client() -> httpx.AsyncClient:
 
 async def get(c: httpx.AsyncClient, url: str) -> str:
     r = await c.get(url)
+    if r.status_code in (403, 429, 503):
+        # Cloudflare often blocks datacenter IPs (GitHub Actions) for plain HTTP
+        return await browser_get(url)
     r.raise_for_status()
     return r.text
+
+
+async def browser_get(url: str) -> str:
+    from playwright.async_api import async_playwright
+
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page(user_agent=UA, viewport={"width": 1440, "height": 1200})
+        resp = await page.goto(url, wait_until="domcontentloaded", timeout=60000)
+        await page.wait_for_timeout(3000)  # let a JS challenge settle
+        html = await page.content()
+        status = resp.status if resp else 0
+        await browser.close()
+    if status >= 400 and "<article" not in html and "website-item" not in html:
+        raise httpx.HTTPStatusError(f"{status} via browser for {url}", request=None, response=None)
+    return html
 
 
 def text(node) -> str:
