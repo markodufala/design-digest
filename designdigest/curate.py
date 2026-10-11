@@ -121,12 +121,13 @@ def curate(cands: list[Item], taste: Taste | None) -> dict[str, float]:
          "--allowedTools", "Read", "--max-turns", "40"],
         cwd=WORK, capture_output=True, text=True, timeout=20 * 60,
     )
-    if proc.returncode != 0:
+    try:
+        reply = json.loads(proc.stdout)
+    except ValueError:
         raise RuntimeError(f"claude exited {proc.returncode}: {(proc.stderr or proc.stdout)[-400:]}")
-    reply = json.loads(proc.stdout)
     result = reply.get("result", "")
-    if reply.get("is_error"):
-        raise RuntimeError(f"claude: {result[:300]}")
+    if proc.returncode != 0 or reply.get("is_error"):
+        raise RuntimeError(f"claude exited {proc.returncode}: {result[:300]}")
     m = re.search(r"\{.*\}", result, re.S)
     if not m:
         raise RuntimeError(f"no JSON in curator reply: {result[:300]}")
