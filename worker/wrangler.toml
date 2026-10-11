@@ -8,6 +8,6 @@ SITE_URL = "https://markodufala.github.io/design-digest/"
 # id is filled in after `wrangler kv namespace create VOTES`
 [[kv_namespaces]]
 binding = "VOTES"
-id = "REPLACE_ME"
+id = "c9b3abb1e78a43cc85451efbaf0a7f40"
 
 # secret (not in this file): SIGNING_KEY — must match the FEEDBACK_KEY GitHub secret
