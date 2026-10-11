@@ -1,0 +1,423 @@
+{
+ "date": "2026-10-11",
+ "sections": {
+  "web": [
+   {
+    "source": "awwwards",
+    "key": "nick-ho",
+    "title": "Nick Ho",
+    "url": "https://www.awwwards.com/sites/nick-ho",
+    "image": "https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2026/08/6a85b37721f48885790043.jpg",
+    "section": "web",
+    "author": "BORING",
+    "link": "https://nickho-motorsports.nl/",
+    "popularity": null,
+    "position": 0,
+    "tags": [
+     "DEV",
+     "SOTD"
+    ],
+    "note": "DEV · SOTD",
+    "score": 1.15,
+    "id": "awwwards:nick-ho"
+   },
+   {
+    "source": "landbook",
+    "key": "100901",
+    "title": "AI Agents for Enterprise Customer Service | Parloa",
+    "url": "https://land-book.com/websites/100901-ai-agents-for-enterprise-customer-service-parloa",
+    "image": "https://cdn.land-book.com/image/0x0:3840x5760/600x0/website/100901/ff486e31f2256f04-screenshot.webp?signature=b2efd095a1c22c6dcaf949ac4b143230451226fba20fe0e59d3414c9757b943c",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "",
+    "score": 1.0,
+    "id": "landbook:100901"
+   },
+   {
+    "source": "minimalgallery",
+    "key": "https://minimal.gallery/?p=28352",
+    "title": "Odyssee",
+    "url": "https://minimal.gallery/odyssee/",
+    "image": "https://minimal.gallery/wp-content/uploads/2026/09/odysseeclinic.com_.jpg",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [
+     "Uncategorized",
+     "Healthcare"
+    ],
+    "note": "",
+    "score": 0.95,
+    "id": "minimalgallery:https://minimal.gallery/?p=28352"
+   },
+   {
+    "source": "onepagelove",
+    "key": "https://onepagelove.com/?p=88959",
+    "title": "New Material",
+    "url": "https://onepagelove.com/new-material",
+    "image": "https://assets.onepagelove.com/cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=top,format=jpg,quality=85/wp-content/uploads/2026/10/opl-screenshot-new-material-1791385723642-desktop.jpg",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [
+     "Inspiration",
+     "Agentic AI",
+     "Artificial Intelligence (AI)",
+     "Consulting"
+    ],
+    "note": "",
+    "score": 0.95,
+    "id": "onepagelove:https://onepagelove.com/?p=88959"
+   },
+   {
+    "source": "awwwards",
+    "key": "lpas",
+    "title": "LPAS",
+    "url": "https://www.awwwards.com/sites/lpas",
+    "image": "https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2026/08/6a834ca95e78f943693095.jpg",
+    "section": "web",
+    "author": "Studio Naam",
+    "link": "https://lpas.com/",
+    "popularity": null,
+    "position": 1,
+    "tags": [
+     "DEV",
+     "SOTD"
+    ],
+    "note": "DEV · SOTD",
+    "score": 1.1117,
+    "id": "awwwards:lpas"
+   },
+   {
+    "source": "landbook",
+    "key": "100924",
+    "title": "Nossara | Imabari Towels, Made in Japan",
+    "url": "https://land-book.com/websites/100924-nossara-imabari-towels-made-in-japan",
+    "image": "https://cdn.land-book.com/image/0x0:2880x4320/600x0/filters:format(webp)/website/100924/584f2495fae52e60-screenshot.jpg?signature=d9604392379c836c1de88da7c255b5ad3949c21600926c73d46dabd2a4914dc2",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "",
+    "score": 0.9474,
+    "id": "landbook:100924"
+   },
+   {
+    "source": "minimalgallery",
+    "key": "https://minimal.gallery/?p=28373",
+    "title": "Flowlife",
+    "url": "https://minimal.gallery/flowlife/",
+    "image": "https://minimal.gallery/wp-content/uploads/2026/09/flowlife.com_.jpg",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 1,
+    "tags": [
+     "Uncategorized",
+     "Startup",
+     "E-commerce",
+     "Healthcare"
+    ],
+    "note": "",
+    "score": 0.8444,
+    "id": "minimalgallery:https://minimal.gallery/?p=28373"
+   },
+   {
+    "source": "onepagelove",
+    "key": "https://onepagelove.com/?p=88951",
+    "title": "Sam Peitz",
+    "url": "https://onepagelove.com/sam-peitz",
+    "image": "https://assets.onepagelove.com/cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=top,format=jpg,quality=85/wp-content/uploads/2026/10/opl-screenshot-sam-peitz-1791380291254-desktop.jpg",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 1,
+    "tags": [
+     "Inspiration",
+     "Day and Night",
+     "Designer",
+     "Draggable"
+    ],
+    "note": "",
+    "score": 0.8444,
+    "id": "onepagelove:https://onepagelove.com/?p=88951"
+   }
+  ],
+  "visual": [
+   {
+    "source": "dribbble",
+    "key": "27797984",
+    "title": "Clinika Healthcare Website Design",
+    "url": "https://dribbble.com/shots/27797984-Clinika-Healthcare-Website-Design",
+    "image": "https://cdn.dribbble.com/userupload/49273806/file/0bcdb37c618f38717e40d080d3d72234.png?format=webp&resize=800x600&vertical=center",
+    "section": "visual",
+    "author": "Awe Design Studio",
+    "link": "",
+    "popularity": 279.0,
+    "position": 17,
+    "tags": [],
+    "note": "♥ 279 · 👁 20.9k",
+    "score": 1.1,
+    "id": "dribbble:27797984"
+   },
+   {
+    "source": "godly",
+    "key": "1g2fr97",
+    "title": "Paper Mono Poster Series",
+    "url": "https://godly.website/i/1g2fr97-paper-mono-poster-series",
+    "image": "https://cdn.recent.design/items/1g2fr97/0/poster/960.webp",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "",
+    "score": 1.05,
+    "id": "godly:1g2fr97"
+   },
+   {
+    "source": "dribbble",
+    "key": "27798006",
+    "title": "Spendio App UI UX",
+    "url": "https://dribbble.com/shots/27798006-Spendio-App-UI-UX",
+    "image": "https://cdn.dribbble.com/userupload/49273880/file/ab9df855e76ff50ac6665794ed6143ce.png?crop=0x0-3840x2880&format=webp&resize=800x600&vertical=center",
+    "section": "visual",
+    "author": "Awe Design Studio",
+    "link": "",
+    "popularity": 264.0,
+    "position": 21,
+    "tags": [],
+    "note": "♥ 264 · 👁 13.9k",
+    "score": 1.0522,
+    "id": "dribbble:27798006"
+   },
+   {
+    "source": "godly",
+    "key": "ycasm0a",
+    "title": "Radial Brushstroke",
+    "url": "https://godly.website/i/ycasm0a-radial-brushstroke-motion-study",
+    "image": "https://cdn.recent.design/items/ycasm0a/0/poster/960.webp",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "",
+    "score": 0.9947,
+    "id": "godly:ycasm0a"
+   },
+   {
+    "source": "dribbble",
+    "key": "27797019",
+    "title": "Website for a Tech Product ✦ Serein",
+    "url": "https://dribbble.com/shots/27797019-Website-for-a-Tech-Product-Serein",
+    "image": "https://cdn.dribbble.com/userupload/49269961/file/40b6026a16632d4ed22d6b23a665c6ac.png?format=webp&resize=800x600&vertical=center",
+    "section": "visual",
+    "author": "HALO LAB",
+    "link": "",
+    "popularity": 199.0,
+    "position": 19,
+    "tags": [],
+    "note": "♥ 199 · 👁 26.5k",
+    "score": 1.0043,
+    "id": "dribbble:27797019"
+   },
+   {
+    "source": "godly",
+    "key": "szwdt4f",
+    "title": "Savee Showcase",
+    "url": "https://godly.website/i/szwdt4f-savee-zoom-showcase",
+    "image": "https://cdn.recent.design/items/szwdt4f/0/poster/675.webp",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 2,
+    "tags": [],
+    "note": "",
+    "score": 0.9395,
+    "id": "godly:szwdt4f"
+   }
+  ],
+  "ui": [
+   {
+    "source": "21st",
+    "key": "serafimcloud/splite",
+    "title": "Spline Scene",
+    "url": "https://21st.dev/serafimcloud/splite",
+    "image": "https://cdn.21st.dev/user_2nElBLvklOKlAURm6W1PTu6yYFh/splite.png",
+    "section": "ui",
+    "author": "serafimcloud",
+    "link": "",
+    "popularity": 1.0,
+    "position": 82,
+    "tags": [
+     "hero"
+    ],
+    "note": "hero · ↓ 9435",
+    "score": 1.0,
+    "id": "21st:serafimcloud/splite"
+   },
+   {
+    "source": "21st",
+    "key": "designali-in/shader-animation",
+    "title": "Shader Animation",
+    "url": "https://21st.dev/designali-in/shader-animation",
+    "image": "https://cdn.21st.dev/designali-in/shader-animation/default/preview.1755486352919.png",
+    "section": "ui",
+    "author": "designali-in",
+    "link": "",
+    "popularity": 1.0,
+    "position": 98,
+    "tags": [
+     "shader"
+    ],
+    "note": "shader · ↓ 2595",
+    "score": 0.9977,
+    "id": "21st:designali-in/shader-animation"
+   },
+   {
+    "source": "21st",
+    "key": "manuarora700/aurora-background",
+    "title": "Aurora Background",
+    "url": "https://21st.dev/manuarora700/aurora-background",
+    "image": "https://cdn.21st.dev/user_aceternity/aurora-background.png",
+    "section": "ui",
+    "author": "manuarora700",
+    "link": "",
+    "popularity": 1.0,
+    "position": 44,
+    "tags": [
+     "background"
+    ],
+    "note": "background · ↓ 7539",
+    "score": 0.9953,
+    "id": "21st:manuarora700/aurora-background"
+   },
+   {
+    "source": "21st",
+    "key": "minhxthanh/shader-background",
+    "title": "Shader Background",
+    "url": "https://21st.dev/minhxthanh/shader-background",
+    "image": "https://cdn.21st.dev/minhxthanh/shader-background/default/preview.1748699860662.png",
+    "section": "ui",
+    "author": "minhxthanh",
+    "link": "",
+    "popularity": 0.9944444444444445,
+    "position": 11,
+    "tags": [
+     "shader"
+    ],
+    "note": "shader · ↓ 1458",
+    "score": 0.993,
+    "id": "21st:minhxthanh/shader-background"
+   }
+  ],
+  "retro": [
+   {
+    "source": "webdesignmuseum",
+    "key": "mozilla-firefox-1-0-2004",
+    "title": "Mozilla Firefox 1.0",
+    "url": "https://www.webdesignmuseum.org/web-design-history/mozilla-firefox-1-0-2004",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/mozilla-firefox-1-0-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 27,
+    "tags": [],
+    "note": "2004 · história webu",
+    "score": 1.0,
+    "id": "webdesignmuseum:mozilla-firefox-1-0-2004"
+   },
+   {
+    "source": "webdesignmuseum",
+    "key": "reddit-2005",
+    "title": "Reddit",
+    "url": "https://www.webdesignmuseum.org/web-design-history/reddit-2005",
+    "image": "https://www.webdesignmuseum.org/uploaded/preview/reddit-2005-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 73,
+    "tags": [],
+    "note": "2005 · história webu",
+    "score": 0.9944,
+    "id": "webdesignmuseum:reddit-2005"
+   },
+   {
+    "source": "webdesignmuseum",
+    "key": "http-v0-9-1991",
+    "title": "HTTP v0.9",
+    "url": "https://www.webdesignmuseum.org/web-design-history/http-v0-9-1991",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/http-v0-9-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 88,
+    "tags": [],
+    "note": "1991 · história webu",
+    "score": 0.9887,
+    "id": "webdesignmuseum:http-v0-9-1991"
+   }
+  ]
+ },
+ "health": {
+  "onepagelove": {
+   "ok": true,
+   "count": 10,
+   "secs": 0.2
+  },
+  "webdesignmuseum": {
+   "ok": true,
+   "count": 178,
+   "secs": 0.3
+  },
+  "landbook": {
+   "ok": true,
+   "count": 20,
+   "secs": 0.4
+  },
+  "godly": {
+   "ok": true,
+   "count": 20,
+   "secs": 1.0
+  },
+  "minimalgallery": {
+   "ok": true,
+   "count": 10,
+   "secs": 1.1
+  },
+  "21st": {
+   "ok": true,
+   "count": 429,
+   "secs": 3.1
+  },
+  "dribbble": {
+   "ok": true,
+   "count": 24,
+   "secs": 4.1
+  },
+  "awwwards": {
+   "ok": true,
+   "count": 31,
+   "secs": 8.2
+  }
+ }
+}

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Design Digest · {{ day.date | nice_date(False) }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f4f2ee; --surface: #ffffff; --ink: #141414; --muted: #6f6b66; --line: #e2ded7;
+  --accent: #ff4f1f; --chip: #ebe7e0; --shadow: 0 1px 2px rgb(0 0 0 / .04), 0 8px 24px rgb(0 0 0 / .06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f0f10; --surface: #18181a; --ink: #f2f0ec; --muted: #8e8a84; --line: #2a2a2d;
+    --accent: #ff6a3d; --chip: #222225; --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 8px 24px rgb(0 0 0 / .35);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f0f10; --surface: #18181a; --ink: #f2f0ec; --muted: #8e8a84; --line: #2a2a2d;
+  --accent: #ff6a3d; --chip: #222225; --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 8px 24px rgb(0 0 0 / .35);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.45 "Inter Tight", system-ui, -apple-system, sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 1440px; margin: 0 auto; padding: 0 16px; }
+@media (min-width: 768px) { .wrap { padding: 0 32px; } }
+
+header.top {
+  position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px);
+  background: color-mix(in srgb, var(--bg) 82%, transparent); border-bottom: 1px solid var(--line);
+}
+header.top .wrap { display: flex; align-items: center; gap: 12px; height: 56px; }
+.logo { font-weight: 600; letter-spacing: -.01em; display: flex; align-items: center; gap: 8px; }
+.logo i { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); display: inline-block; }
+.spacer { flex: 1; }
+select, .iconbtn {
+  font: inherit; color: var(--ink); background: var(--chip); border: 0; border-radius: 999px;
+  height: 34px; padding: 0 14px; cursor: pointer;
+}
+.iconbtn { width: 34px; padding: 0; display: grid; place-items: center; }
+
+.hero { padding: 48px 0 24px; }
+.hero h1 {
+  font: 400 clamp(44px, 8vw, 96px)/.95 "Instrument Serif", Georgia, serif; letter-spacing: -.02em; margin: 0;
+}
+.hero h1 em { color: var(--accent); }
+.hero p { color: var(--muted); margin: 14px 0 0; font-size: 16px; }
+
+.filters { display: flex; gap: 8px; flex-wrap: wrap; padding: 8px 0 8px; }
+.filters button {
+  font: inherit; font-weight: 500; border: 1px solid var(--line); background: transparent; color: var(--ink);
+  height: 34px; padding: 0 14px; border-radius: 999px; cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+section.block { padding: 36px 0 8px; }
+section.block h2 {
+  font: 400 34px/1 "Instrument Serif", Georgia, serif; margin: 0 0 18px; display: flex; align-items: baseline; gap: 10px;
+}
+section.block h2 small { font: 500 13px "Inter Tight", sans-serif; color: var(--muted); }
+.grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+
+.card { position: relative; display: flex; flex-direction: column; gap: 10px; }
+.card .shot {
+  display: block; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; background: var(--chip);
+  box-shadow: var(--shadow); transition: transform .25s ease;
+}
+.card .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+.card[data-section="retro"] .shot img { object-position: top left; }
+.card:hover .shot { transform: translateY(-3px); }
+.meta { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); min-width: 0; }
+.src { color: var(--ink); font-weight: 500; white-space: nowrap; }
+.note { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.title { font-weight: 500; font-size: 15px; line-height: 1.3; margin: -4px 0 0; padding-right: 36px; }
+.title a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.author { color: var(--muted); font-size: 13px; }
+.fav {
+  position: absolute; right: 0; bottom: 0; width: 32px; height: 32px; border-radius: 50%;
+  border: 0; background: transparent; color: var(--muted); cursor: pointer; display: grid; place-items: center;
+}
+.fav[aria-pressed="true"] { color: var(--accent); }
+.fav svg { width: 18px; height: 18px; }
+.visit { font-size: 13px; color: var(--accent); white-space: nowrap; }
+
+.empty { color: var(--muted); padding: 40px 0; }
+footer { border-top: 1px solid var(--line); margin-top: 64px; padding: 32px 0 64px; color: var(--muted); font-size: 13px; }
+footer h3 { font: 400 24px "Instrument Serif", Georgia, serif; color: var(--ink); margin: 0 0 12px; }
+.days { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 28px; }
+.days a { padding: 6px 10px; border-radius: 8px; background: var(--chip); color: var(--ink); }
+.days a.on { background: var(--ink); color: var(--bg); }
+.health span { margin-right: 14px; white-space: nowrap; }
+.health .bad { color: var(--accent); }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="{{ prefix }}index.html"><i></i>Design Digest</a>
+    <span class="spacer"></span>
+    <select aria-label="Archív" onchange="location.href=this.value">
+      {% for d in days[:120] %}
+      <option value="{{ prefix }}d/{{ d.date }}.html" {% if d.date == day.date %}selected{% endif %}>{{ d.date | nice_date(False) }}</option>
+      {% endfor %}
+    </select>
+    <button class="iconbtn" id="theme" aria-label="Prepnúť tému" title="Prepnúť tému">◐</button>
+  </div>
+</header>
+
+<main class="wrap">
+  {% set total = namespace(n=0) %}
+  {% for items in day.sections.values() %}{% set total.n = total.n + items | length %}{% endfor %}
+  <div class="hero">
+    <h1>{{ day.date | nice_date }}<br><em>{{ total.n }} vecí</em> na dnes</h1>
+    <p>Výber z {{ day.health | length }} zdrojov — web, vizuál, UI komponenty a kúsok histórie.</p>
+  </div>
+
+  <nav class="filters" aria-label="Filter">
+    <button aria-pressed="true" data-f="all">Všetko</button>
+    {% for key, (label, _) in SECTIONS.items() %}
+    {% if day.sections.get(key) %}<button aria-pressed="false" data-f="{{ key }}">{{ label.split(' — ')[0] }}</button>{% endif %}
+    {% endfor %}
+    <button aria-pressed="false" data-f="saved">♥ Uložené</button>
+  </nav>
+
+  {% for key, (label, _) in SECTIONS.items() %}
+  {% set items = day.sections.get(key, []) %}
+  {% if items %}
+  <section class="block" data-section="{{ key }}">
+    <h2>{{ label }} <small>{{ items | length }}</small></h2>
+    <div class="grid">
+      {% for it in items %}
+      <article class="card" data-section="{{ key }}" data-id="{{ it.id }}"
+               data-item='{{ {"id": it.id, "title": it.title, "url": it.url, "image": it.image, "source": LABELS.get(it.source, it.source), "section": key} | tojson }}'>
+        <a class="shot" href="{{ it.url }}" target="_blank" rel="noopener">
+          <img src="{{ it.image }}" alt="{{ it.title }}" loading="lazy" referrerpolicy="no-referrer">
+        </a>
+        <div class="meta">
+          <span class="src">{{ LABELS.get(it.source, it.source) }}</span>
+          {% if it.note %}<span class="note">{{ it.note }}</span>{% endif %}
+          <span class="spacer"></span>
+          {% if it.link %}<a class="visit" href="{{ it.link }}" target="_blank" rel="noopener">web ↗</a>{% endif %}
+        </div>
+        <h3 class="title"><a href="{{ it.url }}" target="_blank" rel="noopener">{{ it.title or "Bez názvu" }}</a></h3>
+        {% if it.author %}<div class="author">{{ it.author }}</div>{% endif %}
+        <button class="fav" aria-pressed="false" aria-label="Uložiť">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+        </button>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+  {% endfor %}
+
+  <section class="block" data-section="saved" hidden>
+    <h2>Uložené <small id="saved-count"></small></h2>
+    <div class="grid" id="saved-grid"></div>
+    <p class="empty" id="saved-empty">Zatiaľ nič. Klikni na ♥ pri čomkoľvek, čo sa ti páči.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h3>Archív</h3>
+    <div class="days">
+      {% for d in days[:60] %}
+      <a href="{{ prefix }}d/{{ d.date }}.html" class="{% if d.date == day.date %}on{% endif %}">{{ d.date[5:].replace('-', '/') }}</a>
+      {% endfor %}
+    </div>
+    <div class="health">
+      {% for name, h in day.health.items() %}
+      <span class="{% if not h.ok %}bad{% endif %}" title="{{ h.error or '' }}">{{ '✓' if h.ok else '✗' }} {{ LABELS.get(name, name) }}{% if h.ok %} · {{ h.count }}{% endif %}</span>
+      {% endfor %}
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const store = {
+    get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+  };
+
+  // theme
+  const root = document.documentElement, saved = store.get("dd-theme", null);
+  if (saved) root.dataset.theme = saved;
+  document.getElementById("theme").onclick = () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    store.set("dd-theme", root.dataset.theme);
+  };
+
+  // favourites (kept in this browser only)
+  let favs = store.get("dd-favs", {});
+  const savedGrid = document.getElementById("saved-grid");
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  function paint() {
+    document.querySelectorAll(".card[data-id] .fav").forEach(b => {
+      b.setAttribute("aria-pressed", String(!!favs[b.closest(".card").dataset.id]));
+    });
+    const list = Object.values(favs).sort((a, b) => b.at - a.at);
+    document.getElementById("saved-count").textContent = list.length || "";
+    document.getElementById("saved-empty").hidden = list.length > 0;
+    savedGrid.innerHTML = list.map(it => `
+      <article class="card">
+        <a class="shot" href="${esc(it.url)}" target="_blank" rel="noopener"><img src="${esc(it.image)}" alt="" loading="lazy" referrerpolicy="no-referrer"></a>
+        <div class="meta"><span class="src">${esc(it.source)}</span></div>
+        <h3 class="title"><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title)}</a></h3>
+      </article>`).join("");
+  }
+  document.addEventListener("click", e => {
+    const b = e.target.closest(".card[data-id] .fav");
+    if (!b) return;
+    const card = b.closest(".card"), it = JSON.parse(card.dataset.item);
+    if (favs[it.id]) delete favs[it.id]; else favs[it.id] = { ...it, at: Date.now() };
+    store.set("dd-favs", favs);
+    paint();
+  });
+
+  // filters
+  const buttons = document.querySelectorAll(".filters button");
+  buttons.forEach(btn => btn.onclick = () => {
+    const f = btn.dataset.f;
+    buttons.forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+    document.querySelectorAll("section.block").forEach(s => {
+      s.hidden = f === "all" ? s.dataset.section === "saved" : s.dataset.section !== f;
+    });
+  });
+
+  paint();
+})();
+</script>
+</body>
+</html>
