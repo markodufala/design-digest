@@ -15,12 +15,13 @@ def load_seen() -> dict[str, str]:
     return json.loads(SEEN.read_text()) if SEEN.exists() else {}
 
 
-def save_day(day: date, sections: dict[str, list[Item]], health: dict) -> None:
+def save_day(day: date, sections: dict[str, list[Item]], health: dict, curator: dict | None = None) -> None:
     DAYS.mkdir(parents=True, exist_ok=True)
     payload = {
         "date": day.isoformat(),
         "sections": {s: [it.to_dict() for it in items] for s, items in sections.items()},
         "health": health,
+        "curator": curator or {},
     }
     (DAYS / f"{day.isoformat()}.json").write_text(json.dumps(payload, ensure_ascii=False, indent=1))
 
@@ -38,4 +39,14 @@ def load_days() -> list[dict]:
     days = [json.loads(p.read_text()) for p in sorted(DAYS.glob("*.json"), reverse=True)]
     for d in days:
         d["sections"] = {s: [Item.from_dict(x) for x in items] for s, items in d["sections"].items()}
+        d.setdefault("curator", {})
     return days
+
+
+def load_archive() -> dict[str, Item]:
+    """Every item ever published, by id (newest wins)."""
+    archive = {}
+    for d in reversed(load_days()):
+        for items in d["sections"].values():
+            archive.update({it.id: it for it in items})
+    return archive

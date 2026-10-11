@@ -23,6 +23,8 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     env:
       SITE_URL: ${{ vars.SITE_URL || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
+      FEEDBACK_URL: ${{ vars.FEEDBACK_URL }}
+      FEEDBACK_KEY: ${{ secrets.FEEDBACK_KEY }}
     steps:
       - uses: actions/checkout@v4
 
@@ -35,8 +37,12 @@ jobs:
         run: |
           pip install -r requirements.txt
           python -m playwright install --with-deps chromium
+          npm install -g @anthropic-ai/claude-code
 
-      - name: Scrape, rank, build site
+      - name: Scrape, curate, build site
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CURATOR_MODEL: ${{ vars.CURATOR_MODEL || 'opus' }}
         run: python -m designdigest --no-email
 
       - name: Commit archive

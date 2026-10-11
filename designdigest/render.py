@@ -1,12 +1,16 @@
 """HTML for the email and the static site (site/)."""
+import json
+import os
 import shutil
 from datetime import date
 from pathlib import Path
+from urllib.parse import urlencode
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from .rank import SECTIONS
 from .sources import LABELS
+from .taste import sign
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
@@ -27,8 +31,16 @@ def nice_date(iso: str, weekday: bool = True) -> str:
     return f"{WEEKDAYS[d.weekday()].capitalize()}, {s}" if weekday else s
 
 
+def vote_url(it, v: int) -> str:
+    base = os.environ.get("FEEDBACK_URL", "").rstrip("/")
+    if not base:
+        return ""
+    return f"{base}/v?" + urlencode({"id": it.id, "v": v, "s": sign(it.id)})
+
+
 env.filters["nice_date"] = nice_date
-env.globals.update(SECTIONS=SECTIONS, LABELS=LABELS)
+env.filters["sign"] = sign
+env.globals.update(SECTIONS=SECTIONS, LABELS=LABELS, vote_url=vote_url)
 
 
 def build_site(days: list[dict]) -> None:
@@ -36,11 +48,20 @@ def build_site(days: list[dict]) -> None:
         shutil.rmtree(SITE)
     (SITE / "d").mkdir(parents=True)
     tpl = env.get_template("page.html")
+    feedback = os.environ.get("FEEDBACK_URL", "").rstrip("/")
     for i, day in enumerate(days):
-        html = tpl.render(day=day, days=days, prefix="../")
+        html = tpl.render(day=day, days=days, prefix="../", feedback=feedback)
         (SITE / "d" / f"{day['date']}.html").write_text(html)
         if i == 0:
-            (SITE / "index.html").write_text(tpl.render(day=day, days=days, prefix=""))
+            (SITE / "index.html").write_text(tpl.render(day=day, days=days, prefix="", feedback=feedback))
+    # lets the "saved" view render things liked on earlier days or from the email
+    archive = {}
+    for day in reversed(days):
+        for key, items in day["sections"].items():
+            for it in items:
+                archive[it.id] = {"title": it.title, "url": it.url, "image": it.image,
+                                  "source": LABELS.get(it.source, it.source), "section": key}
+    (SITE / "items.json").write_text(json.dumps(archive, ensure_ascii=False))
     (SITE / ".nojekyll").touch()
 
 

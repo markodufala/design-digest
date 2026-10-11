@@ -16,6 +16,7 @@ class Item:
     tags: list[str] = field(default_factory=list)
     note: str = ""       # short extra line (e.g. "1998", "SOTD")
     score: float = 0.0   # filled in by ranking
+    why: str = ""        # AI curator's one-line take
 
     @property
     def id(self) -> str:

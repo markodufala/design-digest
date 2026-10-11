@@ -25,6 +25,11 @@
   <tr><td style="padding:0 8px 8px; font-family:{{ serif }}; font-size:42px; line-height:1.05; color:{{ ink }};">
     {{ day.date | nice_date }}<br><i style="color:{{ accent }};">{{ total }} vecí</i> na dnes
   </td></tr>
+  {% if day.curator.ok %}
+  <tr><td style="padding:4px 8px 0; font-family:{{ sans }}; font-size:13px; color:{{ muted }};">
+    Vybral a ohodnotil Claude podľa originality a tvojho vkusu. ♥ / ✕ pri každej veci ho učí.
+  </td></tr>
+  {% endif %}
 
   {% for key, (label, _) in SECTIONS.items() %}
   {% set items = day.sections.get(key, []) %}
@@ -49,11 +54,17 @@
           <div style="padding-top:4px; font-family:{{ sans }}; font-size:15px; line-height:1.3; font-weight:600;">
             <a href="{{ it.url }}" style="color:{{ ink }}; text-decoration:none;">{{ it.title or "Bez názvu" }}</a>
           </div>
-          {% if it.author or it.link %}
-          <div style="padding-top:3px; font-family:{{ sans }}; font-size:12px; color:{{ muted }};">
-            {{ it.author }}{% if it.author and it.link %} · {% endif %}{% if it.link %}<a href="{{ it.link }}" style="color:{{ accent }}; text-decoration:none;">web ↗</a>{% endif %}
+          {% if it.why %}
+          <div style="padding-top:4px; font-family:{{ sans }}; font-size:13px; line-height:1.4; color:{{ muted }};">
+            <span style="color:{{ accent }};">✦</span> {{ it.why }}
           </div>
           {% endif %}
+          {% set up, down = vote_url(it, 1), vote_url(it, -1) %}
+          <div style="padding-top:6px; font-family:{{ sans }}; font-size:12px; color:{{ muted }};">
+            {% if up %}<a href="{{ up }}" style="color:{{ accent }}; text-decoration:none; font-weight:600;">♥ viac takého</a>
+            &nbsp;·&nbsp; <a href="{{ down }}" style="color:{{ muted }}; text-decoration:none;">✕ nie</a>{% endif %}
+            {% if it.link %}{% if up %} &nbsp;·&nbsp; {% endif %}<a href="{{ it.link }}" style="color:{{ muted }}; text-decoration:none;">web ↗</a>{% endif %}
+          </div>
         </td>
         {% endfor %}
         {% if row | length == 1 %}<td width="50%"></td>{% endif %}

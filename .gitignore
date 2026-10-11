@@ -3,3 +3,6 @@ __pycache__/
 site/
 .DS_Store
 .env
+.curate/
+worker/node_modules/
+worker/.wrangler/

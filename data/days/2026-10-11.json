@@ -1,6 +1,120 @@
 {
  "date": "2026-10-11",
  "sections": {
+  "wow": [
+   {
+    "source": "codrops",
+    "key": "post-118411",
+    "title": "Interactive Glass Xylophone with Three.js",
+    "url": "https://tympanus.net/codrops/?p=118008",
+    "image": "https://tympanus.net/codrops/wp-content/uploads/2026/08/xylophone_cover-400x300.png.webp",
+    "section": "wow",
+    "author": "Sujen Phea",
+    "link": "https://tympanus.net/Tutorials/Xylophone/",
+    "popularity": null,
+    "position": 0,
+    "tags": [
+     "3D",
+     "audio",
+     "scroll",
+     "Three.js"
+    ],
+    "note": "3D · audio",
+    "score": 1.15,
+    "why": "",
+    "id": "codrops:post-118411"
+   },
+   {
+    "source": "codrops",
+    "key": "post-122066",
+    "title": "Custom-Shaped Cursor Trail with Three.js and TSL",
+    "url": "https://tympanus.net/codrops/?p=121682",
+    "image": "https://tympanus.net/codrops/wp-content/uploads/2026/09/featured-1200x900-2-400x300.jpg.webp",
+    "section": "wow",
+    "author": "Bautista Berto",
+    "link": "https://tympanus.net/Demos/CustomShapedCursorTrail/",
+    "popularity": null,
+    "position": 1,
+    "tags": [
+     "cursor",
+     "React Three Fiber",
+     "Three.js",
+     "TSL"
+    ],
+    "note": "cursor · React Three Fiber",
+    "score": 1.1379,
+    "why": "",
+    "id": "codrops:post-122066"
+   },
+   {
+    "source": "gsap",
+    "key": "https://crl-2026.webflow.io/",
+    "title": "CRL — Creative Reference Library",
+    "url": "https://crl-2026.webflow.io/",
+    "image": "https://gsap.com/community/uploads/monthly_2026_10/gsap_showcase_thumbnail.jpg.56427315260b1a8469835a2a963ab055.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "https://crl-2026.webflow.io/",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "motion",
+    "score": 1.1,
+    "why": "",
+    "id": "gsap:https://crl-2026.webflow.io/"
+   },
+   {
+    "source": "gsap",
+    "key": "https://hidokmeh.com/",
+    "title": "Dokmeh Agency",
+    "url": "https://hidokmeh.com/",
+    "image": "https://gsap.com/community/uploads/monthly_2026_10/GSAP.jpg.927bae404a5072cb685f5b6b01c0c60b.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "https://hidokmeh.com/",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "motion",
+    "score": 1.0686,
+    "why": "",
+    "id": "gsap:https://hidokmeh.com/"
+   },
+   {
+    "source": "brutalist",
+    "key": "wolftonechambers.com",
+    "title": "wolftonechambers.com",
+    "url": "http://wolftonechambers.com",
+    "image": "https://brutalistwebsites.com/_img/wolftonechambers.com.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://wolftonechambers.com",
+    "popularity": null,
+    "position": 5,
+    "tags": [],
+    "note": "brutalist",
+    "score": 1.0,
+    "why": "",
+    "id": "brutalist:wolftonechambers.com"
+   },
+   {
+    "source": "brutalist",
+    "key": "villabohnke.com",
+    "title": "villabohnke.com",
+    "url": "http://villabohnke.com",
+    "image": "https://brutalistwebsites.com/_img/villabohnke.com.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://villabohnke.com",
+    "popularity": null,
+    "position": 6,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.9994,
+    "why": "",
+    "id": "brutalist:villabohnke.com"
+   }
+  ],
   "web": [
    {
     "source": "awwwards",
@@ -19,7 +133,42 @@
     ],
     "note": "DEV · SOTD",
     "score": 1.15,
+    "why": "",
     "id": "awwwards:nick-ho"
+   },
+   {
+    "source": "cssda",
+    "key": "50211",
+    "title": "SNOWFLAKE",
+    "url": "https://www.cssdesignawards.com/sites/snowflake/50211/",
+    "image": "https://www.cssdesignawards.com/cdasites/2026/202609/20261011033451.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://crystallize.prism-on.tokyo/",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "Nominee",
+    "score": 1.05,
+    "why": "",
+    "id": "cssda:50211"
+   },
+   {
+    "source": "bestwebsite",
+    "key": "sites/sotd/2026/10/07/hold",
+    "title": "Hold",
+    "url": "https://bestwebsite.gallery/sites/sotd/2026/10/07/hold",
+    "image": "https://static.bestwebsite.gallery/assets/gallery_bestwebsite/images/grabhold-now_2026-10-07_preview.png",
+    "section": "web",
+    "author": "Wondermake",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "",
+    "score": 1.05,
+    "why": "",
+    "id": "bestwebsite:sites/sotd/2026/10/07/hold"
    },
    {
     "source": "landbook",
@@ -35,7 +184,25 @@
     "tags": [],
     "note": "",
     "score": 1.0,
+    "why": "",
     "id": "landbook:100901"
+   },
+   {
+    "source": "webflow",
+    "key": "truus",
+    "title": "Truus",
+    "url": "https://webflow.com/made-in-webflow/website/truus",
+    "image": "https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/6878a835373ad05b60abdb02_truus-webflow-thumb.jpg",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "",
+    "score": 1.0,
+    "why": "",
+    "id": "webflow:truus"
    },
    {
     "source": "minimalgallery",
@@ -54,6 +221,7 @@
     ],
     "note": "",
     "score": 0.95,
+    "why": "",
     "id": "minimalgallery:https://minimal.gallery/?p=28352"
    },
    {
@@ -75,84 +243,25 @@
     ],
     "note": "",
     "score": 0.95,
+    "why": "",
     "id": "onepagelove:https://onepagelove.com/?p=88959"
    },
    {
-    "source": "awwwards",
-    "key": "lpas",
-    "title": "LPAS",
-    "url": "https://www.awwwards.com/sites/lpas",
-    "image": "https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2026/08/6a834ca95e78f943693095.jpg",
-    "section": "web",
-    "author": "Studio Naam",
-    "link": "https://lpas.com/",
-    "popularity": null,
-    "position": 1,
-    "tags": [
-     "DEV",
-     "SOTD"
-    ],
-    "note": "DEV · SOTD",
-    "score": 1.1117,
-    "id": "awwwards:lpas"
-   },
-   {
-    "source": "landbook",
-    "key": "100924",
-    "title": "Nossara | Imabari Towels, Made in Japan",
-    "url": "https://land-book.com/websites/100924-nossara-imabari-towels-made-in-japan",
-    "image": "https://cdn.land-book.com/image/0x0:2880x4320/600x0/filters:format(webp)/website/100924/584f2495fae52e60-screenshot.jpg?signature=d9604392379c836c1de88da7c255b5ad3949c21600926c73d46dabd2a4914dc2",
+    "source": "darkdesign",
+    "key": "basement-1786786858853",
+    "title": "Basement",
+    "url": "https://dark.design/site/basement-1786786858853",
+    "image": "https://sidhvpjhuucqcehkevrl.supabase.co/storage/v1/render/image/public/screenshots/auto-1786786805983.webp?width=1080&quality=60&height=675&resize=cover",
     "section": "web",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 1,
+    "position": 0,
     "tags": [],
-    "note": "",
-    "score": 0.9474,
-    "id": "landbook:100924"
-   },
-   {
-    "source": "minimalgallery",
-    "key": "https://minimal.gallery/?p=28373",
-    "title": "Flowlife",
-    "url": "https://minimal.gallery/flowlife/",
-    "image": "https://minimal.gallery/wp-content/uploads/2026/09/flowlife.com_.jpg",
-    "section": "web",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 1,
-    "tags": [
-     "Uncategorized",
-     "Startup",
-     "E-commerce",
-     "Healthcare"
-    ],
-    "note": "",
-    "score": 0.8444,
-    "id": "minimalgallery:https://minimal.gallery/?p=28373"
-   },
-   {
-    "source": "onepagelove",
-    "key": "https://onepagelove.com/?p=88951",
-    "title": "Sam Peitz",
-    "url": "https://onepagelove.com/sam-peitz",
-    "image": "https://assets.onepagelove.com/cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=top,format=jpg,quality=85/wp-content/uploads/2026/10/opl-screenshot-sam-peitz-1791380291254-desktop.jpg",
-    "section": "web",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 1,
-    "tags": [
-     "Inspiration",
-     "Day and Night",
-     "Designer",
-     "Draggable"
-    ],
-    "note": "",
-    "score": 0.8444,
-    "id": "onepagelove:https://onepagelove.com/?p=88951"
+    "note": "dark UI",
+    "score": 0.9,
+    "why": "",
+    "id": "darkdesign:basement-1786786858853"
    }
   ],
   "visual": [
@@ -166,11 +275,29 @@
     "author": "Awe Design Studio",
     "link": "",
     "popularity": 279.0,
-    "position": 17,
+    "position": 19,
     "tags": [],
-    "note": "♥ 279 · 👁 21.1k",
+    "note": "♥ 279 · 👁 21.2k",
     "score": 1.1,
+    "why": "",
     "id": "dribbble:27797984"
+   },
+   {
+    "source": "dribbble",
+    "key": "27798006",
+    "title": "Spendio App UI UX",
+    "url": "https://dribbble.com/shots/27798006-Spendio-App-UI-UX",
+    "image": "https://cdn.dribbble.com/userupload/49273880/file/ab9df855e76ff50ac6665794ed6143ce.png?crop=0x0-3840x2880&format=webp&resize=800x600&vertical=center",
+    "section": "visual",
+    "author": "Awe Design Studio",
+    "link": "",
+    "popularity": 265.0,
+    "position": 24,
+    "tags": [],
+    "note": "♥ 265 · 👁 14.1k",
+    "score": 1.0771,
+    "why": "",
+    "id": "dribbble:27798006"
    },
    {
     "source": "godly",
@@ -186,23 +313,25 @@
     "tags": [],
     "note": "",
     "score": 1.05,
+    "why": "",
     "id": "godly:1g2fr97"
    },
    {
-    "source": "dribbble",
-    "key": "27798006",
-    "title": "Spendio App UI UX",
-    "url": "https://dribbble.com/shots/27798006-Spendio-App-UI-UX",
-    "image": "https://cdn.dribbble.com/userupload/49273880/file/ab9df855e76ff50ac6665794ed6143ce.png?crop=0x0-3840x2880&format=webp&resize=800x600&vertical=center",
+    "source": "cosmos",
+    "key": "ideas/black-cat-symbolism",
+    "title": "Black cat symbolism",
+    "url": "https://www.cosmos.so/ideas/black-cat-symbolism",
+    "image": "https://cdn.cosmos.so/cb84c4cd-e465-4764-a4e9-9c616fc0a0f1?rect=53%2C0%2C386%2C386&format=webp&w=800",
     "section": "visual",
-    "author": "Awe Design Studio",
+    "author": "",
     "link": "",
-    "popularity": 264.0,
-    "position": 21,
+    "popularity": null,
+    "position": 0,
     "tags": [],
-    "note": "♥ 264 · 👁 14k",
-    "score": 1.0522,
-    "id": "dribbble:27798006"
+    "note": "ideas",
+    "score": 1.0,
+    "why": "",
+    "id": "cosmos:ideas/black-cat-symbolism"
    },
    {
     "source": "godly",
@@ -218,39 +347,25 @@
     "tags": [],
     "note": "",
     "score": 0.9947,
+    "why": "",
     "id": "godly:ycasm0a"
    },
    {
-    "source": "dribbble",
-    "key": "27797019",
-    "title": "Website for a Tech Product ✦ Serein",
-    "url": "https://dribbble.com/shots/27797019-Website-for-a-Tech-Product-Serein",
-    "image": "https://cdn.dribbble.com/userupload/49269961/file/40b6026a16632d4ed22d6b23a665c6ac.png?format=webp&resize=800x600&vertical=center",
-    "section": "visual",
-    "author": "HALO LAB",
-    "link": "",
-    "popularity": 199.0,
-    "position": 19,
-    "tags": [],
-    "note": "♥ 199 · 👁 26.7k",
-    "score": 1.0043,
-    "id": "dribbble:27797019"
-   },
-   {
-    "source": "godly",
-    "key": "szwdt4f",
-    "title": "Savee Showcase",
-    "url": "https://godly.website/i/szwdt4f-savee-zoom-showcase",
-    "image": "https://cdn.recent.design/items/szwdt4f/0/poster/675.webp",
+    "source": "cosmos",
+    "key": "design/comfort-movie-posters",
+    "title": "Comfort movie posters",
+    "url": "https://www.cosmos.so/design/comfort-movie-posters",
+    "image": "https://cdn.cosmos.so/855d3311-91aa-4de8-b079-7971336256e7?rect=0%2C0%2C1414%2C1414&format=webp&w=800",
     "section": "visual",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 2,
+    "position": 1,
     "tags": [],
-    "note": "",
-    "score": 0.9395,
-    "id": "godly:szwdt4f"
+    "note": "design",
+    "score": 0.75,
+    "why": "",
+    "id": "cosmos:design/comfort-movie-posters"
    }
   ],
   "ui": [
@@ -264,12 +379,13 @@
     "author": "serafimcloud",
     "link": "",
     "popularity": 1.0,
-    "position": 82,
+    "position": 81,
     "tags": [
      "hero"
     ],
     "note": "hero · ↓ 9435",
     "score": 1.0,
+    "why": "",
     "id": "21st:serafimcloud/splite"
    },
    {
@@ -282,12 +398,13 @@
     "author": "designali-in",
     "link": "",
     "popularity": 1.0,
-    "position": 98,
+    "position": 101,
     "tags": [
      "shader"
     ],
     "note": "shader · ↓ 2595",
     "score": 0.9977,
+    "why": "",
     "id": "21st:designali-in/shader-animation"
    },
    {
@@ -306,118 +423,148 @@
     ],
     "note": "background · ↓ 7539",
     "score": 0.9953,
+    "why": "",
     "id": "21st:manuarora700/aurora-background"
-   },
-   {
-    "source": "21st",
-    "key": "minhxthanh/shader-background",
-    "title": "Shader Background",
-    "url": "https://21st.dev/minhxthanh/shader-background",
-    "image": "https://cdn.21st.dev/minhxthanh/shader-background/default/preview.1748699860662.png",
-    "section": "ui",
-    "author": "minhxthanh",
-    "link": "",
-    "popularity": 0.9944444444444445,
-    "position": 11,
-    "tags": [
-     "shader"
-    ],
-    "note": "shader · ↓ 1458",
-    "score": 0.993,
-    "id": "21st:minhxthanh/shader-background"
    }
   ],
   "retro": [
    {
     "source": "webdesignmuseum",
-    "key": "dribbble-com-2009",
-    "title": "Dribbble.com",
-    "url": "https://www.webdesignmuseum.org/web-design-history/dribbble-com-2009",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/dribbble-2009-preview.png",
+    "key": "dmoz-org-1998",
+    "title": "DMOZ.org",
+    "url": "https://www.webdesignmuseum.org/web-design-history/dmoz-org-1998",
+    "image": "https://www.webdesignmuseum.org/uploaded/preview/dmoz-org-1999-preview.png",
     "section": "retro",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 138,
+    "position": 28,
     "tags": [],
-    "note": "2009 · história webu",
+    "note": "1998 · história webu",
     "score": 1.0,
-    "id": "webdesignmuseum:dribbble-com-2009"
+    "why": "",
+    "id": "webdesignmuseum:dmoz-org-1998"
    },
    {
     "source": "webdesignmuseum",
-    "key": "jscript-1-0-1996",
-    "title": "JScript 1.0",
-    "url": "https://www.webdesignmuseum.org/web-design-history/jscript-1-0-1996",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/jscript-1-0-preview.png",
+    "key": "google-maps-2005",
+    "title": "Google Maps",
+    "url": "https://www.webdesignmuseum.org/web-design-history/google-maps-2005",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/google-maps-2005-preview.png",
     "section": "retro",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 234,
+    "position": 45,
     "tags": [],
-    "note": "1996 · história webu",
+    "note": "2005 · história webu",
     "score": 0.9944,
-    "id": "webdesignmuseum:jscript-1-0-1996"
+    "why": "",
+    "id": "webdesignmuseum:google-maps-2005"
    },
    {
     "source": "webdesignmuseum",
-    "key": "the-term-user-experience-1995",
-    "title": "The term User Experience",
-    "url": "https://www.webdesignmuseum.org/web-design-history/the-term-user-experience-1995",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/the-term-user-experience-1995-preview.png",
+    "key": "box-model-hack-2002",
+    "title": "Box Model Hack",
+    "url": "https://www.webdesignmuseum.org/web-design-history/box-model-hack-2002",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/box-model-hack-2002-preview.png",
     "section": "retro",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 315,
+    "position": 140,
     "tags": [],
-    "note": "1995 · história webu",
+    "note": "2002 · história webu",
     "score": 0.9887,
-    "id": "webdesignmuseum:the-term-user-experience-1995"
+    "why": "",
+    "id": "webdesignmuseum:box-model-hack-2002"
    }
   ]
  },
  "health": {
+  "bestwebsite": {
+   "ok": true,
+   "count": 10,
+   "secs": 0.2
+  },
   "onepagelove": {
    "ok": true,
    "count": 10,
-   "secs": 0.6
+   "secs": 0.3
   },
-  "godly": {
+  "brutalist": {
    "ok": true,
-   "count": 20,
-   "secs": 1.6
-  },
-  "minimalgallery": {
-   "ok": true,
-   "count": 10,
-   "secs": 2.0
-  },
-  "dribbble": {
-   "ok": true,
-   "count": 24,
-   "secs": 3.5
-  },
-  "21st": {
-   "ok": true,
-   "count": 429,
-   "secs": 4.4
-  },
-  "awwwards": {
-   "ok": true,
-   "count": 31,
-   "secs": 5.3
-  },
-  "landbook": {
-   "ok": true,
-   "count": 20,
-   "secs": 5.4
+   "count": 1583,
+   "secs": 0.3
   },
   "webdesignmuseum": {
    "ok": true,
    "count": 178,
-   "secs": 12.1
+   "secs": 0.4
+  },
+  "awwwards": {
+   "ok": true,
+   "count": 31,
+   "secs": 0.6
+  },
+  "codrops": {
+   "ok": true,
+   "count": 96,
+   "secs": 0.6
+  },
+  "landbook": {
+   "ok": true,
+   "count": 20,
+   "secs": 0.7
+  },
+  "godly": {
+   "ok": true,
+   "count": 20,
+   "secs": 0.7
+  },
+  "cssda": {
+   "ok": true,
+   "count": 12,
+   "secs": 1.0
+  },
+  "darkdesign": {
+   "ok": true,
+   "count": 246,
+   "secs": 1.2
+  },
+  "minimalgallery": {
+   "ok": true,
+   "count": 10,
+   "secs": 1.2
+  },
+  "webflow": {
+   "ok": true,
+   "count": 18,
+   "secs": 1.7
+  },
+  "21st": {
+   "ok": true,
+   "count": 430,
+   "secs": 4.5
+  },
+  "cosmos": {
+   "ok": true,
+   "count": 5,
+   "secs": 8.0
+  },
+  "gsap": {
+   "ok": true,
+   "count": 36,
+   "secs": 8.8
+  },
+  "dribbble": {
+   "ok": true,
+   "count": 49,
+   "secs": 10.6
   }
+ },
+ "curator": {
+  "ok": false,
+  "error": "disabled"
  }
 }

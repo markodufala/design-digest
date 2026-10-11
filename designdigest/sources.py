@@ -53,6 +53,26 @@ async def browser_get(url: str) -> str:
     return html
 
 
+async def browser_rows(url: str, js: str, wait_for: str | None = None) -> list[dict]:
+    """Open a JS-rendered page, scroll a bit, and run an extractor in it."""
+    from playwright.async_api import async_playwright
+
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page(user_agent=UA, viewport={"width": 1440, "height": 1400})
+        await page.goto(url, wait_until="domcontentloaded", timeout=60000)
+        if wait_for:
+            await page.wait_for_selector(wait_for, timeout=30000)
+        await page.wait_for_timeout(4000)
+        await page.mouse.wheel(0, 3000)
+        await page.wait_for_timeout(1500)
+        rows = await page.evaluate(js)
+        await browser.close()
+    if not rows:
+        raise RuntimeError(f"nothing extracted from {url}")
+    return rows
+
+
 def text(node) -> str:
     return node.text(strip=True) if node else ""
 
@@ -202,14 +222,8 @@ def _twentyfirst_parse(html: str, category: str, seen: set) -> list[Item]:
 
 async def dribbble(_c):
     """Dribbble sits behind a bot check — needs a real browser."""
-    from playwright.async_api import async_playwright
-
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        page = await browser.new_page(user_agent=UA, viewport={"width": 1440, "height": 1200})
-        await page.goto("https://dribbble.com/shots/popular", wait_until="domcontentloaded", timeout=60000)
-        await page.wait_for_selector("li.shot-thumbnail", timeout=30000)
-        rows = await page.evaluate("""() => [...document.querySelectorAll('li.shot-thumbnail')].map(li => ({
+    rows = await browser_rows("https://dribbble.com/shots/popular", wait_for="li.shot-thumbnail", js="""() =>
+        [...document.querySelectorAll('li.shot-thumbnail')].map(li => ({
             href: li.querySelector('a.shot-thumbnail-link')?.getAttribute('href'),
             title: li.querySelector('a.shot-thumbnail-link .accessibility-text')?.textContent.trim(),
             // lazy-loaded thumbs carry a 1px placeholder in src
@@ -223,7 +237,6 @@ async def dribbble(_c):
             likes: li.querySelector('[data-shot-like-count]')?.textContent.trim(),
             views: li.querySelector('.js-shot-views-count')?.textContent.trim(),
         }))""")
-        await browser.close()
 
     def num(s):
         s = (s or "0").strip().lower().replace(",", "")
@@ -244,6 +257,175 @@ async def dribbble(_c):
             url=urljoin("https://dribbble.com", r["href"]), image=image, section="visual",
             author=r["author"] or "", popularity=num(r["likes"]), position=len(items),
             note=f"♥ {r['likes']} · 👁 {r['views']}",
+        ))
+    return items
+
+
+COSMOS_CATEGORIES = {"design", "art", "ideas", "photography", "architecture", "typography"}
+
+
+async def cosmos(_c):
+    """Cosmos 'discover' — curated visual clusters (art, posters, moods)."""
+    rows = await browser_rows("https://cosmos.so/discover", """() =>
+        [...document.querySelectorAll('a[href]')].map(a => {
+            const im = a.querySelector('img');
+            return im && { href: a.href, img: im.currentSrc || im.src };
+        }).filter(r => r && r.href.includes('cosmos.so/') && r.img.startsWith('https://cdn.cosmos.so/'))""")
+    items, seen = [], set()
+    for r in rows:
+        path = r["href"].split("cosmos.so/")[-1].strip("/")
+        if path in seen or path.count("/") != 1:
+            continue
+        seen.add(path)
+        category, slug = path.split("/")
+        if category not in COSMOS_CATEGORIES:  # skip fashion, food, interiors…
+            continue
+        image = re.sub(r"([?&])w=\d+", r"\1w=800", r["img"])
+        items.append(Item(
+            source="cosmos", key=path, title=slug.replace("-", " ").capitalize(), url=r["href"],
+            image=image, section="visual", note=category, position=len(items),
+        ))
+    return items
+
+
+# --- WOW / experimental -----------------------------------------------------
+
+async def codrops(c):
+    """Codrops Hub — WebGL, Three.js, shader and interaction demos."""
+    tree = LexborHTMLParser(await get(c, "https://tympanus.net/codrops/hub/"))
+    items = []
+    for art in tree.css("article.demo-card"):
+        a, h2 = art.css_first("a.demo-card__thumb-img"), art.css_first("h2")
+        video, img = art.css_first("video"), art.css_first("img")
+        image = (video.attributes.get("poster") if video else None) or (img.attributes.get("src") if img else None)
+        if not a or not h2 or not image:
+            continue
+        tags = [text(t) for t in art.css(".demo-card__tags a")][:4]
+        article = art.css_first("a.icon--article")
+        items.append(Item(
+            source="codrops", key=art.attributes.get("id", a.attributes["href"]), title=text(h2),
+            url=article.attributes["href"] if article else a.attributes["href"],
+            link=a.attributes["href"], image=image.split("?")[0], section="wow",
+            author=text(art.css_first(".demo-card__author")), position=len(items),
+            tags=tags, note=" · ".join(tags[:2]),
+        ))
+    return items
+
+
+async def gsap_showcase(_c):
+    """GSAP showcase — sites built around ambitious motion."""
+    rows = await browser_rows("https://gsap.com/showcase/", """() =>
+        [...document.querySelectorAll('a[href]')].map(a => {
+            const im = a.querySelector('img');
+            return im && { href: a.href, img: im.currentSrc || im.src, title: (im.alt || a.innerText || '').trim() };
+        }).filter(r => r && r.img.includes('/community/uploads/') && !r.href.includes('gsap.com'))""")
+    items, seen = [], set()
+    for r in rows:
+        if r["href"] in seen:
+            continue
+        seen.add(r["href"])
+        items.append(Item(
+            source="gsap", key=r["href"], title=r["title"].split("\n")[0][:80] or r["href"],
+            url=r["href"], link=r["href"], image=r["img"], section="wow", position=len(items),
+            note="motion",
+        ))
+    return items
+
+
+async def brutalist(c):
+    """Brutalist Websites — ~1600 raw, odd, opinionated sites. A random handful daily."""
+    base = "https://brutalistwebsites.com"
+    tree = LexborHTMLParser(await get(c, base))
+    items, seen = [], set()
+    for a in tree.css("a[href]"):
+        img = a.css_first("img")
+        href = a.attributes.get("href", "")
+        if not img or "/_img/" not in img.attributes.get("src", "") or href in seen or "brutalistwebsites.com" in href:
+            continue
+        seen.add(href)
+        domain = re.sub(r"^https?://(www\.)?", "", href).strip("/")
+        items.append(Item(
+            source="brutalist", key=domain, title=domain, url=href, link=href,
+            image=urljoin(base + "/", img.attributes["src"]).replace("http://", "https://"), section="wow",
+            note="brutalist", position=random.randint(0, 10_000),
+        ))
+    return items
+
+
+# --- More web galleries ------------------------------------------------------
+
+async def cssda(c):
+    base = "https://www.cssdesignawards.com/"
+    tree = LexborHTMLParser(await get(c, base))
+    items = []
+    for art in tree.css("article.single-project"):
+        a, img = art.css_first(".single-project__title a"), art.css_first(".single-project__thumbnail img")
+        if not a or not img:
+            continue
+        visit = art.css_first("a.sp__project-link")
+        badge = text(art.css_first(".sp__meta__category"))
+        items.append(Item(
+            source="cssda", key=a.attributes["href"].strip("/").split("/")[-1], title=text(a),
+            url=urljoin(base, a.attributes["href"]), image=urljoin(base, img.attributes["src"]),
+            link=visit.attributes.get("href", "") if visit else "", section="web",
+            position=len(items), note=badge.title(),
+        ))
+    return items
+
+
+async def webflow(c):
+    base = "https://webflow.com"
+    tree = LexborHTMLParser(await get(c, base + "/made-in-webflow/popular"))
+    items, seen = [], set()
+    for a in tree.css('a[href*="/made-in-webflow/website/"]'):
+        img = a.css_first("img")
+        href = a.attributes["href"]
+        if not img or href in seen:
+            continue
+        seen.add(href)
+        items.append(Item(
+            source="webflow", key=href.rstrip("/").split("/")[-1],
+            title=img.attributes.get("alt", "").removesuffix(" thumbnail"),
+            url=urljoin(base, href), image=img.attributes["src"], section="web", position=len(items),
+        ))
+    return items
+
+
+async def darkdesign(c):
+    base = "https://dark.design"
+    tree = LexborHTMLParser(await get(c, base))
+    items, seen = [], set()
+    for a in tree.css('a[href^="/site/"]'):
+        img = a.css_first("img")
+        href = a.attributes["href"]
+        if not img or href in seen:
+            continue
+        seen.add(href)
+        items.append(Item(
+            source="darkdesign", key=href.split("/")[-1], title=img.attributes.get("alt", ""),
+            url=urljoin(base, href), image=img.attributes["src"], section="web",
+            position=len(items), note="dark UI",
+        ))
+    return items
+
+
+async def bestwebsite(c):
+    base = "https://bestwebsite.gallery"
+    tree = LexborHTMLParser(await get(c, base))
+    items = []
+    for art in tree.css("article"):
+        # the featured card has an <h1> title; the grid cards only an aria-label
+        a = art.css_first('h1 a[href*="/sites/sotd/"]') or art.css_first('a[aria-label][href*="/sites/sotd/"]:not([aria-label^="View"])')
+        img = art.css_first("figure img")
+        if not a or not img:
+            continue
+        external = art.css_first('a[aria-label^="Open"][target="_blank"]')
+        author = art.css_first('a[href*="/sites/creator/"]')
+        items.append(Item(
+            source="bestwebsite", key=a.attributes["href"].strip("/"),
+            title=text(a) or a.attributes.get("aria-label", ""),
+            url=urljoin(base, a.attributes["href"]), image=img.attributes["src"], section="web",
+            link=external.attributes["href"] if external else "", author=text(author), position=len(items),
         ))
     return items
 
@@ -289,9 +471,17 @@ SOURCES = {
     "landbook": landbook,
     "minimalgallery": minimal_gallery,
     "onepagelove": onepagelove,
+    "cssda": cssda,
+    "webflow": webflow,
+    "darkdesign": darkdesign,
+    "bestwebsite": bestwebsite,
     "godly": godly,
-    "21st": twentyfirst,
     "dribbble": dribbble,
+    "cosmos": cosmos,
+    "codrops": codrops,
+    "gsap": gsap_showcase,
+    "brutalist": brutalist,
+    "21st": twentyfirst,
     "webdesignmuseum": webdesignmuseum,
 }
 
@@ -300,7 +490,15 @@ LABELS = {
     "landbook": "Land-book",
     "minimalgallery": "Minimal Gallery",
     "onepagelove": "One Page Love",
+    "cssda": "CSS Design Awards",
+    "webflow": "Made in Webflow",
+    "darkdesign": "Dark.design",
+    "bestwebsite": "Best Website Gallery",
     "godly": "Godly",
+    "cosmos": "Cosmos",
+    "codrops": "Codrops",
+    "gsap": "GSAP Showcase",
+    "brutalist": "Brutalist Websites",
     "21st": "21st.dev",
     "dribbble": "Dribbble",
     "webdesignmuseum": "Web Design Museum",

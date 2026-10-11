@@ -79,16 +79,24 @@ section.block h2 small { font: 500 13px "Inter Tight", sans-serif; color: var(--
 .meta { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); min-width: 0; }
 .src { color: var(--ink); font-weight: 500; white-space: nowrap; }
 .note { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.title { font-weight: 500; font-size: 15px; line-height: 1.3; margin: -4px 0 0; padding-right: 36px; }
+.title { font-weight: 500; font-size: 15px; line-height: 1.3; margin: -4px 0 0; padding-right: 72px; }
 .title a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .author { color: var(--muted); font-size: 13px; }
-.fav {
-  position: absolute; right: 0; bottom: 0; width: 32px; height: 32px; border-radius: 50%;
-  border: 0; background: transparent; color: var(--muted); cursor: pointer; display: grid; place-items: center;
+.why { margin: -2px 0 0; font-size: 13px; line-height: 1.4; color: var(--muted); padding-right: 72px; }
+.why::before { content: "✦ "; color: var(--accent); }
+.votes { position: absolute; right: 0; bottom: 0; display: flex; gap: 2px; }
+.vote {
+  width: 32px; height: 32px; border-radius: 50%; border: 0; background: transparent;
+  color: var(--muted); cursor: pointer; display: grid; place-items: center; font-size: 15px;
 }
-.fav[aria-pressed="true"] { color: var(--accent); }
-.fav svg { width: 18px; height: 18px; }
+.vote:hover { background: var(--chip); }
+.vote svg { width: 18px; height: 18px; }
+.vote.up[aria-pressed="true"] { color: var(--accent); }
+.vote.down[aria-pressed="true"] { color: var(--ink); background: var(--chip); }
+.card.hidden-vote .shot, .card.hidden-vote .title, .card.hidden-vote .meta, .card.hidden-vote .why { opacity: .25; }
 .visit { font-size: 13px; color: var(--accent); white-space: nowrap; }
+.ai { display: inline-flex; align-items: center; gap: 6px; }
+.ai b { color: var(--ink); font-weight: 500; }
 
 .empty { color: var(--muted); padding: 40px 0; }
 footer { border-top: 1px solid var(--line); margin-top: 64px; padding: 32px 0 64px; color: var(--muted); font-size: 13px; }
@@ -120,7 +128,10 @@ footer h3 { font: 400 24px "Instrument Serif", Georgia, serif; color: var(--ink)
   {% for items in day.sections.values() %}{% set total.n = total.n + items | length %}{% endfor %}
   <div class="hero">
     <h1>{{ day.date | nice_date }}<br><em>{{ total.n }} vecí</em> na dnes</h1>
-    <p>Výber z {{ day.health | length }} zdrojov — web, vizuál, UI komponenty a kúsok histórie.</p>
+    <p>
+      Výber z {{ day.health | length }} zdrojov{% if day.curator.ok %}, <span class="ai">vybral a ohodnotil <b>Claude</b></span>{% endif %}.
+      {% if feedback %}♥ = viac takého, ✕ = už nikdy.{% endif %}
+    </p>
   </div>
 
   <nav class="filters" aria-label="Filter">
@@ -150,10 +161,14 @@ footer h3 { font: 400 24px "Instrument Serif", Georgia, serif; color: var(--ink)
           {% if it.link %}<a class="visit" href="{{ it.link }}" target="_blank" rel="noopener">web ↗</a>{% endif %}
         </div>
         <h3 class="title"><a href="{{ it.url }}" target="_blank" rel="noopener">{{ it.title or "Bez názvu" }}</a></h3>
+        {% if it.why %}<p class="why">{{ it.why }}</p>{% endif %}
         {% if it.author %}<div class="author">{{ it.author }}</div>{% endif %}
-        <button class="fav" aria-pressed="false" aria-label="Uložiť">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
-        </button>
+        <div class="votes" data-s="{{ it.id | sign }}">
+          <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+          </button>
+          <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+        </div>
       </article>
       {% endfor %}
     </div>
@@ -200,15 +215,26 @@ footer h3 { font: 400 24px "Instrument Serif", Georgia, serif; color: var(--ink)
     store.set("dd-theme", root.dataset.theme);
   };
 
-  // favourites (kept in this browser only)
-  let favs = store.get("dd-favs", {});
+  // ♥ / ✕ votes. With a feedback worker they sync everywhere and tune tomorrow's
+  // picks; without one they just live in this browser.
+  const FEEDBACK = {{ feedback | tojson }};
+  let votes = store.get("dd-votes", {});            // {id: {v, at, item?}}
+  let archive = {};                                  // id -> item, for the saved view
   const savedGrid = document.getElementById("saved-grid");
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
   function paint() {
-    document.querySelectorAll(".card[data-id] .fav").forEach(b => {
-      b.setAttribute("aria-pressed", String(!!favs[b.closest(".card").dataset.id]));
+    document.querySelectorAll(".card[data-id]").forEach(card => {
+      const v = votes[card.dataset.id]?.v || 0;
+      card.querySelector(".vote.up").setAttribute("aria-pressed", String(v === 1));
+      card.querySelector(".vote.down").setAttribute("aria-pressed", String(v === -1));
+      card.classList.toggle("hidden-vote", v === -1);
     });
-    const list = Object.values(favs).sort((a, b) => b.at - a.at);
+    const list = Object.entries(votes)
+      .filter(([, x]) => x.v === 1)
+      .map(([id, x]) => ({ ...(archive[id] || x.item || {}), at: x.at }))
+      .filter(it => it.url)
+      .sort((a, b) => String(b.at).localeCompare(String(a.at)));
     document.getElementById("saved-count").textContent = list.length || "";
     document.getElementById("saved-empty").hidden = list.length > 0;
     savedGrid.innerHTML = list.map(it => `
@@ -218,14 +244,36 @@ footer h3 { font: 400 24px "Instrument Serif", Georgia, serif; color: var(--ink)
         <h3 class="title"><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title)}</a></h3>
       </article>`).join("");
   }
+
   document.addEventListener("click", e => {
-    const b = e.target.closest(".card[data-id] .fav");
+    const b = e.target.closest(".card[data-id] .vote");
     if (!b) return;
-    const card = b.closest(".card"), it = JSON.parse(card.dataset.item);
-    if (favs[it.id]) delete favs[it.id]; else favs[it.id] = { ...it, at: Date.now() };
-    store.set("dd-favs", favs);
+    const card = b.closest(".card"), id = card.dataset.id;
+    const v = votes[id]?.v === Number(b.dataset.v) ? 0 : Number(b.dataset.v);   // click again = undo
+    if (v) votes[id] = { v, at: new Date().toISOString(), item: JSON.parse(card.dataset.item) };
+    else delete votes[id];
+    store.set("dd-votes", votes);
     paint();
+    if (FEEDBACK) {
+      fetch(FEEDBACK + "/vote", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, v, s: card.querySelector(".votes").dataset.s }),
+      }).catch(() => {});
+    }
   });
+
+  if (FEEDBACK) {
+    // the worker is the source of truth (votes from email or other devices)
+    Promise.all([
+      fetch(FEEDBACK + "/votes").then(r => r.json()),
+      fetch("{{ prefix }}items.json").then(r => r.json()).catch(() => ({})),
+    ]).then(([remote, items]) => {
+      archive = items;
+      votes = Object.fromEntries(Object.entries(remote).map(([id, x]) => [id, { ...x, item: votes[id]?.item }]));
+      store.set("dd-votes", votes);
+      paint();
+    }).catch(() => {});
+  }
 
   // filters
   const buttons = document.querySelectorAll(".filters button");
