@@ -22,6 +22,22 @@
     "id": "awwwards:nick-ho"
    },
    {
+    "source": "landbook",
+    "key": "100901",
+    "title": "AI Agents for Enterprise Customer Service | Parloa",
+    "url": "https://land-book.com/websites/100901-ai-agents-for-enterprise-customer-service-parloa",
+    "image": "https://cdn.land-book.com/image/0x0:3840x5760/600x0/website/100901/ff486e31f2256f04-screenshot.webp?signature=b2efd095a1c22c6dcaf949ac4b143230451226fba20fe0e59d3414c9757b943c",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "",
+    "score": 1.0,
+    "id": "landbook:100901"
+   },
+   {
     "source": "minimalgallery",
     "key": "https://minimal.gallery/?p=28352",
     "title": "Odyssee",
@@ -81,6 +97,22 @@
     "id": "awwwards:lpas"
    },
    {
+    "source": "landbook",
+    "key": "100924",
+    "title": "Nossara | Imabari Towels, Made in Japan",
+    "url": "https://land-book.com/websites/100924-nossara-imabari-towels-made-in-japan",
+    "image": "https://cdn.land-book.com/image/0x0:2880x4320/600x0/filters:format(webp)/website/100924/584f2495fae52e60-screenshot.jpg?signature=d9604392379c836c1de88da7c255b5ad3949c21600926c73d46dabd2a4914dc2",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "",
+    "score": 0.9474,
+    "id": "landbook:100924"
+   },
+   {
     "source": "minimalgallery",
     "key": "https://minimal.gallery/?p=28373",
     "title": "Flowlife",
@@ -121,45 +153,6 @@
     "note": "",
     "score": 0.8444,
     "id": "onepagelove:https://onepagelove.com/?p=88951"
-   },
-   {
-    "source": "awwwards",
-    "key": "maria-vasilyeva-portfolio",
-    "title": "Maria Vasilyeva Portfolio",
-    "url": "https://www.awwwards.com/sites/maria-vasilyeva-portfolio",
-    "image": "https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2026/08/6a87093710758900048487.png",
-    "section": "web",
-    "author": "Maria Vasilyeva",
-    "link": "https://www.mariavasilyeva.com/",
-    "popularity": null,
-    "position": 2,
-    "tags": [
-     "DEV",
-     "SOTD"
-    ],
-    "note": "DEV · SOTD",
-    "score": 1.0733,
-    "id": "awwwards:maria-vasilyeva-portfolio"
-   },
-   {
-    "source": "minimalgallery",
-    "key": "https://minimal.gallery/?p=28267",
-    "title": "GRNDWRK STUDIO",
-    "url": "https://minimal.gallery/grndwrk-studio/",
-    "image": "https://minimal.gallery/wp-content/uploads/2026/08/grndwrk.studio.jpg",
-    "section": "web",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 2,
-    "tags": [
-     "Uncategorized",
-     "Agency",
-     "Production Studio"
-    ],
-    "note": "",
-    "score": 0.7389,
-    "id": "minimalgallery:https://minimal.gallery/?p=28267"
    }
   ],
   "visual": [
@@ -334,46 +327,97 @@
     "id": "21st:minhxthanh/shader-background"
    }
   ],
-  "retro": []
+  "retro": [
+   {
+    "source": "webdesignmuseum",
+    "key": "dribbble-com-2009",
+    "title": "Dribbble.com",
+    "url": "https://www.webdesignmuseum.org/web-design-history/dribbble-com-2009",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/dribbble-2009-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 138,
+    "tags": [],
+    "note": "2009 · história webu",
+    "score": 1.0,
+    "id": "webdesignmuseum:dribbble-com-2009"
+   },
+   {
+    "source": "webdesignmuseum",
+    "key": "jscript-1-0-1996",
+    "title": "JScript 1.0",
+    "url": "https://www.webdesignmuseum.org/web-design-history/jscript-1-0-1996",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/jscript-1-0-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 234,
+    "tags": [],
+    "note": "1996 · história webu",
+    "score": 0.9944,
+    "id": "webdesignmuseum:jscript-1-0-1996"
+   },
+   {
+    "source": "webdesignmuseum",
+    "key": "the-term-user-experience-1995",
+    "title": "The term User Experience",
+    "url": "https://www.webdesignmuseum.org/web-design-history/the-term-user-experience-1995",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/the-term-user-experience-1995-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 315,
+    "tags": [],
+    "note": "1995 · história webu",
+    "score": 0.9887,
+    "id": "webdesignmuseum:the-term-user-experience-1995"
+   }
+  ]
  },
  "health": {
-  "landbook": {
-   "ok": false,
-   "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://land-book.com'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
-  },
   "onepagelove": {
    "ok": true,
    "count": 10,
-   "secs": 0.7
-  },
-  "21st": {
-   "ok": true,
-   "count": 429,
-   "secs": 1.5
+   "secs": 0.6
   },
   "godly": {
    "ok": true,
    "count": 20,
-   "secs": 1.8
-  },
-  "awwwards": {
-   "ok": true,
-   "count": 31,
-   "secs": 2.3
-  },
-  "webdesignmuseum": {
-   "ok": false,
-   "error": "RuntimeError: no items parsed (blocked?)"
-  },
-  "dribbble": {
-   "ok": true,
-   "count": 24,
-   "secs": 4.6
+   "secs": 1.6
   },
   "minimalgallery": {
    "ok": true,
    "count": 10,
-   "secs": 4.9
+   "secs": 2.0
+  },
+  "dribbble": {
+   "ok": true,
+   "count": 24,
+   "secs": 3.5
+  },
+  "21st": {
+   "ok": true,
+   "count": 429,
+   "secs": 4.4
+  },
+  "awwwards": {
+   "ok": true,
+   "count": 31,
+   "secs": 5.3
+  },
+  "landbook": {
+   "ok": true,
+   "count": 20,
+   "secs": 5.4
+  },
+  "webdesignmuseum": {
+   "ok": true,
+   "count": 178,
+   "secs": 12.1
   }
  }
 }
