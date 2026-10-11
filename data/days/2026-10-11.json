@@ -3,100 +3,6 @@
  "sections": {
   "wow": [
    {
-    "source": "codrops",
-    "key": "post-122709",
-    "title": "Wide: Grid Layout With a WebGL Shader",
-    "url": "https://tympanus.net/codrops/?p=122699",
-    "image": "https://tympanus.net/codrops/wp-content/uploads/2026/09/wide-400x300.png.webp",
-    "section": "wow",
-    "author": "BL/S®",
-    "link": "https://c-84373805020260930-01a0d773-dab5-744d-bc5e-3f11d4f2262e.codepen.dev/",
-    "popularity": null,
-    "position": 6,
-    "tags": [
-     "glsl",
-     "grid",
-     "template",
-     "WebGL"
-    ],
-    "note": "glsl · grid",
-    "score": 1.0774,
-    "why": "",
-    "id": "codrops:post-122709"
-   },
-   {
-    "source": "codrops",
-    "key": "post-116681",
-    "title": "3D Image Rotations on Scroll",
-    "url": "https://tympanus.net/Development/RotatingOnScrollAnimations/",
-    "image": "https://tympanus.net/codrops/wp-content/uploads/2026/06/RotatingOnScrolAnimation_featured-400x300.png.webp",
-    "section": "wow",
-    "author": "Manoela Ilic",
-    "link": "https://tympanus.net/Development/RotatingOnScrollAnimations/",
-    "popularity": null,
-    "position": 7,
-    "tags": [
-     "3D",
-     "GSAP",
-     "scroll"
-    ],
-    "note": "3D · GSAP",
-    "score": 1.0653,
-    "why": "",
-    "id": "codrops:post-116681"
-   },
-   {
-    "source": "brutalist",
-    "key": "chrpsh.faith",
-    "title": "chrpsh.faith",
-    "url": "http://chrpsh.faith",
-    "image": "https://brutalistwebsites.com/_img/chrpsh.faith.jpg",
-    "section": "wow",
-    "author": "",
-    "link": "http://chrpsh.faith",
-    "popularity": null,
-    "position": 31,
-    "tags": [],
-    "note": "brutalist",
-    "score": 0.9962,
-    "why": "",
-    "id": "brutalist:chrpsh.faith"
-   },
-   {
-    "source": "brutalist",
-    "key": "edicionesdaga.com",
-    "title": "edicionesdaga.com",
-    "url": "http://edicionesdaga.com",
-    "image": "https://brutalistwebsites.com/_img/edicionesdaga.com.jpg",
-    "section": "wow",
-    "author": "",
-    "link": "http://edicionesdaga.com",
-    "popularity": null,
-    "position": 33,
-    "tags": [],
-    "note": "brutalist",
-    "score": 0.9956,
-    "why": "",
-    "id": "brutalist:edicionesdaga.com"
-   },
-   {
-    "source": "gsap",
-    "key": "https://guillaumecolombel.fr/",
-    "title": "Guillaume Colombel — Portfolio 2026",
-    "url": "https://guillaumecolombel.fr/",
-    "image": "https://gsap.com/community/uploads/monthly_2026_10/Frame7.webp.d17a562b966787de546585e95e272cbd.webp",
-    "section": "wow",
-    "author": "",
-    "link": "https://guillaumecolombel.fr/",
-    "popularity": null,
-    "position": 6,
-    "tags": [],
-    "note": "motion",
-    "score": 0.9114,
-    "why": "",
-    "id": "gsap:https://guillaumecolombel.fr/"
-   },
-   {
     "source": "gsap",
     "key": "https://crl-2026.webflow.io/",
     "title": "CRL — Creative Reference Library",
@@ -109,79 +15,140 @@
     "position": 0,
     "tags": [],
     "note": "motion",
-    "score": 0.89,
-    "why": "Obrovské čierne písmená položené na betónovú architektúru, edičná mriežka",
+    "score": 0.86,
+    "why": "Obrovské čierne glyfy CRL vrezané do betónovej architektúry",
     "id": "gsap:https://crl-2026.webflow.io/"
+   },
+   {
+    "source": "codrops",
+    "key": "post-118411",
+    "title": "Interactive Glass Xylophone with Three.js",
+    "url": "https://tympanus.net/codrops/?p=118008",
+    "image": "https://tympanus.net/codrops/wp-content/uploads/2026/08/xylophone_cover-400x300.png.webp",
+    "section": "wow",
+    "author": "Sujen Phea",
+    "link": "https://tympanus.net/Tutorials/Xylophone/",
+    "popularity": null,
+    "position": 0,
+    "tags": [
+     "3D",
+     "audio",
+     "scroll",
+     "Three.js"
+    ],
+    "note": "3D · audio",
+    "score": 0.832,
+    "why": "Sklenené dlaždice v špirále ako DNA, hrajú tóny pri scrolle",
+    "id": "codrops:post-118411"
+   },
+   {
+    "source": "gsap",
+    "key": "https://henrietta.wearetattoodigital.com/",
+    "title": "Henrietta Said",
+    "url": "https://henrietta.wearetattoodigital.com/",
+    "image": "https://gsap.com/community/uploads/monthly_2026_10/gsapthumb(1).png.2e7729e91a31261ac5a7b554d731bfbd.png",
+    "section": "wow",
+    "author": "",
+    "link": "https://henrietta.wearetattoodigital.com/",
+    "popularity": null,
+    "position": 2,
+    "tags": [],
+    "note": "motion",
+    "score": 0.832,
+    "why": "Nachos v slnečných okuliaroch, hlasný kondenzovaný titulok, drzý humor",
+    "id": "gsap:https://henrietta.wearetattoodigital.com/"
+   },
+   {
+    "source": "codrops",
+    "key": "post-120266",
+    "title": "Dreamfold",
+    "url": "https://cityfold.vercel.app/",
+    "image": "https://tympanus.net/codrops/wp-content/uploads/2026/09/3dcesium-400x300.png.webp",
+    "section": "wow",
+    "author": "David Ronai",
+    "link": "https://cityfold.vercel.app/",
+    "popularity": null,
+    "position": 4,
+    "tags": [
+     "3D",
+     "map",
+     "Three.js",
+     "WebGL"
+    ],
+    "note": "3D · map",
+    "score": 0.832,
+    "why": "Fotogrametrické 3D mesto Tokia, ktorým sa dá letieť",
+    "id": "codrops:post-120266"
+   },
+   {
+    "source": "brutalist",
+    "key": "fakathon.fr",
+    "title": "fakathon.fr",
+    "url": "http://fakathon.fr",
+    "image": "https://brutalistwebsites.com/_img/fakathon.fr.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://fakathon.fr",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.79,
+    "why": "Kobaltová modrá, pixelový monospace a TV koláž ako retro terminál",
+    "id": "brutalist:fakathon.fr"
+   },
+   {
+    "source": "brutalist",
+    "key": "drewwallacegames.com/okaygood.html",
+    "title": "drewwallacegames.com/okaygood.html",
+    "url": "http://drewwallacegames.com/okaygood.html",
+    "image": "https://brutalistwebsites.com/_img/drewwallacegames.com_okaygood.html.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://drewwallacegames.com/okaygood.html",
+    "popularity": null,
+    "position": 18,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.7894,
+    "why": "ASCII krajina z bodiek a pomlčiek so žltými písmenami",
+    "id": "brutalist:drewwallacegames.com/okaygood.html"
    }
   ],
   "web": [
    {
     "source": "darkdesign",
-    "key": "pryzm-1786785316458",
-    "title": "Pryzm",
-    "url": "https://dark.design/site/pryzm-1786785316458",
-    "image": "https://sidhvpjhuucqcehkevrl.supabase.co/storage/v1/render/image/public/screenshots/auto-1786785300169.webp?width=1080&quality=60&height=675&resize=cover",
+    "key": "basement-1786786858853",
+    "title": "Basement",
+    "url": "https://dark.design/site/basement-1786786858853",
+    "image": "https://sidhvpjhuucqcehkevrl.supabase.co/storage/v1/render/image/public/screenshots/auto-1786786805983.webp?width=1080&quality=60&height=675&resize=cover",
     "section": "web",
     "author": "",
     "link": "",
-    "popularity": null,
-    "position": 3,
-    "tags": [],
-    "note": "dark UI",
-    "score": 0.889,
-    "why": "",
-    "id": "darkdesign:pryzm-1786785316458"
-   },
-   {
-    "source": "darkdesign",
-    "key": "108-1782376633087",
-    "title": "108™",
-    "url": "https://dark.design/site/108-1782376633087",
-    "image": "https://sidhvpjhuucqcehkevrl.supabase.co/storage/v1/render/image/public/screenshots/auto-1782376621001.webp?width=1080&quality=60&height=675&resize=cover",
-    "section": "web",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 4,
-    "tags": [],
-    "note": "dark UI",
-    "score": 0.8853,
-    "why": "",
-    "id": "darkdesign:108-1782376633087"
-   },
-   {
-    "source": "cssda",
-    "key": "50211",
-    "title": "SNOWFLAKE",
-    "url": "https://www.cssdesignawards.com/sites/snowflake/50211/",
-    "image": "https://www.cssdesignawards.com/cdasites/2026/202609/20261011033451.jpg",
-    "section": "web",
-    "author": "",
-    "link": "https://crystallize.prism-on.tokyo/",
     "popularity": null,
     "position": 0,
     "tags": [],
-    "note": "Nominee",
-    "score": 0.875,
-    "why": "Kryštalická vločka praská na dúhové črepiny so zrnami písmen",
-    "id": "cssda:50211"
+    "note": "dark UI",
+    "score": 0.802,
+    "why": "Kancelária ako tmavá 3D scéna s arkádou a basketbalovým košom",
+    "id": "darkdesign:basement-1786786858853"
    },
    {
-    "source": "webflow",
-    "key": "streamtime-ad25b3",
-    "title": "Streamtime",
-    "url": "https://webflow.com/made-in-webflow/website/streamtime-ad25b3",
-    "image": "https://screenshots.webflow.com/sites/6807989b8d233f8b34bccb3e/20250622162022_dcbc3a41b941ef7c6e146c8f9d70b4e1.png",
+    "source": "cssda",
+    "key": "50376",
+    "title": "HELLO_WORLD_DSGN",
+    "url": "https://www.cssdesignawards.com/sites/hello_world_dsgn/50376/",
+    "image": "https://www.cssdesignawards.com/cdasites/2026/202610/20261010120648.jpg",
     "section": "web",
     "author": "",
-    "link": "",
+    "link": "https://helloworlddsgn.com/",
     "popularity": null,
-    "position": 3,
+    "position": 1,
     "tags": [],
-    "note": "",
-    "score": 0.8235,
-    "why": "",
-    "id": "webflow:streamtime-ad25b3"
+    "note": "Nominee",
+    "score": 0.7764,
+    "why": "Vintage CRT monitor v teplom svetle ako celý portfólio hero",
+    "id": "cssda:50376"
    },
    {
     "source": "onepagelove",
@@ -201,26 +168,9 @@
      "Draggable"
     ],
     "note": "",
-    "score": 0.8133,
-    "why": "Svetlo cez žalúzie ako pozadie, strojopisný text medzi lamelami, deň/noc",
+    "score": 0.7713,
+    "why": "Text presvitá cez žalúzie, monospace a deň/noc svetlo",
     "id": "onepagelove:https://onepagelove.com/?p=88951"
-   },
-   {
-    "source": "landbook",
-    "key": "100869",
-    "title": "Terms.so: Never touch DocuSign again.",
-    "url": "https://land-book.com/websites/100869-terms-so-never-touch-docusign-again",
-    "image": "https://cdn.land-book.com/image/0x0:3840x5760/600x0/website/100869/9c0285d0c219c207-screenshot.webp?signature=29de9546c1d12254045bd356ddd3c6291db02f3daf26101c9a30f732e6909cbc",
-    "section": "web",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 4,
-    "tags": [],
-    "note": "",
-    "score": 0.7895,
-    "why": "",
-    "id": "landbook:100869"
    },
    {
     "source": "bestwebsite",
@@ -235,9 +185,63 @@
     "position": 0,
     "tags": [],
     "note": "",
-    "score": 0.735,
-    "why": "Krabičky produktu v rade, výber farby swipom do strán, balenie do výšky",
+    "score": 0.72,
+    "why": "Produktové krabice ako rozhranie, swipe na výber farby",
     "id": "bestwebsite:sites/sotd/2026/10/07/hold"
+   },
+   {
+    "source": "awwwards",
+    "key": "nick-ho",
+    "title": "Nick Ho",
+    "url": "https://www.awwwards.com/sites/nick-ho",
+    "image": "https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2026/08/6a85b37721f48885790043.jpg",
+    "section": "web",
+    "author": "BORING",
+    "link": "https://nickho-motorsports.nl/",
+    "popularity": null,
+    "position": 0,
+    "tags": [
+     "DEV",
+     "SOTD"
+    ],
+    "note": "DEV · SOTD",
+    "score": 0.692,
+    "why": "Prilba ako centrum mriežky sponzorských log, motorsport téma",
+    "id": "awwwards:nick-ho"
+   },
+   {
+    "source": "webflow",
+    "key": "truus",
+    "title": "Truus",
+    "url": "https://webflow.com/made-in-webflow/website/truus",
+    "image": "https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/6878a835373ad05b60abdb02_truus-webflow-thumb.jpg",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "",
+    "score": 0.692,
+    "why": "Script typografia cez video a hravé nálepky, sebavedomý tón",
+    "id": "webflow:truus"
+   },
+   {
+    "source": "landbook",
+    "key": "100924",
+    "title": "Nossara | Imabari Towels, Made in Japan",
+    "url": "https://land-book.com/websites/100924-nossara-imabari-towels-made-in-japan",
+    "image": "https://cdn.land-book.com/image/0x0:2880x4320/600x0/filters:format(webp)/website/100924/584f2495fae52e60-screenshot.jpg?signature=d9604392379c836c1de88da7c255b5ad3949c21600926c73d46dabd2a4914dc2",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "",
+    "score": 0.6762,
+    "why": "Uterák v lese s vertikálnou japonskou typografiou",
+    "id": "landbook:100924"
    },
    {
     "source": "minimalgallery",
@@ -256,46 +260,12 @@
      "Production Studio"
     ],
     "note": "",
-    "score": 0.6417,
-    "why": "Tučný orezaný logotyp nad filmovými zábermi vinice, produkčný tón",
+    "score": 0.5717,
+    "why": "Ťažký orezaný grotesk vedľa vertikálneho pásu fotiek",
     "id": "minimalgallery:https://minimal.gallery/?p=28267"
    }
   ],
   "visual": [
-   {
-    "source": "dribbble",
-    "key": "27270131",
-    "title": "cryonex: Biostorage & Biomanufacturing for - Brand Cards UI",
-    "url": "https://dribbble.com/shots/27270131-cryonex-Biostorage-Biomanufacturing-for-Brand-Cards-UI",
-    "image": "https://cdn.dribbble.com/userupload/47356558/file/9e8099281f7df321f0c739a17778dfe0.png?format=webp&resize=800x600&vertical=center",
-    "section": "visual",
-    "author": "Samuel Oktavianus",
-    "link": "",
-    "popularity": 174.0,
-    "position": 28,
-    "tags": [],
-    "note": "♥ 174 · 👁 22.7k",
-    "score": 0.9396,
-    "why": "",
-    "id": "dribbble:27270131"
-   },
-   {
-    "source": "dribbble",
-    "key": "27795844",
-    "title": "Kova - Fintech SaaS Landing Page",
-    "url": "https://dribbble.com/shots/27795844-Kova-Fintech-SaaS-Landing-Page",
-    "image": "https://cdn.dribbble.com/userupload/49265555/file/e65127da26b20ec29d979d24fcd9f050.png?format=webp&resize=800x600&vertical=center",
-    "section": "visual",
-    "author": "Korsa",
-    "link": "",
-    "popularity": 172.0,
-    "position": 40,
-    "tags": [],
-    "note": "♥ 172 · 👁 25.2k",
-    "score": 0.9167,
-    "why": "",
-    "id": "dribbble:27795844"
-   },
    {
     "source": "godly",
     "key": "1g2fr97",
@@ -309,8 +279,8 @@
     "position": 0,
     "tags": [],
     "note": "",
-    "score": 0.875,
-    "why": "Ružovo-modrý rizograf plagát, písmená padajú šikmo ako hračky",
+    "score": 0.818,
+    "why": "Monospace písmo v hravých rotáciách na neónovo ružovej",
     "id": "godly:1g2fr97"
    },
    {
@@ -327,154 +297,188 @@
     "tags": [],
     "note": "",
     "score": 0.7884,
-    "why": "Radiálny výbuch tušových ťahov štetcom, surová gestická grafika",
+    "why": "Výbuch čiernych ťahov štetca v kruhu, generatívna kresba",
     "id": "godly:ycasm0a"
    },
    {
-    "source": "cosmos",
-    "key": "design/comfort-movie-posters",
-    "title": "Comfort movie posters",
-    "url": "https://www.cosmos.so/design/comfort-movie-posters",
-    "image": "https://cdn.cosmos.so/855d3311-91aa-4de8-b079-7971336256e7?rect=0%2C0%2C1414%2C1414&format=webp&w=800",
+    "source": "godly",
+    "key": "mi01tni",
+    "title": "Paper Mono Font Site",
+    "url": "https://godly.website/i/mi01tni-paper-mono-font-site",
+    "image": "https://cdn.recent.design/items/mi01tni/0/poster/1199.webp",
     "section": "visual",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 1,
+    "position": 3,
     "tags": [],
-    "note": "design",
-    "score": 0.715,
-    "why": "Filmový plagát z jednoduchej tlačovej halftone fotky a obrého groteskového titulu",
-    "id": "cosmos:design/comfort-movie-posters"
+    "note": "",
+    "score": 0.7833,
+    "why": "Konštrukčné body a krivky glyfov ukázané priamo v hero",
+    "id": "godly:mi01tni"
    },
    {
-    "source": "cosmos",
-    "key": "ideas/black-cat-symbolism",
-    "title": "Black cat symbolism",
-    "url": "https://www.cosmos.so/ideas/black-cat-symbolism",
-    "image": "https://cdn.cosmos.so/cb84c4cd-e465-4764-a4e9-9c616fc0a0f1?rect=53%2C0%2C386%2C386&format=webp&w=800",
+    "source": "dribbble",
+    "key": "27777144",
+    "title": "AI Tarot Reading Mobile App Design",
+    "url": "https://dribbble.com/shots/27777144-AI-Tarot-Reading-Mobile-App-Design",
+    "image": "https://cdn.dribbble.com/userupload/49193661/file/3ab021a671dd83c73fa3c7c6cff50f6c.jpg?format=webp&resize=800x600&vertical=center",
     "section": "visual",
-    "author": "",
+    "author": "Nixtio",
     "link": "",
-    "popularity": null,
-    "position": 0,
+    "popularity": 192.0,
+    "position": 11,
     "tags": [],
-    "note": "ideas",
-    "score": 0.65,
-    "why": "Čierna mačka v tme, len svietiace oči, atmosférický záber",
-    "id": "cosmos:ideas/black-cat-symbolism"
+    "note": "♥ 192 · 👁 25.9k",
+    "score": 0.581,
+    "why": "Zlatý tarotový ornament na tmavých kartách, efektné",
+    "id": "dribbble:27777144"
+   },
+   {
+    "source": "dribbble",
+    "key": "27798182",
+    "title": "Taleo — AI Interactive Storytelling App for Kids",
+    "url": "https://dribbble.com/shots/27798182-Taleo-AI-Interactive-Storytelling-App-for-Kids",
+    "image": "https://cdn.dribbble.com/userupload/49274583/file/still-a098c8fba4a16d26f6077d1b211872b6.png?format=webp&resize=800x600&vertical=center",
+    "section": "visual",
+    "author": "Phenomenon Studio",
+    "link": "",
+    "popularity": 224.0,
+    "position": 30,
+    "tags": [],
+    "note": "♥ 224 · 👁 24.5k",
+    "score": 0.552,
+    "why": "Líška maskot vo fialových obrazovkách, bežné app UI",
+    "id": "dribbble:27798182"
+   },
+   {
+    "source": "dribbble",
+    "key": "27270131",
+    "title": "cryonex: Biostorage & Biomanufacturing for - Brand Cards UI",
+    "url": "https://dribbble.com/shots/27270131-cryonex-Biostorage-Biomanufacturing-for-Brand-Cards-UI",
+    "image": "https://cdn.dribbble.com/userupload/47356558/file/9e8099281f7df321f0c739a17778dfe0.png?format=webp&resize=800x600&vertical=center",
+    "section": "visual",
+    "author": "Samuel Oktavianus",
+    "link": "",
+    "popularity": 175.0,
+    "position": 26,
+    "tags": [],
+    "note": "♥ 175 · 👁 22.8k",
+    "score": 0.5318,
+    "why": "Biotech kartičky s limetkovou, čisté ale bežné",
+    "id": "dribbble:27270131"
    }
   ],
   "ui": [
    {
     "source": "21st",
-    "key": "manuarora700/lamp",
-    "title": "Lamp",
-    "url": "https://21st.dev/manuarora700/lamp",
-    "image": "https://cdn.21st.dev/user_aceternity/lamp.png",
+    "key": "arunachalam/scroll-expansion-hero",
+    "title": "Scroll media expansion hero",
+    "url": "https://21st.dev/arunachalam/scroll-expansion-hero",
+    "image": "https://cdn.21st.dev/arunachalam/scroll-expansion-hero/default/preview.1788803090804-2c8fb1d2-2c97-49da-8b80-56ad608613d9.webp",
     "section": "ui",
-    "author": "manuarora700",
+    "author": "arunachalam",
     "link": "",
-    "popularity": 0.9811320754716981,
-    "position": 91,
+    "popularity": 0.9748427672955975,
+    "position": 79,
     "tags": [
      "hero"
     ],
-    "note": "hero · ↓ 2325",
-    "score": 0.979,
-    "why": "",
-    "id": "21st:manuarora700/lamp"
+    "note": "hero · ↓ 2606",
+    "score": 0.5492,
+    "why": "Video sa pri scrolle rozbalí na celú plochu",
+    "id": "21st:arunachalam/scroll-expansion-hero"
    },
    {
     "source": "21st",
-    "key": "moazamtrade/paper-design-shader-background",
-    "title": "Paper design shader Background ",
-    "url": "https://21st.dev/moazamtrade/paper-design-shader-background",
-    "image": "https://cdn.21st.dev/moazamtrade/paper-design-shader-background/default/preview.1756567728912.png",
+    "key": "serafimcloud/splite",
+    "title": "Spline Scene",
+    "url": "https://21st.dev/serafimcloud/splite",
+    "image": "https://cdn.21st.dev/user_2nElBLvklOKlAURm6W1PTu6yYFh/splite.png",
     "section": "ui",
-    "author": "moazamtrade",
+    "author": "serafimcloud",
     "link": "",
-    "popularity": 0.9777777777777777,
-    "position": 0,
+    "popularity": 1.0,
+    "position": 82,
     "tags": [
-     "shader"
+     "hero"
     ],
-    "note": "shader · ↓ 273",
-    "score": 0.9767,
-    "why": "",
-    "id": "21st:moazamtrade/paper-design-shader-background"
+    "note": "hero · ↓ 9435",
+    "score": 0.4865,
+    "why": "Spline robot v tmavej karte, preexponovaný komponent",
+    "id": "21st:serafimcloud/splite"
    },
    {
     "source": "21st",
-    "key": "kokonutd/beams-background",
-    "title": "Beams Background",
-    "url": "https://21st.dev/kokonutd/beams-background",
-    "image": "https://cdn.21st.dev/user_2rQ1QHrJyxpmWMHhqhANzWMc64n/beams-background/default/preview.png?v=1",
+    "key": "kokonutd/background-paths",
+    "title": "Background Paths",
+    "url": "https://21st.dev/kokonutd/background-paths",
+    "image": "https://cdn.21st.dev/user_2rQ1QHrJyxpmWMHhqhANzWMc64n/background-paths/default/preview.png?v=1",
     "section": "ui",
     "author": "kokonutd",
     "link": "",
-    "popularity": 0.9772727272727273,
-    "position": 14,
+    "popularity": 0.9937106918238994,
+    "position": 68,
     "tags": [
-     "background"
+     "hero"
     ],
-    "note": "background · ↓ 2084",
-    "score": 0.9744,
-    "why": "",
-    "id": "21st:kokonutd/beams-background"
+    "note": "hero · ↓ 5974",
+    "score": 0.4841,
+    "why": "Animované vlnité čiary za titulkom, videné tisíckrát",
+    "id": "21st:kokonutd/background-paths"
    }
   ],
   "retro": [
    {
     "source": "webdesignmuseum",
-    "key": "bbedit-html-and-text-editor-1992",
-    "title": "BBEdit HTML and text editor",
-    "url": "https://www.webdesignmuseum.org/web-design-history/bbedit-html-and-text-editor-1992",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/bbedit-4-0-4-preview.png",
+    "key": "wikipedia-2001",
+    "title": "Wikipedia",
+    "url": "https://www.webdesignmuseum.org/web-design-history/wikipedia-2001",
+    "image": "https://www.webdesignmuseum.org/uploaded/timeline/wikipedia/wikipedia-2001-preview.png",
     "section": "retro",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 557,
+    "position": 29,
     "tags": [],
-    "note": "1992 · história webu",
-    "score": 0.9492,
-    "why": "",
-    "id": "webdesignmuseum:bbedit-html-and-text-editor-1992"
+    "note": "2001 · história webu",
+    "score": 0.762,
+    "why": "Prvá Wikipedia: modré odkazy, 8 000 článkov a čistý text",
+    "id": "webdesignmuseum:wikipedia-2001"
    },
    {
     "source": "webdesignmuseum",
-    "key": "netflix-2002",
-    "title": "Netflix",
-    "url": "https://www.webdesignmuseum.org/gallery/netflix-2002",
-    "image": "https://www.webdesignmuseum.org/uploaded/timeline/netflix/netflix-2002-preview.png",
+    "key": "the-first-web-banner-1994",
+    "title": "The first web banner",
+    "url": "https://www.webdesignmuseum.org/web-design-history/the-first-web-banner-1994",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/the-first-banner-preview.png",
     "section": "retro",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 573,
+    "position": 310,
     "tags": [],
-    "note": "2002",
-    "score": 0.9435,
-    "why": "",
-    "id": "webdesignmuseum:netflix-2002"
+    "note": "1994 · história webu",
+    "score": 0.6275,
+    "why": "Banner AT&T na HotWired z roku 1994, zrod online reklamy",
+    "id": "webdesignmuseum:the-first-web-banner-1994"
    },
    {
     "source": "webdesignmuseum",
-    "key": "jeffrey-zeldman-published-designing-with-web-standards-2003",
-    "title": "Jeffrey Zeldman published Designing with Web Standards",
-    "url": "https://www.webdesignmuseum.org/web-design-history/jeffrey-zeldman-published-designing-with-web-standards-2003",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/jeffrey-zeldman-designing-with-web-standards-preview.png",
+    "key": "facebook-like-button-2009",
+    "title": "Facebook “like” button",
+    "url": "https://www.webdesignmuseum.org/web-design-history/facebook-like-button-2009",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/facebook-like-button-2009-preview.png",
     "section": "retro",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 580,
+    "position": 104,
     "tags": [],
-    "note": "2003 · história webu",
-    "score": 0.9379,
-    "why": "",
-    "id": "webdesignmuseum:jeffrey-zeldman-published-designing-with-web-standards-2003"
+    "note": "2009 · história webu",
+    "score": 0.6063,
+    "why": "Palec hore, ktorý zmenil dizajn interakcií aj sociálne siete",
+    "id": "webdesignmuseum:facebook-like-button-2009"
    }
   ]
  },
@@ -482,87 +486,87 @@
   "onepagelove": {
    "ok": true,
    "count": 10,
-   "secs": 0.4
+   "secs": 0.8
   },
   "cssda": {
    "ok": true,
    "count": 12,
-   "secs": 0.6
+   "secs": 0.8
   },
   "webflow": {
    "ok": true,
    "count": 18,
-   "secs": 0.8
+   "secs": 0.9
   },
   "brutalist": {
    "ok": true,
    "count": 1583,
    "secs": 1.0
   },
+  "awwwards": {
+   "ok": true,
+   "count": 31,
+   "secs": 1.1
+  },
   "bestwebsite": {
    "ok": true,
    "count": 10,
-   "secs": 1.0
-  },
-  "darkdesign": {
-   "ok": true,
-   "count": 246,
    "secs": 1.1
   },
   "godly": {
    "ok": true,
    "count": 20,
-   "secs": 1.5
+   "secs": 1.6
+  },
+  "darkdesign": {
+   "ok": true,
+   "count": 246,
+   "secs": 1.8
   },
   "21st": {
    "ok": true,
    "count": 430,
-   "secs": 1.9
+   "secs": 2.6
   },
   "minimalgallery": {
    "ok": true,
    "count": 10,
-   "secs": 2.2
-  },
-  "codrops": {
-   "ok": true,
-   "count": 96,
-   "secs": 6.5
+   "secs": 2.8
   },
   "landbook": {
    "ok": true,
    "count": 20,
-   "secs": 7.1
+   "secs": 7.2
+  },
+  "codrops": {
+   "ok": true,
+   "count": 96,
+   "secs": 8.1
+  },
+  "cosmos": {
+   "ok": false,
+   "error": "RuntimeError: nothing extracted from https://cosmos.so/discover"
   },
   "gsap": {
    "ok": true,
    "count": 36,
-   "secs": 9.0
-  },
-  "cosmos": {
-   "ok": true,
-   "count": 5,
-   "secs": 9.0
+   "secs": 9.9
   },
   "dribbble": {
    "ok": true,
-   "count": 49,
-   "secs": 10.8
+   "count": 47,
+   "secs": 11.9
   },
   "webdesignmuseum": {
    "ok": true,
    "count": 178,
-   "secs": 14.2
-  },
-  "awwwards": {
-   "ok": false,
-   "error": "ConnectTimeout: "
+   "secs": 16.1
   }
  },
  "curator": {
   "ok": true,
   "model": "opus",
   "rated": 78,
-  "secs": 63
+  "secs": 59
  }
 }
