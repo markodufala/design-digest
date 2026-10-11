@@ -82,40 +82,60 @@
    },
    {
     "source": "brutalist",
-    "key": "en-2018.tight.media",
-    "title": "en-2018.tight.media",
-    "url": "http://en-2018.tight.media",
-    "image": "https://brutalistwebsites.com/_img/2018.tight.media.jpg",
+    "key": "pio-magazin.de",
+    "title": "pio-magazin.de",
+    "url": "http://pio-magazin.de",
+    "image": "https://brutalistwebsites.com/_img/pio-magazin.de.jpg",
     "section": "wow",
     "author": "",
-    "link": "http://en-2018.tight.media",
+    "link": "http://pio-magazin.de",
     "popularity": null,
-    "position": 10,
+    "position": 0,
     "tags": [],
     "note": "brutalist",
     "score": 1.0,
     "why": "",
-    "id": "brutalist:en-2018.tight.media"
+    "id": "brutalist:pio-magazin.de"
    },
    {
     "source": "brutalist",
-    "key": "escolalateral.com",
-    "title": "escolalateral.com",
-    "url": "http://escolalateral.com",
-    "image": "https://brutalistwebsites.com/_img/escolalateral.com.jpg",
+    "key": "ailsaogden.co.uk",
+    "title": "ailsaogden.co.uk",
+    "url": "http://ailsaogden.co.uk",
+    "image": "https://brutalistwebsites.com/_img/ailsaogden.co.uk.jpg",
     "section": "wow",
     "author": "",
-    "link": "http://escolalateral.com",
+    "link": "http://ailsaogden.co.uk",
     "popularity": null,
-    "position": 15,
+    "position": 2,
     "tags": [],
     "note": "brutalist",
     "score": 0.9994,
     "why": "",
-    "id": "brutalist:escolalateral.com"
+    "id": "brutalist:ailsaogden.co.uk"
    }
   ],
   "web": [
+   {
+    "source": "awwwards",
+    "key": "nick-ho",
+    "title": "Nick Ho",
+    "url": "https://www.awwwards.com/sites/nick-ho",
+    "image": "https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2026/08/6a85b37721f48885790043.jpg",
+    "section": "web",
+    "author": "BORING",
+    "link": "https://nickho-motorsports.nl/",
+    "popularity": null,
+    "position": 0,
+    "tags": [
+     "DEV",
+     "SOTD"
+    ],
+    "note": "DEV · SOTD",
+    "score": 1.15,
+    "why": "",
+    "id": "awwwards:nick-ho"
+   },
    {
     "source": "cssda",
     "key": "50211",
@@ -183,23 +203,6 @@
     "score": 1.0,
     "why": "",
     "id": "webflow:truus"
-   },
-   {
-    "source": "cssda",
-    "key": "50376",
-    "title": "HELLO_WORLD_DSGN",
-    "url": "https://www.cssdesignawards.com/sites/hello_world_dsgn/50376/",
-    "image": "https://www.cssdesignawards.com/cdasites/2026/202610/20261010120648.jpg",
-    "section": "web",
-    "author": "",
-    "link": "https://helloworlddsgn.com/",
-    "popularity": null,
-    "position": 1,
-    "tags": [],
-    "note": "Nominee",
-    "score": 0.9545,
-    "why": "",
-    "id": "cssda:50376"
    },
    {
     "source": "minimalgallery",
@@ -274,7 +277,7 @@
     "popularity": 279.0,
     "position": 19,
     "tags": [],
-    "note": "♥ 279 · 👁 21.2k",
+    "note": "♥ 279 · 👁 21.3k",
     "score": 1.1,
     "why": "",
     "id": "dribbble:27797984"
@@ -291,10 +294,27 @@
     "popularity": 265.0,
     "position": 24,
     "tags": [],
-    "note": "♥ 265 · 👁 14.1k",
+    "note": "♥ 265 · 👁 14.2k",
     "score": 1.0771,
     "why": "",
     "id": "dribbble:27798006"
+   },
+   {
+    "source": "dribbble",
+    "key": "27779182",
+    "title": "Financial Website - Wealth Management Portal",
+    "url": "https://dribbble.com/shots/27779182-Financial-Website-Wealth-Management-Portal",
+    "image": "https://cdn.dribbble.com/userupload/49201728/file/still-ccb0918edf82c330d2672978e031bba0.png?format=webp&resize=800x600&vertical=center",
+    "section": "visual",
+    "author": "Ronas IT | UI/UX Team",
+    "link": "",
+    "popularity": 242.0,
+    "position": 36,
+    "tags": [],
+    "note": "♥ 242 · 👁 32.1k",
+    "score": 1.0542,
+    "why": "",
+    "id": "dribbble:27779182"
    },
    {
     "source": "godly",
@@ -314,23 +334,6 @@
     "id": "godly:1g2fr97"
    },
    {
-    "source": "cosmos",
-    "key": "ideas/black-cat-symbolism",
-    "title": "Black cat symbolism",
-    "url": "https://www.cosmos.so/ideas/black-cat-symbolism",
-    "image": "https://cdn.cosmos.so/cb84c4cd-e465-4764-a4e9-9c616fc0a0f1?rect=53%2C0%2C386%2C386&format=webp&w=800",
-    "section": "visual",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 0,
-    "tags": [],
-    "note": "ideas",
-    "score": 1.0,
-    "why": "",
-    "id": "cosmos:ideas/black-cat-symbolism"
-   },
-   {
     "source": "godly",
     "key": "ycasm0a",
     "title": "Radial Brushstroke",
@@ -348,21 +351,21 @@
     "id": "godly:ycasm0a"
    },
    {
-    "source": "cosmos",
-    "key": "design/comfort-movie-posters",
-    "title": "Comfort movie posters",
-    "url": "https://www.cosmos.so/design/comfort-movie-posters",
-    "image": "https://cdn.cosmos.so/855d3311-91aa-4de8-b079-7971336256e7?rect=0%2C0%2C1414%2C1414&format=webp&w=800",
+    "source": "godly",
+    "key": "szwdt4f",
+    "title": "Savee Showcase",
+    "url": "https://godly.website/i/szwdt4f-savee-zoom-showcase",
+    "image": "https://cdn.recent.design/items/szwdt4f/0/poster/675.webp",
     "section": "visual",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 1,
+    "position": 2,
     "tags": [],
-    "note": "design",
-    "score": 0.75,
+    "note": "",
+    "score": 0.9395,
     "why": "",
-    "id": "cosmos:design/comfort-movie-posters"
+    "id": "godly:szwdt4f"
    }
   ],
   "ui": [
@@ -427,54 +430,54 @@
   "retro": [
    {
     "source": "webdesignmuseum",
-    "key": "sketch-1-0-2010",
-    "title": "Sketch 1.0",
-    "url": "https://www.webdesignmuseum.org/web-design-history/sketch-1-0-2010",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/bohemian-coding-sketch-1-0-2010-preview.png",
+    "key": "netflix-2002",
+    "title": "Netflix",
+    "url": "https://www.webdesignmuseum.org/gallery/netflix-2002",
+    "image": "https://www.webdesignmuseum.org/uploaded/timeline/netflix/netflix-2002-preview.png",
     "section": "retro",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 18,
+    "position": 126,
     "tags": [],
-    "note": "2010 · história webu",
+    "note": "2002",
     "score": 1.0,
     "why": "",
-    "id": "webdesignmuseum:sketch-1-0-2010"
+    "id": "webdesignmuseum:netflix-2002"
    },
    {
     "source": "webdesignmuseum",
-    "key": "twitter-2006",
-    "title": "Twitter",
-    "url": "https://www.webdesignmuseum.org/web-design-history/twitter-2006",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/twitter-2006-preview.png",
+    "key": "mosaic-netscape-0-9-1994",
+    "title": "Mosaic Netscape 0.9",
+    "url": "https://www.webdesignmuseum.org/web-design-history/mosaic-netscape-0-9-1994",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/mosaic-netscape-0-9-preview.png",
     "section": "retro",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 54,
+    "position": 180,
     "tags": [],
-    "note": "2006 · história webu",
+    "note": "1994 · história webu",
     "score": 0.9944,
     "why": "",
-    "id": "webdesignmuseum:twitter-2006"
+    "id": "webdesignmuseum:mosaic-netscape-0-9-1994"
    },
    {
     "source": "webdesignmuseum",
-    "key": "veronica-search-engine-1992",
-    "title": "Veronica search engine",
-    "url": "https://www.webdesignmuseum.org/web-design-history/veronica-search-engine-1992",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/veronica-search-engine-preview.png",
+    "key": "adobe-pagemill-1-0-1995",
+    "title": "Adobe PageMill 1.0",
+    "url": "https://www.webdesignmuseum.org/web-design-history/adobe-pagemill-1-0-1995",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/adobe-pagemill-preview.png",
     "section": "retro",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 111,
+    "position": 380,
     "tags": [],
-    "note": "1992 · história webu",
+    "note": "1995 · história webu",
     "score": 0.9887,
     "why": "",
-    "id": "webdesignmuseum:veronica-search-engine-1992"
+    "id": "webdesignmuseum:adobe-pagemill-1-0-1995"
    }
   ]
  },
@@ -482,85 +485,85 @@
   "onepagelove": {
    "ok": true,
    "count": 10,
-   "secs": 0.6
+   "secs": 0.3
+  },
+  "cssda": {
+   "ok": true,
+   "count": 12,
+   "secs": 0.5
   },
   "webflow": {
    "ok": true,
    "count": 18,
    "secs": 0.6
   },
-  "cssda": {
-   "ok": true,
-   "count": 12,
-   "secs": 0.8
-  },
   "brutalist": {
    "ok": true,
    "count": 1583,
-   "secs": 0.9
+   "secs": 1.0
   },
   "bestwebsite": {
    "ok": true,
    "count": 10,
    "secs": 1.1
   },
+  "darkdesign": {
+   "ok": true,
+   "count": 246,
+   "secs": 1.1
+  },
   "godly": {
    "ok": true,
    "count": 20,
-   "secs": 1.6
+   "secs": 1.4
   },
   "21st": {
    "ok": true,
    "count": 430,
-   "secs": 1.7
-  },
-  "darkdesign": {
-   "ok": true,
-   "count": 246,
-   "secs": 2.0
+   "secs": 2.8
   },
   "minimalgallery": {
    "ok": true,
    "count": 10,
-   "secs": 2.2
+   "secs": 3.0
   },
-  "codrops": {
+  "awwwards": {
    "ok": true,
-   "count": 96,
-   "secs": 8.1
+   "count": 31,
+   "secs": 3.1
   },
   "landbook": {
    "ok": true,
    "count": 20,
-   "secs": 8.3
+   "secs": 7.0
+  },
+  "codrops": {
+   "ok": true,
+   "count": 96,
+   "secs": 7.8
   },
   "gsap": {
    "ok": true,
    "count": 36,
-   "secs": 9.7
+   "secs": 9.2
   },
   "cosmos": {
-   "ok": true,
-   "count": 5,
-   "secs": 9.7
+   "ok": false,
+   "error": "RuntimeError: nothing extracted from https://cosmos.so/discover"
   },
   "dribbble": {
    "ok": true,
    "count": 49,
-   "secs": 12.9
+   "secs": 11.5
   },
   "webdesignmuseum": {
    "ok": true,
    "count": 178,
-   "secs": 15.9
-  },
-  "awwwards": {
-   "ok": false,
-   "error": "ConnectTimeout: "
+   "secs": 15.0
   }
  },
  "curator": {
   "ok": false,
-  "error": "RuntimeError: claude exited 1: {\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":true,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":401,\"result\":\"Failed to authenticate. API Error: 401 OAuth access token is "
+  "error": "RuntimeError: claude exited 1: Failed to authenticate. API Error: 401 Invalid bearer token"
  }
 }
