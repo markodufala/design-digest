@@ -82,60 +82,40 @@
    },
    {
     "source": "brutalist",
-    "key": "wolftonechambers.com",
-    "title": "wolftonechambers.com",
-    "url": "http://wolftonechambers.com",
-    "image": "https://brutalistwebsites.com/_img/wolftonechambers.com.jpg",
+    "key": "en-2018.tight.media",
+    "title": "en-2018.tight.media",
+    "url": "http://en-2018.tight.media",
+    "image": "https://brutalistwebsites.com/_img/2018.tight.media.jpg",
     "section": "wow",
     "author": "",
-    "link": "http://wolftonechambers.com",
+    "link": "http://en-2018.tight.media",
     "popularity": null,
-    "position": 5,
+    "position": 10,
     "tags": [],
     "note": "brutalist",
     "score": 1.0,
     "why": "",
-    "id": "brutalist:wolftonechambers.com"
+    "id": "brutalist:en-2018.tight.media"
    },
    {
     "source": "brutalist",
-    "key": "villabohnke.com",
-    "title": "villabohnke.com",
-    "url": "http://villabohnke.com",
-    "image": "https://brutalistwebsites.com/_img/villabohnke.com.jpg",
+    "key": "escolalateral.com",
+    "title": "escolalateral.com",
+    "url": "http://escolalateral.com",
+    "image": "https://brutalistwebsites.com/_img/escolalateral.com.jpg",
     "section": "wow",
     "author": "",
-    "link": "http://villabohnke.com",
+    "link": "http://escolalateral.com",
     "popularity": null,
-    "position": 6,
+    "position": 15,
     "tags": [],
     "note": "brutalist",
     "score": 0.9994,
     "why": "",
-    "id": "brutalist:villabohnke.com"
+    "id": "brutalist:escolalateral.com"
    }
   ],
   "web": [
-   {
-    "source": "awwwards",
-    "key": "nick-ho",
-    "title": "Nick Ho",
-    "url": "https://www.awwwards.com/sites/nick-ho",
-    "image": "https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2026/08/6a85b37721f48885790043.jpg",
-    "section": "web",
-    "author": "BORING",
-    "link": "https://nickho-motorsports.nl/",
-    "popularity": null,
-    "position": 0,
-    "tags": [
-     "DEV",
-     "SOTD"
-    ],
-    "note": "DEV · SOTD",
-    "score": 1.15,
-    "why": "",
-    "id": "awwwards:nick-ho"
-   },
    {
     "source": "cssda",
     "key": "50211",
@@ -203,6 +183,23 @@
     "score": 1.0,
     "why": "",
     "id": "webflow:truus"
+   },
+   {
+    "source": "cssda",
+    "key": "50376",
+    "title": "HELLO_WORLD_DSGN",
+    "url": "https://www.cssdesignawards.com/sites/hello_world_dsgn/50376/",
+    "image": "https://www.cssdesignawards.com/cdasites/2026/202610/20261010120648.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://helloworlddsgn.com/",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "Nominee",
+    "score": 0.9545,
+    "why": "",
+    "id": "cssda:50376"
    },
    {
     "source": "minimalgallery",
@@ -430,141 +427,140 @@
   "retro": [
    {
     "source": "webdesignmuseum",
-    "key": "dmoz-org-1998",
-    "title": "DMOZ.org",
-    "url": "https://www.webdesignmuseum.org/web-design-history/dmoz-org-1998",
-    "image": "https://www.webdesignmuseum.org/uploaded/preview/dmoz-org-1999-preview.png",
+    "key": "sketch-1-0-2010",
+    "title": "Sketch 1.0",
+    "url": "https://www.webdesignmuseum.org/web-design-history/sketch-1-0-2010",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/bohemian-coding-sketch-1-0-2010-preview.png",
     "section": "retro",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 28,
+    "position": 18,
     "tags": [],
-    "note": "1998 · história webu",
+    "note": "2010 · história webu",
     "score": 1.0,
     "why": "",
-    "id": "webdesignmuseum:dmoz-org-1998"
+    "id": "webdesignmuseum:sketch-1-0-2010"
    },
    {
     "source": "webdesignmuseum",
-    "key": "google-maps-2005",
-    "title": "Google Maps",
-    "url": "https://www.webdesignmuseum.org/web-design-history/google-maps-2005",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/google-maps-2005-preview.png",
+    "key": "twitter-2006",
+    "title": "Twitter",
+    "url": "https://www.webdesignmuseum.org/web-design-history/twitter-2006",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/twitter-2006-preview.png",
     "section": "retro",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 45,
+    "position": 54,
     "tags": [],
-    "note": "2005 · história webu",
+    "note": "2006 · história webu",
     "score": 0.9944,
     "why": "",
-    "id": "webdesignmuseum:google-maps-2005"
+    "id": "webdesignmuseum:twitter-2006"
    },
    {
     "source": "webdesignmuseum",
-    "key": "box-model-hack-2002",
-    "title": "Box Model Hack",
-    "url": "https://www.webdesignmuseum.org/web-design-history/box-model-hack-2002",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/box-model-hack-2002-preview.png",
+    "key": "veronica-search-engine-1992",
+    "title": "Veronica search engine",
+    "url": "https://www.webdesignmuseum.org/web-design-history/veronica-search-engine-1992",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/veronica-search-engine-preview.png",
     "section": "retro",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 140,
+    "position": 111,
     "tags": [],
-    "note": "2002 · história webu",
+    "note": "1992 · história webu",
     "score": 0.9887,
     "why": "",
-    "id": "webdesignmuseum:box-model-hack-2002"
+    "id": "webdesignmuseum:veronica-search-engine-1992"
    }
   ]
  },
  "health": {
-  "bestwebsite": {
-   "ok": true,
-   "count": 10,
-   "secs": 0.2
-  },
   "onepagelove": {
    "ok": true,
    "count": 10,
-   "secs": 0.3
-  },
-  "brutalist": {
-   "ok": true,
-   "count": 1583,
-   "secs": 0.3
-  },
-  "webdesignmuseum": {
-   "ok": true,
-   "count": 178,
-   "secs": 0.4
-  },
-  "awwwards": {
-   "ok": true,
-   "count": 31,
    "secs": 0.6
-  },
-  "codrops": {
-   "ok": true,
-   "count": 96,
-   "secs": 0.6
-  },
-  "landbook": {
-   "ok": true,
-   "count": 20,
-   "secs": 0.7
-  },
-  "godly": {
-   "ok": true,
-   "count": 20,
-   "secs": 0.7
-  },
-  "cssda": {
-   "ok": true,
-   "count": 12,
-   "secs": 1.0
-  },
-  "darkdesign": {
-   "ok": true,
-   "count": 246,
-   "secs": 1.2
-  },
-  "minimalgallery": {
-   "ok": true,
-   "count": 10,
-   "secs": 1.2
   },
   "webflow": {
    "ok": true,
    "count": 18,
-   "secs": 1.7
+   "secs": 0.6
+  },
+  "cssda": {
+   "ok": true,
+   "count": 12,
+   "secs": 0.8
+  },
+  "brutalist": {
+   "ok": true,
+   "count": 1583,
+   "secs": 0.9
+  },
+  "bestwebsite": {
+   "ok": true,
+   "count": 10,
+   "secs": 1.1
+  },
+  "godly": {
+   "ok": true,
+   "count": 20,
+   "secs": 1.6
   },
   "21st": {
    "ok": true,
    "count": 430,
-   "secs": 4.5
+   "secs": 1.7
   },
-  "cosmos": {
+  "darkdesign": {
    "ok": true,
-   "count": 5,
-   "secs": 8.0
+   "count": 246,
+   "secs": 2.0
+  },
+  "minimalgallery": {
+   "ok": true,
+   "count": 10,
+   "secs": 2.2
+  },
+  "codrops": {
+   "ok": true,
+   "count": 96,
+   "secs": 8.1
+  },
+  "landbook": {
+   "ok": true,
+   "count": 20,
+   "secs": 8.3
   },
   "gsap": {
    "ok": true,
    "count": 36,
-   "secs": 8.8
+   "secs": 9.7
+  },
+  "cosmos": {
+   "ok": true,
+   "count": 5,
+   "secs": 9.7
   },
   "dribbble": {
    "ok": true,
    "count": 49,
-   "secs": 10.6
+   "secs": 12.9
+  },
+  "webdesignmuseum": {
+   "ok": true,
+   "count": 178,
+   "secs": 15.9
+  },
+  "awwwards": {
+   "ok": false,
+   "error": "ConnectTimeout: "
   }
  },
  "curator": {
   "ok": false,
-  "error": "disabled"
+  "error": "RuntimeError: claude exited 1: {\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":true,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":401,\"result\":\"Failed to authenticate. API Error: 401 OAuth access token is "
  }
 }
