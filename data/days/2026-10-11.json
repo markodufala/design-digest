@@ -4,47 +4,97 @@
   "wow": [
    {
     "source": "codrops",
-    "key": "post-118411",
-    "title": "Interactive Glass Xylophone with Three.js",
-    "url": "https://tympanus.net/codrops/?p=118008",
-    "image": "https://tympanus.net/codrops/wp-content/uploads/2026/08/xylophone_cover-400x300.png.webp",
+    "key": "post-122709",
+    "title": "Wide: Grid Layout With a WebGL Shader",
+    "url": "https://tympanus.net/codrops/?p=122699",
+    "image": "https://tympanus.net/codrops/wp-content/uploads/2026/09/wide-400x300.png.webp",
     "section": "wow",
-    "author": "Sujen Phea",
-    "link": "https://tympanus.net/Tutorials/Xylophone/",
+    "author": "BL/S®",
+    "link": "https://c-84373805020260930-01a0d773-dab5-744d-bc5e-3f11d4f2262e.codepen.dev/",
     "popularity": null,
-    "position": 0,
+    "position": 6,
     "tags": [
-     "3D",
-     "audio",
-     "scroll",
-     "Three.js"
+     "glsl",
+     "grid",
+     "template",
+     "WebGL"
     ],
-    "note": "3D · audio",
-    "score": 1.15,
+    "note": "glsl · grid",
+    "score": 1.0774,
     "why": "",
-    "id": "codrops:post-118411"
+    "id": "codrops:post-122709"
    },
    {
     "source": "codrops",
-    "key": "post-122066",
-    "title": "Custom-Shaped Cursor Trail with Three.js and TSL",
-    "url": "https://tympanus.net/codrops/?p=121682",
-    "image": "https://tympanus.net/codrops/wp-content/uploads/2026/09/featured-1200x900-2-400x300.jpg.webp",
+    "key": "post-116681",
+    "title": "3D Image Rotations on Scroll",
+    "url": "https://tympanus.net/Development/RotatingOnScrollAnimations/",
+    "image": "https://tympanus.net/codrops/wp-content/uploads/2026/06/RotatingOnScrolAnimation_featured-400x300.png.webp",
     "section": "wow",
-    "author": "Bautista Berto",
-    "link": "https://tympanus.net/Demos/CustomShapedCursorTrail/",
+    "author": "Manoela Ilic",
+    "link": "https://tympanus.net/Development/RotatingOnScrollAnimations/",
     "popularity": null,
-    "position": 1,
+    "position": 7,
     "tags": [
-     "cursor",
-     "React Three Fiber",
-     "Three.js",
-     "TSL"
+     "3D",
+     "GSAP",
+     "scroll"
     ],
-    "note": "cursor · React Three Fiber",
-    "score": 1.1379,
+    "note": "3D · GSAP",
+    "score": 1.0653,
     "why": "",
-    "id": "codrops:post-122066"
+    "id": "codrops:post-116681"
+   },
+   {
+    "source": "brutalist",
+    "key": "chrpsh.faith",
+    "title": "chrpsh.faith",
+    "url": "http://chrpsh.faith",
+    "image": "https://brutalistwebsites.com/_img/chrpsh.faith.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://chrpsh.faith",
+    "popularity": null,
+    "position": 31,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.9962,
+    "why": "",
+    "id": "brutalist:chrpsh.faith"
+   },
+   {
+    "source": "brutalist",
+    "key": "edicionesdaga.com",
+    "title": "edicionesdaga.com",
+    "url": "http://edicionesdaga.com",
+    "image": "https://brutalistwebsites.com/_img/edicionesdaga.com.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://edicionesdaga.com",
+    "popularity": null,
+    "position": 33,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.9956,
+    "why": "",
+    "id": "brutalist:edicionesdaga.com"
+   },
+   {
+    "source": "gsap",
+    "key": "https://guillaumecolombel.fr/",
+    "title": "Guillaume Colombel — Portfolio 2026",
+    "url": "https://guillaumecolombel.fr/",
+    "image": "https://gsap.com/community/uploads/monthly_2026_10/Frame7.webp.d17a562b966787de546585e95e272cbd.webp",
+    "section": "wow",
+    "author": "",
+    "link": "https://guillaumecolombel.fr/",
+    "popularity": null,
+    "position": 6,
+    "tags": [],
+    "note": "motion",
+    "score": 0.9114,
+    "why": "",
+    "id": "gsap:https://guillaumecolombel.fr/"
    },
    {
     "source": "gsap",
@@ -59,82 +109,45 @@
     "position": 0,
     "tags": [],
     "note": "motion",
-    "score": 1.1,
-    "why": "",
+    "score": 0.89,
+    "why": "Obrovské čierne písmená položené na betónovú architektúru, edičná mriežka",
     "id": "gsap:https://crl-2026.webflow.io/"
-   },
-   {
-    "source": "gsap",
-    "key": "https://hidokmeh.com/",
-    "title": "Dokmeh Agency",
-    "url": "https://hidokmeh.com/",
-    "image": "https://gsap.com/community/uploads/monthly_2026_10/GSAP.jpg.927bae404a5072cb685f5b6b01c0c60b.jpg",
-    "section": "wow",
-    "author": "",
-    "link": "https://hidokmeh.com/",
-    "popularity": null,
-    "position": 1,
-    "tags": [],
-    "note": "motion",
-    "score": 1.0686,
-    "why": "",
-    "id": "gsap:https://hidokmeh.com/"
-   },
-   {
-    "source": "brutalist",
-    "key": "pio-magazin.de",
-    "title": "pio-magazin.de",
-    "url": "http://pio-magazin.de",
-    "image": "https://brutalistwebsites.com/_img/pio-magazin.de.jpg",
-    "section": "wow",
-    "author": "",
-    "link": "http://pio-magazin.de",
-    "popularity": null,
-    "position": 0,
-    "tags": [],
-    "note": "brutalist",
-    "score": 1.0,
-    "why": "",
-    "id": "brutalist:pio-magazin.de"
-   },
-   {
-    "source": "brutalist",
-    "key": "ailsaogden.co.uk",
-    "title": "ailsaogden.co.uk",
-    "url": "http://ailsaogden.co.uk",
-    "image": "https://brutalistwebsites.com/_img/ailsaogden.co.uk.jpg",
-    "section": "wow",
-    "author": "",
-    "link": "http://ailsaogden.co.uk",
-    "popularity": null,
-    "position": 2,
-    "tags": [],
-    "note": "brutalist",
-    "score": 0.9994,
-    "why": "",
-    "id": "brutalist:ailsaogden.co.uk"
    }
   ],
   "web": [
    {
-    "source": "awwwards",
-    "key": "nick-ho",
-    "title": "Nick Ho",
-    "url": "https://www.awwwards.com/sites/nick-ho",
-    "image": "https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2026/08/6a85b37721f48885790043.jpg",
+    "source": "darkdesign",
+    "key": "pryzm-1786785316458",
+    "title": "Pryzm",
+    "url": "https://dark.design/site/pryzm-1786785316458",
+    "image": "https://sidhvpjhuucqcehkevrl.supabase.co/storage/v1/render/image/public/screenshots/auto-1786785300169.webp?width=1080&quality=60&height=675&resize=cover",
     "section": "web",
-    "author": "BORING",
-    "link": "https://nickho-motorsports.nl/",
+    "author": "",
+    "link": "",
     "popularity": null,
-    "position": 0,
-    "tags": [
-     "DEV",
-     "SOTD"
-    ],
-    "note": "DEV · SOTD",
-    "score": 1.15,
+    "position": 3,
+    "tags": [],
+    "note": "dark UI",
+    "score": 0.889,
     "why": "",
-    "id": "awwwards:nick-ho"
+    "id": "darkdesign:pryzm-1786785316458"
+   },
+   {
+    "source": "darkdesign",
+    "key": "108-1782376633087",
+    "title": "108™",
+    "url": "https://dark.design/site/108-1782376633087",
+    "image": "https://sidhvpjhuucqcehkevrl.supabase.co/storage/v1/render/image/public/screenshots/auto-1782376621001.webp?width=1080&quality=60&height=675&resize=cover",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 4,
+    "tags": [],
+    "note": "dark UI",
+    "score": 0.8853,
+    "why": "",
+    "id": "darkdesign:108-1782376633087"
    },
    {
     "source": "cssda",
@@ -149,9 +162,65 @@
     "position": 0,
     "tags": [],
     "note": "Nominee",
-    "score": 1.05,
-    "why": "",
+    "score": 0.875,
+    "why": "Kryštalická vločka praská na dúhové črepiny so zrnami písmen",
     "id": "cssda:50211"
+   },
+   {
+    "source": "webflow",
+    "key": "streamtime-ad25b3",
+    "title": "Streamtime",
+    "url": "https://webflow.com/made-in-webflow/website/streamtime-ad25b3",
+    "image": "https://screenshots.webflow.com/sites/6807989b8d233f8b34bccb3e/20250622162022_dcbc3a41b941ef7c6e146c8f9d70b4e1.png",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 3,
+    "tags": [],
+    "note": "",
+    "score": 0.8235,
+    "why": "",
+    "id": "webflow:streamtime-ad25b3"
+   },
+   {
+    "source": "onepagelove",
+    "key": "https://onepagelove.com/?p=88951",
+    "title": "Sam Peitz",
+    "url": "https://onepagelove.com/sam-peitz",
+    "image": "https://assets.onepagelove.com/cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=top,format=jpg,quality=85/wp-content/uploads/2026/10/opl-screenshot-sam-peitz-1791380291254-desktop.jpg",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 1,
+    "tags": [
+     "Inspiration",
+     "Day and Night",
+     "Designer",
+     "Draggable"
+    ],
+    "note": "",
+    "score": 0.8133,
+    "why": "Svetlo cez žalúzie ako pozadie, strojopisný text medzi lamelami, deň/noc",
+    "id": "onepagelove:https://onepagelove.com/?p=88951"
+   },
+   {
+    "source": "landbook",
+    "key": "100869",
+    "title": "Terms.so: Never touch DocuSign again.",
+    "url": "https://land-book.com/websites/100869-terms-so-never-touch-docusign-again",
+    "image": "https://cdn.land-book.com/image/0x0:3840x5760/600x0/website/100869/9c0285d0c219c207-screenshot.webp?signature=29de9546c1d12254045bd356ddd3c6291db02f3daf26101c9a30f732e6909cbc",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 4,
+    "tags": [],
+    "note": "",
+    "score": 0.7895,
+    "why": "",
+    "id": "landbook:100869"
    },
    {
     "source": "bestwebsite",
@@ -166,155 +235,66 @@
     "position": 0,
     "tags": [],
     "note": "",
-    "score": 1.05,
-    "why": "",
+    "score": 0.735,
+    "why": "Krabičky produktu v rade, výber farby swipom do strán, balenie do výšky",
     "id": "bestwebsite:sites/sotd/2026/10/07/hold"
    },
    {
-    "source": "landbook",
-    "key": "100901",
-    "title": "AI Agents for Enterprise Customer Service | Parloa",
-    "url": "https://land-book.com/websites/100901-ai-agents-for-enterprise-customer-service-parloa",
-    "image": "https://cdn.land-book.com/image/0x0:3840x5760/600x0/website/100901/ff486e31f2256f04-screenshot.webp?signature=b2efd095a1c22c6dcaf949ac4b143230451226fba20fe0e59d3414c9757b943c",
-    "section": "web",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 0,
-    "tags": [],
-    "note": "",
-    "score": 1.0,
-    "why": "",
-    "id": "landbook:100901"
-   },
-   {
-    "source": "webflow",
-    "key": "truus",
-    "title": "Truus",
-    "url": "https://webflow.com/made-in-webflow/website/truus",
-    "image": "https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/6878a835373ad05b60abdb02_truus-webflow-thumb.jpg",
-    "section": "web",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 0,
-    "tags": [],
-    "note": "",
-    "score": 1.0,
-    "why": "",
-    "id": "webflow:truus"
-   },
-   {
     "source": "minimalgallery",
-    "key": "https://minimal.gallery/?p=28352",
-    "title": "Odyssee",
-    "url": "https://minimal.gallery/odyssee/",
-    "image": "https://minimal.gallery/wp-content/uploads/2026/09/odysseeclinic.com_.jpg",
+    "key": "https://minimal.gallery/?p=28267",
+    "title": "GRNDWRK STUDIO",
+    "url": "https://minimal.gallery/grndwrk-studio/",
+    "image": "https://minimal.gallery/wp-content/uploads/2026/08/grndwrk.studio.jpg",
     "section": "web",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 0,
+    "position": 2,
     "tags": [
      "Uncategorized",
-     "Healthcare"
+     "Agency",
+     "Production Studio"
     ],
     "note": "",
-    "score": 0.95,
-    "why": "",
-    "id": "minimalgallery:https://minimal.gallery/?p=28352"
-   },
-   {
-    "source": "onepagelove",
-    "key": "https://onepagelove.com/?p=88959",
-    "title": "New Material",
-    "url": "https://onepagelove.com/new-material",
-    "image": "https://assets.onepagelove.com/cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=top,format=jpg,quality=85/wp-content/uploads/2026/10/opl-screenshot-new-material-1791385723642-desktop.jpg",
-    "section": "web",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 0,
-    "tags": [
-     "Inspiration",
-     "Agentic AI",
-     "Artificial Intelligence (AI)",
-     "Consulting"
-    ],
-    "note": "",
-    "score": 0.95,
-    "why": "",
-    "id": "onepagelove:https://onepagelove.com/?p=88959"
-   },
-   {
-    "source": "darkdesign",
-    "key": "basement-1786786858853",
-    "title": "Basement",
-    "url": "https://dark.design/site/basement-1786786858853",
-    "image": "https://sidhvpjhuucqcehkevrl.supabase.co/storage/v1/render/image/public/screenshots/auto-1786786805983.webp?width=1080&quality=60&height=675&resize=cover",
-    "section": "web",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 0,
-    "tags": [],
-    "note": "dark UI",
-    "score": 0.9,
-    "why": "",
-    "id": "darkdesign:basement-1786786858853"
+    "score": 0.6417,
+    "why": "Tučný orezaný logotyp nad filmovými zábermi vinice, produkčný tón",
+    "id": "minimalgallery:https://minimal.gallery/?p=28267"
    }
   ],
   "visual": [
    {
     "source": "dribbble",
-    "key": "27797984",
-    "title": "Clinika Healthcare Website Design",
-    "url": "https://dribbble.com/shots/27797984-Clinika-Healthcare-Website-Design",
-    "image": "https://cdn.dribbble.com/userupload/49273806/file/0bcdb37c618f38717e40d080d3d72234.png?format=webp&resize=800x600&vertical=center",
+    "key": "27270131",
+    "title": "cryonex: Biostorage & Biomanufacturing for - Brand Cards UI",
+    "url": "https://dribbble.com/shots/27270131-cryonex-Biostorage-Biomanufacturing-for-Brand-Cards-UI",
+    "image": "https://cdn.dribbble.com/userupload/47356558/file/9e8099281f7df321f0c739a17778dfe0.png?format=webp&resize=800x600&vertical=center",
     "section": "visual",
-    "author": "Awe Design Studio",
+    "author": "Samuel Oktavianus",
     "link": "",
-    "popularity": 279.0,
-    "position": 19,
+    "popularity": 174.0,
+    "position": 28,
     "tags": [],
-    "note": "♥ 279 · 👁 21.3k",
-    "score": 1.1,
+    "note": "♥ 174 · 👁 22.7k",
+    "score": 0.9396,
     "why": "",
-    "id": "dribbble:27797984"
+    "id": "dribbble:27270131"
    },
    {
     "source": "dribbble",
-    "key": "27798006",
-    "title": "Spendio App UI UX",
-    "url": "https://dribbble.com/shots/27798006-Spendio-App-UI-UX",
-    "image": "https://cdn.dribbble.com/userupload/49273880/file/ab9df855e76ff50ac6665794ed6143ce.png?crop=0x0-3840x2880&format=webp&resize=800x600&vertical=center",
+    "key": "27795844",
+    "title": "Kova - Fintech SaaS Landing Page",
+    "url": "https://dribbble.com/shots/27795844-Kova-Fintech-SaaS-Landing-Page",
+    "image": "https://cdn.dribbble.com/userupload/49265555/file/e65127da26b20ec29d979d24fcd9f050.png?format=webp&resize=800x600&vertical=center",
     "section": "visual",
-    "author": "Awe Design Studio",
+    "author": "Korsa",
     "link": "",
-    "popularity": 265.0,
-    "position": 24,
+    "popularity": 172.0,
+    "position": 40,
     "tags": [],
-    "note": "♥ 265 · 👁 14.2k",
-    "score": 1.0771,
+    "note": "♥ 172 · 👁 25.2k",
+    "score": 0.9167,
     "why": "",
-    "id": "dribbble:27798006"
-   },
-   {
-    "source": "dribbble",
-    "key": "27779182",
-    "title": "Financial Website - Wealth Management Portal",
-    "url": "https://dribbble.com/shots/27779182-Financial-Website-Wealth-Management-Portal",
-    "image": "https://cdn.dribbble.com/userupload/49201728/file/still-ccb0918edf82c330d2672978e031bba0.png?format=webp&resize=800x600&vertical=center",
-    "section": "visual",
-    "author": "Ronas IT | UI/UX Team",
-    "link": "",
-    "popularity": 242.0,
-    "position": 36,
-    "tags": [],
-    "note": "♥ 242 · 👁 32.1k",
-    "score": 1.0542,
-    "why": "",
-    "id": "dribbble:27779182"
+    "id": "dribbble:27795844"
    },
    {
     "source": "godly",
@@ -329,8 +309,8 @@
     "position": 0,
     "tags": [],
     "note": "",
-    "score": 1.05,
-    "why": "",
+    "score": 0.875,
+    "why": "Ružovo-modrý rizograf plagát, písmená padajú šikmo ako hračky",
     "id": "godly:1g2fr97"
    },
    {
@@ -346,88 +326,122 @@
     "position": 1,
     "tags": [],
     "note": "",
-    "score": 0.9947,
-    "why": "",
+    "score": 0.7884,
+    "why": "Radiálny výbuch tušových ťahov štetcom, surová gestická grafika",
     "id": "godly:ycasm0a"
    },
    {
-    "source": "godly",
-    "key": "szwdt4f",
-    "title": "Savee Showcase",
-    "url": "https://godly.website/i/szwdt4f-savee-zoom-showcase",
-    "image": "https://cdn.recent.design/items/szwdt4f/0/poster/675.webp",
+    "source": "cosmos",
+    "key": "design/comfort-movie-posters",
+    "title": "Comfort movie posters",
+    "url": "https://www.cosmos.so/design/comfort-movie-posters",
+    "image": "https://cdn.cosmos.so/855d3311-91aa-4de8-b079-7971336256e7?rect=0%2C0%2C1414%2C1414&format=webp&w=800",
     "section": "visual",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 2,
+    "position": 1,
     "tags": [],
-    "note": "",
-    "score": 0.9395,
-    "why": "",
-    "id": "godly:szwdt4f"
+    "note": "design",
+    "score": 0.715,
+    "why": "Filmový plagát z jednoduchej tlačovej halftone fotky a obrého groteskového titulu",
+    "id": "cosmos:design/comfort-movie-posters"
+   },
+   {
+    "source": "cosmos",
+    "key": "ideas/black-cat-symbolism",
+    "title": "Black cat symbolism",
+    "url": "https://www.cosmos.so/ideas/black-cat-symbolism",
+    "image": "https://cdn.cosmos.so/cb84c4cd-e465-4764-a4e9-9c616fc0a0f1?rect=53%2C0%2C386%2C386&format=webp&w=800",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "ideas",
+    "score": 0.65,
+    "why": "Čierna mačka v tme, len svietiace oči, atmosférický záber",
+    "id": "cosmos:ideas/black-cat-symbolism"
    }
   ],
   "ui": [
    {
     "source": "21st",
-    "key": "serafimcloud/splite",
-    "title": "Spline Scene",
-    "url": "https://21st.dev/serafimcloud/splite",
-    "image": "https://cdn.21st.dev/user_2nElBLvklOKlAURm6W1PTu6yYFh/splite.png",
-    "section": "ui",
-    "author": "serafimcloud",
-    "link": "",
-    "popularity": 1.0,
-    "position": 81,
-    "tags": [
-     "hero"
-    ],
-    "note": "hero · ↓ 9435",
-    "score": 1.0,
-    "why": "",
-    "id": "21st:serafimcloud/splite"
-   },
-   {
-    "source": "21st",
-    "key": "designali-in/shader-animation",
-    "title": "Shader Animation",
-    "url": "https://21st.dev/designali-in/shader-animation",
-    "image": "https://cdn.21st.dev/designali-in/shader-animation/default/preview.1755486352919.png",
-    "section": "ui",
-    "author": "designali-in",
-    "link": "",
-    "popularity": 1.0,
-    "position": 101,
-    "tags": [
-     "shader"
-    ],
-    "note": "shader · ↓ 2595",
-    "score": 0.9977,
-    "why": "",
-    "id": "21st:designali-in/shader-animation"
-   },
-   {
-    "source": "21st",
-    "key": "manuarora700/aurora-background",
-    "title": "Aurora Background",
-    "url": "https://21st.dev/manuarora700/aurora-background",
-    "image": "https://cdn.21st.dev/user_aceternity/aurora-background.png",
+    "key": "manuarora700/lamp",
+    "title": "Lamp",
+    "url": "https://21st.dev/manuarora700/lamp",
+    "image": "https://cdn.21st.dev/user_aceternity/lamp.png",
     "section": "ui",
     "author": "manuarora700",
     "link": "",
-    "popularity": 1.0,
-    "position": 44,
+    "popularity": 0.9811320754716981,
+    "position": 91,
+    "tags": [
+     "hero"
+    ],
+    "note": "hero · ↓ 2325",
+    "score": 0.979,
+    "why": "",
+    "id": "21st:manuarora700/lamp"
+   },
+   {
+    "source": "21st",
+    "key": "moazamtrade/paper-design-shader-background",
+    "title": "Paper design shader Background ",
+    "url": "https://21st.dev/moazamtrade/paper-design-shader-background",
+    "image": "https://cdn.21st.dev/moazamtrade/paper-design-shader-background/default/preview.1756567728912.png",
+    "section": "ui",
+    "author": "moazamtrade",
+    "link": "",
+    "popularity": 0.9777777777777777,
+    "position": 0,
+    "tags": [
+     "shader"
+    ],
+    "note": "shader · ↓ 273",
+    "score": 0.9767,
+    "why": "",
+    "id": "21st:moazamtrade/paper-design-shader-background"
+   },
+   {
+    "source": "21st",
+    "key": "kokonutd/beams-background",
+    "title": "Beams Background",
+    "url": "https://21st.dev/kokonutd/beams-background",
+    "image": "https://cdn.21st.dev/user_2rQ1QHrJyxpmWMHhqhANzWMc64n/beams-background/default/preview.png?v=1",
+    "section": "ui",
+    "author": "kokonutd",
+    "link": "",
+    "popularity": 0.9772727272727273,
+    "position": 14,
     "tags": [
      "background"
     ],
-    "note": "background · ↓ 7539",
-    "score": 0.9953,
+    "note": "background · ↓ 2084",
+    "score": 0.9744,
     "why": "",
-    "id": "21st:manuarora700/aurora-background"
+    "id": "21st:kokonutd/beams-background"
    }
   ],
   "retro": [
+   {
+    "source": "webdesignmuseum",
+    "key": "bbedit-html-and-text-editor-1992",
+    "title": "BBEdit HTML and text editor",
+    "url": "https://www.webdesignmuseum.org/web-design-history/bbedit-html-and-text-editor-1992",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/bbedit-4-0-4-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 557,
+    "tags": [],
+    "note": "1992 · história webu",
+    "score": 0.9492,
+    "why": "",
+    "id": "webdesignmuseum:bbedit-html-and-text-editor-1992"
+   },
    {
     "source": "webdesignmuseum",
     "key": "netflix-2002",
@@ -438,46 +452,29 @@
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 126,
+    "position": 573,
     "tags": [],
     "note": "2002",
-    "score": 1.0,
+    "score": 0.9435,
     "why": "",
     "id": "webdesignmuseum:netflix-2002"
    },
    {
     "source": "webdesignmuseum",
-    "key": "mosaic-netscape-0-9-1994",
-    "title": "Mosaic Netscape 0.9",
-    "url": "https://www.webdesignmuseum.org/web-design-history/mosaic-netscape-0-9-1994",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/mosaic-netscape-0-9-preview.png",
+    "key": "jeffrey-zeldman-published-designing-with-web-standards-2003",
+    "title": "Jeffrey Zeldman published Designing with Web Standards",
+    "url": "https://www.webdesignmuseum.org/web-design-history/jeffrey-zeldman-published-designing-with-web-standards-2003",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/jeffrey-zeldman-designing-with-web-standards-preview.png",
     "section": "retro",
     "author": "",
     "link": "",
     "popularity": null,
-    "position": 180,
+    "position": 580,
     "tags": [],
-    "note": "1994 · história webu",
-    "score": 0.9944,
+    "note": "2003 · história webu",
+    "score": 0.9379,
     "why": "",
-    "id": "webdesignmuseum:mosaic-netscape-0-9-1994"
-   },
-   {
-    "source": "webdesignmuseum",
-    "key": "adobe-pagemill-1-0-1995",
-    "title": "Adobe PageMill 1.0",
-    "url": "https://www.webdesignmuseum.org/web-design-history/adobe-pagemill-1-0-1995",
-    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/adobe-pagemill-preview.png",
-    "section": "retro",
-    "author": "",
-    "link": "",
-    "popularity": null,
-    "position": 380,
-    "tags": [],
-    "note": "1995 · história webu",
-    "score": 0.9887,
-    "why": "",
-    "id": "webdesignmuseum:adobe-pagemill-1-0-1995"
+    "id": "webdesignmuseum:jeffrey-zeldman-published-designing-with-web-standards-2003"
    }
   ]
  },
@@ -485,17 +482,17 @@
   "onepagelove": {
    "ok": true,
    "count": 10,
-   "secs": 0.3
+   "secs": 0.4
   },
   "cssda": {
    "ok": true,
    "count": 12,
-   "secs": 0.5
+   "secs": 0.6
   },
   "webflow": {
    "ok": true,
    "count": 18,
-   "secs": 0.6
+   "secs": 0.8
   },
   "brutalist": {
    "ok": true,
@@ -505,7 +502,7 @@
   "bestwebsite": {
    "ok": true,
    "count": 10,
-   "secs": 1.1
+   "secs": 1.0
   },
   "darkdesign": {
    "ok": true,
@@ -515,55 +512,57 @@
   "godly": {
    "ok": true,
    "count": 20,
-   "secs": 1.4
+   "secs": 1.5
   },
   "21st": {
    "ok": true,
    "count": 430,
-   "secs": 2.8
+   "secs": 1.9
   },
   "minimalgallery": {
    "ok": true,
    "count": 10,
-   "secs": 3.0
-  },
-  "awwwards": {
-   "ok": true,
-   "count": 31,
-   "secs": 3.1
-  },
-  "landbook": {
-   "ok": true,
-   "count": 20,
-   "secs": 7.0
+   "secs": 2.2
   },
   "codrops": {
    "ok": true,
    "count": 96,
-   "secs": 7.8
+   "secs": 6.5
+  },
+  "landbook": {
+   "ok": true,
+   "count": 20,
+   "secs": 7.1
   },
   "gsap": {
    "ok": true,
    "count": 36,
-   "secs": 9.2
+   "secs": 9.0
   },
   "cosmos": {
-   "ok": false,
-   "error": "RuntimeError: nothing extracted from https://cosmos.so/discover"
+   "ok": true,
+   "count": 5,
+   "secs": 9.0
   },
   "dribbble": {
    "ok": true,
    "count": 49,
-   "secs": 11.5
+   "secs": 10.8
   },
   "webdesignmuseum": {
    "ok": true,
    "count": 178,
-   "secs": 15.0
+   "secs": 14.2
+  },
+  "awwwards": {
+   "ok": false,
+   "error": "ConnectTimeout: "
   }
  },
  "curator": {
-  "ok": false,
-  "error": "RuntimeError: claude exited 1: Failed to authenticate. API Error: 401 Invalid bearer token"
+  "ok": true,
+  "model": "opus",
+  "rated": 78,
+  "secs": 63
  }
 }
