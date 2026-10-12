@@ -1,0 +1,576 @@
+{
+ "date": "2026-10-12",
+ "sections": {
+  "wow": [
+   {
+    "source": "brutalist",
+    "key": "friends-only.net.jpg",
+    "title": "friends-only.net.jpg",
+    "url": "http://friends-only.net.jpg",
+    "image": "https://brutalistwebsites.com/_img/friends-only.net.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://friends-only.net.jpg",
+    "popularity": null,
+    "position": 49,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.93,
+    "why": "Roztečený atramentový nápis s kyselinovo zelenou, divoká typografia výstavy",
+    "id": "brutalist:friends-only.net.jpg"
+   },
+   {
+    "source": "brutalist",
+    "key": "froy.me",
+    "title": "froy.me",
+    "url": "http://froy.me",
+    "image": "https://brutalistwebsites.com/_img/froy.me.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://froy.me",
+    "popularity": null,
+    "position": 25,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.93,
+    "why": "Rube-Goldbergov stroj z vintage rytín, ovce a továrne na bodkovanej mriežke",
+    "id": "brutalist:froy.me"
+   },
+   {
+    "source": "brutalist",
+    "key": "radicalzz.studio",
+    "title": "radicalzz.studio",
+    "url": "http://radicalzz.studio",
+    "image": "https://brutalistwebsites.com/_img/radicalzz.studio.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://radicalzz.studio",
+    "popularity": null,
+    "position": 60,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.888,
+    "why": "Obrie červené čínske znaky ako vzor pozadia, brutálna dvojfarebnosť",
+    "id": "brutalist:radicalzz.studio"
+   },
+   {
+    "source": "codrops",
+    "key": "post-120464",
+    "title": "ASCII Logo in Three.js",
+    "url": "https://tympanus.net/codrops/?p=120018",
+    "image": "https://tympanus.net/codrops/wp-content/uploads/2026/09/Ascii_logo_demo_cover-400x300.png.webp",
+    "section": "wow",
+    "author": "Edoardo Lunardi",
+    "link": "https://tympanus.net/Tutorials/ASCIILogo/",
+    "popularity": null,
+    "position": 5,
+    "tags": [
+     "3D",
+     "ASCII",
+     "glsl",
+     "Three.js"
+    ],
+    "note": "3D · ASCII",
+    "score": 0.6678,
+    "why": "Logo poskladané z modrých ASCII znakov v 3D, retro terminálová textúra",
+    "id": "codrops:post-120464"
+   },
+   {
+    "source": "codrops",
+    "key": "post-115947",
+    "title": "Scroll-Driven SVG Map Animation with GSAP",
+    "url": "https://tympanus.net/codrops/?p=115658",
+    "image": "https://tympanus.net/codrops/wp-content/uploads/2026/05/MapAnimation-400x300.webp",
+    "section": "wow",
+    "author": "Tom Miller",
+    "link": "https://tympanus.net/Tutorials/ScrollMap/",
+    "popularity": null,
+    "position": 3,
+    "tags": [
+     "GSAP",
+     "map",
+     "scroll",
+     "svg"
+    ],
+    "note": "GSAP · map",
+    "score": 0.6511,
+    "why": "Trasa bicykla sa kreslí po SVG mape podľa scrollu, editoriálne karty",
+    "id": "codrops:post-115947"
+   },
+   {
+    "source": "codrops",
+    "key": "post-95994",
+    "title": "Infinite Layers Grid",
+    "url": "https://tympanus.net/codrops/2025/06/11/building-an-infinite-parallax-grid-with-gsap-and-seamless-tiling/",
+    "image": "https://tympanus.net/codrops/wp-content/uploads/2025/05/featuredInfintieLayersGrid-400x300.jpg",
+    "section": "wow",
+    "author": "Jorge Toloza",
+    "link": "https://tympanus.net/Tutorials/InfiniteLayersGrid",
+    "popularity": null,
+    "position": 10,
+    "tags": [
+     "grid",
+     "GSAP",
+     "infinite",
+     "parallax"
+    ],
+    "note": "grid · GSAP",
+    "score": 0.6341,
+    "why": "Nekonečná mriežka vrstvených fotiek s paralaxou, zemité zátišia",
+    "id": "codrops:post-95994"
+   }
+  ],
+  "web": [
+   {
+    "source": "awwwards",
+    "key": "odyssee",
+    "title": "Odyssée",
+    "url": "https://www.awwwards.com/sites/odyssee",
+    "image": "https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2026/08/6a8299452ae29820569010.png",
+    "section": "web",
+    "author": "NIGHTJAR",
+    "link": "https://www.odysseeclinic.com.au/",
+    "popularity": null,
+    "position": 4,
+    "tags": [
+     "DEV",
+     "SOTD"
+    ],
+    "note": "DEV · SOTD",
+    "score": 0.733,
+    "why": "Čiernobiele makro bublín, tichá serifová typografia na okrajoch",
+    "id": "awwwards:odyssee"
+   },
+   {
+    "source": "awwwards",
+    "key": "twks-1",
+    "title": "twks",
+    "url": "https://www.awwwards.com/sites/twks-1",
+    "image": "https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2026/08/6a8d4591d07cb861638495.jpg",
+    "section": "web",
+    "author": "twks",
+    "link": "https://twks.ch/en",
+    "popularity": null,
+    "position": 6,
+    "tags": [
+     "DEV",
+     "SOTD"
+    ],
+    "note": "DEV · SOTD",
+    "score": 0.7215,
+    "why": "Organický zelený vír z lístkov ako hero, rozmazané okraje",
+    "id": "awwwards:twks-1"
+   },
+   {
+    "source": "webflow",
+    "key": "bunkr-design",
+    "title": "BUNKR Design",
+    "url": "https://webflow.com/made-in-webflow/website/bunkr-design",
+    "image": "https://screenshots.webflow.com/sites/67d84a4692225e70a862c18f/20250804194823_a74faa5a20c2918f01596b6154288e1a.png",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "",
+    "score": 0.6744,
+    "why": "Obrovský serifový BUNKR orezaný spodkom obrazovky nad tmavým interiérom",
+    "id": "webflow:bunkr-design"
+   },
+   {
+    "source": "bestwebsite",
+    "key": "sites/sotd/2026/09/29/mistral",
+    "title": "Mistral",
+    "url": "https://bestwebsite.gallery/sites/sotd/2026/09/29/mistral",
+    "image": "https://static.bestwebsite.gallery/assets/gallery_bestwebsite/images/mistral-ai_2026-09-29_preview.png",
+    "section": "web",
+    "author": "",
+    "link": "https://mistral.ai/",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "",
+    "score": 0.672,
+    "why": "Pixelové oranžovo-červené bloky ako vizuálny jazyk AI značky",
+    "id": "bestwebsite:sites/sotd/2026/09/29/mistral"
+   },
+   {
+    "source": "onepagelove",
+    "key": "https://onepagelove.com/?p=88879",
+    "title": "Office Commun",
+    "url": "https://onepagelove.com/office-commun",
+    "image": "https://assets.onepagelove.com/cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=top,format=jpg,quality=85/wp-content/uploads/2026/10/opl-screenshot-office-commun-1791214203961-desktop.jpg",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 2,
+    "tags": [
+     "Inspiration",
+     "Big Images",
+     "Brand Identity",
+     "Creative Studio"
+    ],
+    "note": "",
+    "score": 0.6417,
+    "why": "Štúdio ako archív projektov s olejomaľbami, kurátorský katalóg",
+    "id": "onepagelove:https://onepagelove.com/?p=88879"
+   },
+   {
+    "source": "webflow",
+    "key": "pause-48e09e",
+    "title": "Pause",
+    "url": "https://webflow.com/made-in-webflow/website/pause-48e09e",
+    "image": "https://screenshots.webflow.com/sites/66d916671c0960cc3107be26/20241030005936_c7d6d4c410e403e40e5625fae10e6e68.png",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 4,
+    "tags": [],
+    "note": "",
+    "score": 0.6214,
+    "why": "Nafúknuté bublinové písmo PAUSE cez fotku sauny pri mori",
+    "id": "webflow:pause-48e09e"
+   },
+   {
+    "source": "landbook",
+    "key": "100491",
+    "title": "Sharplink",
+    "url": "https://land-book.com/websites/100491-sharplink-home",
+    "image": "https://cdn.land-book.com/image/0x0:3456x5184/600x0/filters:format(webp)/website/100491/a6dabf74d9c70885-screenshot-upload?signature=984c7a8513157c4dc6529e2b52e045ce09c52767922485aa80bab92003416f9b",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 2,
+    "tags": [],
+    "note": "",
+    "score": 0.5204,
+    "why": "Priehľadný 3D hardvér v modrom, typická krypto landing page",
+    "id": "landbook:100491"
+   },
+   {
+    "source": "darkdesign",
+    "key": "railway-1786786455266",
+    "title": "Railway",
+    "url": "https://dark.design/site/railway-1786786455266",
+    "image": "https://sidhvpjhuucqcehkevrl.supabase.co/storage/v1/render/image/public/screenshots/auto-1786786397379.webp?width=1080&quality=60&height=675&resize=cover",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 2,
+    "tags": [],
+    "note": "dark UI",
+    "score": 0.4583,
+    "why": "Pixelová nočná obloha za dev SaaS hero, osvedčená formula",
+    "id": "darkdesign:railway-1786786455266"
+   }
+  ],
+  "visual": [
+   {
+    "source": "dribbble",
+    "key": "27797259",
+    "title": "ALTA",
+    "url": "https://dribbble.com/shots/27797259-ALTA",
+    "image": "https://cdn.dribbble.com/userupload/49270812/file/a41ba3afe3171e94adc28eb4e7f67464.jpg?format=webp&resize=800x600&vertical=center",
+    "section": "visual",
+    "author": "Type08 (Alen Pavlovic)",
+    "link": "",
+    "popularity": 177.0,
+    "position": 1,
+    "tags": [],
+    "note": "♥ 177 · 👁 64.4k",
+    "score": 0.748,
+    "why": "Wordmark ALTA s chýbajúcimi priečkami, logistická presnosť v oranžovej",
+    "id": "dribbble:27797259"
+   },
+   {
+    "source": "godly",
+    "key": "our3i3u",
+    "title": "Mythic Horse",
+    "url": "https://godly.website/i/our3i3u-mythic-horse-animation",
+    "image": "https://cdn.recent.design/items/our3i3u/0/poster/960.webp",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 6,
+    "tags": [],
+    "note": "",
+    "score": 0.7195,
+    "why": "Kôň v hustom neónovom ornamente tibetského koberca",
+    "id": "godly:our3i3u"
+   },
+   {
+    "source": "godly",
+    "key": "9vh1nss",
+    "title": "Blissful Studio Brand Poster",
+    "url": "https://godly.website/i/9vh1nss-blissful-studio-brand-posters",
+    "image": "https://cdn.recent.design/items/9vh1nss/0/image/22a678799743fee79750/1102.webp",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 7,
+    "tags": [],
+    "note": "",
+    "score": 0.7169,
+    "why": "Roztrhaný papier, xerox textúra a rozmazaná postava na plagáte",
+    "id": "godly:9vh1nss"
+   },
+   {
+    "source": "dribbble",
+    "key": "27796638",
+    "title": "Elephant Logo",
+    "url": "https://dribbble.com/shots/27796638-Elephant-Logo",
+    "image": "https://cdn.dribbble.com/userupload/49268463/file/c4dd90ab9ff55d610aceaa491bdabcbd.png?format=webp&resize=800x600&vertical=center",
+    "section": "visual",
+    "author": "Yoga Perdana",
+    "link": "",
+    "popularity": 147.0,
+    "position": 6,
+    "tags": [],
+    "note": "♥ 147 · 👁 48.2k",
+    "score": 0.6305,
+    "why": "Slon v kruhu so záporným priestorom a ručným podpisom",
+    "id": "dribbble:27796638"
+   },
+   {
+    "source": "cosmos",
+    "key": "design/the-end",
+    "title": "The end",
+    "url": "https://www.cosmos.so/design/the-end",
+    "image": "https://cdn.cosmos.so/290da267-c928-4e8d-b464-efccaa1ff802?rect=0%2C0%2C320%2C320&format=webp&w=800",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 3,
+    "tags": [],
+    "note": "design",
+    "score": 0.495,
+    "why": "Čínsky znak 完 cez filmový záber prístavu, kinematografická nostalgia",
+    "id": "cosmos:design/the-end"
+   },
+   {
+    "source": "cosmos",
+    "key": "ideas/cacti-in-every-shape",
+    "title": "Cacti in every shape",
+    "url": "https://www.cosmos.so/ideas/cacti-in-every-shape",
+    "image": "https://cdn.cosmos.so/01eff224-eee6-4337-8db0-efb4aaaf023c?format=webp&w=800",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 2,
+    "tags": [],
+    "note": "ideas",
+    "score": 0.472,
+    "why": "Skleník plný kaktusov, pekná fotka bez dizajnového zásahu",
+    "id": "cosmos:ideas/cacti-in-every-shape"
+   }
+  ],
+  "ui": [
+   {
+    "source": "21st",
+    "key": "ayushmxxn/feature-section",
+    "title": "Feature Section",
+    "url": "https://21st.dev/ayushmxxn/feature-section",
+    "image": "https://cdn.21st.dev/user_ayushmxxn/feature-section.png",
+    "section": "ui",
+    "author": "ayushmxxn",
+    "link": "",
+    "popularity": 0.9874213836477987,
+    "position": 40,
+    "tags": [
+     "features"
+    ],
+    "note": "features · ↓ 1540",
+    "score": 0.5474,
+    "why": "Holografický 3D nápis WTF oživuje inak bežnú sekciu",
+    "id": "21st:ayushmxxn/feature-section"
+   },
+   {
+    "source": "21st",
+    "key": "shadcnblockscom/shadcnblocks-com-feature108",
+    "title": "Feature 108",
+    "url": "https://21st.dev/shadcnblockscom/shadcnblocks-com-feature108",
+    "image": "https://cdn.21st.dev/user_2rguB0QxcSITG2Y7ivePFsKsUU6/shadcnblocks-com-feature108/default/preview.1737979331417.png",
+    "section": "ui",
+    "author": "shadcnblockscom",
+    "link": "",
+    "popularity": 0.9748427672955975,
+    "position": 75,
+    "tags": [
+     "features"
+    ],
+    "note": "features · ↓ 1077",
+    "score": 0.5017,
+    "why": "",
+    "id": "21st:shadcnblockscom/shadcnblocks-com-feature108"
+   },
+   {
+    "source": "21st",
+    "key": "kokonutd/pricing-table",
+    "title": "Pricing Table",
+    "url": "https://21st.dev/kokonutd/pricing-table",
+    "image": "https://cdn.21st.dev/user_2rQ1QHrJyxpmWMHhqhANzWMc64n/pricing-table.png",
+    "section": "ui",
+    "author": "kokonutd",
+    "link": "",
+    "popularity": 0.9726027397260274,
+    "position": 63,
+    "tags": [
+     "pricing"
+    ],
+    "note": "pricing · ↓ 384",
+    "score": 0.5008,
+    "why": "",
+    "id": "21st:kokonutd/pricing-table"
+   }
+  ],
+  "retro": [
+   {
+    "source": "webdesignmuseum",
+    "key": "ebay-1996",
+    "title": "AuctionWeb",
+    "url": "https://www.webdesignmuseum.org/web-design-in-the-90s/ebay-1996",
+    "image": "https://www.webdesignmuseum.org/uploaded/timeline/ebay/ebay-1996-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 225,
+    "tags": [],
+    "note": "1996",
+    "score": 0.7378,
+    "why": "AuctionWeb 1996, prvotný eBay v čistom HTML s šedým prechodom",
+    "id": "webdesignmuseum:ebay-1996"
+   },
+   {
+    "source": "webdesignmuseum",
+    "key": "macromedia-flash-5-0-and-actionscript-1-0-2000",
+    "title": "Macromedia Flash 5.0 and ActionScript 1.0",
+    "url": "https://www.webdesignmuseum.org/web-design-history/macromedia-flash-5-0-and-actionscript-1-0-2000",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/macromedia-flash-5-0-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 204,
+    "tags": [],
+    "note": "2000 · história webu",
+    "score": 0.6835,
+    "why": "Flash 5 a ActionScript 1.0, motor experimentálneho webu 2000s",
+    "id": "webdesignmuseum:macromedia-flash-5-0-and-actionscript-1-0-2000"
+   },
+   {
+    "source": "webdesignmuseum",
+    "key": "w3c-org-1994",
+    "title": "W3C.org",
+    "url": "https://www.webdesignmuseum.org/web-design-history/w3c-org-1994",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/w3c-org-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 108,
+    "tags": [],
+    "note": "1994 · história webu",
+    "score": 0.6712,
+    "why": "W3C.org z 1994, surové HTML pri zrode webových štandardov",
+    "id": "webdesignmuseum:w3c-org-1994"
+   }
+  ]
+ },
+ "health": {
+  "cssda": {
+   "ok": true,
+   "count": 0,
+   "secs": 0.2
+  },
+  "webflow": {
+   "ok": true,
+   "count": 18,
+   "secs": 0.9
+  },
+  "onepagelove": {
+   "ok": true,
+   "count": 10,
+   "secs": 0.9
+  },
+  "brutalist": {
+   "ok": true,
+   "count": 1583,
+   "secs": 1.2
+  },
+  "21st": {
+   "ok": true,
+   "count": 328,
+   "secs": 1.3
+  },
+  "minimalgallery": {
+   "ok": true,
+   "count": 0,
+   "secs": 1.4
+  },
+  "godly": {
+   "ok": true,
+   "count": 20,
+   "secs": 1.8
+  },
+  "bestwebsite": {
+   "ok": true,
+   "count": 10,
+   "secs": 1.9
+  },
+  "darkdesign": {
+   "ok": true,
+   "count": 246,
+   "secs": 2.2
+  },
+  "awwwards": {
+   "ok": true,
+   "count": 31,
+   "secs": 3.8
+  },
+  "landbook": {
+   "ok": true,
+   "count": 20,
+   "secs": 7.6
+  },
+  "codrops": {
+   "ok": true,
+   "count": 96,
+   "secs": 7.8
+  },
+  "gsap": {
+   "ok": false,
+   "error": "RuntimeError: nothing extracted from https://gsap.com/showcase/"
+  },
+  "cosmos": {
+   "ok": true,
+   "count": 5,
+   "secs": 9.9
+  },
+  "dribbble": {
+   "ok": true,
+   "count": 46,
+   "secs": 12.7
+  },
+  "webdesignmuseum": {
+   "ok": true,
+   "count": 178,
+   "secs": 15.5
+  }
+ },
+ "curator": {
+  "ok": true,
+  "model": "opus",
+  "rated": 78,
+  "secs": 63
+ }
+}
