@@ -3,6 +3,10 @@
 //   POST /vote  {id, v, s}     -> from the site (fetch)
 //   GET  /v?id=&v=&s=          -> from email links, answers with a tiny HTML page
 // `s` is an HMAC of the item id, so only items the digest published can be voted on.
+//
+// Cron (wrangler.toml): starts the daily GitHub workflow, because GitHub's own
+// schedule sometimes just doesn't fire. `if_missing` makes it a no-op once today's
+// digest exists, so this and GitHub's cron can both fire without a second email.
 
 const KEY = "votes";
 
@@ -34,6 +38,22 @@ export default {
     }
 
     return new Response("Design Digest feedback", { headers: cors });
+  },
+
+  async scheduled(_event, env) {
+    const r = await fetch(
+      `https://api.github.com/repos/${env.GITHUB_REPO}/actions/workflows/daily.yml/dispatches`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+          Accept: "application/vnd.github+json",
+          "User-Agent": "design-digest-cron",
+        },
+        body: JSON.stringify({ ref: "main", inputs: { if_missing: true } }),
+      },
+    );
+    if (!r.ok) throw new Error(`dispatch failed: ${r.status} ${await r.text()}`);
   },
 };
 

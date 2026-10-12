@@ -3,11 +3,17 @@ name: Daily design digest
 on:
   schedule:
     # GitHub drops scheduled runs at busy times (whole hours especially), so there
-    # are backups; the `check` job turns them into no-ops once today's digest exists.
+    # are backups, plus a Cloudflare cron in worker/ that dispatches with if_missing.
+    # The `check` job turns all of them into no-ops once today's digest exists.
     - cron: "17 4 * * *"   # 06:17 Bratislava in summer, 05:17 in winter (GitHub cron is UTC)
     - cron: "47 5 * * *"
     - cron: "31 7 * * *"
   workflow_dispatch:       # "Run workflow" button for manual runs
+    inputs:
+      if_missing:
+        description: "Skip if today's digest already exists (set by the Cloudflare cron)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -30,7 +36,7 @@ jobs:
       - id: today
         run: |
           f="data/days/$(TZ=Europe/Bratislava date +%F).json"
-          if [ "${{ github.event_name }}" = schedule ] && [ -f "$f" ]; then
+          if { [ "${{ github.event_name }}" = schedule ] || [ "${{ inputs.if_missing }}" = true ]; } && [ -f "$f" ]; then
             echo "done=true" >> "$GITHUB_OUTPUT"; echo "$f already exists, skipping"
           fi
 
