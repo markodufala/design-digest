@@ -2,7 +2,11 @@ name: Daily design digest
 
 on:
   schedule:
-    - cron: "0 5 * * *"   # 07:00 Bratislava in summer, 06:00 in winter (GitHub cron is UTC)
+    # GitHub drops scheduled runs at busy times (whole hours especially), so there
+    # are backups; the `check` job turns them into no-ops once today's digest exists.
+    - cron: "17 4 * * *"   # 06:17 Bratislava in summer, 05:17 in winter (GitHub cron is UTC)
+    - cron: "47 5 * * *"
+    - cron: "31 7 * * *"
   workflow_dispatch:       # "Run workflow" button for manual runs
 
 permissions:
@@ -15,7 +19,24 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      done: ${{ steps.today.outputs.done }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main   # a queued backup run must see the commit an earlier run just pushed
+      - id: today
+        run: |
+          f="data/days/$(TZ=Europe/Bratislava date +%F).json"
+          if [ "${{ github.event_name }}" = schedule ] && [ -f "$f" ]; then
+            echo "done=true" >> "$GITHUB_OUTPUT"; echo "$f already exists, skipping"
+          fi
+
   digest:
+    needs: check
+    if: needs.check.outputs.done != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     environment:
@@ -27,6 +48,8 @@ jobs:
       FEEDBACK_KEY: ${{ secrets.FEEDBACK_KEY }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
