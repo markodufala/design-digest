@@ -18,7 +18,8 @@
 {# mirrors templates/page.html — keep the two in sync #}
 {% set ink = "#111111" %}{% set muted = "#8a8a8a" %}{% set line = "#ececec" %}{% set fill = "#f4f4f4" %}
 {% set key = "#k=" ~ ("taste" | sign) if feedback else "" %}
-{% set sans = "'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" %}
+{# unquoted: quotes would be escaped to &#39; on every one of ~600 styles — Gmail clips mails over 102 KB #}
+{% set sans = "Inter Tight,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" %}
 <body style="margin:0; padding:0; background:#ffffff;">
 <div style="display:none; max-height:0; overflow:hidden;">
   {% for items in day.sections.values() %}{% for it in items[:2] %}{{ it.title }} · {% endfor %}{% endfor %}
@@ -86,10 +87,7 @@
           {% endif %}
           {% if it.palette or it.fonts %}
           <table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:10px;"><tr>
-            {% for c in it.palette %}
-            <td width="10" height="10" bgcolor="{{ c }}" style="width:10px; height:10px; background:{{ c }}; border:1px solid #e4e4e4; border-radius:3px; font-size:0; line-height:0;">&nbsp;</td>
-            <td width="3" style="font-size:0; line-height:0;">&nbsp;</td>
-            {% endfor %}
+            {% for c in it.palette %}<td width="10" height="10" bgcolor="{{ c }}" style="border:1px solid #e4e4e4;border-radius:3px;font-size:0">&nbsp;</td><td width="3"></td>{% endfor %}
             {% if it.fonts %}<td style="padding-left:{{ '7px' if it.palette else '0' }}; font-family:{{ sans }}; font-size:12px; line-height:1.3; color:{{ ink }};">{{ it.fonts | join(" · ") }}</td>{% endif %}
           </tr></table>
           {% endif %}

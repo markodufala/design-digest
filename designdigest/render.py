@@ -1,6 +1,7 @@
 """HTML for the email and the static site (site/)."""
 import json
 import os
+import re
 import shutil
 from datetime import date
 from pathlib import Path
@@ -65,14 +66,26 @@ def build_site(days: list[dict]) -> None:
     (SITE / ".nojekyll").touch()
 
 
+GMAIL_CLIP = 100_000  # Gmail hides everything past ~102 KB behind "[Message clipped]"
+
+
+def minify(html: str) -> str:
+    """Collapse whitespace (HTML ignores it anyway) and tighten inline styles."""
+    html = re.sub(r"\s+", " ", html)
+    html = re.sub(r">\s+<", "><", html)
+    return re.sub(r'style="([^"]*)"', lambda m: 'style="' + re.sub(r"\s*([:;,])\s*", r"\1", m.group(1)).rstrip(";") + '"', html)
+
+
 def email(day: dict, site_url: str = "") -> tuple[str, str, str]:
     total = sum(len(v) for v in day["sections"].values())
     subject = f"Design digest · {nice_date(day['date'], weekday=False)} · {total} vecí"
     broken = [LABELS.get(k, k) for k, h in day["health"].items() if not h["ok"]]
-    html = env.get_template("email.html").render(
+    html = minify(env.get_template("email.html").render(
         day=day, total=total, site_url=site_url.rstrip("/"), broken=broken,
         feedback=bool(os.environ.get("FEEDBACK_URL")),
-    )
+    ))
+    if len(html.encode()) > GMAIL_CLIP:
+        print(f"  ! email is {len(html.encode()) // 1024} KB — Gmail will clip it")
     lines = [subject, ""]
     if day.get("alerts"):
         subject = "⚠ " + subject  # something needs fixing — make it stand out in the inbox
