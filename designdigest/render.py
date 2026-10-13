@@ -74,9 +74,15 @@ def email(day: dict, site_url: str = "") -> tuple[str, str, str]:
         feedback=bool(os.environ.get("FEEDBACK_URL")),
     )
     lines = [subject, ""]
+    if day.get("alerts"):
+        subject = "⚠ " + subject  # something needs fixing — make it stand out in the inbox
+        lines += [f"! {a}" for a in day["alerts"]] + [""]
     for key, items in day["sections"].items():
         if items:
             lines.append(SECTIONS[key][0].upper())
-            lines += [f"- {it.title} ({LABELS.get(it.source, it.source)}): {it.url}" for it in items]
+            for it in items:
+                lines.append(f"- {it.title} ({LABELS.get(it.source, it.source)}): {it.url}")
+                if it.take or it.why:
+                    lines.append(f"  {it.take or it.why}")
             lines.append("")
     return subject, html, "\n".join(lines)

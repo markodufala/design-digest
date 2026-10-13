@@ -2,13 +2,18 @@
 //   GET  /votes                -> {id: {v, at}}            (read by the daily job + the site)
 //   POST /vote  {id, v, s}     -> from the site (fetch)
 //   GET  /v?id=&v=&s=          -> from email links, answers with a tiny HTML page
-// `s` is an HMAC of the item id, so only items the digest published can be voted on.
+//   GET  /taste                -> the taste profile {text, generated_at, edited_at}
+//   POST /taste {text, s, by}  -> Claude (daily job) or the person (site) rewrites it
+//   GET  /status               -> what the cron saw last: {cron: {at, ok, status, token_expires}}
+// `s` is an HMAC of the item id (or of "taste"), so only the digest and its email can write.
 //
 // Cron (wrangler.toml): starts the daily GitHub workflow, because GitHub's own
 // schedule sometimes just doesn't fire. `if_missing` makes it a no-op once today's
 // digest exists, so this and GitHub's cron can both fire without a second email.
 
 const KEY = "votes";
+const TASTE = "taste";
+const CRON = "cron";
 
 export default {
   async fetch(req, env) {
@@ -37,23 +42,53 @@ export default {
       return page(res.ok ? (v === 1 ? "♥ Uložené" : "✕ Toto už neuvidíš") : "Neplatný odkaz", env.SITE_URL);
     }
 
+    if (url.pathname === "/taste" && req.method === "GET") {
+      const taste = (await env.VOTES.get(TASTE, "json")) || {};
+      return Response.json(taste, { headers: { ...cors, "Cache-Control": "no-store" } });
+    }
+
+    if (url.pathname === "/taste" && req.method === "POST") {
+      const body = await req.json().catch(() => ({}));
+      const text = String(body.text ?? "").trim().slice(0, 2000);
+      if (body.s !== (await hmac(env.SIGNING_KEY, TASTE))) {
+        return Response.json({ ok: false, error: "bad signature" }, { status: 403, headers: cors });
+      }
+      const taste = (await env.VOTES.get(TASTE, "json")) || {};
+      const now = new Date().toISOString();
+      Object.assign(taste, { text }, body.by === "claude" ? { generated_at: now } : { edited_at: now });
+      await env.VOTES.put(TASTE, JSON.stringify(taste));
+      return Response.json({ ok: true, ...taste }, { headers: cors });
+    }
+
+    if (url.pathname === "/status" && req.method === "GET") {
+      const cron = (await env.VOTES.get(CRON, "json")) || null;
+      return Response.json({ cron }, { headers: { ...cors, "Cache-Control": "no-store" } });
+    }
+
     return new Response("Design Digest feedback", { headers: cors });
   },
 
   async scheduled(_event, env) {
-    const r = await fetch(
-      `https://api.github.com/repos/${env.GITHUB_REPO}/actions/workflows/daily.yml/dispatches`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${env.GITHUB_TOKEN}`,
-          Accept: "application/vnd.github+json",
-          "User-Agent": "design-digest-cron",
-        },
-        body: JSON.stringify({ ref: "main", inputs: { if_missing: true } }),
+    const gh = (path, init = {}) => fetch(`https://api.github.com${path}`, {
+      ...init,
+      headers: {
+        Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+        Accept: "application/vnd.github+json",
+        "User-Agent": "design-digest-cron",
       },
-    );
-    if (!r.ok) throw new Error(`dispatch failed: ${r.status} ${await r.text()}`);
+    });
+    const r = await gh(`/repos/${env.GITHUB_REPO}/actions/workflows/daily.yml/dispatches`, {
+      method: "POST",
+      body: JSON.stringify({ ref: "main", inputs: { if_missing: true } }),
+    });
+    // GitHub tells us when the PAT dies; the daily job warns in the email a week before
+    const expHeader = "github-authentication-token-expiration";
+    const expires = r.headers.get(expHeader) || (await gh("/rate_limit")).headers.get(expHeader);
+    const error = r.ok ? null : `${r.status} ${(await r.text()).slice(0, 200)}`;
+    await env.VOTES.put(CRON, JSON.stringify({
+      at: new Date().toISOString(), ok: r.ok, status: r.status, token_expires: expires, error,
+    }));
+    if (error) throw new Error(`dispatch failed: ${error}`);
   },
 };
 
@@ -76,14 +111,15 @@ async function hmac(secret, msg) {
 }
 
 function page(message, siteUrl) {
-  const back = siteUrl ? `<a href="${siteUrl}">Späť na Design Digest →</a>` : "";
+  const back = siteUrl ? `<a href="${siteUrl}" style="color:#111;text-decoration:none">Späť na Design Digest →</a>` : "";
   return new Response(
     `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Design Digest</title>
-<body style="margin:0;min-height:100vh;display:grid;place-items:center;background:#f4f2ee;color:#141414;
-font:16px/1.5 -apple-system,system-ui,sans-serif;text-align:center">
-<div><p style="font:400 44px Georgia,serif;margin:0 0 12px">${message}</p>
-<p style="color:#6f6b66">Zajtrajší výber sa podľa toho prispôsobí.</p>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<body style="margin:0;min-height:100vh;display:grid;place-items:center;background:#fff;color:#111;
+font:15px/1.45 'Inter Tight',system-ui,-apple-system,sans-serif;text-align:center">
+<div><p style="font-size:48px;line-height:1;letter-spacing:-.04em;margin:0 0 16px">${message}</p>
+<p style="color:#8a8a8a">Zajtrajší výber sa podľa toho prispôsobí.</p>
 <p>${back}</p></div></body>`,
     { headers: { "Content-Type": "text/html; charset=utf-8" } },
   );

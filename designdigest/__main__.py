@@ -7,8 +7,8 @@ import time
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import curate, mailer, rank, render, sources, store
-from .taste import Taste, fetch_votes
+from . import alerts, analyze, curate, mailer, rank, render, sources, store
+from .taste import Taste, fetch_profile, fetch_votes, profile_due, save_profile, worker_status
 
 TZ = ZoneInfo("Europe/Bratislava")
 
@@ -36,6 +36,7 @@ def main() -> int:
     ap.add_argument("--email-only", action="store_true", help="send the latest archived day, don't scrape")
     ap.add_argument("--only", help="comma-separated sources (for testing)")
     ap.add_argument("--no-ai", action="store_true", help="skip the Claude curator")
+    ap.add_argument("--no-rozbor", action="store_true", help="skip visiting the live sites")
     args = ap.parse_args()
 
     if args.email_only:
@@ -49,21 +50,32 @@ def main() -> int:
 
     profile = Taste(fetch_votes(), store.load_archive())
     print(f"  taste: {len(profile.liked)} ♥ / {len(profile.disliked)} ✕")
+    ai = not args.no_ai and curate.available()
+
+    taste_profile = fetch_profile()
+    taste_info = {"text": taste_profile.get("text", ""), "updated": False}
+    if ai and profile_due(taste_profile, profile, today.isoformat()):
+        try:
+            taste_info = {"text": save_profile(curate.write_profile(profile, taste_info["text"]))["text"],
+                          "updated": True}
+            print("  taste profile rewritten")
+        except Exception as e:  # keep the old one
+            print(f"  ! taste profile: {type(e).__name__}: {e}"[:300])
 
     # re-running the same day may reuse today's picks; ✕-ed things never come back
     seen = {k for k, d in store.load_seen().items() if d != today.isoformat()} | profile.hidden
     rank.score(items, profile)
 
     curator = {"ok": False}
-    if args.no_ai or not curate.available():
+    if not ai:
         curator["error"] = "disabled" if args.no_ai else "no Claude token / CLI"
     else:
         shortlist = rank.candidates(items, seen)
         t = time.monotonic()
         try:
-            ai = curate.curate(shortlist, profile or None)
-            rank.score(items, profile, ai)
-            curator = {"ok": True, "model": curate.MODEL, "rated": len(ai), "secs": round(time.monotonic() - t)}
+            verdict = curate.curate(shortlist, profile or None, taste_info["text"])
+            rank.score(items, profile, verdict)
+            curator = {"ok": True, "model": curate.MODEL, "rated": len(verdict), "secs": round(time.monotonic() - t)}
         except Exception as e:  # fall back to the heuristic ranking
             curator["error"] = f"{type(e).__name__}: {e}"[:300]
     print(f"  curator: {curator}")
@@ -74,7 +86,18 @@ def main() -> int:
         print("Nothing to send — all sources failed?", file=sys.stderr)
         return 1
 
-    store.save_day(today, picked, health, curator)
+    analysis = {"skipped": True}
+    if not args.no_rozbor:
+        try:
+            analysis = analyze.run(picked, use_ai=ai)
+        except Exception as e:  # never lose the digest over the extras
+            analysis = {"error": f"{type(e).__name__}: {e}"[:300]}
+        print(f"  rozbor: {analysis}")
+
+    warnings = alerts.collect(today, worker_status(), curator, analysis)
+    for w in warnings:
+        print(f"  ! {w}")
+    store.save_day(today, picked, health, curator, analysis=analysis, taste=taste_info, alerts=warnings)
     days = store.load_days()
     render.build_site(days)
     print(f"Saved {today}: {total} items → site/")

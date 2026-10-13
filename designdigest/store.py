@@ -15,14 +15,14 @@ def load_seen() -> dict[str, str]:
     return json.loads(SEEN.read_text()) if SEEN.exists() else {}
 
 
-def save_day(day: date, sections: dict[str, list[Item]], health: dict, curator: dict | None = None) -> None:
+def save_day(day: date, sections: dict[str, list[Item]], health: dict, curator: dict | None = None, **extra) -> None:
     DAYS.mkdir(parents=True, exist_ok=True)
     payload = {
         "date": day.isoformat(),
         "sections": {s: [it.to_dict() for it in items] for s, items in sections.items()},
         "health": health,
         "curator": curator or {},
-    }
+    } | extra
     (DAYS / f"{day.isoformat()}.json").write_text(json.dumps(payload, ensure_ascii=False, indent=1))
 
     seen = load_seen()
@@ -39,7 +39,9 @@ def load_days() -> list[dict]:
     days = [json.loads(p.read_text()) for p in sorted(DAYS.glob("*.json"), reverse=True)]
     for d in days:
         d["sections"] = {s: [Item.from_dict(x) for x in items] for s, items in d["sections"].items()}
-        d.setdefault("curator", {})
+        for k in ("curator", "analysis", "taste"):
+            d.setdefault(k, {})
+        d.setdefault("alerts", [])
     return days
 
 

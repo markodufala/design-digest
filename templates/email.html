@@ -17,6 +17,7 @@
 </head>
 {# mirrors templates/page.html — keep the two in sync #}
 {% set ink = "#111111" %}{% set muted = "#8a8a8a" %}{% set line = "#ececec" %}{% set fill = "#f4f4f4" %}
+{% set key = "#k=" ~ ("taste" | sign) if feedback else "" %}
 {% set sans = "'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" %}
 <body style="margin:0; padding:0; background:#ffffff;">
 <div style="display:none; max-height:0; overflow:hidden;">
@@ -28,8 +29,18 @@
 
   <tr><td style="padding:20px 8px 0; font-family:{{ sans }}; font-size:14px; color:{{ ink }};">
     <span style="font-weight:500;">Design Digest</span>
-    {% if site_url %}<span style="float:right;"><a href="{{ site_url }}/d/{{ day.date }}.html" style="color:{{ muted }}; text-decoration:none;">Otvoriť na webe →</a></span>{% endif %}
+    {% if site_url %}<span style="float:right;"><a href="{{ site_url }}/d/{{ day.date }}.html{{ key }}" style="color:{{ muted }}; text-decoration:none;">Otvoriť na webe →</a></span>{% endif %}
   </td></tr>
+
+  {% if day.alerts %}
+  <tr><td style="padding:24px 8px 0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid {{ ink }}; border-radius:6px;">
+      {% for a in day.alerts %}
+      <tr><td style="padding:{{ '12px' if loop.first else '0' }} 16px {{ '12px' if loop.last else '8px' }}; font-family:{{ sans }}; font-size:13px; line-height:1.45; color:{{ ink }};">⚠ {{ a }}</td></tr>
+      {% endfor %}
+    </table>
+  </td></tr>
+  {% endif %}
 
   <tr><td style="padding:56px 8px 0; font-family:{{ sans }}; font-size:48px; line-height:1; font-weight:400; letter-spacing:-1.8px; color:{{ ink }};">
     {{ day.date | nice_date(False) }}
@@ -70,8 +81,20 @@
           <div style="padding-top:3px; font-family:{{ sans }}; font-size:13px; line-height:1.4; color:{{ muted }};">
             {{ LABELS.get(it.source, it.source) }}{% if it.author %} · {{ it.author }}{% endif %}{% if it.link %} · <a href="{{ it.link }}" style="color:{{ muted }}; text-decoration:none;">web ↗</a>{% endif %}
           </div>
-          {% if it.why %}
-          <div style="padding-top:6px; font-family:{{ sans }}; font-size:13px; line-height:1.45; color:{{ muted }};">{{ it.why }}</div>
+          {% if it.take or it.why %}
+          <div style="padding-top:6px; font-family:{{ sans }}; font-size:13px; line-height:1.45; color:{{ muted }};">{{ it.take or it.why }}</div>
+          {% endif %}
+          {% if it.palette or it.fonts %}
+          <table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:10px;"><tr>
+            {% for c in it.palette %}
+            <td width="10" height="10" bgcolor="{{ c }}" style="width:10px; height:10px; background:{{ c }}; border:1px solid #e4e4e4; border-radius:3px; font-size:0; line-height:0;">&nbsp;</td>
+            <td width="3" style="font-size:0; line-height:0;">&nbsp;</td>
+            {% endfor %}
+            {% if it.fonts %}<td style="padding-left:{{ '7px' if it.palette else '0' }}; font-family:{{ sans }}; font-size:12px; line-height:1.3; color:{{ ink }};">{{ it.fonts | join(" · ") }}</td>{% endif %}
+          </tr></table>
+          {% endif %}
+          {% if it.tech %}
+          <div style="padding-top:4px; font-family:{{ sans }}; font-size:12px; line-height:1.4; color:{{ muted }};">{{ it.tech | join(" · ") }}</div>
           {% endif %}
           {% set up, down = vote_url(it, 1), vote_url(it, -1) %}
           {% if up %}
@@ -90,9 +113,27 @@
   {% endif %}
   {% endfor %}
 
+  {% if day.taste.updated and day.taste.text %}
+  <tr><td style="padding:0 8px 40px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid {{ line }};">
+      <tr><td style="padding-top:14px; font-family:{{ sans }}; font-size:15px; font-weight:500; color:{{ ink }};">
+        Tvoj vkus <span style="font-weight:400; color:{{ muted }};">&nbsp;Claude ho prepísal podľa tvojich ♥ / ✕</span>
+      </td></tr>
+      <tr><td style="padding-top:12px; font-family:{{ sans }}; font-size:14px; line-height:1.5; color:{{ ink }};">
+        {{ day.taste.text | e | replace("\n", "<br>" | safe) }}
+      </td></tr>
+      {% if site_url and key %}
+      <tr><td style="padding-top:10px; font-family:{{ sans }}; font-size:13px;">
+        <a href="{{ site_url }}/{{ key }}&go=vkus" style="color:{{ muted }}; text-decoration:none;">Nesedí? Uprav ho →</a>
+      </td></tr>
+      {% endif %}
+    </table>
+  </td></tr>
+  {% endif %}
+
   <tr><td style="padding:24px 8px 8px; font-family:{{ sans }}; font-size:13px; line-height:1.6; color:{{ muted }}; border-top:1px solid {{ line }};">
     {% if broken %}<span style="color:{{ ink }};">Dnes nefungovalo: {{ broken | join(", ") }}.</span><br>{% endif %}
-    Automaticky každé ráno.{% if site_url %} Archív a uložené: <a href="{{ site_url }}" style="color:{{ ink }}; text-decoration:none;">{{ site_url.split("//")[-1] }}</a>{% endif %}
+    Automaticky každé ráno.{% if site_url %} Archív a uložené: <a href="{{ site_url }}/{{ key }}" style="color:{{ ink }}; text-decoration:none;">{{ site_url.split("//")[-1] }}</a>{% if key %} · <a href="{{ site_url }}/{{ key }}&go=vkus" style="color:{{ ink }}; text-decoration:none;">Tvoj vkus</a>{% endif %}{% endif %}
   </td></tr>
 
 </table>

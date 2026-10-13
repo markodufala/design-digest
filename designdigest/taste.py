@@ -3,6 +3,7 @@ import hashlib
 import hmac
 import os
 from collections import Counter
+from datetime import date
 
 import httpx
 
@@ -75,3 +76,53 @@ class Taste:
         if top:
             parts.append("Source affinity: " + ", ".join(f"{s} {a:+.2f}" for s, a in top))
         return "\n".join(parts)
+
+
+# --- Taste profile: Claude writes it, the person can edit it (stored in the worker) ---
+
+PROFILE_EVERY_DAYS = 7
+PROFILE_MIN_VOTES = 5
+
+
+def _worker() -> str:
+    return os.environ.get("FEEDBACK_URL", "").rstrip("/")
+
+
+def fetch_profile() -> dict:
+    """{"text", "generated_at", "edited_at"} — empty if none yet or no worker."""
+    if not _worker():
+        return {}
+    try:
+        r = httpx.get(f"{_worker()}/taste", timeout=20)
+        r.raise_for_status()
+        return r.json()
+    except (httpx.HTTPError, ValueError) as e:
+        print(f"  ! taste profile unavailable: {e}")
+        return {}
+
+
+def save_profile(text: str) -> dict:
+    r = httpx.post(f"{_worker()}/taste", json={"text": text, "s": sign("taste"), "by": "claude"}, timeout=20)
+    r.raise_for_status()
+    return r.json()
+
+
+def profile_due(profile: dict, taste: "Taste", today: str) -> bool:
+    """Rewrite weekly, and only once there are votes it hasn't seen yet."""
+    if not _worker() or not os.environ.get("FEEDBACK_KEY") or len(taste.votes) < PROFILE_MIN_VOTES:
+        return False
+    last = profile.get("generated_at", "")
+    if not last:
+        return True
+    newer = any(v.get("at", "") > last for v in taste.votes.values())
+    return newer and (date.fromisoformat(today) - date.fromisoformat(last[:10])).days >= PROFILE_EVERY_DAYS
+
+
+def worker_status() -> dict:
+    """What the worker's cron saw last time it started the workflow (token expiry etc.)."""
+    if not _worker():
+        return {}
+    try:
+        return httpx.get(f"{_worker()}/status", timeout=20).json()
+    except (httpx.HTTPError, ValueError):
+        return {}

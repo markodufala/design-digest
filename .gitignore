@@ -6,3 +6,4 @@ site/
 .curate/
 worker/node_modules/
 worker/.wrangler/
+.analyze/

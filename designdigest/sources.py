@@ -435,6 +435,31 @@ async def bestwebsite(c):
     return items
 
 
+# --- Type --------------------------------------------------------------------
+
+async def fontsinuse(c):
+    """Fonts In Use — typography in real work, with the typefaces named."""
+    base = "https://fontsinuse.com"
+    tree = LexborHTMLParser(await get(c, base + "/"))
+    items = []
+    for card in tree.css(".fiu-galleryItem[data-id]"):
+        a, img = card.css_first('a[href^="/uses/"]'), card.css_first("img")
+        if not a or not img:
+            continue
+        # the typeface samples sit next to the card, not inside it
+        faces = [s.attributes.get("alt", "") for s in card.parent.css(".fiu-sampleList__item img")]
+        faces = [f for f in faces if f][:4]
+        image = re.sub(r"(/thumb/[^/]+/)(?!@2x/)", r"\1@2x/", img.attributes.get("src", ""), count=1)  # sharper
+        items.append(Item(
+            source="fontsinuse", key=card.attributes["data-id"],
+            title=text(card.css_first(".fiu-galleryItem__headline")), url=urljoin(base, a.attributes["href"]),
+            image=image, section="type", position=len(items),
+            author=", ".join(text(li) for li in card.css(".fiu-galleryItem__designers li")[:2]),
+            fonts=faces, tags=faces, note=text(card.css_first(".fiu-galleryItem__date")),
+        ))
+    return items
+
+
 # --- Retro -------------------------------------------------------------------
 
 async def webdesignmuseum(c):
@@ -487,6 +512,7 @@ SOURCES = {
     "gsap": gsap_showcase,
     "brutalist": brutalist,
     "21st": twentyfirst,
+    "fontsinuse": fontsinuse,
     "webdesignmuseum": webdesignmuseum,
 }
 
@@ -506,5 +532,6 @@ LABELS = {
     "brutalist": "Brutalist Websites",
     "21st": "21st.dev",
     "dribbble": "Dribbble",
+    "fontsinuse": "Fonts In Use",
     "webdesignmuseum": "Web Design Museum",
 }

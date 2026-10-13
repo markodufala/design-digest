@@ -10,6 +10,7 @@ SECTIONS = {
     "web": ("Web — top weby dňa", 8),
     "visual": ("Vizuál & shots", 6),
     "ui": ("UI komponenty", 3),
+    "type": ("Typo — písmo v praxi", 3),
     "retro": ("Retro — z archívu", 3),
 }
 
@@ -22,6 +23,7 @@ SOURCE_WEIGHT = {
     "godly": 1.05,
     "cssda": 1.05,
     "bestwebsite": 1.05,
+    "fontsinuse": 1.05,
     "21st": 1.0,
     "landbook": 1.0,
     "webflow": 1.0,

@@ -8,6 +8,7 @@ a uloží na stránku s archívom. Beží samo na GitHub Actions.
 | Web | Awwwards (Site of the Day), Land-book, Minimal Gallery, One Page Love |
 | Vizuál & shots | Dribbble (popular, cez Playwright), Godly |
 | UI komponenty | 21st.dev (3 rotujúce kategórie denne: hero, shader, background…) |
+| Typo | Fonts In Use (písmo v reálnych projektoch, s menami fontov) |
 | Retro | Web Design Museum (staré weby + história webu) |
 
 ## Ako to funguje
@@ -15,8 +16,16 @@ a uloží na stránku s archívom. Beží samo na GitHub Actions.
 1. `designdigest/sources.py` — jeden fetcher na zdroj; chyba jedného zdroja nezhodí ostatné.
 2. `designdigest/rank.py` — popularita sa normalizuje v rámci zdroja, potom sa
    po sekciách berú najlepšie ešte nevidené veci (striedavo zo zdrojov kvôli pestrosti).
-3. `data/days/YYYY-MM-DD.json` + `data/seen.json` — archív, commitovaný späť do repa.
-4. `site/` — statická stránka (GitHub Pages), `templates/email.html` — mail.
+3. `designdigest/analyze.py` — rozbor vybraných vecí: otvorí živý web (Playwright), vytiahne
+   fonty, paletu a stack (GSAP, Three.js, Webflow…), potom Claude napíše „čo si z toho zobrať“.
+4. Profil vkusu — Claude ho raz týždenne prepíše z ♥ / ✕ (`curate.write_profile`), uložený je
+   vo workeri (`/taste`) a dá sa upraviť na stránke, ak ju otvoríš cez odkaz v maile (`#k=…`).
+   Kurátor ho berie ako hlavný vstup.
+5. `designdigest/alerts.py` — výstrahy navrchu mailu: GitHub token workera expiruje do 7 dní
+   (worker si pri crone ukladá hlavičku `github-authentication-token-expiration`, `/status`),
+   cron zlyhal, kurátor alebo rozbor nefungoval.
+6. `data/days/YYYY-MM-DD.json` + `data/seen.json` — archív, commitovaný späť do repa.
+7. `site/` — statická stránka (GitHub Pages), `templates/email.html` — mail (drž ho v súlade s `page.html`).
 
 ## Lokálne
 
@@ -24,7 +33,7 @@ a uloží na stránku s archívom. Beží samo na GitHub Actions.
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python -m playwright install chromium
 .venv/bin/python -m designdigest --no-email          # scrape + build site/
-.venv/bin/python -m designdigest --only godly,21st --no-email
+.venv/bin/python -m designdigest --only godly,21st --no-email --no-rozbor
 python3 -m http.server 8765 --directory site
 ```
 

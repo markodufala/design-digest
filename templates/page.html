@@ -58,6 +58,37 @@ section.block h2 .n { margin-left: auto; }
 .meta { color: var(--muted); font-size: 13px; margin-top: 3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .meta a:hover { color: var(--ink); }
 .why { color: var(--muted); font-size: 13px; line-height: 1.45; margin: 6px 0 0; }
+.dna { display: flex; align-items: center; gap: 10px; margin-top: 10px; font-size: 12px; min-width: 0; }
+.swatches { display: flex; gap: 3px; flex: none; }
+.sw {
+  width: 12px; height: 12px; padding: 0; border: 0; border-radius: 3px; cursor: copy;
+  box-shadow: inset 0 0 0 1px rgba(127, 127, 127, .25);
+}
+.sw.copied { outline: 1px solid var(--ink); outline-offset: 1px; }
+.fonts { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tech { color: var(--muted); font-size: 12px; margin-top: 4px; }
+
+.alerts { margin: 24px 0 0; padding: 12px 16px; border: 1px solid var(--ink); border-radius: 6px; font-size: 13px; }
+.alerts p { margin: 0; }
+.alerts p + p { margin-top: 8px; }
+
+.taste { margin-bottom: 40px; max-width: 640px; }
+.taste h3 { display: flex; align-items: baseline; gap: 12px; }
+.taste-text { color: var(--ink); font-size: 14px; white-space: pre-line; }
+.taste textarea {
+  display: block; width: 100%; min-height: 200px; margin: 0 0 10px; padding: 12px; resize: vertical;
+  font: inherit; font-size: 14px; color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 6px;
+}
+.taste textarea:focus { outline: none; border-color: var(--muted); }
+.btn {
+  font: inherit; font-size: 13px; color: var(--ink); background: transparent; cursor: pointer;
+  border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px;
+}
+.btn:hover { border-color: var(--muted); }
+.link-btn { font: inherit; font-size: 13px; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
+.link-btn:hover { color: var(--ink); }
+.taste .hint { margin: 10px 0 0; }
 
 .votes { display: flex; gap: 2px; margin: -6px -8px 0 0; }
 .vote {
@@ -99,6 +130,11 @@ footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10
 </header>
 
 <main class="wrap">
+  {% if day.alerts %}
+  <div class="alerts" role="alert">
+    {% for a in day.alerts %}<p>⚠ {{ a }}</p>{% endfor %}
+  </div>
+  {% endif %}
   <div class="hero">
     <div>
       <h1>{{ day.date | nice_date(False) }}</h1>
@@ -134,7 +170,14 @@ footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10
             <div class="meta">
               {{ LABELS.get(it.source, it.source) }}{% if it.author %} · {{ it.author }}{% endif %}{% if it.link %} · <a href="{{ it.link }}" target="_blank" rel="noopener">web ↗</a>{% endif %}
             </div>
-            {% if it.why %}<p class="why">{{ it.why }}</p>{% endif %}
+            {% if it.take or it.why %}<p class="why">{{ it.take or it.why }}</p>{% endif %}
+            {% if it.palette or it.fonts %}
+            <div class="dna">
+              {% if it.palette %}<span class="swatches">{% for c in it.palette %}<button class="sw" style="background:{{ c }}" data-hex="{{ c }}" title="{{ c }} · kopírovať" aria-label="Farba {{ c }}, kopírovať"></button>{% endfor %}</span>{% endif %}
+              {% if it.fonts %}<span class="fonts" title="{{ it.fonts | join(', ') }}">{{ it.fonts | join(" · ") }}</span>{% endif %}
+            </div>
+            {% endif %}
+            {% if it.tech %}<div class="tech">{{ it.tech | join(" · ") }}</div>{% endif %}
           </div>
           <div class="votes" data-s="{{ it.id | sign }}">
             <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
@@ -158,6 +201,18 @@ footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10
 
 <footer>
   <div class="wrap">
+    <section class="taste" id="vkus">
+      <h3>Tvoj vkus <button class="link-btn" id="taste-edit" hidden>Upraviť</button></h3>
+      <div class="taste-text" id="taste-text">{{ day.taste.text or "Zatiaľ žiadny profil. Vznikne z tvojich ♥ / ✕ — alebo si ho napíš sám." }}</div>
+      <form id="taste-form" hidden>
+        <textarea aria-label="Tvoj vkus" placeholder="Páči sa ti:&#10;- …&#10;Nebaví ťa:&#10;- …"></textarea>
+        <button class="btn" type="submit">Uložiť</button>
+        <button class="link-btn" type="button" id="taste-cancel">Zrušiť</button>
+        <span id="taste-msg"></span>
+      </form>
+      <p class="hint" id="taste-hint">Claude ho raz týždenne prepíše podľa ♥ / ✕ a podľa neho vyberá. Čo tu upravíš, berie ako fakt.<span id="taste-howto"> Upraviť sa dá po otvorení stránky cez odkaz v maile.</span></p>
+    </section>
+
     <h3>Archív</h3>
     <div class="days">
       {% for d in days[:60] %}
@@ -230,7 +285,55 @@ footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10
     }
   });
 
+  // swatches: click copies the hex
+  document.addEventListener("click", e => {
+    const sw = e.target.closest(".sw");
+    if (!sw) return;
+    navigator.clipboard?.writeText(sw.dataset.hex).then(() => {
+      sw.classList.add("copied");
+      setTimeout(() => sw.classList.remove("copied"), 900);
+    }).catch(() => {});
+  });
+
+  // taste profile — editable on devices that opened the site from the email (#k=… carries the key)
+  const hash = new URLSearchParams(location.hash.slice(1));
+  if (hash.get("k")) {
+    store.set("dd-key", hash.get("k"));
+    history.replaceState(null, "", location.pathname + (hash.get("go") ? "#" + hash.get("go") : ""));
+    if (hash.get("go")) document.getElementById(hash.get("go"))?.scrollIntoView();
+  }
+  const KEY = store.get("dd-key", "");
+  const tasteText = document.getElementById("taste-text"), tasteForm = document.getElementById("taste-form");
+  const tasteEdit = document.getElementById("taste-edit"), tasteMsg = document.getElementById("taste-msg");
+  const area = tasteForm.querySelector("textarea");
+  let tasteValue = {{ (day.taste.text or "") | tojson }};
+  if (FEEDBACK && KEY) {
+    tasteEdit.hidden = false;
+    document.getElementById("taste-howto").hidden = true;
+  }
+  const showTaste = t => { tasteValue = t; if (t) tasteText.textContent = t; };
+  tasteEdit.addEventListener("click", () => {
+    area.value = tasteValue;
+    tasteForm.hidden = false; tasteText.hidden = true; tasteEdit.hidden = true; tasteMsg.textContent = "";
+    area.focus();
+  });
+  const closeEditor = () => { tasteForm.hidden = true; tasteText.hidden = false; tasteEdit.hidden = false; };
+  document.getElementById("taste-cancel").addEventListener("click", closeEditor);
+  tasteForm.addEventListener("submit", e => {
+    e.preventDefault();
+    tasteMsg.textContent = "Ukladám…";
+    fetch(FEEDBACK + "/taste", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: area.value, s: KEY, by: "user" }),
+    }).then(r => r.json()).then(r => {
+      if (!r.ok) throw new Error(r.error);
+      showTaste(r.text); closeEditor();
+    }).catch(() => { tasteMsg.textContent = "Neuložilo sa — otvor stránku znova cez odkaz v maile."; });
+  });
+
   if (FEEDBACK) {
+    fetch(FEEDBACK + "/taste").then(r => r.json()).then(t => showTaste(t.text || "")).catch(() => {});
+
     // the worker is the source of truth (votes from email or other devices)
     Promise.all([
       fetch(FEEDBACK + "/votes").then(r => r.json()),
