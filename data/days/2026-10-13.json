@@ -1,0 +1,572 @@
+{
+ "date": "2026-10-13",
+ "sections": {
+  "wow": [
+   {
+    "source": "brutalist",
+    "key": "imogen.fyi",
+    "title": "imogen.fyi",
+    "url": "http://imogen.fyi",
+    "image": "https://brutalistwebsites.com/_img/imogen.fyi.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://imogen.fyi",
+    "popularity": null,
+    "position": 7,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.888,
+    "why": "Žltá stena textu s farebnými odkazmi a graffiti logom, osobný a drzý",
+    "id": "brutalist:imogen.fyi"
+   },
+   {
+    "source": "brutalist",
+    "key": "adidas.com/us/yung",
+    "title": "adidas.com/us/yung",
+    "url": "http://adidas.com/us/yung",
+    "image": "https://brutalistwebsites.com/_img/adidas.com_us_yung.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://adidas.com/us/yung",
+    "popularity": null,
+    "position": 3,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.86,
+    "why": "Adidas Yung-96 ako web z 90. rokov: WordArt, tapetové pozadie, GIF tlačidlá",
+    "id": "brutalist:adidas.com/us/yung"
+   },
+   {
+    "source": "gsap",
+    "key": "https://bersus.io/",
+    "title": "Den Bersus - Portfolio",
+    "url": "https://bersus.io/",
+    "image": "https://gsap.com/community/uploads/monthly_2026_10/brs-v3-screenshot-01b.jpg.36805bc09ad8d45d9dfcc3dd1d844fdc.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "https://bersus.io/",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "motion",
+    "score": 0.6725,
+    "why": "Obrovské BERSUS a mramorová socha s pálkou, šachové figúrky ako rekvizity",
+    "id": "gsap:https://bersus.io/"
+   },
+   {
+    "source": "gsap",
+    "key": "https://ateliernorth.vercel.app/",
+    "title": "ATELIERNORTH",
+    "url": "https://ateliernorth.vercel.app/",
+    "image": "https://gsap.com/community/uploads/monthly_2026_10/Frame1360.jpg.2b8c3b1bfb6fb4abe7225e3efdaea045.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "https://ateliernorth.vercel.app/",
+    "popularity": null,
+    "position": 5,
+    "tags": [],
+    "note": "motion",
+    "score": 0.6675,
+    "why": "Krémová plocha, kondenzovaný modrý nápis a technická mriežka v drobnom texte",
+    "id": "gsap:https://ateliernorth.vercel.app/"
+   },
+   {
+    "source": "codrops",
+    "key": "post-87360",
+    "title": "Slideshow with Filter Reveal Effect",
+    "url": "https://tympanus.net/Development/ParanoiaSlideshow/",
+    "image": "https://tympanus.net/codrops/wp-content/uploads/2021/11/Paranoia-400x300.jpg",
+    "section": "wow",
+    "author": "Manoela Ilic",
+    "link": "https://tympanus.net/Development/ParanoiaSlideshow/",
+    "popularity": null,
+    "position": 14,
+    "tags": [
+     "filter",
+     "slideshow"
+    ],
+    "note": "filter · slideshow",
+    "score": 0.5713,
+    "why": "Fialový plagátový slideshow s dúhovým filtrom, odvážna farebnosť",
+    "id": "codrops:post-87360"
+   },
+   {
+    "source": "codrops",
+    "key": "post-119038",
+    "title": "Interactive 3D Cluster",
+    "url": "https://tympanus.net/codrops/?p=117948",
+    "image": "https://tympanus.net/codrops/wp-content/uploads/2026/08/videoframe_8751-400x300.png.webp",
+    "section": "wow",
+    "author": "Francesco Michelini",
+    "link": "https://tympanus.net/Tutorials/3DCluster/",
+    "popularity": null,
+    "position": 8,
+    "tags": [
+     "3D",
+     "icosahedron",
+     "Three.js",
+     "TSL"
+    ],
+    "note": "3D · icosahedron",
+    "score": 0.545,
+    "why": "Ikosaédrový zhluk úlomkov v Three.js, technicky čistý, ale WebGL demo",
+    "id": "codrops:post-119038"
+   }
+  ],
+  "web": [
+   {
+    "source": "onepagelove",
+    "key": "https://onepagelove.com/?p=88970",
+    "title": "Tim Van Damme (Max Voltar)",
+    "url": "https://onepagelove.com/tim-van-damme-max-voltar",
+    "image": "https://assets.onepagelove.com/cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=top,format=jpg,quality=85/wp-content/uploads/2026/10/tim-vandamm-homepage-preview.png",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [
+     "Inspiration",
+     "Curriculum Vitae (CV)",
+     "Figma",
+     "Icon Designer"
+    ],
+    "note": "",
+    "score": 0.845,
+    "why": "Čiernobiela fotka počmáraná červenými rožkami a fúzmi, punková sebairónia",
+    "id": "onepagelove:https://onepagelove.com/?p=88970"
+   },
+   {
+    "source": "cssda",
+    "key": "50377",
+    "title": "Petrillo.studio",
+    "url": "https://www.cssdesignawards.com/sites/petrillo-studio/50377/",
+    "image": "https://www.cssdesignawards.com/cdasites/2026/202610/20261012051422.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://petrillo.studio",
+    "popularity": null,
+    "position": 2,
+    "tags": [],
+    "note": "Nominee",
+    "score": 0.7295,
+    "why": "Červená plocha s čiernou dierou ako ciferník hodín, dátum ako typografia",
+    "id": "cssda:50377"
+   },
+   {
+    "source": "webflow",
+    "key": "portal-to-the-future",
+    "title": "Finalist #WebflowChallenge 2025 - Portal to the Future",
+    "url": "https://webflow.com/made-in-webflow/website/portal-to-the-future",
+    "image": "https://cdn.prod.website-files.com/688c53958c286a5e5aa8aae5/68c1a6c43e917248c502e5cb_portal-to-the-future.webflow.io_.png",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 5,
+    "tags": [],
+    "note": "",
+    "score": 0.7002,
+    "why": "Svetelný portál v jaskyni a serifový nadpis, filmová a symbolická scéna",
+    "id": "webflow:portal-to-the-future"
+   },
+   {
+    "source": "bestwebsite",
+    "key": "sites/sotd/2026/09/24/noww",
+    "title": "Noww",
+    "url": "https://bestwebsite.gallery/sites/sotd/2026/09/24/noww",
+    "image": "https://static.bestwebsite.gallery/assets/gallery_bestwebsite/images/noww-ch_2026-09-24_preview.png",
+    "section": "web",
+    "author": "",
+    "link": "https://www.noww.ch/",
+    "popularity": null,
+    "position": 2,
+    "tags": [],
+    "note": "",
+    "score": 0.665,
+    "why": "Obrovské NOWW pretekajúce cez okraje, tvrdá švajčiarska typografia",
+    "id": "bestwebsite:sites/sotd/2026/09/24/noww"
+   },
+   {
+    "source": "minimalgallery",
+    "key": "https://minimal.gallery/?p=27922",
+    "title": "JARCOS",
+    "url": "https://minimal.gallery/jarcos/",
+    "image": "https://minimal.gallery/wp-content/uploads/2026/08/jarcos.work_.jpg",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 5,
+    "tags": [
+     "Uncategorized",
+     "Portfolio",
+     "Personal"
+    ],
+    "note": "",
+    "score": 0.6167,
+    "why": "Obrovské čierne JARCOS prekryté farebným vrstveným objektom, odvážny kontrast",
+    "id": "minimalgallery:https://minimal.gallery/?p=27922"
+   },
+   {
+    "source": "onepagelove",
+    "key": "https://onepagelove.com/?p=88989",
+    "title": "ByMayo",
+    "url": "https://onepagelove.com/bymayo-2",
+    "image": "https://assets.onepagelove.com/cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=top,format=jpg,quality=85/wp-content/uploads/2026/10/opl-screenshot-bymayo-1791456477478-desktop.jpg",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 1,
+    "tags": [
+     "Inspiration",
+     "App Developer",
+     "CMS",
+     "Craft"
+    ],
+    "note": "",
+    "score": 0.6033,
+    "why": "Teplá šedá mriežka, ikony pluginov ako hračky, tichý remeselný charakter",
+    "id": "onepagelove:https://onepagelove.com/?p=88989"
+   },
+   {
+    "source": "landbook",
+    "key": "100969",
+    "title": "Lightspark | The API for money: accounts, payments, cards",
+    "url": "https://land-book.com/websites/100969-lightspark-the-api-for-money-accounts-payments-cards",
+    "image": "https://cdn.land-book.com/image/0x0:2732x4098/600x0/filters:format(webp)/website/100969/3b2bc5b61f664abf-screenshot-source?signature=fddd3051f075d6d57b5a0eb9ce10520aa3b9d658949a508a10c078af648e8613",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "",
+    "score": 0.594,
+    "why": "Rozmazané plávajúce karty okolo nadpisu, fintech klišé s miernym šarmom",
+    "id": "landbook:100969"
+   },
+   {
+    "source": "darkdesign",
+    "key": "ponder-1782376605237",
+    "title": "Ponder",
+    "url": "https://dark.design/site/ponder-1782376605237",
+    "image": "https://sidhvpjhuucqcehkevrl.supabase.co/storage/v1/render/image/public/screenshots/auto-1782376597098.webp?width=1080&quality=60&height=675&resize=cover",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 5,
+    "tags": [],
+    "note": "dark UI",
+    "score": 0.4554,
+    "why": "Plávajúce video ukážky v tme, video editor bez vlastnej identity",
+    "id": "darkdesign:ponder-1782376605237"
+   }
+  ],
+  "visual": [
+   {
+    "source": "godly",
+    "key": "0t0c08y",
+    "title": "Ronnie's Pro Skater",
+    "url": "https://godly.website/i/0t0c08y-ghost-skater-pixel-game",
+    "image": "https://cdn.recent.design/items/0t0c08y/0/poster/960.webp",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 3,
+    "tags": [],
+    "note": "",
+    "score": 0.8584,
+    "why": "Pixel-art skejt hra s logom v štýle Tony Hawka, retro radosť",
+    "id": "godly:0t0c08y"
+   },
+   {
+    "source": "dribbble",
+    "key": "27270061",
+    "title": "cryonex: Cold Biostorage & Biomanufacturing - Reels Design UI",
+    "url": "https://dribbble.com/shots/27270061-cryonex-Cold-Biostorage-Biomanufacturing-Reels-Design-UI",
+    "image": "https://cdn.dribbble.com/userupload/47356343/file/9fd2c411e19ea1f2faf4e9fe2c9d5ad3.png?format=webp&resize=800x600&vertical=center",
+    "section": "visual",
+    "author": "Samuel Oktavianus",
+    "link": "",
+    "popularity": 142.0,
+    "position": 35,
+    "tags": [],
+    "note": "♥ 142 · 👁 11k",
+    "score": 0.776,
+    "why": "Cryonex reels: limetková, sklenená vialka a typografia so šípkami",
+    "id": "dribbble:27270061"
+   },
+   {
+    "source": "godly",
+    "key": "f61iezo",
+    "title": "Office Commun Brand Identity",
+    "url": "https://godly.website/i/f61iezo-office-commun-brand-identity",
+    "image": "https://cdn.recent.design/items/f61iezo/0/poster/960.webp",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "",
+    "score": 0.748,
+    "why": "Identita nad videom stromu vo vetre, pokojná a organická",
+    "id": "godly:f61iezo"
+   },
+   {
+    "source": "godly",
+    "key": "o2pgx18",
+    "title": "Dessn Branded UI Components",
+    "url": "https://godly.website/i/o2pgx18-dessn-branded-ui-components",
+    "image": "https://cdn.recent.design/items/o2pgx18/0/image/0e965f2a85df2e246a06/2000.webp",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 4,
+    "tags": [],
+    "note": "",
+    "score": 0.6998,
+    "why": "Tmavé UI komponenty nad divokou zeleno-červenou ilustráciou, odvážny kontrast",
+    "id": "godly:o2pgx18"
+   },
+   {
+    "source": "cosmos",
+    "key": "design/fall-phone-wallpapers",
+    "title": "Fall phone wallpapers",
+    "url": "https://www.cosmos.so/design/fall-phone-wallpapers",
+    "image": "https://cdn.cosmos.so/images/41d51018-6ace-44f0-9ac5-56f6dc498ed8?format=webp&w=800",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "design",
+    "score": 0.678,
+    "why": "Zrnité jesenné prechody farieb ako tapeta, tichá textúra",
+    "id": "cosmos:design/fall-phone-wallpapers"
+   },
+   {
+    "source": "dribbble",
+    "key": "27802536",
+    "title": "Branding for the Business Analytic Platform",
+    "url": "https://dribbble.com/shots/27802536-Branding-for-the-Business-Analytic-Platform",
+    "image": "https://cdn.dribbble.com/userupload/49292231/file/cdfb49ce79f4bab1a20716e7f392617b.webp?format=webp&resize=800x600&vertical=center",
+    "section": "visual",
+    "author": "Bato",
+    "link": "",
+    "popularity": 206.0,
+    "position": 17,
+    "tags": [],
+    "note": "♥ 206 · 👁 14.3k",
+    "score": 0.608,
+    "why": "Oranžové 3D logo a biznis portrét, štandardná Dribbble prezentácia",
+    "id": "dribbble:27802536"
+   }
+  ],
+  "ui": [
+   {
+    "source": "21st",
+    "key": "danielpetho/text-rotate",
+    "title": "Text Rotate",
+    "url": "https://21st.dev/danielpetho/text-rotate",
+    "image": "https://cdn.21st.dev/user_danielpetho/text-rotate/default/preview.png?v=1",
+    "section": "ui",
+    "author": "danielpetho",
+    "link": "",
+    "popularity": 0.9943820224719101,
+    "position": 47,
+    "tags": [
+     "text"
+    ],
+    "note": "text · ↓ 1730",
+    "score": 0.5081,
+    "why": "Rotujúce slovo v korálovom boxe, jednoduchý trik",
+    "id": "21st:danielpetho/text-rotate"
+   },
+   {
+    "source": "21st",
+    "key": "dillionverma/rainbow-button",
+    "title": "Rainbow Button",
+    "url": "https://21st.dev/dillionverma/rainbow-button",
+    "image": "https://cdn.21st.dev/user_magicui/rainbow-button.png",
+    "section": "ui",
+    "author": "dillionverma",
+    "link": "",
+    "popularity": 0.9828571428571429,
+    "position": 172,
+    "tags": [
+     "cta"
+    ],
+    "note": "cta · ↓ 3110",
+    "score": 0.5037,
+    "why": "",
+    "id": "21st:dillionverma/rainbow-button"
+   },
+   {
+    "source": "21st",
+    "key": "dillionverma/blur-fade",
+    "title": "Blur Fade",
+    "url": "https://21st.dev/dillionverma/blur-fade",
+    "image": "https://cdn.21st.dev/user_magicui/blur-fade.png",
+    "section": "ui",
+    "author": "dillionverma",
+    "link": "",
+    "popularity": 0.9775280898876404,
+    "position": 72,
+    "tags": [
+     "text"
+    ],
+    "note": "text · ↓ 1393",
+    "score": 0.5031,
+    "why": "",
+    "id": "21st:dillionverma/blur-fade"
+   }
+  ],
+  "retro": [
+   {
+    "source": "webdesignmuseum",
+    "key": "internet-explorer-4-0-1997",
+    "title": "Internet Explorer 4.0",
+    "url": "https://www.webdesignmuseum.org/web-design-history/internet-explorer-4-0-1997",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/internet-explorer-4-0-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 153,
+    "tags": [],
+    "note": "1997 · história webu",
+    "score": 0.6063,
+    "why": "IE 4.0 priniesol Active Desktop a channels, vojna prehliadačov",
+    "id": "webdesignmuseum:internet-explorer-4-0-1997"
+   },
+   {
+    "source": "webdesignmuseum",
+    "key": "html-4-0-1997",
+    "title": "HTML 4.0",
+    "url": "https://www.webdesignmuseum.org/web-design-history/html-4-0-1997",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/html-4-0-specification-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 155,
+    "tags": [],
+    "note": "1997 · história webu",
+    "score": 0.6046,
+    "why": "HTML 4.0 zaviedol CSS a oddelil štýl od štruktúry",
+    "id": "webdesignmuseum:html-4-0-1997"
+   },
+   {
+    "source": "webdesignmuseum",
+    "key": "media-queries-2001",
+    "title": "Media Queries",
+    "url": "https://www.webdesignmuseum.org/web-design-history/media-queries-2001",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/media-queries-working-draft-2001-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 232,
+    "tags": [],
+    "note": "2001 · história webu",
+    "score": 0.6029,
+    "why": "Media queries v návrhu 2001, korene responzívneho webu",
+    "id": "webdesignmuseum:media-queries-2001"
+   }
+  ]
+ },
+ "health": {
+  "onepagelove": {
+   "ok": true,
+   "count": 10,
+   "secs": 0.4
+  },
+  "webflow": {
+   "ok": true,
+   "count": 18,
+   "secs": 0.6
+  },
+  "brutalist": {
+   "ok": true,
+   "count": 1583,
+   "secs": 1.0
+  },
+  "darkdesign": {
+   "ok": true,
+   "count": 246,
+   "secs": 1.2
+  },
+  "godly": {
+   "ok": true,
+   "count": 20,
+   "secs": 1.4
+  },
+  "21st": {
+   "ok": true,
+   "count": 477,
+   "secs": 1.8
+  },
+  "minimalgallery": {
+   "ok": true,
+   "count": 10,
+   "secs": 2.2
+  },
+  "cssda": {
+   "ok": true,
+   "count": 12,
+   "secs": 3.4
+  },
+  "bestwebsite": {
+   "ok": true,
+   "count": 10,
+   "secs": 3.4
+  },
+  "landbook": {
+   "ok": true,
+   "count": 20,
+   "secs": 7.9
+  },
+  "codrops": {
+   "ok": true,
+   "count": 96,
+   "secs": 8.9
+  },
+  "gsap": {
+   "ok": true,
+   "count": 36,
+   "secs": 10.3
+  },
+  "cosmos": {
+   "ok": true,
+   "count": 5,
+   "secs": 10.4
+  },
+  "dribbble": {
+   "ok": true,
+   "count": 48,
+   "secs": 12.2
+  },
+  "webdesignmuseum": {
+   "ok": true,
+   "count": 178,
+   "secs": 15.7
+  },
+  "awwwards": {
+   "ok": false,
+   "error": "TimeoutError: Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.awwwards.com/websites/sites_of_the_day/\", waiting until \"domcontentloaded\"\n"
+  }
+ },
+ "curator": {
+  "ok": true,
+  "model": "opus",
+  "rated": 78,
+  "secs": 63
+ }
+}
