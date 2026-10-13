@@ -28,7 +28,8 @@ def save_day(day: date, sections: dict[str, list[Item]], health: dict, curator: 
     seen = load_seen()
     for items in sections.values():
         for it in items:
-            seen.setdefault(it.id, day.isoformat())
+            for key in {it.id} | it.dedupe_keys():  # site / title keys catch it in other galleries
+                seen.setdefault(key, day.isoformat())
     cutoff = (day - timedelta(days=SEEN_TTL_DAYS)).isoformat()
     seen = {k: v for k, v in seen.items() if v >= cutoff}
     SEEN.write_text(json.dumps(seen, indent=0, sort_keys=True))

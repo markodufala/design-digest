@@ -5,6 +5,8 @@
 //   GET  /taste                -> the taste profile {text, generated_at, edited_at}
 //   POST /taste {text, s, by}  -> Claude (daily job) or the person (site) rewrites it
 //   GET  /status               -> what the cron saw last: {cron: {at, ok, status, token_expires}}
+//   POST /img?key=&s=  (jpeg)  -> the daily job mirrors each pick's image here…
+//   GET  /img/<key>.jpg        -> …so the archive survives galleries deleting or hotlink-blocking them
 // `s` is an HMAC of the item id (or of "taste"), so only the digest and its email can write.
 //
 // Cron (wrangler.toml): starts the daily GitHub workflow, because GitHub's own
@@ -16,7 +18,7 @@ const TASTE = "taste";
 const CRON = "cron";
 
 export default {
-  async fetch(req, env) {
+  async fetch(req, env, ctx) {
     const url = new URL(req.url);
     const cors = {
       "Access-Control-Allow-Origin": "*",
@@ -58,6 +60,35 @@ export default {
       Object.assign(taste, { text }, body.by === "claude" ? { generated_at: now } : { edited_at: now });
       await env.VOTES.put(TASTE, JSON.stringify(taste));
       return Response.json({ ok: true, ...taste }, { headers: cors });
+    }
+
+    if (url.pathname === "/img" && req.method === "POST") {
+      const key = url.searchParams.get("key") || "";
+      if (!/^[0-9a-f]{8,40}$/.test(key) || url.searchParams.get("s") !== (await hmac(env.SIGNING_KEY, `img:${key}`))) {
+        return Response.json({ ok: false, error: "bad signature" }, { status: 403 });
+      }
+      const body = await req.arrayBuffer();
+      if (!body.byteLength || body.byteLength > 2_000_000) return Response.json({ ok: false, error: "bad size" }, { status: 400 });
+      await env.VOTES.put(`img:${key}`, body, { metadata: { type: req.headers.get("Content-Type") || "image/jpeg" } });
+      return Response.json({ ok: true });
+    }
+
+    if (url.pathname.startsWith("/img/") && req.method === "GET") {
+      const cache = caches.default;   // images never change, so KV is read once per edge location
+      const hit = await cache.match(req);
+      if (hit) return hit;
+      const key = url.pathname.slice(5).replace(/\.\w+$/, "");
+      const { value, metadata } = await env.VOTES.getWithMetadata(`img:${key}`, "arrayBuffer");
+      if (!value) return new Response("not found", { status: 404 });
+      const res = new Response(value, {
+        headers: {
+          "Content-Type": metadata?.type || "image/jpeg",
+          "Cache-Control": "public, max-age=31536000, immutable",
+          "Access-Control-Allow-Origin": "*",
+        },
+      });
+      ctx.waitUntil(cache.put(req, res.clone()));
+      return res;
     }
 
     if (url.pathname === "/status" && req.method === "GET") {

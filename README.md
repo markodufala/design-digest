@@ -24,8 +24,12 @@ a uloží na stránku s archívom. Beží samo na GitHub Actions.
 5. `designdigest/alerts.py` — výstrahy navrchu mailu: GitHub token workera expiruje do 7 dní
    (worker si pri crone ukladá hlavičku `github-authentication-token-expiration`, `/status`),
    cron zlyhal, kurátor alebo rozbor nefungoval.
-6. `data/days/YYYY-MM-DD.json` + `data/seen.json` — archív, commitovaný späť do repa.
-7. `site/` — statická stránka (GitHub Pages), `templates/email.html` — mail (drž ho v súlade s `page.html`).
+6. `designdigest/mirror.py` — obrázky vybraných vecí orezané na 4:3 sa ukladajú do workera
+   (KV, `/img/<key>.jpg`), aby archív a staré maily neostali prázdne, keď galéria obrázok zmaže.
+   Zlyhané zdroje sa skúšajú druhýkrát; rovnaký web z viacerých galérií prejde len raz
+   (`Item.dedupe_keys`: adresa webu / názov, ukladajú sa aj do `seen.json`).
+7. `data/days/YYYY-MM-DD.json` + `data/seen.json` — archív, commitovaný späť do repa.
+8. `site/` — statická stránka (GitHub Pages), `templates/email.html` — mail (drž ho v súlade s `page.html`).
 
 ## Lokálne
 

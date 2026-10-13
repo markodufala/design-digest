@@ -7,10 +7,11 @@ import time
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import alerts, analyze, curate, mailer, rank, render, sources, store
+from . import alerts, analyze, curate, mailer, mirror, rank, render, sources, store
 from .taste import Taste, fetch_profile, fetch_votes, profile_due, save_profile, worker_status
 
 TZ = ZoneInfo("Europe/Bratislava")
+RETRY_AFTER = 15  # seconds before failed sources get a second try
 
 
 async def fetch_all(names: list[str]):
@@ -27,6 +28,15 @@ async def fetch_all(names: list[str]):
                 return []
         for got in await asyncio.gather(*(run(n) for n in names)):
             items.extend(got)
+        # in CI a different source times out most days — usually while a dozen headless
+        # browsers start at once; a second, quieter try gets most of them back
+        failed = [n for n in names if not health[n]["ok"]]
+        if failed:
+            await asyncio.sleep(RETRY_AFTER)
+            for got in await asyncio.gather(*(run(n) for n in failed)):
+                items.extend(got)
+            for n in failed:
+                health[n]["retried"] = True
     return items, health
 
 
@@ -93,11 +103,18 @@ def main() -> int:
         except Exception as e:  # never lose the digest over the extras
             analysis = {"error": f"{type(e).__name__}: {e}"[:300]}
         print(f"  rozbor: {analysis}")
+        if dropped := rank.dedupe(picked):  # the rozbor found that two galleries showed one site
+            analysis["duplicates_dropped"] = dropped
+            print(f"  dropped {dropped} duplicate(s)")
 
-    warnings = alerts.collect(today, worker_status(), curator, analysis)
+    mirrored = mirror.run(picked)
+    print(f"  images: {mirrored}")
+
+    warnings = alerts.collect(today, worker_status(), curator, analysis, mirrored)
     for w in warnings:
         print(f"  ! {w}")
-    store.save_day(today, picked, health, curator, analysis=analysis, taste=taste_info, alerts=warnings)
+    store.save_day(today, picked, health, curator, analysis=analysis, taste=taste_info,
+                    images=mirrored, alerts=warnings)
     days = store.load_days()
     render.build_site(days)
     print(f"Saved {today}: {total} items → site/")

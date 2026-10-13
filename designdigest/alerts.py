@@ -6,7 +6,7 @@ RENEW = ("Nový token: github.com/settings/personal-access-tokens (repo design-d
          "potom v priečinku worker/: wrangler secret put GITHUB_TOKEN")
 
 
-def collect(today: date, status: dict, curator: dict, analysis: dict) -> list[str]:
+def collect(today: date, status: dict, curator: dict, analysis: dict, images: dict | None = None) -> list[str]:
     out = []
     cron = status.get("cron") or {}
     if exp := cron.get("token_expires"):
@@ -28,4 +28,8 @@ def collect(today: date, status: dict, curator: dict, analysis: dict) -> list[st
                    "Ak ide o token: claude setup-token → GitHub secret CLAUDE_CODE_OAUTH_TOKEN.")
     if err := analysis.get("error"):
         out.append(f"Rozbor od Clauda zlyhal: {err[:140]}")
+    images = images or {}
+    if images.get("failed", 0) > images.get("mirrored", 0):
+        out.append(f"Obrázky sa neuložili do workera ({images['failed']}× chyba), mail ich berie priamo z galérií. "
+                   "Je worker nasadený v poslednej verzii? V priečinku worker/: npx wrangler deploy")
     return out

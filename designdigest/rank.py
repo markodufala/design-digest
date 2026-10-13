@@ -66,21 +66,26 @@ def score(items: list[Item], taste=None, ai: dict | None = None) -> None:
             it.score = round(it.score, 4)
 
 
+def fresh(it: Item, seen: set[str]) -> bool:
+    """Not published before — not even the same site through another gallery."""
+    return it.id not in seen and not (it.dedupe_keys() & seen)
+
+
 def candidates(items: list[Item], seen: set[str], per_section: int = 3) -> list[Item]:
     """Shortlist for the AI curator: a few times each section's quota, diverse by source."""
     out = []
     for section, (_, quota) in SECTIONS.items():
-        out += _round_robin([it for it in items if it.section == section and it.id not in seen],
+        out += _round_robin([it for it in items if it.section == section and fresh(it, seen)],
                             quota * per_section)
     return out
 
 
 def pick(items: list[Item], seen: set[str]) -> dict[str, list[Item]]:
     """Best unseen items per section, round-robin across sources for variety."""
-    out = {}
+    out, taken = {}, set()
     for section, (_, quota) in SECTIONS.items():
         pool = [it for it in items if it.section == section]
-        chosen = _round_robin([it for it in pool if it.id not in seen], quota)
+        chosen = _round_robin([it for it in pool if fresh(it, seen)], quota, taken)
         if section in RECYCLE and len(chosen) < quota:
             # the archive pool is finite — once exhausted, show old picks again
             rest = [it for it in pool if it not in chosen]
@@ -90,7 +95,25 @@ def pick(items: list[Item], seen: set[str]) -> dict[str, list[Item]]:
     return out
 
 
-def _round_robin(pool: list[Item], quota: int) -> list[Item]:
+def dedupe(sections: dict[str, list[Item]]) -> int:
+    """Drop the weaker copy once the rozbor has found more live links. Returns how many went."""
+    taken, dropped = set(), 0
+    best_first = sorted((it for group in sections.values() for it in group), key=lambda it: it.score, reverse=True)
+    dupes = set()
+    for it in best_first:
+        keys = it.dedupe_keys()
+        if keys & taken:
+            dupes.add(it.id)
+        taken |= keys
+    for key, group in sections.items():
+        sections[key] = [it for it in group if it.id not in dupes]
+        dropped += len(group) - len(sections[key])
+    return dropped
+
+
+def _round_robin(pool: list[Item], quota: int, taken: set[str] | None = None) -> list[Item]:
+    """Best items, alternating sources. `taken` (dedupe keys) is shared across calls."""
+    taken = set() if taken is None else taken
     queues = defaultdict(list)
     for it in sorted(pool, key=lambda it: it.score, reverse=True):
         queues[it.source].append(it)
@@ -99,6 +122,11 @@ def _round_robin(pool: list[Item], quota: int) -> list[Item]:
     order = sorted(queues, key=lambda s: queues[s][0].score, reverse=True)
     while len(chosen) < quota and any(queues.values()):
         for s in order:
-            if queues[s] and len(chosen) < quota:
-                chosen.append(queues[s].pop(0))
+            while queues[s] and len(chosen) < quota:
+                it = queues[s].pop(0)
+                if it.dedupe_keys() & taken:
+                    continue  # same site already picked from another gallery
+                taken |= it.dedupe_keys()
+                chosen.append(it)
+                break
     return chosen

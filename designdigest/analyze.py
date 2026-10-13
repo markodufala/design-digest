@@ -42,6 +42,33 @@ VISIT_JS = """() => {
   return a ? a.href : null;
 }"""
 
+# Is a preloader / intro screen still covering the page?
+BUSY_JS = """() => {
+  const re = /preload|loader|loading|splash|intro-screen/i;
+  return [...document.querySelectorAll('body *')].some(el => {
+    if (!re.test((el.id || '') + ' ' + (typeof el.className === 'string' ? el.className : ''))) return false;
+    const cs = getComputedStyle(el), r = el.getBoundingClientRect();
+    return cs.display !== 'none' && cs.visibility !== 'hidden' && parseFloat(cs.opacity) > 0.1
+      && r.width * r.height > innerWidth * innerHeight * 0.6;
+  });
+}"""
+
+# Hide cookie / consent banners for the screenshot — hidden, never accepted.
+HIDE_CONSENT_JS = """() => {
+  const known = '#onetrust-consent-sdk, #CybotCookiebotDialog, #usercentrics-root, #didomi-host, .cc-window, '
+    + '.osano-cm-window, .fc-consent-root, .qc-cmp2-container, #cookiescript_injected, .cky-consent-container, '
+    + '#hs-eu-cookie-confirmation, .termly-styles-root, iframe[src*="consent"]';
+  const hide = el => el.style.setProperty('display', 'none', 'important');
+  document.querySelectorAll(known).forEach(hide);
+  const re = /cookie|consent|gdpr|privacy preferences|we use cookies/i;
+  for (const el of document.querySelectorAll('body *')) {
+    const cs = getComputedStyle(el);
+    if (cs.position !== 'fixed' && cs.position !== 'sticky') continue;
+    const r = el.getBoundingClientRect();
+    if (r.width * r.height < innerWidth * innerHeight * 0.7 && re.test(el.textContent.slice(0, 600))) hide(el);
+  }
+}"""
+
 PROBE_JS = """() => {
   // fonts, weighted by how much text they set and how big
   const weight = {};
@@ -166,12 +193,18 @@ async def _visit(browser, it: Item) -> Image.Image | None:
             await page.goto(it.link, wait_until="load", timeout=30000)
         except Exception:
             pass  # slow assets — whatever rendered by now is enough
-        await page.wait_for_timeout(3500)  # preloaders, intro animations, font swap
+        await page.wait_for_timeout(3500)  # intro animations, font swap
+        for _ in range(12):                # long preloaders get up to 6 s more
+            if not await page.evaluate(BUSY_JS):
+                break
+            await page.wait_for_timeout(500)
         await page.mouse.wheel(0, 1200)    # wakes lazy WebGL / scroll libs
         await page.wait_for_timeout(1200)
         probe = await page.evaluate(PROBE_JS)
         await page.mouse.wheel(0, -1200)
+        await page.evaluate("window.scrollTo(0, 0)")  # smooth-scroll libs eat part of the wheel
         await page.wait_for_timeout(1000)
+        await page.evaluate(HIDE_CONSENT_JS)
         shot = await page.screenshot(type="jpeg", quality=80)
         if not it.fonts:
             it.fonts = top_fonts(probe["fonts"])
