@@ -71,6 +71,7 @@ def email(day: dict, site_url: str = "") -> tuple[str, str, str]:
     broken = [LABELS.get(k, k) for k, h in day["health"].items() if not h["ok"]]
     html = env.get_template("email.html").render(
         day=day, total=total, site_url=site_url.rstrip("/"), broken=broken,
+        feedback=bool(os.environ.get("FEEDBACK_URL")),
     )
     lines = [subject, ""]
     for key, items in day["sections"].items():
