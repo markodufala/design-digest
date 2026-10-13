@@ -14,6 +14,10 @@ on:
         description: "Skip if today's digest already exists (set by the Cloudflare cron)"
         type: boolean
         default: false
+      resend:
+        description: "Only re-send the latest digest email (no scraping)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -42,7 +46,7 @@ jobs:
 
   digest:
     needs: check
-    if: needs.check.outputs.done != 'true'
+    if: needs.check.outputs.done != 'true' && !inputs.resend
     runs-on: ubuntu-latest
     timeout-minutes: 20
     environment:
@@ -91,6 +95,31 @@ jobs:
 
       - name: Send email
         env:
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+        run: python -m designdigest --email-only
+
+  resend:
+    if: inputs.resend
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Send email
+        env:
+          SITE_URL: ${{ vars.SITE_URL || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
+          FEEDBACK_URL: ${{ vars.FEEDBACK_URL }}
+          FEEDBACK_KEY: ${{ secrets.FEEDBACK_KEY }}
           MAIL_TO: ${{ secrets.MAIL_TO }}
           MAIL_FROM: ${{ secrets.MAIL_FROM }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
