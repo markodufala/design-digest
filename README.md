@@ -53,6 +53,22 @@ python3 -m http.server 8765 --directory site
 
 Beží denne o 05:00 UTC (7:00 v lete, 6:00 v zime). GitHub cron môže meškať pár minút.
 
+## Odber noviniek (zatiaľ vypnutý)
+
+Hotové, ale spí, kým nie je overená doména — z `onboarding@resend.dev` smie Resend
+posielať len majiteľovi účtu. Výber riadi len tvoj vkus; odberatelia dostanú rovnaký
+digest bez hlasovania, výstrah a kľúča, s odhlásením jedným klikom (`List-Unsubscribe`).
+
+- Prihlásenie s potvrdením mailom (double opt-in), adresy v KV workera (`sub:<hash>`),
+  ochrana: honeypot, 5 potvrdení na IP denne, 20 spolu (Resend zadarmo = 100 mailov/deň).
+- Hlasovať ♥ / ✕ a upravovať vkus môže len zariadenie s kľúčom z tvojho mailu (`#k=`).
+
+Zapnutie:
+1. Resend → Domains → pridaj doménu a nastav DNS záznamy, ktoré ukáže.
+2. GitHub secret `MAIL_FROM` = `Design Digest <digest@tvoja-domena.sk>`
+3. V `worker/`: `npx wrangler secret put RESEND_API_KEY`, `npx wrangler secret put MAIL_FROM`
+   (rovnaké hodnoty), potom `npx wrangler deploy`. Formulár sa na stránke ukáže sám.
+
 ## Pridanie zdroja
 
 Napíš async funkciu v `sources.py`, ktorá vráti `list[Item]`, a pridaj ju do

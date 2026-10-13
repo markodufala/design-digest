@@ -4,6 +4,7 @@ import hmac
 import os
 from collections import Counter
 from datetime import date
+from urllib.parse import urlencode
 
 import httpx
 
@@ -102,7 +103,7 @@ def fetch_profile() -> dict:
 
 
 def save_profile(text: str) -> dict:
-    r = httpx.post(f"{_worker()}/taste", json={"text": text, "s": sign("taste"), "by": "claude"}, timeout=20)
+    r = httpx.post(f"{_worker()}/taste", json={"text": text, "s": sign("owner"), "by": "claude"}, timeout=20)
     r.raise_for_status()
     return r.json()
 
@@ -126,3 +127,16 @@ def worker_status() -> dict:
         return httpx.get(f"{_worker()}/status", timeout=20).json()
     except (httpx.HTTPError, ValueError):
         return {}
+
+
+def subscribers() -> list[dict]:
+    """Confirmed newsletter subscribers [{id, email}] — see worker /subscribe."""
+    if not _worker() or not os.environ.get("FEEDBACK_KEY"):
+        return []
+    r = httpx.get(f"{_worker()}/subscribers", params={"s": sign("subscribers")}, timeout=20)
+    r.raise_for_status()
+    return r.json()
+
+
+def unsubscribe_url(sub_id: str) -> str:
+    return f"{_worker()}/unsubscribe?" + urlencode({"e": sub_id, "s": sign(f"unsub:{sub_id}")})

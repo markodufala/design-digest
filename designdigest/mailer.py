@@ -33,3 +33,32 @@ def send(subject: str, html: str, plain: str) -> str:
         s.login(user, os.environ["SMTP_PASS"])
         s.send_message(msg)
     return f"smtp {host} → {to}"
+
+
+BATCH = 100               # Resend's batch endpoint takes up to 100 mails per call
+DAILY_LIMIT = 100         # Resend free tier: 100 mails a day (the owner's copy included)
+
+
+def send_subscribers(subject: str, html: str, plain: str, subs: list[dict], unsubscribe_url, placeholder: str) -> dict:
+    """Same digest to every confirmed subscriber, each with their own one-click unsubscribe."""
+    key, sender = os.environ.get("RESEND_API_KEY"), os.environ.get("MAIL_FROM")
+    if not key or not sender:
+        # onboarding@resend.dev may only mail the account owner — subscribers need a verified domain
+        return {"skipped": "needs RESEND_API_KEY and MAIL_FROM on a verified domain"}
+    owner = os.environ.get("MAIL_TO", "").lower()
+    subs = [s for s in subs if s["email"].lower() != owner][: DAILY_LIMIT - 1]
+    sent = 0
+    for i in range(0, len(subs), BATCH):
+        mails = []
+        for s in subs[i:i + BATCH]:
+            link = unsubscribe_url(s["id"])
+            mails.append({
+                "from": sender, "to": [s["email"]], "subject": subject,
+                "html": html.replace(placeholder, link), "text": plain.replace(placeholder, link),
+                "headers": {"List-Unsubscribe": f"<{link}>", "List-Unsubscribe-Post": "List-Unsubscribe=One-Click"},
+            })
+        r = httpx.post("https://api.resend.com/emails/batch", headers={"Authorization": f"Bearer {key}"},
+                       json=mails, timeout=60)
+        r.raise_for_status()
+        sent += len(mails)
+    return {"sent": sent}

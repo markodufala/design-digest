@@ -18,3 +18,5 @@ id = "c9b3abb1e78a43cc85451efbaf0a7f40"
 # secrets (not in this file):
 #   SIGNING_KEY  — must match the FEEDBACK_KEY GitHub secret
 #   GITHUB_TOKEN — fine-grained PAT for this repo with Actions: read & write
+#   RESEND_API_KEY, MAIL_FROM — newsletter confirmation mails; until both are set the
+#                  subscribe form stays hidden (MAIL_FROM must be on a domain verified in Resend)

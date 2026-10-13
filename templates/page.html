@@ -112,9 +112,24 @@ footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10
 .health span { margin-right: 16px; white-space: nowrap; }
 .health .bad { color: var(--ink); }
 [hidden] { display: none !important; }
+
+/* the owner (a device opened from the email, which carries the key) votes and edits the taste;
+   everyone else just reads — and can subscribe */
+body:not(.owner) .owner-only, body.owner .visitor-only { display: none !important; }
+.subscribe { display: flex; flex-wrap: wrap; gap: 8px; max-width: 440px; margin-top: 28px; }
+.subscribe input[type=email] {
+  flex: 1; min-width: 0; font: inherit; color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 999px; padding: 7px 16px;
+}
+.subscribe input[type=email]:focus { outline: none; border-color: var(--muted); }
+.subscribe .btn { padding: 7px 18px; font-size: 15px; background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.subscribe .hp { position: absolute; left: -9999px; width: 1px; height: 1px; }
+.sub-note { flex-basis: 100%; margin: 4px 0 0 !important; font-size: 13px; }
 </style>
 </head>
 <body>
+<script>try { if (JSON.parse(localStorage.getItem("dd-key"))) document.body.classList.add("owner"); } catch {}
+if (/[#&]k=/.test(location.hash)) document.body.classList.add("owner");</script>
 {% set ns = namespace(i=0, total=0) %}
 {% for d in days %}{% if d.date == day.date %}{% set ns.i = loop.index0 %}{% endif %}{% endfor %}
 {% for items in day.sections.values() %}{% set ns.total = ns.total + items | length %}{% endfor %}
@@ -140,14 +155,22 @@ footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10
       <h1>{{ day.date | nice_date(False) }}</h1>
       <p>
         {{ ns.total }} vecí z {{ day.health | length }} zdrojov{% if day.curator.ok %}, vybral Claude{% endif %}.
-        {% if feedback %}♥ = viac takého, ✕ = už nikdy.{% endif %}
+        {% if feedback %}<span class="owner-only">♥ = viac takého, ✕ = už nikdy.</span>{% endif %}
       </p>
+      {% if feedback %}
+      <form class="subscribe visitor-only" id="subscribe" hidden>
+        <input type="email" name="email" required placeholder="tvoj@email.sk" aria-label="Tvoj e-mail" autocomplete="email">
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn" type="submit">Odoberať</button>
+        <p class="sub-note" id="sub-msg">Každé ráno jeden mail. Odhlásenie jedným klikom, adresu nepoužijeme na nič iné.</p>
+      </form>
+      {% endif %}
     </div>
     <ol class="index">
       {% for key, (label, _) in SECTIONS.items() %}
       {% if day.sections.get(key) %}<li><a href="#{{ key }}">{{ label.split(' — ')[0] }}<span>{{ day.sections[key] | length }}</span></a></li>{% endif %}
       {% endfor %}
-      <li id="saved-link" hidden><a href="#saved">Uložené<span id="saved-n"></span></a></li>
+      <li id="saved-link" class="owner-only" hidden><a href="#saved">Uložené<span id="saved-n"></span></a></li>
     </ol>
   </div>
 
@@ -179,7 +202,7 @@ footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10
             {% endif %}
             {% if it.tech %}<div class="tech">{{ it.tech | join(" · ") }}</div>{% endif %}
           </div>
-          <div class="votes" data-s="{{ it.id | sign }}">
+          <div class="votes owner-only" data-s="{{ it.id | sign }}">
             <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
             </button>
@@ -193,7 +216,7 @@ footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10
   {% endif %}
   {% endfor %}
 
-  <section class="block" id="saved" hidden>
+  <section class="block owner-only" id="saved" hidden>
     <h2>Uložené<small class="n" id="saved-count"></small></h2>
     <div class="grid" id="saved-grid"></div>
   </section>
@@ -201,7 +224,7 @@ footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10
 
 <footer>
   <div class="wrap">
-    <section class="taste" id="vkus">
+    <section class="taste owner-only" id="vkus">
       <h3>Tvoj vkus <button class="link-btn" id="taste-edit" hidden>Upraviť</button></h3>
       <div class="taste-text" id="taste-text">{{ day.taste.text or "Zatiaľ žiadny profil. Vznikne z tvojich ♥ / ✕ — alebo si ho napíš sám." }}</div>
       <form id="taste-form" hidden>
@@ -233,6 +256,15 @@ footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10
     get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
   };
+
+  // the owner key arrives through the email's links (#k=…) and stays on this device
+  const hash = new URLSearchParams(location.hash.slice(1));
+  if (hash.get("k")) {
+    store.set("dd-key", hash.get("k"));
+    history.replaceState(null, "", location.pathname + (hash.get("go") ? "#" + hash.get("go") : ""));
+    if (hash.get("go")) document.getElementById(hash.get("go"))?.scrollIntoView();
+  }
+  const KEY = store.get("dd-key", "");
 
   // ♥ / ✕ votes. With a feedback worker they sync everywhere and tune tomorrow's
   // picks; without one they just live in this browser.
@@ -280,7 +312,7 @@ footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10
     if (FEEDBACK) {
       fetch(FEEDBACK + "/vote", {
         method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id, v, s: card.querySelector(".votes").dataset.s }),
+        body: JSON.stringify({ id, v, s: card.querySelector(".votes").dataset.s, k: KEY }),
       }).catch(() => {});
     }
   });
@@ -295,14 +327,7 @@ footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10
     }).catch(() => {});
   });
 
-  // taste profile — editable on devices that opened the site from the email (#k=… carries the key)
-  const hash = new URLSearchParams(location.hash.slice(1));
-  if (hash.get("k")) {
-    store.set("dd-key", hash.get("k"));
-    history.replaceState(null, "", location.pathname + (hash.get("go") ? "#" + hash.get("go") : ""));
-    if (hash.get("go")) document.getElementById(hash.get("go"))?.scrollIntoView();
-  }
-  const KEY = store.get("dd-key", "");
+  // taste profile — editable on the owner's devices
   const tasteText = document.getElementById("taste-text"), tasteForm = document.getElementById("taste-form");
   const tasteEdit = document.getElementById("taste-edit"), tasteMsg = document.getElementById("taste-msg");
   const area = tasteForm.querySelector("textarea");
@@ -331,7 +356,27 @@ footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10
     }).catch(() => { tasteMsg.textContent = "Neuložilo sa — otvor stránku znova cez odkaz v maile."; });
   });
 
-  if (FEEDBACK) {
+  // newsletter: the form shows up once the worker can send mail (a verified domain in Resend)
+  const sub = document.getElementById("subscribe");
+  if (FEEDBACK && sub && !KEY) {
+    fetch(FEEDBACK + "/subscribe").then(r => r.json()).then(r => { sub.hidden = !r.enabled; }).catch(() => {});
+    sub.addEventListener("submit", e => {
+      e.preventDefault();
+      const msg = document.getElementById("sub-msg"), btn = sub.querySelector("button");
+      btn.disabled = true;
+      msg.textContent = "Posielam…";
+      fetch(FEEDBACK + "/subscribe", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: sub.email.value, website: sub.website.value }),
+      }).then(r => r.json()).then(r => {
+        msg.textContent = r.ok ? r.message || "Skontroluj si mail a potvrď odber." : r.error;
+        if (r.ok) sub.email.value = "";
+      }).catch(() => { msg.textContent = "Nepodarilo sa, skús to prosím neskôr."; })
+        .finally(() => { btn.disabled = false; });
+    });
+  }
+
+  if (FEEDBACK && KEY) {
     fetch(FEEDBACK + "/taste").then(r => r.json()).then(t => showTaste(t.text || "")).catch(() => {});
 
     // the worker is the source of truth (votes from email or other devices)

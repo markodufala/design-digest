@@ -17,7 +17,9 @@
 </head>
 {# mirrors templates/page.html — keep the two in sync #}
 {% set ink = "#111111" %}{% set muted = "#8a8a8a" %}{% set line = "#ececec" %}{% set fill = "#f4f4f4" %}
-{% set key = "#k=" ~ ("taste" | sign) if feedback else "" %}
+{# owner = the person whose taste steers the digest; subscribers get the same picks without
+   votes, alerts or the key that lets a device vote and edit the taste profile #}
+{% set owner_key = "#k=" ~ ("owner" | sign) if owner and feedback else "" %}
 {# unquoted: quotes would be escaped to &#39; on every one of ~600 styles — Gmail clips mails over 102 KB #}
 {% set sans = "Inter Tight,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" %}
 <body style="margin:0; padding:0; background:#ffffff;">
@@ -30,10 +32,10 @@
 
   <tr><td style="padding:20px 8px 0; font-family:{{ sans }}; font-size:14px; color:{{ ink }};">
     <span style="font-weight:500;">Design Digest</span>
-    {% if site_url %}<span style="float:right;"><a href="{{ site_url }}/d/{{ day.date }}.html{{ key }}" style="color:{{ muted }}; text-decoration:none;">Otvoriť na webe →</a></span>{% endif %}
+    {% if site_url %}<span style="float:right;"><a href="{{ site_url }}/d/{{ day.date }}.html{{ owner_key }}" style="color:{{ muted }}; text-decoration:none;">Otvoriť na webe →</a></span>{% endif %}
   </td></tr>
 
-  {% if day.alerts %}
+  {% if owner and day.alerts %}
   <tr><td style="padding:24px 8px 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid {{ ink }}; border-radius:6px;">
       {% for a in day.alerts %}
@@ -48,7 +50,7 @@
   </td></tr>
   <tr><td style="padding:16px 8px 0; font-family:{{ sans }}; font-size:15px; line-height:1.45; color:{{ muted }};">
     {{ total }} vecí z {{ day.health | length }} zdrojov{% if day.curator.ok %}, vybral Claude{% endif %}.
-    {% if feedback %}♥ = viac takého, ✕ = už nikdy.{% endif %}
+    {% if owner and feedback %}♥ = viac takého, ✕ = už nikdy.{% endif %}
   </td></tr>
 
   {% for key, (label, _) in SECTIONS.items() %}
@@ -94,7 +96,7 @@
           {% if it.tech %}
           <div style="padding-top:4px; font-family:{{ sans }}; font-size:12px; line-height:1.4; color:{{ muted }};">{{ it.tech | join(" · ") }}</div>
           {% endif %}
-          {% set up, down = vote_url(it, 1), vote_url(it, -1) %}
+          {% set up, down = (vote_url(it, 1), vote_url(it, -1)) if owner else ("", "") %}
           {% if up %}
           <div style="padding-top:8px; font-family:{{ sans }}; font-size:13px;">
             <a href="{{ up }}" title="Viac takého" style="color:{{ muted }}; text-decoration:none;">♥</a>
@@ -111,7 +113,7 @@
   {% endif %}
   {% endfor %}
 
-  {% if day.taste.updated and day.taste.text %}
+  {% if owner and day.taste.updated and day.taste.text %}
   <tr><td style="padding:0 8px 40px;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid {{ line }};">
       <tr><td style="padding-top:14px; font-family:{{ sans }}; font-size:15px; font-weight:500; color:{{ ink }};">
@@ -120,9 +122,9 @@
       <tr><td style="padding-top:12px; font-family:{{ sans }}; font-size:14px; line-height:1.5; color:{{ ink }};">
         {{ day.taste.text | e | replace("\n", "<br>" | safe) }}
       </td></tr>
-      {% if site_url and key %}
+      {% if site_url and owner_key %}
       <tr><td style="padding-top:10px; font-family:{{ sans }}; font-size:13px;">
-        <a href="{{ site_url }}/{{ key }}&go=vkus" style="color:{{ muted }}; text-decoration:none;">Nesedí? Uprav ho →</a>
+        <a href="{{ site_url }}/{{ owner_key }}&go=vkus" style="color:{{ muted }}; text-decoration:none;">Nesedí? Uprav ho →</a>
       </td></tr>
       {% endif %}
     </table>
@@ -130,8 +132,13 @@
   {% endif %}
 
   <tr><td style="padding:24px 8px 8px; font-family:{{ sans }}; font-size:13px; line-height:1.6; color:{{ muted }}; border-top:1px solid {{ line }};">
+    {% if owner %}
     {% if broken %}<span style="color:{{ ink }};">Dnes nefungovalo: {{ broken | join(", ") }}.</span><br>{% endif %}
-    Automaticky každé ráno.{% if site_url %} Archív a uložené: <a href="{{ site_url }}/{{ key }}" style="color:{{ ink }}; text-decoration:none;">{{ site_url.split("//")[-1] }}</a>{% if key %} · <a href="{{ site_url }}/{{ key }}&go=vkus" style="color:{{ ink }}; text-decoration:none;">Tvoj vkus</a>{% endif %}{% endif %}
+    Automaticky každé ráno.{% if site_url %} Archív a uložené: <a href="{{ site_url }}/{{ owner_key }}" style="color:{{ ink }}; text-decoration:none;">{{ site_url.split("//")[-1] }}</a>{% if owner_key %} · <a href="{{ site_url }}/{{ owner_key }}&go=vkus" style="color:{{ ink }}; text-decoration:none;">Tvoj vkus</a>{% endif %}{% endif %}
+    {% else %}
+    Dostávaš to, lebo si sa prihlásil(a) na odber Design Digestu.{% if site_url %} Archív: <a href="{{ site_url }}/" style="color:{{ ink }}; text-decoration:none;">{{ site_url.split("//")[-1] }}</a>{% endif %}<br>
+    <a href="{{ unsubscribe }}" style="color:{{ ink }};">Odhlásiť sa</a>
+    {% endif %}
   </td></tr>
 
 </table>

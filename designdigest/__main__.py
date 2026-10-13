@@ -7,7 +7,7 @@ import time
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import alerts, analyze, curate, mailer, mirror, rank, render, sources, store
+from . import alerts, analyze, curate, mailer, mirror, rank, render, sources, store, taste
 from .taste import Taste, fetch_profile, fetch_votes, profile_due, save_profile, worker_status
 
 TZ = ZoneInfo("Europe/Bratislava")
@@ -110,7 +110,11 @@ def main() -> int:
     mirrored = mirror.run(picked)
     print(f"  images: {mirrored}")
 
-    warnings = alerts.collect(today, worker_status(), curator, analysis, mirrored)
+    try:
+        n_subs = len(taste.subscribers())
+    except Exception:  # worker not deployed yet / unreachable
+        n_subs = 0
+    warnings = alerts.collect(today, worker_status(), curator, analysis, mirrored, n_subs)
     for w in warnings:
         print(f"  ! {w}")
     store.save_day(today, picked, health, curator, analysis=analysis, taste=taste_info,
@@ -129,8 +133,18 @@ def send_latest() -> int:
     if not days:
         print("No archived day to send.", file=sys.stderr)
         return 1
-    subject, html, plain = render.email(days[0], site_url=os.environ.get("SITE_URL", ""))
+    site_url = os.environ.get("SITE_URL", "")
+    subject, html, plain = render.email(days[0], site_url=site_url)
     print("Mail:", mailer.send(subject, html, plain))
+
+    try:
+        subs = taste.subscribers()
+        if subs:
+            subject, html, plain = render.email(days[0], site_url=site_url, owner=False)
+            print("Subscribers:", mailer.send_subscribers(subject, html, plain, subs, taste.unsubscribe_url,
+                                                          render.UNSUBSCRIBE))
+    except Exception as e:  # the owner's copy is out; a newsletter hiccup must not fail the run
+        print(f"  ! subscribers: {type(e).__name__}: {e}"[:300])
     return 0
 
 

@@ -6,7 +6,11 @@ RENEW = ("Nový token: github.com/settings/personal-access-tokens (repo design-d
          "potom v priečinku worker/: wrangler secret put GITHUB_TOKEN")
 
 
-def collect(today: date, status: dict, curator: dict, analysis: dict, images: dict | None = None) -> list[str]:
+SUBSCRIBER_WARN = 90  # Resend's free tier sends 100 mails a day
+
+
+def collect(today: date, status: dict, curator: dict, analysis: dict, images: dict | None = None,
+            subscribers: int = 0) -> list[str]:
     out = []
     cron = status.get("cron") or {}
     if exp := cron.get("token_expires"):
@@ -32,4 +36,7 @@ def collect(today: date, status: dict, curator: dict, analysis: dict, images: di
     if images.get("failed", 0) > images.get("mirrored", 0):
         out.append(f"Obrázky sa neuložili do workera ({images['failed']}× chyba), mail ich berie priamo z galérií. "
                    "Je worker nasadený v poslednej verzii? V priečinku worker/: npx wrangler deploy")
+    if subscribers >= SUBSCRIBER_WARN:
+        out.append(f"Máš {subscribers} odberateľov — Resend zadarmo pošle len 100 mailov denne (vrátane tvojho), "
+                   "nad limit sa ďalší nedostanú. Zváž platený plán alebo týždenný výber.")
     return out
