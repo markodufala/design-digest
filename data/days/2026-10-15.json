@@ -1,0 +1,995 @@
+{
+ "date": "2026-10-15",
+ "sections": {
+  "wow": [
+   {
+    "source": "brutalist",
+    "key": "kappakontroll.com",
+    "title": "kappakontroll.com",
+    "url": "http://kappakontroll.com",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/2e7fdffe18cf343a623c.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://kappakontroll.com",
+    "popularity": null,
+    "position": 15,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.8691,
+    "why": "Orezaný obří nápis KONTROLL na plnej oranžovej s Kappa logami",
+    "take": "Logo opakované ako zvislý pás cez celú stránku — značka sa stáva vzorom, nie nálepkou",
+    "fonts": [],
+    "palette": [
+     "#eba43a",
+     "#dddad8",
+     "#b69474",
+     "#2c2223",
+     "#7c5c4d"
+    ],
+    "tech": [],
+    "image_orig": "https://brutalistwebsites.com/_img/kappakontroll.com.jpg",
+    "id": "brutalist:kappakontroll.com"
+   },
+   {
+    "source": "codrops",
+    "key": "post-123724",
+    "title": "Sandboard",
+    "url": "https://sand.scottsun.io/",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/8f4ac8f12bbed01282f8.jpg",
+    "section": "wow",
+    "author": "Scott Sun",
+    "link": "https://sand.scottsun.io/",
+    "popularity": null,
+    "position": 2,
+    "tags": [
+     "simulation",
+     "webgpu"
+    ],
+    "note": "simulation · webgpu",
+    "score": 0.8064,
+    "why": "Simulácia piesku vo WebGPU, teplá zrnitá textúra s tieňom palmy",
+    "take": "Celý hero je simulovaný materiál (piesok vo WebGPU) a jediné UI je malý slider dole",
+    "fonts": [],
+    "palette": [
+     "#e9d9af",
+     "#cebf99",
+     "#918261"
+    ],
+    "tech": [],
+    "image_orig": "https://tympanus.net/codrops/wp-content/uploads/2026/10/sand_cover-400x300.jpg",
+    "id": "codrops:post-123724"
+   },
+   {
+    "source": "gsap",
+    "key": "https://www.mike-fernandez.dev/",
+    "title": "Mike Fernandez Portfolio",
+    "url": "https://www.mike-fernandez.dev/",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/57297d19331311a2ad0f.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "https://www.mike-fernandez.dev/",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "motion",
+    "score": 0.804,
+    "why": "Portfólio ako low-poly herný svet s kobaltovou modrou a fakľami",
+    "take": "Portfólio ako low-poly svet v jednej farbe (kobalt) a teplé fakle ako jediný akcent",
+    "fonts": [],
+    "palette": [
+     "#5f89f0",
+     "#3b65df",
+     "#374bbf",
+     "#000039",
+     "#0930a2"
+    ],
+    "tech": [],
+    "image_orig": "https://gsap.com/community/uploads/monthly_2026_10/mike_fernandez_portfolio_showcase_cover_image.png.9e3c127cd8fcea22d162796512094351.png",
+    "id": "gsap:https://www.mike-fernandez.dev/"
+   },
+   {
+    "source": "brutalist",
+    "key": "goodtypefoundry.com",
+    "title": "goodtypefoundry.com",
+    "url": "http://goodtypefoundry.com",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/dd608d74bead95685ea1.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://goodtypefoundry.com",
+    "popularity": null,
+    "position": 29,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.7989,
+    "why": "Masívne geometrické ADIEU a TURBO orezané okrajom, čierna-biela",
+    "take": "Ukážka písma cez celú šírku orezaná okrajom obrazovky — font predáva sám seba v mierke",
+    "fonts": [
+     "Good Sans Text"
+    ],
+    "palette": [
+     "#000000",
+     "#b8b4af",
+     "#221f20",
+     "#4a4138",
+     "#a48977"
+    ],
+    "tech": [
+     "WordPress",
+     "WebGL"
+    ],
+    "image_orig": "https://brutalistwebsites.com/_img/goodtypefoundry.com.jpg",
+    "id": "brutalist:goodtypefoundry.com"
+   },
+   {
+    "source": "codrops",
+    "key": "post-123709",
+    "title": "R3F Sketch Material",
+    "url": "https://r3f-sketch-material.vercel.app/",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/af6905936fd84d758ace.jpg",
+    "section": "wow",
+    "author": "Abhishek Verma",
+    "link": "https://r3f-sketch-material.vercel.app/",
+    "popularity": null,
+    "position": 1,
+    "tags": [
+     "glsl",
+     "React Three Fiber",
+     "Three.js",
+     "WebGL"
+    ],
+    "note": "glsl · React Three Fiber",
+    "score": 0.7926,
+    "why": "3D scéna vykreslená ako ručná kresba guľôčkovým perom",
+    "take": "Shader, ktorý 3D scénu prekreslí šrafovaním perom — tlačidlá prepínajú typ pera",
+    "fonts": [],
+    "palette": [
+     "#f2f1ec",
+     "#b4b3c7",
+     "#8382a3",
+     "#d1d1d9"
+    ],
+    "tech": [],
+    "image_orig": "https://tympanus.net/codrops/wp-content/uploads/2026/10/r3fsketch_cover-400x300.jpg",
+    "id": "codrops:post-123709"
+   },
+   {
+    "source": "gsap",
+    "key": "https://gif.garajedeideas.com/",
+    "title": "Garaje Inspiration Fest",
+    "url": "https://gif.garajedeideas.com/",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/0bcd5a19341b7f83049e.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "https://gif.garajedeideas.com/",
+    "popularity": null,
+    "position": 6,
+    "tags": [],
+    "note": "motion",
+    "score": 0.7074,
+    "why": "Desktop-OS rozhranie festivalu s chrómovým 3D logom GIF",
+    "take": "Festivalový web ako desktop OS: obsah sú súbory a priečinky, ktoré sa otvárajú ako okná",
+    "fonts": [
+     "Inter"
+    ],
+    "palette": [
+     "#edeaeb",
+     "#a99fad",
+     "#654c75",
+     "#c6c2c6",
+     "#110921"
+    ],
+    "tech": [
+     "Webflow",
+     "GSAP",
+     "Lottie",
+     "Video"
+    ],
+    "image_orig": "https://gsap.com/community/uploads/monthly_2026_10/AWWWARDSCOVER.webp.2967e772747e031b2d8482f3a2f95170.webp",
+    "id": "gsap:https://gif.garajedeideas.com/"
+   }
+  ],
+  "web": [
+   {
+    "source": "awwwards",
+    "key": "neutomni",
+    "title": "Neutomni",
+    "url": "https://www.awwwards.com/sites/neutomni",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/d65dbbdf406012709d3e.jpg",
+    "section": "web",
+    "author": "Neutomni",
+    "link": "https://neutomni.com/",
+    "popularity": null,
+    "position": 2,
+    "tags": [
+     "DEV",
+     "SOTD"
+    ],
+    "note": "DEV · SOTD",
+    "score": 0.846,
+    "why": "Obrí modulárny nápis NEUTOMNI na plnej červenej s krémom",
+    "take": "Modulárny nápis cez celú šírku, červený rám okolo krémovej plochy, serif kurzíva ako pointa",
+    "fonts": [
+     "Vazirmatn Local",
+     "Italic Local",
+     "Firacode Local"
+    ],
+    "palette": [
+     "#ffffff",
+     "#161616",
+     "#a27f7e",
+     "#e5a5aa",
+     "#e4d6d7"
+    ],
+    "tech": [
+     "Webflow",
+     "GSAP",
+     "ScrollTrigger",
+     "Lenis"
+    ],
+    "image_orig": "https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2026/08/6a799d35ad646378736833.png",
+    "id": "awwwards:neutomni"
+   },
+   {
+    "source": "minimalgallery",
+    "key": "https://minimal.gallery.dev/?p=10330",
+    "title": "David Fiz",
+    "url": "https://minimal.gallery/david-fiz/",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/a3eb635300d06615753a.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://www.davidfiz.com/?ref=minimal.gallery",
+    "popularity": null,
+    "position": 0,
+    "tags": [
+     "Uncategorized",
+     "Portfolio",
+     "Personal"
+    ],
+    "note": "",
+    "score": 0.818,
+    "why": "Zrnitá stencil typografia NCC a plagátové sloty, analógový pocit",
+    "take": "Zrnitý stencil a fotokópiová textúra na čiernej — digitálny web s pocitom tlačeného plagátu",
+    "fonts": [
+     "Haas"
+    ],
+    "palette": [
+     "#000000",
+     "#f6f8f7",
+     "#528dce",
+     "#acbd91",
+     "#3a422d"
+    ],
+    "tech": [],
+    "image_orig": "https://minimal.gallery/wp-content/uploads/2021/06/davidfiz.com_.jpg",
+    "id": "minimalgallery:https://minimal.gallery.dev/?p=10330"
+   },
+   {
+    "source": "cssda",
+    "key": "50397",
+    "title": "Sidejob",
+    "url": "https://www.cssdesignawards.com/sites/sidejob/50397/",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/50d005782b57573c41e7.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://www.itsasidejob.com",
+    "popularity": null,
+    "position": 2,
+    "tags": [],
+    "note": "Nominee",
+    "score": 0.7972,
+    "why": "Ťažký grotesk sidejob nad bláznivou fotkou z bazénu",
+    "take": "Tučný grotesk prekrytý bláznivou fotkou, okolo rozhádzané menšie fotky ako kôpka na stole",
+    "fonts": [
+     "KH Teka"
+    ],
+    "palette": [
+     "#f9f9f9",
+     "#211b1c",
+     "#5f5e65",
+     "#bec1c5"
+    ],
+    "tech": [
+     "Nuxt",
+     "Lenis",
+     "Swup"
+    ],
+    "image_orig": "https://www.cssdesignawards.com/cdasites/2026/202610/20261014014409.jpg",
+    "id": "cssda:50397"
+   },
+   {
+    "source": "onepagelove",
+    "key": "https://onepagelove.com/?p=89169",
+    "title": "Melike Turgut",
+    "url": "https://onepagelove.com/melike-turgut",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/a434e68ae8e1e80001b8.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://meliketurgut.com/?ref=onepagelove",
+    "popularity": null,
+    "position": 1,
+    "tags": [
+     "Inspiration",
+     "Blobs",
+     "Curriculum Vitae (CV)",
+     "Custom Icons"
+    ],
+    "note": "",
+    "score": 0.5564,
+    "why": "Rad lesklých 3D nafúknutých symbolov, hravé ale renderové",
+    "take": "Rad nafúknutých 3D symbolov nahrádza slovo v nadpise — „me ✿✿✿ like“ ako veta z ikon",
+    "fonts": [
+     "Agrandir",
+     "Agrandir Tight"
+    ],
+    "palette": [
+     "#ebece6",
+     "#aebdb4"
+    ],
+    "tech": [
+     "Three.js"
+    ],
+    "image_orig": "https://assets.onepagelove.com/cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=top,format=jpg,quality=85/wp-content/uploads/2026/10/opl-screenshot-me-c2b7-1791813177414-desktop.jpg",
+    "id": "onepagelove:https://onepagelove.com/?p=89169"
+   },
+   {
+    "source": "webflow",
+    "key": "gsap-flip-layout",
+    "title": "✨ New Cloneable: GSAP Flip Layout",
+    "url": "https://webflow.com/made-in-webflow/website/gsap-flip-layout",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/952d1cf9ca930655d23c.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://gsap-flip-layout.webflow.io/",
+    "popularity": null,
+    "position": 6,
+    "tags": [],
+    "note": "",
+    "score": 0.5409,
+    "why": "Krémový interiérový template s GSAP Flip rozložením",
+    "take": "GSAP Flip prepína rozloženie (zoznam/mriežka) plynulo — prvky sa presúvajú, nie preblikujú",
+    "fonts": [
+     "Apercu Pro"
+    ],
+    "palette": [
+     "#fefae0",
+     "#624532",
+     "#4a2617",
+     "#9d8269",
+     "#b9a68d"
+    ],
+    "tech": [
+     "Webflow",
+     "GSAP"
+    ],
+    "image_orig": "https://cdn.prod.website-files.com/68a6d6660991b88c1d15d725/68b69a07a6d99dda1a802134_flippagelayoutog.png",
+    "id": "webflow:gsap-flip-layout"
+   },
+   {
+    "source": "landbook",
+    "key": "100702",
+    "title": "Patch | Environmental market AI-native services",
+    "url": "https://land-book.com/websites/100702-patch-environmental-market-ai-native-services",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/c59c45b538c15f963c2d.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://patch.io/?ref=land-book.com",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "",
+    "score": 0.5145,
+    "why": "Klimatický SaaS s veľkým nadpisom na modrej, firemné logá",
+    "take": "Plnoplošná textúrovaná fotka v tlmenej tyrkysovej, tenký veľký nadpis a jeden oranžový CTA",
+    "fonts": [
+     "Muoto"
+    ],
+    "palette": [
+     "#276369",
+     "#438b89",
+     "#0e2633",
+     "#f3f6f6",
+     "#8ab0ae"
+    ],
+    "tech": [
+     "Webflow",
+     "GSAP"
+    ],
+    "image_orig": "https://cdn.land-book.com/image/0x0:2160x3240/600x0/website/100702/891e650b4dda1ec4-screenshot.webp?signature=20c98532e716b03c16db1df2f9f7766198d235933b6eadf0d4817922b78b20ce",
+    "id": "landbook:100702"
+   },
+   {
+    "source": "bestwebsite",
+    "key": "sites/sotd/2026/10/14/sketch",
+    "title": "Sketch",
+    "url": "https://bestwebsite.gallery/sites/sotd/2026/10/14/sketch",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/604a3cbcaa2e1833d655.jpg",
+    "section": "web",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "",
+    "score": 0.482,
+    "why": "Produktová stránka Sketch s pastelovým gradientom, bezpečná",
+    "take": "Serif nadpis vo veľkom vedľa malého sans textu, pastelový gradient len v rohu pozadia",
+    "fonts": [],
+    "palette": [
+     "#f0eaee",
+     "#cbc2d2",
+     "#69646e"
+    ],
+    "tech": [],
+    "image_orig": "https://static.bestwebsite.gallery/assets/gallery_bestwebsite/images/sketch-com_2026-10-14_preview.png",
+    "id": "bestwebsite:sites/sotd/2026/10/14/sketch"
+   },
+   {
+    "source": "darkdesign",
+    "key": "glyphs-grids-1782376531766",
+    "title": "Glyphs & Grids",
+    "url": "https://dark.design/site/glyphs-grids-1782376531766",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/92fa820177694b5d1fd8.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://www.glyphsandgrids.com/",
+    "popularity": null,
+    "position": 6,
+    "tags": [],
+    "note": "dark UI",
+    "score": 0.4545,
+    "why": "Tmavý správca fontov s rozmazanou kartou v strede",
+    "take": "Ukážka produktu priamo v hero ako rozmazaná tmavá karta — UI je samo o sebe vizuál",
+    "fonts": [
+     "CSLiona Mono"
+    ],
+    "palette": [
+     "#040517",
+     "#1d2028",
+     "#494b55"
+    ],
+    "tech": [
+     "GSAP",
+     "ScrollTrigger"
+    ],
+    "image_orig": "https://sidhvpjhuucqcehkevrl.supabase.co/storage/v1/render/image/public/screenshots/auto-1782376485811.webp?width=1080&quality=60&height=675&resize=cover",
+    "id": "darkdesign:glyphs-grids-1782376531766"
+   }
+  ],
+  "visual": [
+   {
+    "source": "dribbble",
+    "key": "27700601",
+    "title": "Cybersecurity Iconography & Visual Design System for Okta",
+    "url": "https://dribbble.com/shots/27700601-Cybersecurity-Iconography-Visual-Design-System-for-Okta",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/c09761559de1fa385bb9.jpg",
+    "section": "visual",
+    "author": "Ramotion",
+    "link": "",
+    "popularity": 153.0,
+    "position": 16,
+    "tags": [],
+    "note": "♥ 153 · 👁 16.2k",
+    "score": 0.818,
+    "why": "Okta ikony v kobaltovej, levanduľovej a bielej, plochá čistota",
+    "take": "Ikonografická mriežka v 3 farbách s rovnakou hrúbkou čiary — systém, nie jednotlivé ikony",
+    "fonts": [],
+    "palette": [
+     "#042776",
+     "#fdfdfd",
+     "#886a97",
+     "#bec9e0",
+     "#1e3d96"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.dribbble.com/userupload/48909230/file/still-de47f23c5fe8ffcdaf75b313a5f8cfd1.png?format=webp&resize=800x600&vertical=center",
+    "id": "dribbble:27700601"
+   },
+   {
+    "source": "godly",
+    "key": "apdu7k8",
+    "title": "Halloween Like Button",
+    "url": "https://godly.website/i/apdu7k8-halloween-like-button",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/ccd8c904c421678907e7.jpg",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "",
+    "score": 0.72,
+    "why": "Ružová netopierová mačka ako like tlačidlo, hravá mikroanimácia",
+    "take": "Like tlačidlo ako postavička s vlastnou animáciou — sezónna mikrointerakcia s osobnosťou",
+    "fonts": [],
+    "palette": [
+     "#000000"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.recent.design/items/apdu7k8/0/poster/960.webp",
+    "id": "godly:apdu7k8"
+   },
+   {
+    "source": "dribbble",
+    "key": "27809238",
+    "title": "Healthy Food Branding & Brand Identity",
+    "url": "https://dribbble.com/shots/27809238-Healthy-Food-Branding-Brand-Identity",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/af617f2decaa7ec7867e.jpg",
+    "section": "visual",
+    "author": "Artspire",
+    "link": "",
+    "popularity": 142.0,
+    "position": 22,
+    "tags": [],
+    "note": "♥ 142 · 👁 10.2k",
+    "score": 0.678,
+    "why": "Brandbook na plnej oranžovej, poctivá ale bežná prezentácia",
+    "take": "Brandbook ako mriežka strán na plnej oranžovej — jedna farba drží celú prezentáciu",
+    "fonts": [],
+    "palette": [
+     "#ef5b32",
+     "#370d0c",
+     "#f1f3ee",
+     "#d1b4a8",
+     "#c37259"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.dribbble.com/userupload/49316107/file/79d3bdafa2fa1fe452436c4c9d10521e.jpg?format=webp&resize=800x600&vertical=center",
+    "id": "dribbble:27809238"
+   },
+   {
+    "source": "dribbble",
+    "key": "27270211",
+    "title": "cryonex: Cold-chain Biostorage for Cell/Gene Therapy - Mobile",
+    "url": "https://dribbble.com/shots/27270211-cryonex-Cold-chain-Biostorage-for-Cell-Gene-Therapy-Mobile",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/7211b6bbdc316834d20b.jpg",
+    "section": "visual",
+    "author": "Samuel Oktavianus",
+    "link": "",
+    "popularity": 195.0,
+    "position": 32,
+    "tags": [],
+    "note": "♥ 195 · 👁 12.9k",
+    "score": 0.678,
+    "why": "Pokračovanie cryonex: limetková a sivá, laboratórne rendery",
+    "take": "Limetková na grafitovej pre laboratórny produkt — biotech bez klinickej bielej a modrej",
+    "fonts": [],
+    "palette": [
+     "#2b3541",
+     "#ffffff",
+     "#b7d0de",
+     "#d5e666",
+     "#afbdb5"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.dribbble.com/userupload/47356843/file/d5124f06abf7fb90ff88bdb2927df38a.png?format=webp&resize=800x600&vertical=center",
+    "id": "dribbble:27270211"
+   },
+   {
+    "source": "godly",
+    "key": "4vj2244",
+    "title": "Numbered Blob Motion Studies",
+    "url": "https://godly.website/i/4vj2244-numbered-blob-motion-studies",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/921eaad94d64e6086de6.jpg",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 12,
+    "tags": [],
+    "note": "",
+    "score": 0.6351,
+    "why": "Čierne bunkové bloby v kruhu, organické motion štúdie",
+    "take": "Organické bloby zbalené v kruhu — čierne tvary a negatívny priestor ako generatívny motív",
+    "fonts": [],
+    "palette": [
+     "#fdfdfd",
+     "#000000",
+     "#a5a5a5",
+     "#404040"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.recent.design/items/4vj2244/0/poster/720.webp",
+    "id": "godly:4vj2244"
+   },
+   {
+    "source": "godly",
+    "key": "mjy0sgn",
+    "title": "Dreamvision Hero",
+    "url": "https://godly.website/i/mjy0sgn-dreamvision-typing-app-website",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/bb5e313241b2d0849830.jpg",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 10,
+    "tags": [],
+    "note": "",
+    "score": 0.6065,
+    "why": "Písací stroj ako hero, pokojný serif o radosti z písania",
+    "take": "Ľahký serif nad fotoreálnym písacím strojom — hero objekt vyjadruje tempo produktu",
+    "fonts": [],
+    "palette": [
+     "#ffffff",
+     "#e0e0e0",
+     "#131618",
+     "#c5c5c5",
+     "#2e3338"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.recent.design/items/mjy0sgn/0/poster/1199.webp",
+    "id": "godly:mjy0sgn"
+   }
+  ],
+  "ui": [
+   {
+    "source": "21st",
+    "key": "danielpetho/parallax-floating",
+    "title": "Parallax Floating",
+    "url": "https://21st.dev/danielpetho/parallax-floating",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/647bd61f0b72a8dd74b7.jpg",
+    "section": "ui",
+    "author": "danielpetho",
+    "link": "",
+    "popularity": 0.9851851851851852,
+    "position": 47,
+    "tags": [
+     "cursor"
+    ],
+    "note": "cursor · ↓ 832",
+    "score": 0.65,
+    "why": "Rozhádzané fotky plávajú paralaxou okolo nápisu fancy",
+    "take": "Fotky rozhádzané v rôznych hĺbkach reagujú na kurzor paralaxou okolo malého nápisu",
+    "fonts": [],
+    "palette": [
+     "#000000",
+     "#a69987",
+     "#838977",
+     "#2a231d",
+     "#555d48"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.21st.dev/user_danielpetho/parallax-floating/default/preview.png?v=1",
+    "id": "21st:danielpetho/parallax-floating"
+   },
+   {
+    "source": "21st",
+    "key": "minhxthanh/interactive-image-accordion",
+    "title": "Interactive Image Accordion",
+    "url": "https://21st.dev/minhxthanh/interactive-image-accordion",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/7278b377040bcba06dcb.jpg",
+    "section": "ui",
+    "author": "minhxthanh",
+    "link": "",
+    "popularity": 0.9825581395348837,
+    "position": 100,
+    "tags": [
+     "ai-chat"
+    ],
+    "note": "ai-chat · ↓ 820",
+    "score": 0.552,
+    "why": "Akordeón obrázkov pri AI nadpise, funkčné ale nudné",
+    "take": "Úzke zvislé pásy obrázkov s otočenými popiskami, aktívny sa roztiahne — kompaktná galéria",
+    "fonts": [],
+    "palette": [
+     "#ffffff",
+     "#0e1417",
+     "#50595a",
+     "#3e3d3d",
+     "#757575"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.21st.dev/minhxthanh/interactive-image-accordion/default/preview.1788797504559-62bd40d7-a17f-42ed-8d25-fbea892998fc.png",
+    "id": "21st:minhxthanh/interactive-image-accordion"
+   },
+   {
+    "source": "21st",
+    "key": "designali-in/ai-actions",
+    "title": "AI Actions",
+    "url": "https://21st.dev/designali-in/ai-actions",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/34fe9644731f4d27f892.jpg",
+    "section": "ui",
+    "author": "designali-in",
+    "link": "",
+    "popularity": 0.8895348837209303,
+    "position": 2,
+    "tags": [
+     "ai-chat"
+    ],
+    "note": "ai-chat · ↓ 109",
+    "score": 0.51,
+    "why": "",
+    "take": "Pod odpoveďou chatu tichý rad ikon akcií (kopírovať, like, zopakovať) — bez rámov a textu",
+    "fonts": [],
+    "palette": [
+     "#ffffff"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.21st.dev/designali-in/ai-actions/default/preview.1756918230237.png",
+    "id": "21st:designali-in/ai-actions"
+   }
+  ],
+  "type": [
+   {
+    "source": "fontsinuse",
+    "key": "80713",
+    "title": "Monuments historiquescovers, 1980–1985",
+    "url": "https://fontsinuse.com/uses/80713/monuments-historiques-covers-1980-1985",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/9369e510decfd5fbb10c.jpg",
+    "section": "type",
+    "author": "Jean-Charles Rousseau, Pierre Dusser",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [
+     "Sully-Jonquières",
+     "Franklin Gothic",
+     "Helvetica"
+    ],
+    "note": "c. 1980",
+    "score": 0.888,
+    "why": "Vyblednuté obálky 80. rokov, kondenzovaný serif a pečiatka",
+    "take": "Kondenzovaný serif v ťahu cez obálku + tučný Franklin Gothic ako druhý hlas a pečiatka",
+    "fonts": [
+     "Sully-Jonquières",
+     "Franklin Gothic",
+     "Helvetica"
+    ],
+    "palette": [
+     "#e8decc",
+     "#c7b69a",
+     "#594d3d",
+     "#8c7e6a"
+    ],
+    "tech": [],
+    "image_orig": "https://assets.fontsinuse.com/static/use-media-items/307/306765/thumb/6acfcc11/@2x/11r_8-pi-13_1980_n110_000001.jpeg",
+    "id": "fontsinuse:80713"
+   },
+   {
+    "source": "fontsinuse",
+    "key": "80189",
+    "title": "Watermelon Pictures",
+    "url": "https://fontsinuse.com/uses/80189/watermelon-pictures",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/3f211f7f1e2eeca7bee0.jpg",
+    "section": "type",
+    "author": "One Design Company, Field of Practice",
+    "link": "",
+    "popularity": null,
+    "position": 5,
+    "tags": [
+     "Farmacia",
+     "Zaatar",
+     "29LT Ada Flat"
+    ],
+    "note": "c. 2024",
+    "score": 0.846,
+    "why": "Oblúkové PICTURES na tmavozelenej s červenou pečiatkou",
+    "take": "Slovo PICTURES zakrivené do oblúka pod rovným WATERMELON, cez to červená arabská pečiatka",
+    "fonts": [
+     "Farmacia",
+     "Zaatar",
+     "29LT Ada Flat"
+    ],
+    "palette": [
+     "#194429",
+     "#ffffff",
+     "#75897a",
+     "#bfc8c1",
+     "#7c2719"
+    ],
+    "tech": [],
+    "image_orig": "https://assets.fontsinuse.com/static/use-media-items/305/304191/thumb/6acf2e7e/@2x/03-wp-system-sm.jpeg",
+    "id": "fontsinuse:80189"
+   },
+   {
+    "source": "fontsinuse",
+    "key": "80159",
+    "title": "Natur, Kunst og Nærvær",
+    "url": "https://fontsinuse.com/uses/80159/natur-kunst-og-narvar",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/4c5857e049c9aeed10cd.jpg",
+    "section": "type",
+    "author": "Nikita Gavrilenko",
+    "link": "",
+    "popularity": null,
+    "position": 6,
+    "tags": [
+     "Softcore"
+    ],
+    "note": "c. 2026",
+    "score": 0.818,
+    "why": "Kyanotypia s mušou a serif sadzba, kobaltovo-krémová kniha",
+    "take": "Kyanotypia v jednej modrej oproti krémovej sadzbe — zvislý kurzívny titul na farebnej strane",
+    "fonts": [
+     "Softcore"
+    ],
+    "palette": [
+     "#ffffff",
+     "#000000",
+     "#103f85",
+     "#bdc0c3",
+     "#7d899b"
+    ],
+    "tech": [],
+    "image_orig": "https://assets.fontsinuse.com/static/use-media-items/305/304077/thumb/6acf347e/@2x/Spread_4.jpeg",
+    "id": "fontsinuse:80159"
+   }
+  ],
+  "retro": [
+   {
+    "source": "webdesignmuseum",
+    "key": "requiem-for-a-dream-2000",
+    "title": "Requiem for a Dream",
+    "url": "https://www.webdesignmuseum.org/web-design-history/requiem-for-a-dream-2000",
+    "image": "https://www.webdesignmuseum.org/uploaded/preview/requiem-for-a-dream-2000-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 436,
+    "tags": [],
+    "note": "2000 · história webu",
+    "score": 0.7904,
+    "why": "Legendárny Flash web Requiem, rozpadajúce sa experimentálne UI",
+    "take": "Rozpadajúce sa UI, ktoré nesie náladu filmu — navigácia ako súčasť príbehu, nie len menu",
+    "fonts": [],
+    "palette": [],
+    "tech": [],
+    "image_orig": "",
+    "id": "webdesignmuseum:requiem-for-a-dream-2000"
+   },
+   {
+    "source": "webdesignmuseum",
+    "key": "worldwideweb-the-first-browser-1990",
+    "title": "WorldWideWeb – the first browser",
+    "url": "https://www.webdesignmuseum.org/web-design-history/worldwideweb-the-first-browser-1990",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/worldwideweb-the-first-browser-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 120,
+    "tags": [],
+    "note": "1990 · história webu",
+    "score": 0.7306,
+    "why": "Prvý prehliadač Tima Bernersa-Lee na NeXT, zrod webu",
+    "take": "Prehliadač, ktorý aj upravoval stránky — zober si myšlienku webu ako editovateľného dokumentu",
+    "fonts": [],
+    "palette": [],
+    "tech": [],
+    "image_orig": "",
+    "id": "webdesignmuseum:worldwideweb-the-first-browser-1990"
+   },
+   {
+    "source": "webdesignmuseum",
+    "key": "the-x-files-1996",
+    "title": "The X-Files",
+    "url": "https://www.webdesignmuseum.org/web-design-in-the-90s/the-x-files-1996",
+    "image": "https://www.webdesignmuseum.org/uploaded/preview/the-x-files-1996-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 394,
+    "tags": [],
+    "note": "1996",
+    "score": 0.7098,
+    "why": "Fanúšikovsky tajomný web X-Files z 90. rokov, náhľad chýba",
+    "take": "Tmavý web s pocitom tajných spisov — atmosféru vytvára obsah stylizovaný ako dokumenty",
+    "fonts": [],
+    "palette": [],
+    "tech": [],
+    "image_orig": "",
+    "id": "webdesignmuseum:the-x-files-1996"
+   }
+  ]
+ },
+ "health": {
+  "fontsinuse": {
+   "ok": true,
+   "count": 59,
+   "secs": 0.8
+  },
+  "onepagelove": {
+   "ok": true,
+   "count": 10,
+   "secs": 1.0
+  },
+  "cssda": {
+   "ok": true,
+   "count": 12,
+   "secs": 1.0
+  },
+  "webflow": {
+   "ok": true,
+   "count": 18,
+   "secs": 1.0
+  },
+  "awwwards": {
+   "ok": true,
+   "count": 31,
+   "secs": 1.6
+  },
+  "bestwebsite": {
+   "ok": true,
+   "count": 10,
+   "secs": 1.7
+  },
+  "21st": {
+   "ok": true,
+   "count": 463,
+   "secs": 1.8
+  },
+  "brutalist": {
+   "ok": true,
+   "count": 1583,
+   "secs": 1.9
+  },
+  "darkdesign": {
+   "ok": true,
+   "count": 246,
+   "secs": 2.0
+  },
+  "minimalgallery": {
+   "ok": true,
+   "count": 10,
+   "secs": 2.6
+  },
+  "godly": {
+   "ok": true,
+   "count": 20,
+   "secs": 2.8
+  },
+  "landbook": {
+   "ok": true,
+   "count": 20,
+   "secs": 7.0
+  },
+  "codrops": {
+   "ok": true,
+   "count": 96,
+   "secs": 7.9
+  },
+  "gsap": {
+   "ok": true,
+   "count": 36,
+   "secs": 9.6
+  },
+  "cosmos": {
+   "ok": true,
+   "count": 5,
+   "secs": 6.6,
+   "retried": true
+  },
+  "dribbble": {
+   "ok": true,
+   "count": 49,
+   "secs": 12.2
+  },
+  "webdesignmuseum": {
+   "ok": true,
+   "count": 178,
+   "secs": 15.4
+  }
+ },
+ "curator": {
+  "ok": true,
+  "model": "opus",
+  "rated": 87,
+  "secs": 69
+ },
+ "analysis": {
+  "visited": 11,
+  "items": 29,
+  "takes": 29,
+  "secs": 125
+ },
+ "taste": {
+  "text": "Páči sa ti:\n- Obrovské bezpätkové nápisy cez celú šírku, orezané okrajom\n- Teplé zrnité textúry, film a analógová nostalgia\n- Odvážne plné farby: červená, kobaltová modrá, krémová\n- Jednoduché značky a logá s čistou plochou a pokojom\n- Bohaté ilustrácie a hravý pixel-art s vlastným svetom\nNebaví ťa:\n- Technické 3D a WebGL demá bez nápadu, temné scény\n- Ostrý neónový chaos, kričiaca žltá a ružová v Y2K štýle\n- Generické SaaS stránky s rozmazanými kartami\n- Fotorealistické 3D maskoty a renderované interiéry\n- Nevýrazné osobné CV stránky s malým textom",
+  "updated": false
+ },
+ "images": {
+  "mirrored": 26,
+  "failed": 3,
+  "kept": 0
+ },
+ "alerts": []
+}
