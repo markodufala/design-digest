@@ -1,0 +1,1019 @@
+{
+ "date": "2026-10-16",
+ "sections": {
+  "wow": [
+   {
+    "source": "codrops",
+    "key": "post-123538",
+    "title": "Interlude: Custom Page Transitions in Astro",
+    "url": "https://interlude.crnacura.workers.dev/",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/cc64c8cce3d3116f645b.jpg",
+    "section": "wow",
+    "author": "Manoela Ilic",
+    "link": "https://interlude.crnacura.workers.dev/",
+    "popularity": null,
+    "position": 4,
+    "tags": [
+     "astro",
+     "GSAP",
+     "page transition",
+     "Three.js"
+    ],
+    "note": "astro · GSAP",
+    "score": 0.755,
+    "why": "Katalóg 20+ prechodov stránok (curtain, peel, ink) ako typografický zoznam",
+    "take": "Zoznam efektov ako typografické menu: veľké slová s drobnými indexmi, každé slovo spustí svoj prechod",
+    "fonts": [
+     "Inter ad2eef0277559c4e"
+    ],
+    "palette": [
+     "#ffffff",
+     "#2b2b2b",
+     "#797979",
+     "#565656",
+     "#9b9b9b"
+    ],
+    "tech": [
+     "Astro",
+     "Lenis"
+    ],
+    "image_orig": "https://tympanus.net/codrops/wp-content/uploads/2026/10/interlude-transitions-4x3-cover-400x300.png",
+    "id": "codrops:post-123538"
+   },
+   {
+    "source": "brutalist",
+    "key": "kioskkiosk.com",
+    "title": "kioskkiosk.com",
+    "url": "http://kioskkiosk.com",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/22f2df05d80fe2ede449.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://kioskkiosk.com",
+    "popularity": null,
+    "position": 7,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.7432,
+    "why": "Ručne poskladaný katalóg predmetov v mriežke, farebný monospace text",
+    "take": "Courier New, každý odkaz inou farbou a fotky v pevnej mriežke: Shopify obchod pôsobí ako ručný zin",
+    "fonts": [
+     "Courier New"
+    ],
+    "palette": [
+     "#ffffff",
+     "#7e593f",
+     "#90755c",
+     "#999085",
+     "#3e3a38"
+    ],
+    "tech": [
+     "Shopify"
+    ],
+    "image_orig": "https://brutalistwebsites.com/_img/kioskkiosk.com.jpg",
+    "id": "brutalist:kioskkiosk.com"
+   },
+   {
+    "source": "brutalist",
+    "key": "uncannyvalley.studio",
+    "title": "uncannyvalley.studio",
+    "url": "http://uncannyvalley.studio",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/76eec1c82d91364f07c5.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "http://uncannyvalley.studio",
+    "popularity": null,
+    "position": 13,
+    "tags": [],
+    "note": "brutalist",
+    "score": 0.7429,
+    "why": "Obrovské orezané ATLAS nakreslené do kruhu, s tlejúcim papierom",
+    "take": "Obrovské slovo orezané okrajom obrazovky a zatočené do kruhu vedľa fotky horiaceho papiera",
+    "fonts": [
+     "Times New"
+    ],
+    "palette": [
+     "#f8f8f8",
+     "#21201f",
+     "#d9d9d9",
+     "#060606",
+     "#645047"
+    ],
+    "tech": [],
+    "image_orig": "https://brutalistwebsites.com/_img/uncannyvalley.studio.jpg",
+    "id": "brutalist:uncannyvalley.studio"
+   },
+   {
+    "source": "gsap",
+    "key": "https://www.minalstudio.com/",
+    "title": "Minal Studio",
+    "url": "https://www.minalstudio.com/",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/8ea6a92577e5cf98fef3.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "https://www.minalstudio.com/",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "motion",
+    "score": 0.692,
+    "why": "Rozvírené 3D karty s fotkami okolo veľkého bezpätkového claimu na čiernej",
+    "take": "Čierny pás s claimom nad vejárom 3D kariet, ktoré sa s Lenis scrollom rozkladajú ako balíček",
+    "fonts": [
+     "Minal"
+    ],
+    "palette": [
+     "#0c0a0b",
+     "#f0e9e1",
+     "#d29e65",
+     "#ceb794",
+     "#665247"
+    ],
+    "tech": [
+     "Webflow",
+     "GSAP",
+     "ScrollTrigger",
+     "Lottie",
+     "Lenis"
+    ],
+    "image_orig": "https://gsap.com/community/uploads/monthly_2026_10/minal-studio-optimized.jpeg.f05d08d02b4bb3103d6fdf164f28c51b.jpeg",
+    "id": "gsap:https://www.minalstudio.com/"
+   },
+   {
+    "source": "codrops",
+    "key": "post-87268",
+    "title": "Reaction-Diffusion Compute Shader in WebGPU",
+    "url": "https://tympanus.net/codrops/2024/05/01/reaction-diffusion-compute-shader-in-webgpu/",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/4dce41cd0e6467c7732f.jpg",
+    "section": "wow",
+    "author": "Robert Leitl",
+    "link": "https://tympanus.net/Tutorials/WebGPUReactionDiffusion",
+    "popularity": null,
+    "position": 9,
+    "tags": [
+     "glsl",
+     "reaction diffusion",
+     "webgpu"
+    ],
+    "note": "glsl · reaction diffusion",
+    "score": 0.6836,
+    "why": "Reakčno-difúzne vzory pučia cez čísla v kobaltovej modrej",
+    "take": "Reakčno-difúzny WebGPU shader, ktorý nechá vzor rásť cez masku čísel: typografia ako živá kultúra",
+    "fonts": [],
+    "palette": [
+     "#020329",
+     "#161e56",
+     "#3d4881"
+    ],
+    "tech": [
+     "WebGPU"
+    ],
+    "image_orig": "https://tympanus.net/codrops/wp-content/uploads/2024/04/feature-image-400x300.jpg",
+    "id": "codrops:post-87268"
+   },
+   {
+    "source": "gsap",
+    "key": "https://www.extrafazant.nl/",
+    "title": "Extrafazant",
+    "url": "https://www.extrafazant.nl/",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/937037a6905f7ae67cde.jpg",
+    "section": "wow",
+    "author": "",
+    "link": "https://www.extrafazant.nl/",
+    "popularity": null,
+    "position": 14,
+    "tags": [],
+    "note": "motion",
+    "score": 0.6542,
+    "why": "Masívny zúžený grotesk BRENGT JE MERK na bielom, hravý kurzor",
+    "take": "Úzky grotesk a serif v jednom riadku (Helvetica Now + Serrif), pod tým drobný ručne písaný podpis",
+    "fonts": [
+     "Helvetica Now Subset",
+     "Serrif Subset"
+    ],
+    "palette": [
+     "#f4f4f4",
+     "#070707",
+     "#bdbfc9",
+     "#83869d"
+    ],
+    "tech": [
+     "Webflow",
+     "GSAP",
+     "ScrollTrigger",
+     "Lenis",
+     "Barba.js"
+    ],
+    "image_orig": "https://gsap.com/community/uploads/monthly_2026_10/ef-gsap-thumb.jpg.f5721d165cbcec2a6cd8533f6a8d2945.jpg",
+    "id": "gsap:https://www.extrafazant.nl/"
+   }
+  ],
+  "web": [
+   {
+    "source": "awwwards",
+    "key": "huy-phan-vol-2",
+    "title": "Huy Phan Vol.2",
+    "url": "https://www.awwwards.com/sites/huy-phan-vol-2",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/2f770c0ca1342e855680.jpg",
+    "section": "web",
+    "author": "Huy Phan",
+    "link": "https://huyml.co/",
+    "popularity": null,
+    "position": 2,
+    "tags": [
+     "DEV",
+     "SOTD"
+    ],
+    "note": "DEV · SOTD",
+    "score": 0.79,
+    "why": "Obrie 19/96 a hravá ilustrácia hlavy s červeným textom",
+    "take": "Obrie číslice 19/96 ako ramená okolo ilustrácie; červený text ako jediný farebný akcent na sivej",
+    "fonts": [
+     "BT Grotesk"
+    ],
+    "palette": [
+     "#ededed",
+     "#111115",
+     "#302c28",
+     "#9c9f9e",
+     "#cbc9c7"
+    ],
+    "tech": [
+     "Framer",
+     "Three.js"
+    ],
+    "image_orig": "https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2026/08/6a8c16494e7ac039645572.jpg",
+    "id": "awwwards:huy-phan-vol-2"
+   },
+   {
+    "source": "minimalgallery",
+    "key": "https://minimal.gallery/?p=28451",
+    "title": "How&How",
+    "url": "https://minimal.gallery/howhow/",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/6a0a4eecd68224244d05.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://how.studio/?ref=minimal.gallery",
+    "popularity": null,
+    "position": 0,
+    "tags": [
+     "Uncategorized",
+     "Agency",
+     "Branding"
+    ],
+    "note": "",
+    "score": 0.748,
+    "why": "Obrovské orezané ENERGY v oranžovej pod vzdušným claimom",
+    "take": "Ľahký Mabry claim hore a obrie slovo ENERGY orezané spodnou hranou, s videom vnútri písmen",
+    "fonts": [
+     "Mabry Pro",
+     "GTPressura Mono"
+    ],
+    "palette": [
+     "#000000",
+     "#919189",
+     "#6d5f57",
+     "#30302f"
+    ],
+    "tech": [
+     "Next.js",
+     "Video"
+    ],
+    "image_orig": "https://minimal.gallery/wp-content/uploads/2026/09/how.studio.jpg",
+    "id": "minimalgallery:https://minimal.gallery/?p=28451"
+   },
+   {
+    "source": "cssda",
+    "key": "50419",
+    "title": "Chris Daly Art Gallery",
+    "url": "https://www.cssdesignawards.com/sites/chris-daly-art-gallery/50419/",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/617dfcf531833c421e07.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://www.chriswilliamsart.com/",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "Nominee",
+    "score": 0.692,
+    "why": "Olejomaľby voľne rozhádzané po bielom plátne ako galéria",
+    "take": "Obrazy voľne rozhodené po nekonečnom plátne, ktoré sa dá ťahať; galéria bez mriežky, v Three.js",
+    "fonts": [
+     "Google Sans Flex"
+    ],
+    "palette": [
+     "#f4f6f5",
+     "#a8a88c",
+     "#1f1614",
+     "#4f4b46",
+     "#c5c5a9"
+    ],
+    "tech": [
+     "Three.js"
+    ],
+    "image_orig": "https://www.cssdesignawards.com/cdasites/2026/202610/20261015112627.jpg",
+    "id": "cssda:50419"
+   },
+   {
+    "source": "onepagelove",
+    "key": "https://onepagelove.com/?p=89320",
+    "title": "HEDROOM™",
+    "url": "https://onepagelove.com/hedroom",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/369bf2d1af8101e4aa3a.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://www.hedroom.fm/?ref=onepagelove",
+    "popularity": null,
+    "position": 0,
+    "tags": [
+     "Inspiration",
+     "Audio Visualization",
+     "Community",
+     "Interactive"
+    ],
+    "note": "",
+    "score": 0.5849,
+    "why": "Pixelový dither a rozmazané farebné škvrny ako audio vizuál",
+    "take": "Biela plocha, sem-tam pixelový dither a rozmazaná neónová guľa: málo prvkov, veľa atmosféry",
+    "fonts": [
+     "Helvetica Now Display"
+    ],
+    "palette": [
+     "#ffffff",
+     "#7bff46",
+     "#9598a4",
+     "#ccffa0",
+     "#babdc0"
+    ],
+    "tech": [
+     "Three.js"
+    ],
+    "image_orig": "https://assets.onepagelove.com/cdn-cgi/image/width=1200,height=1200,fit=cover,gravity=top,format=jpg,quality=85/wp-content/uploads/2026/10/opl-screenshot-hedroom-1791987744182-desktop.jpg",
+    "id": "onepagelove:https://onepagelove.com/?p=89320"
+   },
+   {
+    "source": "landbook",
+    "key": "101142",
+    "title": "SIHA",
+    "url": "https://land-book.com/websites/101142-siha",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/3c8470f308af86ac5c55.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://siha.com.au/?ref=land-book.com",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "",
+    "score": 0.5567,
+    "why": "Teplý prírodný portrét so zeleňou pre kozmetický e-shop",
+    "take": "Fotka na celú plochu a drobný claim vľavo dole; newsletter je malá biela karta v rohu, nie popup",
+    "fonts": [
+     "ABC Walter Neue"
+    ],
+    "palette": [
+     "#243729",
+     "#e0c0aa",
+     "#885334",
+     "#c39875",
+     "#0e1810"
+    ],
+    "tech": [
+     "Shopify"
+    ],
+    "image_orig": "https://cdn.land-book.com/image/0x0:2732x4098/600x0/filters:format(webp)/website/101142/d91072386e904325-screenshot-source?signature=dc05a277226dad95675c3d0eee670de9f66167c0dfc1422dceb2288d3a495061",
+    "id": "landbook:101142"
+   },
+   {
+    "source": "webflow",
+    "key": "layered-slider-live-build",
+    "title": "Layered Image Slider (CMS)",
+    "url": "https://webflow.com/made-in-webflow/website/layered-slider-live-build",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/5c9a132e44c3fe440477.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://layered-slider-live-build.webflow.io/",
+    "popularity": null,
+    "position": 7,
+    "tags": [],
+    "note": "",
+    "score": 0.5198,
+    "why": "Teplá fotka pri okne lietadla vo vrstvenom slideri",
+    "take": "Vrstvený slider: menšia fotka prekrýva veľkú a názvy klientov sa posúvajú v jednom riadku",
+    "fonts": [
+     "Haffer"
+    ],
+    "palette": [
+     "#3e2612",
+     "#f4f4f4",
+     "#693d22",
+     "#c4beab",
+     "#080503"
+    ],
+    "tech": [
+     "Webflow",
+     "GSAP"
+    ],
+    "image_orig": "https://cdn.prod.website-files.com/6a3a72dbf95fd259cc019837/6a3ce27ba26f149fa36c0808_layered-image-slider-1440x960.jpg",
+    "id": "webflow:layered-slider-live-build"
+   },
+   {
+    "source": "bestwebsite",
+    "key": "sites/sotd/2026/09/17/jesper-landberg",
+    "title": "Jesper Landberg",
+    "url": "https://bestwebsite.gallery/sites/sotd/2026/09/17/jesper-landberg",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/1ebe73c85763a6c23e24.jpg",
+    "section": "web",
+    "author": "Jesper Landberg",
+    "link": "https://main--jesper-folio.netlify.app/",
+    "popularity": null,
+    "position": 5,
+    "tags": [],
+    "note": "",
+    "score": 0.476,
+    "why": "Plávajúce sklenené karty projektov v tmavom 3D priestore",
+    "take": "Projekty ako zakrivené sklenené panely nad 3D mriežkou podlahy; portfólio ako výstava v priestore",
+    "fonts": [
+     "Sans"
+    ],
+    "palette": [
+     "#000000",
+     "#312a2b",
+     "#574c4e",
+     "#8b7375",
+     "#ae8882"
+    ],
+    "tech": [
+     "Nuxt",
+     "Three.js"
+    ],
+    "image_orig": "https://static.bestwebsite.gallery/assets/gallery_bestwebsite/images/main-jesper-folio-netlify-app_2026-09-17_preview.png",
+    "id": "bestwebsite:sites/sotd/2026/09/17/jesper-landberg"
+   },
+   {
+    "source": "darkdesign",
+    "key": "mainframe-1780069525324",
+    "title": "Mainframe",
+    "url": "https://dark.design/site/mainframe-1780069525324",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/a9798ad8bec59402cf91.jpg",
+    "section": "web",
+    "author": "",
+    "link": "https://mainframe.app/",
+    "popularity": null,
+    "position": 10,
+    "tags": [],
+    "note": "dark UI",
+    "score": 0.4366,
+    "why": "",
+    "take": "Tmavý gradient a centrovaný krátky claim nad radom UI kariet, ktoré ukazujú produkt priamo v hero",
+    "fonts": [],
+    "palette": [
+     "#202427",
+     "#595b58",
+     "#0a0a0b",
+     "#b8bab6"
+    ],
+    "tech": [
+     "Next.js"
+    ],
+    "image_orig": "https://sidhvpjhuucqcehkevrl.supabase.co/storage/v1/render/image/public/screenshots/auto-1780069306624.webp?width=1080&quality=60&height=675&resize=cover",
+    "id": "darkdesign:mainframe-1780069525324"
+   }
+  ],
+  "visual": [
+   {
+    "source": "cosmos",
+    "key": "art/museum-archive-shapes",
+    "title": "Museum archive shapes",
+    "url": "https://www.cosmos.so/art/museum-archive-shapes",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/20d67902dd17da743397.jpg",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [],
+    "note": "art",
+    "score": 0.79,
+    "why": "Skladaná origami veža z modrých a červených trojuholníkov",
+    "take": "Modulárne skladanie trojuholníkov v dvoch farbách (modrá a lososová) na teplom papieri",
+    "fonts": [],
+    "palette": [
+     "#fbf5eb",
+     "#5f495c",
+     "#a37882",
+     "#ccb0b5"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.cosmos.so/a8cf2cc7-3f8f-40e2-86cd-ad09e40c1d0a?rect=92%2C123%2C694%2C694&format=webp&w=800",
+    "id": "cosmos:art/museum-archive-shapes"
+   },
+   {
+    "source": "dribbble",
+    "key": "27813460",
+    "title": "R logo for \"Rapid Rescore\"",
+    "url": "https://dribbble.com/shots/27813460-R-logo-for-Rapid-Rescore",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/83e478ce15bd65f50d7e.jpg",
+    "section": "visual",
+    "author": "Knacky Studio",
+    "link": "",
+    "popularity": 162.0,
+    "position": 2,
+    "tags": [],
+    "note": "♥ 162 · 👁 11.3k",
+    "score": 0.706,
+    "why": "Oranžový blesk-R, čistá značka s pokojnou plochou",
+    "take": "Blesk zložený z dvoch šípok tvorí R; značku over na tmavej, svetlej, oranžovej aj ako ikonu",
+    "fonts": [],
+    "palette": [
+     "#221918",
+     "#fafdf9",
+     "#ff5800",
+     "#c7c6c6",
+     "#7e4528"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.dribbble.com/userupload/49331763/file/a6d59d78618d7df7dbcb11c8a00dc4c4.jpg?format=webp&resize=800x600&vertical=center",
+    "id": "dribbble:27813460"
+   },
+   {
+    "source": "dribbble",
+    "key": "27813077",
+    "title": "Ecommerce Website",
+    "url": "https://dribbble.com/shots/27813077-Ecommerce-Website",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/ccb05c5b34c9e8ef005d.jpg",
+    "section": "visual",
+    "author": "Awe Design Studio",
+    "link": "",
+    "popularity": 183.0,
+    "position": 6,
+    "tags": [],
+    "note": "♥ 183 · 👁 12.1k",
+    "score": 0.65,
+    "why": "Obrovské orezané LUMENLEN nad renderom kamery",
+    "take": "Obrovský názov produktu prečiarknutý žltým pásom; render produktu ho prekrýva, text zostáva vzadu",
+    "fonts": [],
+    "palette": [
+     "#faf7ef",
+     "#b8b8b6",
+     "#e3e1d6",
+     "#a0a0a0",
+     "#595757"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.dribbble.com/userupload/49330405/file/e5cc759f3095b0be1209b80b6347d664.png?format=webp&resize=800x600&vertical=center",
+    "id": "dribbble:27813077"
+   },
+   {
+    "source": "dribbble",
+    "key": "27811968",
+    "title": "Loopie – AI Creative Platform Branding",
+    "url": "https://dribbble.com/shots/27811968-Loopie-AI-Creative-Platform-Branding",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/37e6e5e2e860f01400ca.jpg",
+    "section": "visual",
+    "author": "Bato",
+    "link": "",
+    "popularity": 244.0,
+    "position": 8,
+    "tags": [],
+    "note": "♥ 244 · 👁 22.9k",
+    "score": 0.622,
+    "why": "Nekonečná slučka v logu a roztomilý ružový maskot",
+    "take": "Dve „o“ v logu sa spoja do nekonečna; ten istý gradient ber do ikony, maskota aj merchu",
+    "fonts": [],
+    "palette": [
+     "#fcfbfc",
+     "#604446",
+     "#dadbde",
+     "#f5809e",
+     "#1339a3"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.dribbble.com/userupload/49326451/file/eff7dbe1daaed2778ca93ac3b19716c0.jpg?format=webp&resize=800x600&vertical=center",
+    "id": "dribbble:27811968"
+   },
+   {
+    "source": "godly",
+    "key": "unwr3n7",
+    "title": "Movo Paper Collection",
+    "url": "https://godly.website/i/unwr3n7-movo-paper-collection",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/8d602b3829c573cd6f59.jpg",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 14,
+    "tags": [],
+    "note": "",
+    "score": 0.5656,
+    "why": "Pokrčený papier ako 3D objekty s tučným písmenom na zelenej",
+    "take": "Pokrčený papier ako 3D objekt a jedno tučné písmeno na neónovo zelenom hárku ako stred kompozície",
+    "fonts": [],
+    "palette": [
+     "#d9d9d9",
+     "#952c0e",
+     "#a4ef74",
+     "#a5816f"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.recent.design/items/unwr3n7/0/poster/960.webp",
+    "id": "godly:unwr3n7"
+   },
+   {
+    "source": "godly",
+    "key": "z8hjzvs",
+    "title": "Personal Portfolio Site",
+    "url": "https://godly.website/i/z8hjzvs-interactive-personal-portfolio-site",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/334b2ccaff43a8d714ff.jpg",
+    "section": "visual",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 1,
+    "tags": [],
+    "note": "",
+    "score": 0.552,
+    "why": "Koláž tmavých UI dlaždíc a drobných kariet",
+    "take": "Portfólio ako bento mriežka čiernych a bielych UI dlaždíc, sem-tam jedna plná farebná kocka",
+    "fonts": [],
+    "palette": [
+     "#ffffff",
+     "#000000",
+     "#cdd4d6",
+     "#745061"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.recent.design/items/z8hjzvs/0/poster/1199.webp",
+    "id": "godly:z8hjzvs"
+   }
+  ],
+  "ui": [
+   {
+    "source": "21st",
+    "key": "moazamtrade/wrap-shader",
+    "title": "Wrap Shader",
+    "url": "https://21st.dev/moazamtrade/wrap-shader",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/b2c22838de0ec035c178.jpg",
+    "section": "ui",
+    "author": "moazamtrade",
+    "link": "",
+    "popularity": 0.9728260869565217,
+    "position": 163,
+    "tags": [
+     "shader"
+    ],
+    "note": "shader · ↓ 414",
+    "score": 0.594,
+    "why": "Tyrkysové mramorové víry ako shader pozadie",
+    "take": "Tekutý mramorový shader v jednom odtieni (tyrkys), cez neho tenký biely text a pilulkové CTA",
+    "fonts": [],
+    "palette": [
+     "#78f5cf",
+     "#44c8b3",
+     "#004265",
+     "#1c9997",
+     "#a4f1dd"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.21st.dev/moazamtrade/wrap-shader/default/preview.1756971132325.png",
+    "id": "21st:moazamtrade/wrap-shader"
+   },
+   {
+    "source": "21st",
+    "key": "designali-in/shader-lines",
+    "title": "Shader Lines",
+    "url": "https://21st.dev/designali-in/shader-lines",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/18838bcd8b0d0bac1ad9.jpg",
+    "section": "ui",
+    "author": "designali-in",
+    "link": "",
+    "popularity": 0.9836956521739131,
+    "position": 13,
+    "tags": [
+     "shader"
+    ],
+    "note": "shader · ↓ 958",
+    "score": 0.566,
+    "why": "Chromatické vertikálne svetelné línie na čiernej",
+    "take": "Zvislé chromatické svetelné čiary okolo stredu ako rám pre jeden krátky tučný nadpis",
+    "fonts": [],
+    "palette": [
+     "#141312",
+     "#2e2c2a",
+     "#959495",
+     "#dfe3dd",
+     "#5f5a58"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.21st.dev/designali-in/shader-lines/default/preview.1755617050358.png",
+    "id": "21st:designali-in/shader-lines"
+   },
+   {
+    "source": "21st",
+    "key": "hammamikhairi/animated-gradient-background",
+    "title": "Animated Gradient Background",
+    "url": "https://21st.dev/hammamikhairi/animated-gradient-background",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/47ba8aa2542a932caa7a.jpg",
+    "section": "ui",
+    "author": "hammamikhairi",
+    "link": "",
+    "popularity": 0.9763779527559056,
+    "position": 87,
+    "tags": [
+     "background"
+    ],
+    "note": "background · ↓ 1014",
+    "score": 0.552,
+    "why": "Kobaltovo-oranžový radiálny gradient s ružovou mačkou",
+    "take": "Radiálny gradient z kobaltovej do oranžovej, ktorý pomaly „dýcha“ zdola pod tmavým hero",
+    "fonts": [],
+    "palette": [
+     "#0a0a0a",
+     "#5578eb",
+     "#dc84a5",
+     "#1d305d",
+     "#2b4b96"
+    ],
+    "tech": [],
+    "image_orig": "https://cdn.21st.dev/user_2raao7ewdsV3POoFtbzjac3ufnv/animated-gradient-background/default/preview.1737970588556.png",
+    "id": "21st:hammamikhairi/animated-gradient-background"
+   }
+  ],
+  "type": [
+   {
+    "source": "fontsinuse",
+    "key": "79713",
+    "title": "localhost:2026",
+    "url": "https://fontsinuse.com/uses/79713/localhost-2026",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/ee6d4a19f873064fa3d5.jpg",
+    "section": "type",
+    "author": "Amaury Hamon",
+    "link": "",
+    "popularity": null,
+    "position": 0,
+    "tags": [
+     "SC Gerrit"
+    ],
+    "note": "2026",
+    "score": 0.832,
+    "why": "Plagát festivalu so zalomeným SC Gerrit a fialovým tvarom",
+    "take": "SC Gerrit zalomený do úzkeho stĺpca s malými štvorčekmi ako odrážkami, za ním veľký fialový tvar",
+    "fonts": [
+     "SC Gerrit"
+    ],
+    "palette": [
+     "#040505",
+     "#a196c8",
+     "#21211f",
+     "#505052",
+     "#babac1"
+    ],
+    "tech": [],
+    "image_orig": "https://assets.fontsinuse.com/static/use-media-items/305/304441/thumb/6ab25f6e/@2x/Localhost-Fontinuse-07.png",
+    "id": "fontsinuse:79713"
+   },
+   {
+    "source": "fontsinuse",
+    "key": "59245",
+    "title": "Bordeaux Open Air 2026",
+    "url": "https://fontsinuse.com/uses/59245/bordeaux-open-air-2026",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/95a46b03922f710f6a67.jpg",
+    "section": "type",
+    "author": "Ima Studio, Éma Perret",
+    "link": "",
+    "popularity": null,
+    "position": 2,
+    "tags": [
+     "Gradient"
+    ],
+    "note": "2026",
+    "score": 0.832,
+    "why": "Bohatá ilustrácia kopcov a ľudí s tučným gradientovým písmom",
+    "take": "Žltý tučný titul priamo na pastelovej ilustrácii oblakov; farba textu je vytiahnutá z obrázka",
+    "fonts": [
+     "Gradient"
+    ],
+    "palette": [
+     "#d5c988",
+     "#617754",
+     "#325636",
+     "#9eb6ae",
+     "#939e8b"
+    ],
+    "tech": [],
+    "image_orig": "https://assets.fontsinuse.com/static/use-media-items/305/304388/thumb/6ab228a5/@2x/Bordeaux_Open_Air_Saison_2026.png",
+    "id": "fontsinuse:59245"
+   },
+   {
+    "source": "fontsinuse",
+    "key": "80246",
+    "title": "Radu Jude, L’hérétiqueby Victor Morozov",
+    "url": "https://fontsinuse.com/uses/80246/radu-jude-l-heretique-by-victor-morozov",
+    "image": "https://design-digest-feedback.newsdesign.workers.dev/img/528e7ed5c727fbf1b040.jpg",
+    "section": "type",
+    "author": "Paule Palacios-Dalens",
+    "link": "",
+    "popularity": null,
+    "position": 1,
+    "tags": [
+     "Borges",
+     "Choc",
+     "Neue Helvetica"
+    ],
+    "note": "2026",
+    "score": 0.818,
+    "why": "Kobaltové ručné kapitálky na žltej obálke, červený podtitul",
+    "take": "Ručné štetcové kapitálky v kobaltovej na žltej, podtitul v červenej: tri čisté farby a žiadny obrázok",
+    "fonts": [
+     "Borges",
+     "Choc",
+     "Neue Helvetica"
+    ],
+    "palette": [
+     "#6e4e3e",
+     "#f0e571",
+     "#132c7d",
+     "#b39c68"
+    ],
+    "tech": [],
+    "image_orig": "https://assets.fontsinuse.com/static/use-media-items/305/304410/thumb/6ab243e5/@2x/1B_COUV_RADUJUDE_202ED.jpeg",
+    "id": "fontsinuse:80246"
+   }
+  ],
+  "retro": [
+   {
+    "source": "webdesignmuseum",
+    "key": "batman-forever-website-1995",
+    "title": "Batman Forever website",
+    "url": "https://www.webdesignmuseum.org/web-design-history/batman-forever-website-1995",
+    "image": "https://www.webdesignmuseum.org/uploaded/web-design-history/batman-forever-website-1995-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 507,
+    "tags": [],
+    "note": "1995 · história webu",
+    "score": 0.6191,
+    "why": "Batman Forever 1995: ranný filmový web, temná gotika",
+    "take": "Celá stránka ako jedna tmavá filmová scéna; navigáciu tvoria objekty v obraze, nie tlačidlá",
+    "fonts": [],
+    "palette": [],
+    "tech": [],
+    "image_orig": "",
+    "id": "webdesignmuseum:batman-forever-website-1995"
+   },
+   {
+    "source": "webdesignmuseum",
+    "key": "deviantart-2000",
+    "title": "DeviantArt",
+    "url": "https://www.webdesignmuseum.org/web-design-history/deviantart-2000",
+    "image": "https://www.webdesignmuseum.org/uploaded/preview/deviant-art-2000-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 14,
+    "tags": [],
+    "note": "2000 · história webu",
+    "score": 0.608,
+    "why": "DeviantArt 2000: zeleno-šedá komunita digitálneho umenia",
+    "take": "Tlmená zeleno-sivá paleta komunitného webu: farba ustúpi, aby vynikli diela používateľov",
+    "fonts": [],
+    "palette": [],
+    "tech": [],
+    "image_orig": "",
+    "id": "webdesignmuseum:deviantart-2000"
+   },
+   {
+    "source": "webdesignmuseum",
+    "key": "the-apple-store-2001",
+    "title": "Apple Store",
+    "url": "https://www.webdesignmuseum.org/gallery/the-apple-store-2001",
+    "image": "https://www.webdesignmuseum.org/uploaded/preview/the-apple-store-2001-preview.png",
+    "section": "retro",
+    "author": "",
+    "link": "",
+    "popularity": null,
+    "position": 54,
+    "tags": [],
+    "note": "2001",
+    "score": 0.6063,
+    "why": "Apple Store 2001: aqua tlačidlá a začiatky online predaja",
+    "take": "Lesklé aqua tlačidlá ako hmatateľné objekty; jeden výrazný materiál pre CTA a zvyšok nechaj plochý",
+    "fonts": [],
+    "palette": [],
+    "tech": [],
+    "image_orig": "",
+    "id": "webdesignmuseum:the-apple-store-2001"
+   }
+  ]
+ },
+ "health": {
+  "fontsinuse": {
+   "ok": true,
+   "count": 59,
+   "secs": 0.3
+  },
+  "cssda": {
+   "ok": true,
+   "count": 12,
+   "secs": 0.5
+  },
+  "onepagelove": {
+   "ok": true,
+   "count": 10,
+   "secs": 0.6
+  },
+  "webflow": {
+   "ok": true,
+   "count": 18,
+   "secs": 0.8
+  },
+  "brutalist": {
+   "ok": true,
+   "count": 1583,
+   "secs": 0.9
+  },
+  "bestwebsite": {
+   "ok": true,
+   "count": 10,
+   "secs": 1.0
+  },
+  "awwwards": {
+   "ok": true,
+   "count": 31,
+   "secs": 1.2
+  },
+  "darkdesign": {
+   "ok": true,
+   "count": 246,
+   "secs": 1.3
+  },
+  "godly": {
+   "ok": true,
+   "count": 20,
+   "secs": 1.3
+  },
+  "21st": {
+   "ok": true,
+   "count": 473,
+   "secs": 1.5
+  },
+  "minimalgallery": {
+   "ok": true,
+   "count": 10,
+   "secs": 1.9
+  },
+  "codrops": {
+   "ok": true,
+   "count": 96,
+   "secs": 6.0
+  },
+  "landbook": {
+   "ok": true,
+   "count": 20,
+   "secs": 6.5
+  },
+  "cosmos": {
+   "ok": true,
+   "count": 6,
+   "secs": 8.3
+  },
+  "gsap": {
+   "ok": true,
+   "count": 35,
+   "secs": 8.6
+  },
+  "dribbble": {
+   "ok": true,
+   "count": 49,
+   "secs": 10.4
+  },
+  "webdesignmuseum": {
+   "ok": true,
+   "count": 178,
+   "secs": 13.2
+  }
+ },
+ "curator": {
+  "ok": true,
+  "model": "opus",
+  "rated": 87,
+  "secs": 64
+ },
+ "analysis": {
+  "visited": 14,
+  "items": 29,
+  "takes": 29,
+  "secs": 76
+ },
+ "taste": {
+  "text": "Páči sa ti:\n- Obrovské bezpätkové nápisy cez celú šírku, orezané okrajom\n- Teplé zrnité textúry, film a analógová nostalgia\n- Odvážne plné farby: červená, kobaltová modrá, krémová\n- Jednoduché značky a logá s čistou plochou a pokojom\n- Bohaté ilustrácie a hravý pixel-art s vlastným svetom\nNebaví ťa:\n- Technické 3D a WebGL demá bez nápadu, temné scény\n- Ostrý neónový chaos, kričiaca žltá a ružová v Y2K štýle\n- Generické SaaS stránky s rozmazanými kartami\n- Fotorealistické 3D maskoty a renderované interiéry\n- Nevýrazné osobné CV stránky s malým textom",
+  "updated": false
+ },
+ "images": {
+  "mirrored": 26,
+  "failed": 3,
+  "kept": 0
+ },
+ "alerts": []
+}
