@@ -1,0 +1,1567 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Design Digest · 14. novembra 2026</title>
+<meta name="description" content="Obrie bezpätkové písmo orezané okrajom (meno na plnej červenej, ultraširoký CNCPT, grotesk na tabuliach) stojí proti tekutému chrómu a sklu, ktoré dávajú hĺbku drobným objektom.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Design Digest">
+<meta property="og:title" content="Design Digest · 14. novembra 2026">
+<meta property="og:description" content="Obrie bezpätkové písmo orezané okrajom (meno na plnej červenej, ultraširoký CNCPT, grotesk na tabuliach) stojí proti tekutému chrómu a sklu, ktoré dávajú hĺbku drobným objektom.">
+<meta property="og:image" content="https://design-digest-feedback.newsdesign.workers.dev/img/6e68e25173237c215286.jpg">
+<meta name="twitter:card" content="summary_large_image"><link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Digest">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e0e0e" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --ink: #111111; --muted: #8a8a8a; --line: #ececec; --fill: #f4f4f4; --nav-h: 48px; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0e0e0e; --ink: #ededed; --muted: #7a7a7a; --line: #222222; --fill: #1a1a1a; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.45 "Inter Tight", system-ui, -apple-system, sans-serif; letter-spacing: -.005em;
+}
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 1320px; margin: 0 auto; padding: 0 16px; }
+@media (min-width: 768px) { .wrap { padding: 0 40px; } }
+
+header.top .wrap { display: flex; align-items: center; height: 64px; gap: 20px; font-size: 14px; }
+.logo { font-weight: 500; white-space: nowrap; }
+.spacer { flex: 1; }
+.pager, .nav { display: flex; gap: 20px; color: var(--muted); white-space: nowrap; }
+.pager a:hover, .nav a:hover, .nav a[aria-current] { color: var(--ink); }
+@media (max-width: 599px) { header.top .wide { display: none; } }
+
+.hero { display: grid; gap: 28px; padding: 64px 0 56px; }
+@media (min-width: 900px) {
+  .hero { padding: 72px 0 64px; }
+  .hero.split { grid-template-columns: minmax(0, 1fr) minmax(0, 380px); align-items: end; gap: 56px; }
+  .hero.split h1 { font-size: clamp(40px, 6vw, 88px); }
+}
+.hero h1 { font-weight: 400; font-size: clamp(40px, 7vw, 88px); line-height: 1; letter-spacing: -.04em; margin: 0; }
+.hero p { color: var(--muted); margin: 18px 0 0; }
+.theme .kicker { margin: 0 0 8px; font-size: 13px; }
+.theme .theme-text { color: var(--ink); margin: 0; font-size: 17px; line-height: 1.45; letter-spacing: -.01em; text-wrap: pretty; }
+
+/* section bar: under the hero, then stuck to the top while scrolling */
+.secnav { position: sticky; top: 0; z-index: 20; background: var(--bg); margin: 0 -16px; padding: 0 16px; }
+@media (min-width: 768px) { .secnav { margin: 0 -40px; padding: 0 40px; } }
+.secnav.stuck { box-shadow: 0 1px 0 var(--line); }
+.secnav-in {
+  position: relative; display: flex; align-items: center; gap: 22px; height: var(--nav-h); overflow-x: auto;
+  scrollbar-width: none; white-space: nowrap; font-size: 14px; color: var(--muted);
+}
+.secnav-in::-webkit-scrollbar { display: none; }
+@media (max-width: 767px) {
+  .secnav-in { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); padding-right: 32px; }
+}
+.secnav a { transition: color .15s; }
+.secnav a:hover, .secnav a.on { color: var(--ink); }
+.secnav a span { margin-left: 6px; font-variant-numeric: tabular-nums; opacity: .7; }
+.secnav .lib { margin-left: auto; }
+
+section.block { padding: 0 0 96px; scroll-margin-top: calc(var(--nav-h) + 8px); }
+section.block h2 {
+  display: flex; align-items: baseline; gap: 12px; margin: 0 0 24px; padding-top: 16px;
+  border-top: 1px solid var(--line); font-size: 15px; font-weight: 500;
+}
+section.block h2 small { color: var(--muted); font-size: inherit; font-weight: 400; }
+section.block h2 .n { margin-left: auto; }
+section.block h2 a.n { color: var(--muted); font-weight: 400; }
+section.block h2 a.n:hover { color: var(--ink); }
+section.saved:not(.open) { padding-bottom: 48px; }
+.saved-toggle {
+  display: flex; align-items: baseline; gap: 12px; padding: 0; border: 0; background: none;
+  font: inherit; color: inherit; cursor: pointer;
+}
+.saved-toggle small { color: var(--muted); font-size: inherit; font-weight: 400; font-variant-numeric: tabular-nums; }
+.saved-toggle .toggle-label { color: var(--muted); font-weight: 400; }
+.saved-toggle:hover .toggle-label { color: var(--ink); }
+.secnav + section.block, .secnav + .feature { margin-top: 8px; }
+.grid { display: grid; gap: 48px 24px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+
+.card { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.shot { display: block; aspect-ratio: 4 / 3; border-radius: 6px; overflow: hidden; background: var(--fill); cursor: zoom-in; }
+.shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform .4s ease; }
+.card[data-section="retro"] .shot img { object-position: top left; }
+.card:hover .shot img { transform: scale(1.015); }
+.row { display: flex; gap: 12px; align-items: flex-start; }
+.text { flex: 1; min-width: 0; }
+.title { font-size: 15px; font-weight: 500; line-height: 1.3; margin: 0; }
+.meta { color: var(--muted); font-size: 13px; margin-top: 3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.meta a:hover { color: var(--ink); }
+.why { color: var(--muted); font-size: 13px; line-height: 1.45; margin: 6px 0 0; }
+.dna { display: flex; align-items: center; gap: 10px; margin-top: 10px; font-size: 12px; min-width: 0; }
+.swatches { display: flex; gap: 3px; flex: none; }
+.sw {
+  width: 12px; height: 12px; padding: 0; border: 0; border-radius: 3px; cursor: copy;
+  box-shadow: inset 0 0 0 1px rgba(127, 127, 127, .25);
+}
+.sw.copied { outline: 1px solid var(--ink); outline-offset: 1px; }
+.fonts { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tech { color: var(--muted); font-size: 12px; margin-top: 4px; }
+
+/* pick of the day: one card across the page */
+.feature { padding: 16px 0 96px; scroll-margin-top: calc(var(--nav-h) + 8px); }
+.feature h2 { margin: 0 0 20px; font-size: 15px; font-weight: 500; }
+.feature h2 small { color: var(--muted); font-weight: 400; margin-left: 12px; font-size: inherit; }
+.card.feature-card { display: grid; gap: 20px 40px; }
+@media (min-width: 900px) { .card.feature-card { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); align-items: start; } }
+.feature-card .shot { border-radius: 8px; }
+.feature-card .title { font-size: clamp(22px, 2.4vw, 30px); font-weight: 500; line-height: 1.15; letter-spacing: -.02em; }
+.feature-card .meta { font-size: 14px; margin-top: 8px; }
+.feature-card .pick-why { color: var(--ink); font-size: 17px; line-height: 1.45; margin: 18px 0 0; text-wrap: pretty; }
+.feature-card .why { font-size: 14px; margin-top: 10px; }
+.feature-card .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+
+.alerts { margin: 24px 0 0; padding: 12px 16px; border: 1px solid var(--ink); border-radius: 6px; font-size: 13px; }
+.alerts p { margin: 0; }
+.alerts p + p { margin-top: 8px; }
+
+.taste { margin-bottom: 40px; max-width: 640px; }
+.taste h3 { display: flex; align-items: baseline; gap: 12px; }
+.taste-text { color: var(--ink); font-size: 14px; white-space: pre-line; }
+.taste textarea {
+  display: block; width: 100%; min-height: 200px; margin: 0 0 10px; padding: 12px; resize: vertical;
+  font: inherit; font-size: 14px; color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 6px;
+}
+.taste textarea:focus { outline: none; border-color: var(--muted); }
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font: inherit; font-size: 13px; color: var(--ink); background: transparent; cursor: pointer;
+  border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; white-space: nowrap;
+}
+.btn:hover { border-color: var(--muted); }
+.btn.solid { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.btn.solid:hover { opacity: .85; }
+.btn.lg { font-size: 14px; padding: 8px 16px; }
+.link-btn { font: inherit; font-size: 13px; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
+.link-btn:hover { color: var(--ink); }
+.taste .hint { margin: 10px 0 0; }
+
+.votes { display: flex; gap: 2px; margin: -6px -8px 0 0; }
+.vote {
+  width: 30px; height: 30px; border: 0; border-radius: 50%; background: transparent; color: var(--muted);
+  cursor: pointer; display: grid; place-items: center; font: inherit; font-size: 13px;
+}
+.vote svg { width: 15px; height: 15px; }
+.vote:hover { color: var(--ink); }
+.vote[aria-pressed="true"] { color: var(--ink); }
+@media (hover: hover) {
+  .vote { opacity: 0; transition: opacity .15s; }
+  .card:hover .vote, .vote:focus-visible, .vote[aria-pressed="true"], .feature-card .vote { opacity: 1; }
+}
+.card.hidden-vote .shot, .card.hidden-vote .text { opacity: .25; }
+
+.empty { color: var(--muted); }
+footer { border-top: 1px solid var(--line); padding: 24px 0 72px; color: var(--muted); font-size: 13px; }
+footer h3 { font-size: 13px; font-weight: 500; color: var(--ink); margin: 0 0 10px; }
+.days { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-bottom: 32px; }
+.days a:hover, .days a.on { color: var(--ink); }
+.health span { margin-right: 16px; white-space: nowrap; }
+.health .bad { color: var(--ink); }
+.health { display: flex; flex-wrap: wrap; gap: 6px 0; }
+.health .hist { display: inline-flex; gap: 2px; margin-left: 6px; vertical-align: 1px; }
+.health .hist b { width: 4px; height: 8px; border-radius: 1px; background: var(--line); }
+.health .hist b.ok { background: var(--muted); opacity: .55; }
+.health .hist b.bad { background: #e5484d; }
+[hidden] { display: none !important; }
+
+/* the owner (a device opened from the email, which carries the key) votes and edits the taste;
+   everyone else just reads — and can subscribe */
+body:not(.owner) .owner-only, body.owner .visitor-only { display: none !important; }
+.subscribe { display: flex; flex-wrap: wrap; gap: 8px; max-width: 440px; margin-top: 28px; }
+.subscribe input[type=email] {
+  flex: 1; min-width: 0; font: inherit; color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 999px; padding: 7px 16px;
+}
+.subscribe input[type=email]:focus { outline: none; border-color: var(--muted); }
+.subscribe .btn { padding: 7px 18px; font-size: 15px; background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.subscribe .hp { position: absolute; left: -9999px; width: 1px; height: 1px; }
+.sub-note { flex-basis: 100%; margin: 4px 0 0 !important; font-size: 13px; }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 12px; line-height: 1.4;
+  color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 999px;
+  padding: 3px 10px; cursor: pointer; white-space: nowrap;
+}
+.chip:hover { border-color: var(--muted); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.chip small { color: var(--muted); font-size: inherit; font-variant-numeric: tabular-nums; }
+.chip[aria-pressed="true"] small { color: inherit; opacity: .6; }
+
+/* quick look */
+.ql {
+  --side: 380px;
+  padding: 0; border: 0; color: var(--ink); background: var(--bg); overflow: hidden;
+  width: min(1240px, calc(100vw - 64px)); max-width: none; max-height: none; border-radius: 10px;
+  height: min(calc((min(1240px, 100vw - 64px) - var(--side)) * .75), calc(100vh - 64px));
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .35);
+}
+.ql::backdrop { background: rgba(8, 8, 8, .6); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.ql[open] { animation: ql-in .22s cubic-bezier(.2, .8, .2, 1); }
+@keyframes ql-in { from { opacity: 0; transform: translateY(10px) scale(.985); } }
+@media (prefers-reduced-motion: reduce) { .ql[open] { animation: none; } }
+.ql-body {
+  display: grid; height: 100%;
+  grid-template-columns: minmax(0, 1fr) var(--side); grid-template-rows: auto minmax(0, 1fr);
+  grid-template-areas: "shot bar" "shot side";
+}
+.ql-body:focus { outline: none; }
+.ql-shot { grid-area: shot; position: relative; display: block; background: var(--fill); overflow: hidden; min-height: 0; }
+.ql-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: opacity .2s; }
+.ql-shot img.loading { opacity: 0; }
+.ql-shot[data-section="retro"] img { object-position: top left; }
+.ql-shot .go {
+  position: absolute; right: 14px; bottom: 14px; font-size: 13px; padding: 6px 12px; border-radius: 999px;
+  background: rgba(17, 17, 17, .78); color: #fff; opacity: 0; transition: opacity .15s;
+}
+.ql-shot:hover .go, .ql-shot:focus-visible .go { opacity: 1; }
+.ql-bar { grid-area: bar; display: flex; align-items: center; gap: 2px; padding: 12px 12px 0 24px; color: var(--muted); font-size: 13px; }
+.ql-pos { font-variant-numeric: tabular-nums; margin-right: auto; }
+.ql-ico {
+  width: 34px; height: 34px; border: 0; border-radius: 50%; background: transparent; color: var(--ink);
+  font: inherit; font-size: 16px; cursor: pointer; display: grid; place-items: center;
+}
+.ql-ico:hover { background: var(--fill); }
+.ql-ico:disabled { color: var(--line); cursor: default; background: none; }
+.ql-side { grid-area: side; display: flex; flex-direction: column; gap: 18px; padding: 8px 24px 22px; overflow-y: auto; }
+.ql-kicker { margin: 0; color: var(--muted); font-size: 13px; }
+.ql-title { margin: -10px 0 0; font-size: 24px; font-weight: 500; line-height: 1.15; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.ql-take { margin: 0; font-size: 16px; line-height: 1.45; text-wrap: pretty; }
+.ql-why { margin: -8px 0 0; color: var(--muted); font-size: 14px; line-height: 1.45; }
+.ql-pal { display: flex; gap: 6px; }
+.ql-sw {
+  flex: 1; min-width: 0; padding: 0; border: 0; background: none; cursor: copy; color: var(--muted);
+  font: 11px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; text-align: left;
+}
+.ql-sw i { display: block; height: 36px; border-radius: 5px; margin-bottom: 5px; box-shadow: inset 0 0 0 1px rgba(127, 127, 127, .25); }
+.ql-sw:hover { color: var(--ink); }
+.ql-facts { display: grid; grid-template-columns: auto 1fr; gap: 10px 14px; margin: 0; font-size: 13px; align-items: baseline; }
+.ql-facts dt { color: var(--muted); }
+.ql-facts dd { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+.ql-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.ql-votes { display: flex; gap: 8px; }
+.ql-votes .btn { flex: 1; justify-content: center; padding: 8px 12px; font-size: 14px; }
+.ql-votes .btn svg { width: 14px; height: 14px; }
+.ql-votes .btn[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.ql-keys { margin: auto 0 0; padding-top: 6px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.ql-keys kbd { font: inherit; border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; margin-right: 3px; }
+@media (hover: none) { .ql-keys { display: none; } }
+/* narrower windows: picture on top, text under it, the whole sheet scrolls */
+@media (max-width: 1099px) {
+  .ql { width: min(760px, calc(100vw - 48px)); height: auto; max-height: calc(100dvh - 48px); }
+  .ql-body { display: flex; flex-direction: column; max-height: calc(100dvh - 48px); overflow-y: auto; overscroll-behavior: contain; }
+  .ql-body > * { flex: none; }
+  .ql-bar { position: sticky; top: 0; z-index: 2; background: var(--bg); padding: 8px 8px 8px 20px; }
+  .ql-shot { aspect-ratio: 4 / 3; }
+  .ql-side { overflow: visible; padding: 18px 20px 24px; }
+}
+/* phones: a full-screen sheet */
+@media (max-width: 819px) {
+  .ql { width: 100%; height: 100%; height: 100dvh; max-height: none; border-radius: 0; margin: 0; }
+  .ql-body { height: 100%; max-height: none; }
+  .ql-bar { padding: max(8px, env(safe-area-inset-top)) 8px 8px 16px; }
+  .ql-side { padding: 18px 16px max(28px, env(safe-area-inset-bottom)); }
+}
+
+.toast {
+  position: fixed; left: 50%; bottom: 28px; z-index: 100; transform: translate(-50%, 12px);
+  background: var(--ink); color: var(--bg); font-size: 13px; padding: 8px 16px; border-radius: 999px;
+  opacity: 0; pointer-events: none; transition: opacity .18s, transform .18s;
+}
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+</style></head>
+<body>
+<script>try { if (JSON.parse(localStorage.getItem("dd-key"))) document.body.classList.add("owner"); } catch {}
+if (/[#&]k=/.test(location.hash)) document.body.classList.add("owner");</script>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html">Design Digest</a>
+    <nav class="nav"><a href="kniznica.html">Knižnica</a><a class="wide" href="taxonomia.html">Taxonómia</a></nav>
+    <span class="spacer"></span>
+    <nav class="pager" aria-label="Dni">
+<a href="d/2026-11-13.html">← Predošlý</a>    </nav>
+  </div>
+</header>
+
+<main class="wrap" data-ql="day">
+  <div class="hero split">
+    <div>
+      <h1>14. novembra 2026</h1>
+      <p>
+        29 vecí z 17 zdrojov, vybral Claude.
+<span class="owner-only">♥ = viac takého, ✕ = už nikdy.</span>      </p>
+      <form class="subscribe visitor-only" id="subscribe" hidden>
+        <input type="email" name="email" required placeholder="tvoj@email.sk" aria-label="Tvoj e-mail" autocomplete="email">
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn" type="submit">Odoberať</button>
+        <p class="sub-note" id="sub-msg">Každé ráno jeden mail. Odhlásenie jedným klikom, adresu nepoužijeme na nič iné.</p>
+      </form>
+    </div>
+    <div class="theme">
+      <p class="kicker">Téma dňa</p>
+      <p class="theme-text">Obrie bezpätkové písmo orezané okrajom (meno na plnej červenej, ultraširoký CNCPT, grotesk na tabuliach) stojí proti tekutému chrómu a sklu, ktoré dávajú hĺbku drobným objektom.</p>
+    </div>
+  </div>
+
+  <nav class="secnav" aria-label="Sekcie">
+    <div class="secnav-in">
+<a href="#vyber">Výber dňa</a><a href="#wow">WOW<span>5</span></a><a href="#web">Web<span>8</span></a><a href="#visual">Vizuál &amp; shots<span>6</span></a><a href="#ui">UI komponenty<span>3</span></a><a href="#type">Typo<span>3</span></a><a href="#retro">Retro<span>3</span></a>      <a href="#saved" id="saved-link" class="owner-only" hidden>Uložené<span id="saved-n"></span></a>
+      <a href="kniznica.html" class="lib">Knižnica</a>
+      <a href="taxonomia.html">Taxonómia →</a>
+    </div>
+  </nav>
+
+  <section class="feature" id="vyber">
+    <h2>Výber dňa<small>WOW</small></h2>
+    <article class="card feature-card" data-section="wow" data-id="gsap:https://andreshunger.com/" data-item='{"date": "2026-11-14", "id": "gsap:https://andreshunger.com/", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/6e68e25173237c215286.jpg", "link": "https://andreshunger.com/", "note": "motion", "palette": ["#e32704", "#ffffff", "#ea6952", "#ecbbb0"], "section": "wow", "source": "GSAP Showcase", "take": "Meno orezan\u00e9 cez okraje na plnej \u010dervenej, drobn\u00fd mono r\u00e1mec navrchu \u2014 \u0161k\u00e1la rob\u00ed cel\u00fd hero", "title": "Andres Hunger \u2014 Break it!", "url": "https://andreshunger.com/", "why": "Obr\u00ed orezan\u00fd grotesk cez cel\u00fa \u0161\u00edrku na plnej \u010dervenej"}'>
+  <a class="shot" href="https://andreshunger.com/" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/6e68e25173237c215286.jpg" alt="Andres Hunger — Break it!" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://andreshunger.com/" target="_blank" rel="noopener">Andres Hunger — Break it!</a></h3>
+      <div class="meta">
+        WOW · GSAP Showcase      </div>
+<p class="pick-why">Pozri, ako meno orezané oboma okrajmi na plnej červenej a drobný mono rámec nesú celý hero.</p><p class="why">Meno orezané cez okraje na plnej červenej, drobný mono rámec navrchu — škála robí celý hero</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#e32704" data-hex="#e32704" title="#e32704 · kopírovať" aria-label="Farba #e32704, kopírovať"></button><button class="sw" style="background:#ffffff" data-hex="#ffffff" title="#ffffff · kopírovať" aria-label="Farba #ffffff, kopírovať"></button><button class="sw" style="background:#ea6952" data-hex="#ea6952" title="#ea6952 · kopírovať" aria-label="Farba #ea6952, kopírovať"></button><button class="sw" style="background:#ecbbb0" data-hex="#ecbbb0" title="#ecbbb0 · kopírovať" aria-label="Farba #ecbbb0, kopírovať"></button></span></div>
+
+      <div class="actions">
+        <a class="btn solid lg" href="https://andreshunger.com/" target="_blank" rel="noopener">Otvoriť web ↗</a>
+        <button class="btn lg" type="button" data-look>Rozbor</button>
+        <button class="btn lg" type="button" data-prompt>Kopírovať prompt</button>
+      </div>
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+
+  </section>
+
+  <section class="block" id="wow">
+    <h2>WOW <small>experimenty &amp; úlety</small><small class="n">5</small></h2>
+    <div class="grid">
+<article class="card" data-section="wow" data-id="codrops:post-125993" data-item='{"author": "Argo", "date": "2026-11-14", "id": "codrops:post-125993", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/fe0e2c053324080e39ca.jpg", "link": "https://argofowl.github.io/ferro-toggle/", "note": "audio \u00b7 glsl", "palette": ["#ebe8e1", "#c2bfb8", "#615f5c"], "section": "wow", "source": "Codrops", "take": "Oby\u010dajn\u00fd prep\u00edna\u010d ako fyzick\u00fd objekt: chr\u00f3mov\u00e1 kvapka v shaderi + zvuk = mikrointerakcia na pam\u00e4\u0165", "title": "Ferro Toggle", "url": "https://argofowl.github.io/ferro-toggle/", "why": "Ferrofluidn\u00fd kvapkov\u00fd prep\u00edna\u010d so zvukom, tekut\u00fd chr\u00f3m v shaderi"}'>
+  <a class="shot" href="https://argofowl.github.io/ferro-toggle/" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/fe0e2c053324080e39ca.jpg" alt="Ferro Toggle" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://argofowl.github.io/ferro-toggle/" target="_blank" rel="noopener">Ferro Toggle</a></h3>
+      <div class="meta">
+        Codrops · Argo · <a href="https://argofowl.github.io/ferro-toggle/" target="_blank" rel="noopener">web ↗</a>      </div>
+<p class="why">Obyčajný prepínač ako fyzický objekt: chrómová kvapka v shaderi + zvuk = mikrointerakcia na pamäť</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#ebe8e1" data-hex="#ebe8e1" title="#ebe8e1 · kopírovať" aria-label="Farba #ebe8e1, kopírovať"></button><button class="sw" style="background:#c2bfb8" data-hex="#c2bfb8" title="#c2bfb8 · kopírovať" aria-label="Farba #c2bfb8, kopírovať"></button><button class="sw" style="background:#615f5c" data-hex="#615f5c" title="#615f5c · kopírovať" aria-label="Farba #615f5c, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="wow" data-id="gsap:https://au-rel.io/" data-item='{"date": "2026-11-14", "id": "gsap:https://au-rel.io/", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/c454811e06dd0b9418b9.jpg", "link": "https://au-rel.io/", "note": "motion", "palette": ["#e2e2e2", "#5a5957", "#b9b0aa"], "section": "wow", "source": "GSAP Showcase", "take": "Wireframe kostra s vlepenou fotkou hlavy a mono HUD \u0161t\u00edtky \u2014 osobnos\u0165 bez ilustr\u00e1tora", "title": "Au-rel.io \u2014 Always on the Run", "url": "https://au-rel.io/", "why": "Dr\u00f4ten\u00e1 postavi\u010dka s hlavou autora be\u017e\u00ed, mono \u0161t\u00edtky ako HUD"}'>
+  <a class="shot" href="https://au-rel.io/" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/c454811e06dd0b9418b9.jpg" alt="Au-rel.io — Always on the Run" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://au-rel.io/" target="_blank" rel="noopener">Au-rel.io — Always on the Run</a></h3>
+      <div class="meta">
+        GSAP Showcase · <a href="https://au-rel.io/" target="_blank" rel="noopener">web ↗</a>      </div>
+<p class="why">Wireframe kostra s vlepenou fotkou hlavy a mono HUD štítky — osobnosť bez ilustrátora</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#e2e2e2" data-hex="#e2e2e2" title="#e2e2e2 · kopírovať" aria-label="Farba #e2e2e2, kopírovať"></button><button class="sw" style="background:#5a5957" data-hex="#5a5957" title="#5a5957 · kopírovať" aria-label="Farba #5a5957, kopírovať"></button><button class="sw" style="background:#b9b0aa" data-hex="#b9b0aa" title="#b9b0aa · kopírovať" aria-label="Farba #b9b0aa, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="wow" data-id="codrops:post-126071" data-item='{"author": "Pablo Mesquida", "date": "2026-11-14", "id": "codrops:post-126071", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/b27ab9506251e335e0b2.jpg", "link": "https://the-hand-chi.vercel.app", "note": "glass \u00b7 Three.js", "palette": ["#abc3e6", "#dce7f6", "#7b7a91"], "section": "wow", "source": "Codrops", "take": "Matn\u00e9 sklo s blur refrakciou, ruka sa do\u0148 zboku tla\u010d\u00ed \u2014 h\u013abka iba z jednej bledomodrej plochy", "title": "The Hand", "url": "https://the-hand-chi.vercel.app", "why": "Ruka tla\u010d\u00ed za matn\u00e9 sklo, m\u00e4kk\u00e1 refrakcia v bledomodrej"}'>
+  <a class="shot" href="https://the-hand-chi.vercel.app" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/b27ab9506251e335e0b2.jpg" alt="The Hand" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://the-hand-chi.vercel.app" target="_blank" rel="noopener">The Hand</a></h3>
+      <div class="meta">
+        Codrops · Pablo Mesquida · <a href="https://the-hand-chi.vercel.app" target="_blank" rel="noopener">web ↗</a>      </div>
+<p class="why">Matné sklo s blur refrakciou, ruka sa doň zboku tlačí — hĺbka iba z jednej bledomodrej plochy</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#abc3e6" data-hex="#abc3e6" title="#abc3e6 · kopírovať" aria-label="Farba #abc3e6, kopírovať"></button><button class="sw" style="background:#dce7f6" data-hex="#dce7f6" title="#dce7f6 · kopírovať" aria-label="Farba #dce7f6, kopírovať"></button><button class="sw" style="background:#7b7a91" data-hex="#7b7a91" title="#7b7a91 · kopírovať" aria-label="Farba #7b7a91, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="wow" data-id="brutalist:thecreativeindependent.com" data-item='{"date": "2026-11-14", "fonts": ["Courier"], "id": "brutalist:thecreativeindependent.com", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/d79f999604aebac3629a.jpg", "link": "http://thecreativeindependent.com", "note": "brutalist", "palette": ["#ffffff", "#acd644", "#929593", "#375682", "#d5a540"], "section": "wow", "source": "Brutalist Websites", "take": "Mrie\u017eka kariet, ka\u017ed\u00e1 v inej plnej farbe s Courier textom \u2014 arch\u00edv, ktor\u00fd sa \u010d\u00edta ako farebn\u00edk", "title": "thecreativeindependent.com", "url": "http://thecreativeindependent.com", "why": "\u017dlt\u00e1 plocha s 3D slim\u00e1kom a mono menu, hravo-retro karty"}'>
+  <a class="shot" href="http://thecreativeindependent.com" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/d79f999604aebac3629a.jpg" alt="thecreativeindependent.com" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="http://thecreativeindependent.com" target="_blank" rel="noopener">thecreativeindependent.com</a></h3>
+      <div class="meta">
+        Brutalist Websites · <a href="http://thecreativeindependent.com" target="_blank" rel="noopener">web ↗</a>      </div>
+<p class="why">Mriežka kariet, každá v inej plnej farbe s Courier textom — archív, ktorý sa číta ako farebník</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#ffffff" data-hex="#ffffff" title="#ffffff · kopírovať" aria-label="Farba #ffffff, kopírovať"></button><button class="sw" style="background:#acd644" data-hex="#acd644" title="#acd644 · kopírovať" aria-label="Farba #acd644, kopírovať"></button><button class="sw" style="background:#929593" data-hex="#929593" title="#929593 · kopírovať" aria-label="Farba #929593, kopírovať"></button><button class="sw" style="background:#375682" data-hex="#375682" title="#375682 · kopírovať" aria-label="Farba #375682, kopírovať"></button><button class="sw" style="background:#d5a540" data-hex="#d5a540" title="#d5a540 · kopírovať" aria-label="Farba #d5a540, kopírovať"></button></span><span class="fonts" title="Courier">Courier</span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="wow" data-id="brutalist:prefall.gucci.com/WW" data-item='{"date": "2026-11-14", "id": "brutalist:prefall.gucci.com/WW", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/77e5c141e788a0dccef7.jpg", "link": "http://prefall.gucci.com/WW", "note": "brutalist", "palette": ["#d3d6db", "#04010a", "#932a07", "#c74e1b", "#35231e"], "section": "wow", "source": "Brutalist Websites", "take": "Editori\u00e1lna fotka s oh\u0148om a ru\u010dne p\u00edsan\u00fd \u010derven\u00fd hashtag navrchu \u2014 luxus cez surov\u00fd gest", "title": "prefall.gucci.com/WW", "url": "http://prefall.gucci.com/WW", "why": "Gucci editori\u00e1l s horiacimi novinami, \u010derven\u00fd rukopisn\u00fd hashtag"}'>
+  <a class="shot" href="http://prefall.gucci.com/WW" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/77e5c141e788a0dccef7.jpg" alt="prefall.gucci.com/WW" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="http://prefall.gucci.com/WW" target="_blank" rel="noopener">prefall.gucci.com/WW</a></h3>
+      <div class="meta">
+        Brutalist Websites · <a href="http://prefall.gucci.com/WW" target="_blank" rel="noopener">web ↗</a>      </div>
+<p class="why">Editoriálna fotka s ohňom a ručne písaný červený hashtag navrchu — luxus cez surový gest</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#d3d6db" data-hex="#d3d6db" title="#d3d6db · kopírovať" aria-label="Farba #d3d6db, kopírovať"></button><button class="sw" style="background:#04010a" data-hex="#04010a" title="#04010a · kopírovať" aria-label="Farba #04010a, kopírovať"></button><button class="sw" style="background:#932a07" data-hex="#932a07" title="#932a07 · kopírovať" aria-label="Farba #932a07, kopírovať"></button><button class="sw" style="background:#c74e1b" data-hex="#c74e1b" title="#c74e1b · kopírovať" aria-label="Farba #c74e1b, kopírovať"></button><button class="sw" style="background:#35231e" data-hex="#35231e" title="#35231e · kopírovať" aria-label="Farba #35231e, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+    </div>
+  </section>
+  <section class="block" id="web">
+    <h2>Web <small>top weby dňa</small><small class="n">8</small></h2>
+    <div class="grid">
+<article class="card" data-section="web" data-id="cssda:50762" data-item='{"date": "2026-11-14", "fonts": ["Bowlby One", "Satoshi", "Anton"], "id": "cssda:50762", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/53f53f5f5eb4c2551c72.jpg", "link": "https://thunder-buns.com/", "note": "Nominee", "palette": ["#fcfaef", "#927651", "#c0b496", "#1a2913", "#ad9b7a"], "section": "web", "source": "CSS Design Awards", "take": "Bowlby One/Anton kri\u010d\u00ed cez foto, n\u00e1lepkov\u00e9 CTA naklonen\u00e9 a cik-cak blesky \u2014 energia plag\u00e1tu", "tech": ["Three.js", "Lenis", "Barba.js"], "title": "Thunderbuns", "url": "https://www.cssdesignawards.com/sites/thunderbuns/50762/", "why": "Hlu\u010dn\u00e9 burgerov\u00e9 plag\u00e1ty, tu\u010dn\u00fd n\u00e1pis a n\u00e1lepkov\u00fd chaos"}'>
+  <a class="shot" href="https://www.cssdesignawards.com/sites/thunderbuns/50762/" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/53f53f5f5eb4c2551c72.jpg" alt="Thunderbuns" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://www.cssdesignawards.com/sites/thunderbuns/50762/" target="_blank" rel="noopener">Thunderbuns</a></h3>
+      <div class="meta">
+        CSS Design Awards · <a href="https://thunder-buns.com/" target="_blank" rel="noopener">web ↗</a>      </div>
+<p class="why">Bowlby One/Anton kričí cez foto, nálepkové CTA naklonené a cik-cak blesky — energia plagátu</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#fcfaef" data-hex="#fcfaef" title="#fcfaef · kopírovať" aria-label="Farba #fcfaef, kopírovať"></button><button class="sw" style="background:#927651" data-hex="#927651" title="#927651 · kopírovať" aria-label="Farba #927651, kopírovať"></button><button class="sw" style="background:#c0b496" data-hex="#c0b496" title="#c0b496 · kopírovať" aria-label="Farba #c0b496, kopírovať"></button><button class="sw" style="background:#1a2913" data-hex="#1a2913" title="#1a2913 · kopírovať" aria-label="Farba #1a2913, kopírovať"></button><button class="sw" style="background:#ad9b7a" data-hex="#ad9b7a" title="#ad9b7a · kopírovať" aria-label="Farba #ad9b7a, kopírovať"></button></span><span class="fonts" title="Bowlby One, Satoshi, Anton">Bowlby One · Satoshi · Anton</span></div>
+<div class="tech">Three.js · Lenis · Barba.js</div>
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="web" data-id="onepagelove:https://onepagelove.com/?p=91740" data-item='{"date": "2026-11-14", "fonts": ["Text", "Times New"], "id": "onepagelove:https://onepagelove.com/?p=91740", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/93c0a5d10cf554a9684e.jpg", "link": "https://wowww.art/?ref=onepagelove", "palette": ["#000000", "#ffffff", "#e4ceac", "#aebaca", "#3d3c48"], "section": "web", "source": "One Page Love", "take": "Logo ako \u017eiv\u00fd vektorov\u00fd objekt s vidite\u013en\u00fdmi uzlami, pixel-d\u00faha ved\u013ea chr\u00f3mu \u2014 proces ako vizu\u00e1l", "tech": ["Next.js"], "title": "Wowww studio", "url": "https://onepagelove.com/wowww-studio", "why": "Holografick\u00e9 pixelov\u00e9 WW a chr\u00f3mov\u00e9 M, d\u00fahov\u00fd lesk"}'>
+  <a class="shot" href="https://onepagelove.com/wowww-studio" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/93c0a5d10cf554a9684e.jpg" alt="Wowww studio" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://onepagelove.com/wowww-studio" target="_blank" rel="noopener">Wowww studio</a></h3>
+      <div class="meta">
+        One Page Love · <a href="https://wowww.art/?ref=onepagelove" target="_blank" rel="noopener">web ↗</a>      </div>
+<p class="why">Logo ako živý vektorový objekt s viditeľnými uzlami, pixel-dúha vedľa chrómu — proces ako vizuál</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#000000" data-hex="#000000" title="#000000 · kopírovať" aria-label="Farba #000000, kopírovať"></button><button class="sw" style="background:#ffffff" data-hex="#ffffff" title="#ffffff · kopírovať" aria-label="Farba #ffffff, kopírovať"></button><button class="sw" style="background:#e4ceac" data-hex="#e4ceac" title="#e4ceac · kopírovať" aria-label="Farba #e4ceac, kopírovať"></button><button class="sw" style="background:#aebaca" data-hex="#aebaca" title="#aebaca · kopírovať" aria-label="Farba #aebaca, kopírovať"></button><button class="sw" style="background:#3d3c48" data-hex="#3d3c48" title="#3d3c48 · kopírovať" aria-label="Farba #3d3c48, kopírovať"></button></span><span class="fonts" title="Text, Times New">Text · Times New</span></div>
+<div class="tech">Next.js</div>
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="web" data-id="cssda:50339" data-item='{"date": "2026-11-14", "id": "cssda:50339", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/8aba10f214d8ff18dd8e.jpg", "link": "https://experience2026.funtech.inc/", "note": "Wotd", "palette": ["#55578a", "#02010f", "#6480b9", "#32456d", "#212451"], "section": "web", "source": "CSS Design Awards", "take": "Ne\u00f3nov\u00e1 3D sc\u00e9na s maskotom a CTA \u201eHold to dance\u201c \u2014 podr\u017eanie odomyk\u00e1 anim\u00e1ciu, nie klik", "title": "Experience FunTech Creativity", "url": "https://www.cssdesignawards.com/sites/experience-funtech-creativity/50339/", "why": "Ne\u00f3nov\u00fd tokijsk\u00fd 3D svet s tancuj\u00facim robotom maskotom"}'>
+  <a class="shot" href="https://www.cssdesignawards.com/sites/experience-funtech-creativity/50339/" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/8aba10f214d8ff18dd8e.jpg" alt="Experience FunTech Creativity" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://www.cssdesignawards.com/sites/experience-funtech-creativity/50339/" target="_blank" rel="noopener">Experience FunTech Creativity</a></h3>
+      <div class="meta">
+        CSS Design Awards · <a href="https://experience2026.funtech.inc/" target="_blank" rel="noopener">web ↗</a>      </div>
+<p class="why">Neónová 3D scéna s maskotom a CTA „Hold to dance“ — podržanie odomyká animáciu, nie klik</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#55578a" data-hex="#55578a" title="#55578a · kopírovať" aria-label="Farba #55578a, kopírovať"></button><button class="sw" style="background:#02010f" data-hex="#02010f" title="#02010f · kopírovať" aria-label="Farba #02010f, kopírovať"></button><button class="sw" style="background:#6480b9" data-hex="#6480b9" title="#6480b9 · kopírovať" aria-label="Farba #6480b9, kopírovať"></button><button class="sw" style="background:#32456d" data-hex="#32456d" title="#32456d · kopírovať" aria-label="Farba #32456d, kopírovať"></button><button class="sw" style="background:#212451" data-hex="#212451" title="#212451 · kopírovať" aria-label="Farba #212451, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="web" data-id="minimalgallery:https://minimal.gallery/?p=29308" data-item='{"date": "2026-11-14", "fonts": ["TikTok Sans", "Outfit"], "id": "minimalgallery:https://minimal.gallery/?p=29308", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/bcf35a2257f9ca8a9d0f.jpg", "link": "https://zeyraglow.com/?ref=minimal.gallery", "palette": ["#755853", "#231922", "#0c2e62", "#847784", "#1e599f"], "section": "web", "source": "Minimal Gallery", "take": "Leskl\u00e1 poko\u017eka v modrom svetle + obrie orezan\u00e9 logo v\u013eavo dole, drobn\u00fd text v rohoch", "tech": ["WordPress"], "title": "Zeyra Glow", "url": "https://minimal.gallery/zeyra-glow/", "why": "Modr\u00fd sat\u00e9n a lesk poko\u017eky s ve\u013ek\u00fdm orezan\u00fdm p\u00edsmom"}'>
+  <a class="shot" href="https://minimal.gallery/zeyra-glow/" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/bcf35a2257f9ca8a9d0f.jpg" alt="Zeyra Glow" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://minimal.gallery/zeyra-glow/" target="_blank" rel="noopener">Zeyra Glow</a></h3>
+      <div class="meta">
+        Minimal Gallery · <a href="https://zeyraglow.com/?ref=minimal.gallery" target="_blank" rel="noopener">web ↗</a>      </div>
+<p class="why">Lesklá pokožka v modrom svetle + obrie orezané logo vľavo dole, drobný text v rohoch</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#755853" data-hex="#755853" title="#755853 · kopírovať" aria-label="Farba #755853, kopírovať"></button><button class="sw" style="background:#231922" data-hex="#231922" title="#231922 · kopírovať" aria-label="Farba #231922, kopírovať"></button><button class="sw" style="background:#0c2e62" data-hex="#0c2e62" title="#0c2e62 · kopírovať" aria-label="Farba #0c2e62, kopírovať"></button><button class="sw" style="background:#847784" data-hex="#847784" title="#847784 · kopírovať" aria-label="Farba #847784, kopírovať"></button><button class="sw" style="background:#1e599f" data-hex="#1e599f" title="#1e599f · kopírovať" aria-label="Farba #1e599f, kopírovať"></button></span><span class="fonts" title="TikTok Sans, Outfit">TikTok Sans · Outfit</span></div>
+<div class="tech">WordPress</div>
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="web" data-id="darkdesign:cncpt" data-item='{"date": "2026-11-14", "id": "darkdesign:cncpt", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/22d266729eb5734d08cc.jpg", "link": "https://cncpt.ca/", "note": "dark UI", "palette": ["#000000", "#9b999a", "#cccccc", "#bf867f", "#edfdfd"], "section": "web", "source": "Dark.design", "take": "Ultra\u0161irok\u00fd tu\u010dn\u00fd CNCPT orezan\u00fd oboma okrajmi, pod n\u00edm hranat\u00e1 navig\u00e1cia v [z\u00e1tvork\u00e1ch]", "title": "Cncpt", "url": "https://dark.design/site/cncpt", "why": "Obr\u00ed orezan\u00fd CNCPT cez cel\u00fa \u0161\u00edrku, \u010diernobiely kontrast"}'>
+  <a class="shot" href="https://dark.design/site/cncpt" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/22d266729eb5734d08cc.jpg" alt="Cncpt" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://dark.design/site/cncpt" target="_blank" rel="noopener">Cncpt</a></h3>
+      <div class="meta">
+        Dark.design · <a href="https://cncpt.ca/" target="_blank" rel="noopener">web ↗</a>      </div>
+<p class="why">Ultraširoký tučný CNCPT orezaný oboma okrajmi, pod ním hranatá navigácia v [zátvorkách]</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#000000" data-hex="#000000" title="#000000 · kopírovať" aria-label="Farba #000000, kopírovať"></button><button class="sw" style="background:#9b999a" data-hex="#9b999a" title="#9b999a · kopírovať" aria-label="Farba #9b999a, kopírovať"></button><button class="sw" style="background:#cccccc" data-hex="#cccccc" title="#cccccc · kopírovať" aria-label="Farba #cccccc, kopírovať"></button><button class="sw" style="background:#bf867f" data-hex="#bf867f" title="#bf867f · kopírovať" aria-label="Farba #bf867f, kopírovať"></button><button class="sw" style="background:#edfdfd" data-hex="#edfdfd" title="#edfdfd · kopírovať" aria-label="Farba #edfdfd, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="web" data-id="landbook:100879" data-item='{"date": "2026-11-14", "id": "landbook:100879", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/d26b9667c530f0f858fb.jpg", "link": "https://www.unicorn.studio/?ref=land-book.com", "palette": ["#101010", "#b85544", "#733d2f", "#392429", "#bb7e73"], "section": "web", "source": "Land-book", "take": "Produkt predaj priamo v hero: \u017eiv\u00fd WebGL gradient v r\u00e1m\u010deku s \u00fachytmi ako v editore", "title": "Unicorn Studio \u2014 Craft Interactive Graphics that Ship", "url": "https://land-book.com/websites/100879-unicorn-studio-craft-interactive-graphics-that-ship", "why": "Tepl\u00fd tekut\u00fd gradient v r\u00e1m\u010deku, inak SaaS hero"}'>
+  <a class="shot" href="https://land-book.com/websites/100879-unicorn-studio-craft-interactive-graphics-that-ship" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/d26b9667c530f0f858fb.jpg" alt="Unicorn Studio — Craft Interactive Graphics that Ship" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://land-book.com/websites/100879-unicorn-studio-craft-interactive-graphics-that-ship" target="_blank" rel="noopener">Unicorn Studio — Craft Interactive Graphics that Ship</a></h3>
+      <div class="meta">
+        Land-book · <a href="https://www.unicorn.studio/?ref=land-book.com" target="_blank" rel="noopener">web ↗</a>      </div>
+<p class="why">Produkt predaj priamo v hero: živý WebGL gradient v rámčeku s úchytmi ako v editore</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#101010" data-hex="#101010" title="#101010 · kopírovať" aria-label="Farba #101010, kopírovať"></button><button class="sw" style="background:#b85544" data-hex="#b85544" title="#b85544 · kopírovať" aria-label="Farba #b85544, kopírovať"></button><button class="sw" style="background:#733d2f" data-hex="#733d2f" title="#733d2f · kopírovať" aria-label="Farba #733d2f, kopírovať"></button><button class="sw" style="background:#392429" data-hex="#392429" title="#392429 · kopírovať" aria-label="Farba #392429, kopírovať"></button><button class="sw" style="background:#bb7e73" data-hex="#bb7e73" title="#bb7e73 · kopírovať" aria-label="Farba #bb7e73, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="web" data-id="awwwards:delta-cafes" data-item='{"author": "B\u00fcrocratik", "date": "2026-11-14", "fonts": ["Delta Season", "Trade Gothic"], "id": "awwwards:delta-cafes", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/1249535b20a0cdea957e.jpg", "link": "https://deltacafes.com/en", "note": "DEV \u00b7 SOTD", "palette": ["#ffffff", "#4f605b", "#859086", "#353f36", "#191c17"], "section": "web", "source": "Awwwards", "take": "Tmav\u00e9 foto skladu k\u00e1vy s tepl\u00fdm svetlom, UI v jemnom r\u00e1m\u010deku s tenk\u00fdmi \u013eahk\u00fdmi bezp\u00e4tkov\u00fdmi", "tech": ["Nuxt", "Lenis", "WebGL"], "title": "Delta Caf\u00e9s", "url": "https://www.awwwards.com/sites/delta-cafes", "why": "Tepl\u00e9 foto skladov k\u00e1vy, sol\u00eddny ale konven\u010dn\u00fd layout"}'>
+  <a class="shot" href="https://www.awwwards.com/sites/delta-cafes" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/1249535b20a0cdea957e.jpg" alt="Delta Cafés" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://www.awwwards.com/sites/delta-cafes" target="_blank" rel="noopener">Delta Cafés</a></h3>
+      <div class="meta">
+        Awwwards · Bürocratik · <a href="https://deltacafes.com/en" target="_blank" rel="noopener">web ↗</a>      </div>
+<p class="why">Tmavé foto skladu kávy s teplým svetlom, UI v jemnom rámčeku s tenkými ľahkými bezpätkovými</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#ffffff" data-hex="#ffffff" title="#ffffff · kopírovať" aria-label="Farba #ffffff, kopírovať"></button><button class="sw" style="background:#4f605b" data-hex="#4f605b" title="#4f605b · kopírovať" aria-label="Farba #4f605b, kopírovať"></button><button class="sw" style="background:#859086" data-hex="#859086" title="#859086 · kopírovať" aria-label="Farba #859086, kopírovať"></button><button class="sw" style="background:#353f36" data-hex="#353f36" title="#353f36 · kopírovať" aria-label="Farba #353f36, kopírovať"></button><button class="sw" style="background:#191c17" data-hex="#191c17" title="#191c17 · kopírovať" aria-label="Farba #191c17, kopírovať"></button></span><span class="fonts" title="Delta Season, Trade Gothic">Delta Season · Trade Gothic</span></div>
+<div class="tech">Nuxt · Lenis · WebGL</div>
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="web" data-id="darkdesign:strv" data-item='{"date": "2026-11-14", "fonts": ["Maison Neue", "Rift"], "id": "darkdesign:strv", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/2df1e211cbf4fc2a5567.jpg", "link": "https://www.strv.com/", "note": "dark UI", "palette": ["#080808", "#ffffff", "#f40d34", "#b8b8b8", "#421c23"], "section": "web", "source": "Dark.design", "take": "Kondenzovan\u00fd Rift dvojfarebne (biela/\u010derven\u00e1) s mal\u00fdm videom vlo\u017een\u00fdm medzi slov\u00e1 nadpisu", "tech": ["Next.js", "Video", "WebGL"], "title": "STRV", "url": "https://dark.design/site/strv", "why": "Kondenzovan\u00fd tu\u010dn\u00fd n\u00e1pis s \u010dervenou, ale agent\u00farne kli\u0161\u00e9"}'>
+  <a class="shot" href="https://dark.design/site/strv" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/2df1e211cbf4fc2a5567.jpg" alt="STRV" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://dark.design/site/strv" target="_blank" rel="noopener">STRV</a></h3>
+      <div class="meta">
+        Dark.design · <a href="https://www.strv.com/" target="_blank" rel="noopener">web ↗</a>      </div>
+<p class="why">Kondenzovaný Rift dvojfarebne (biela/červená) s malým videom vloženým medzi slová nadpisu</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#080808" data-hex="#080808" title="#080808 · kopírovať" aria-label="Farba #080808, kopírovať"></button><button class="sw" style="background:#ffffff" data-hex="#ffffff" title="#ffffff · kopírovať" aria-label="Farba #ffffff, kopírovať"></button><button class="sw" style="background:#f40d34" data-hex="#f40d34" title="#f40d34 · kopírovať" aria-label="Farba #f40d34, kopírovať"></button><button class="sw" style="background:#b8b8b8" data-hex="#b8b8b8" title="#b8b8b8 · kopírovať" aria-label="Farba #b8b8b8, kopírovať"></button><button class="sw" style="background:#421c23" data-hex="#421c23" title="#421c23 · kopírovať" aria-label="Farba #421c23, kopírovať"></button></span><span class="fonts" title="Maison Neue, Rift">Maison Neue · Rift</span></div>
+<div class="tech">Next.js · Video · WebGL</div>
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+    </div>
+  </section>
+  <section class="block" id="visual">
+    <h2>Vizuál &amp; shots<small class="n">6</small></h2>
+    <div class="grid">
+<article class="card" data-section="visual" data-id="godly:e4nb43w" data-item='{"date": "2026-11-14", "id": "godly:e4nb43w", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/b8c25d049e06a12e229f.jpg", "palette": ["#ffffff", "#dcd4ce", "#10a7fd", "#b88fd9", "#76f1e6"], "section": "visual", "source": "Godly", "take": "Produkt ako 3D rolka s perfor\u00e1ciou a po\u010d\u00edtadlom \u201eTORN 00\u201c \u2014 interakcia trhania l\u00edstkov", "title": "Graphic Ticket Rolls", "url": "https://godly.website/i/e4nb43w-graphic-ticket-rolls", "why": "Rolka l\u00edstkov s d\u00fahov\u00fdm pixelov\u00fdm potla\u010dou a perfor\u00e1ciou"}'>
+  <a class="shot" href="https://godly.website/i/e4nb43w-graphic-ticket-rolls" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/b8c25d049e06a12e229f.jpg" alt="Graphic Ticket Rolls" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://godly.website/i/e4nb43w-graphic-ticket-rolls" target="_blank" rel="noopener">Graphic Ticket Rolls</a></h3>
+      <div class="meta">
+        Godly      </div>
+<p class="why">Produkt ako 3D rolka s perforáciou a počítadlom „TORN 00“ — interakcia trhania lístkov</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#ffffff" data-hex="#ffffff" title="#ffffff · kopírovať" aria-label="Farba #ffffff, kopírovať"></button><button class="sw" style="background:#dcd4ce" data-hex="#dcd4ce" title="#dcd4ce · kopírovať" aria-label="Farba #dcd4ce, kopírovať"></button><button class="sw" style="background:#10a7fd" data-hex="#10a7fd" title="#10a7fd · kopírovať" aria-label="Farba #10a7fd, kopírovať"></button><button class="sw" style="background:#b88fd9" data-hex="#b88fd9" title="#b88fd9 · kopírovať" aria-label="Farba #b88fd9, kopírovať"></button><button class="sw" style="background:#76f1e6" data-hex="#76f1e6" title="#76f1e6 · kopírovať" aria-label="Farba #76f1e6, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="visual" data-id="cosmos:ideas/words-in-museums?from=explore" data-item='{"date": "2026-11-14", "id": "cosmos:ideas/words-in-museums?from=explore", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/f2143d505eb312dfb9fc.jpg", "note": "ideas", "palette": ["#d0d0d1", "#fafbfc", "#6e625a", "#aaa39c", "#8a837f"], "section": "visual", "source": "Cosmos", "take": "Typo, ktor\u00e1 ste\u010die zo steny na podlahu \u2014 nadpis, \u010do prekro\u010d\u00ed hranu sekcie a pokra\u010duje \u010falej", "title": "Words in museums?from=explore", "url": "https://www.cosmos.so/ideas/words-in-museums?from=explore", "why": "Ru\u010dne ma\u013eovan\u00fd n\u00e1pis cez stenu aj podlahu gal\u00e9rie"}'>
+  <a class="shot" href="https://www.cosmos.so/ideas/words-in-museums?from=explore" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/f2143d505eb312dfb9fc.jpg" alt="Words in museums?from=explore" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://www.cosmos.so/ideas/words-in-museums?from=explore" target="_blank" rel="noopener">Words in museums?from=explore</a></h3>
+      <div class="meta">
+        Cosmos      </div>
+<p class="why">Typo, ktorá stečie zo steny na podlahu — nadpis, čo prekročí hranu sekcie a pokračuje ďalej</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#d0d0d1" data-hex="#d0d0d1" title="#d0d0d1 · kopírovať" aria-label="Farba #d0d0d1, kopírovať"></button><button class="sw" style="background:#fafbfc" data-hex="#fafbfc" title="#fafbfc · kopírovať" aria-label="Farba #fafbfc, kopírovať"></button><button class="sw" style="background:#6e625a" data-hex="#6e625a" title="#6e625a · kopírovať" aria-label="Farba #6e625a, kopírovať"></button><button class="sw" style="background:#aaa39c" data-hex="#aaa39c" title="#aaa39c · kopírovať" aria-label="Farba #aaa39c, kopírovať"></button><button class="sw" style="background:#8a837f" data-hex="#8a837f" title="#8a837f · kopírovať" aria-label="Farba #8a837f, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="visual" data-id="godly:2pl65e8" data-item='{"date": "2026-11-14", "id": "godly:2pl65e8", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/5e0f35a22b9f955c59ed.jpg", "palette": ["#000000", "#7a7977", "#444346", "#252529", "#4c6b5d"], "section": "visual", "source": "Godly", "take": "Mono riadok opakovan\u00fd a postupne odsaden\u00fd, slov\u00e1 svietia v r\u00f4znych farebn\u00fdch boxoch ako k\u00f3d", "title": "Kinetic Token API Concept", "url": "https://godly.website/i/2pl65e8-kinetic-token-api-concept", "why": "Mono riadky s farebn\u00fdmi zv\u00fdrazneniami, kinetick\u00e1 typografia"}'>
+  <a class="shot" href="https://godly.website/i/2pl65e8-kinetic-token-api-concept" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/5e0f35a22b9f955c59ed.jpg" alt="Kinetic Token API Concept" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://godly.website/i/2pl65e8-kinetic-token-api-concept" target="_blank" rel="noopener">Kinetic Token API Concept</a></h3>
+      <div class="meta">
+        Godly      </div>
+<p class="why">Mono riadok opakovaný a postupne odsadený, slová svietia v rôznych farebných boxoch ako kód</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#000000" data-hex="#000000" title="#000000 · kopírovať" aria-label="Farba #000000, kopírovať"></button><button class="sw" style="background:#7a7977" data-hex="#7a7977" title="#7a7977 · kopírovať" aria-label="Farba #7a7977, kopírovať"></button><button class="sw" style="background:#444346" data-hex="#444346" title="#444346 · kopírovať" aria-label="Farba #444346, kopírovať"></button><button class="sw" style="background:#252529" data-hex="#252529" title="#252529 · kopírovať" aria-label="Farba #252529, kopírovať"></button><button class="sw" style="background:#4c6b5d" data-hex="#4c6b5d" title="#4c6b5d · kopírovať" aria-label="Farba #4c6b5d, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="visual" data-id="cosmos:art/color-grading-goals?from=explore" data-item='{"date": "2026-11-14", "id": "cosmos:art/color-grading-goals?from=explore", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/7309466ba6c1a18fac95.jpg", "note": "art", "palette": ["#ddac44", "#901f02", "#a65408", "#6a7604", "#192404"], "section": "visual", "source": "Cosmos", "take": "Paletu \u0165ahaj z filmov\u00e9ho stillu: tlmen\u00e1 \u010derven\u00e1 + olivov\u00e1 zelen\u00e1, p\u00e1s vzoriek priamo pod fotkou", "title": "Color grading goals?from=explore", "url": "https://www.cosmos.so/art/color-grading-goals?from=explore", "why": "Filmov\u00fd still s teplou paletou, \u010derven\u00e1 a zelen\u00e1 v zrne"}'>
+  <a class="shot" href="https://www.cosmos.so/art/color-grading-goals?from=explore" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/7309466ba6c1a18fac95.jpg" alt="Color grading goals?from=explore" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://www.cosmos.so/art/color-grading-goals?from=explore" target="_blank" rel="noopener">Color grading goals?from=explore</a></h3>
+      <div class="meta">
+        Cosmos      </div>
+<p class="why">Paletu ťahaj z filmového stillu: tlmená červená + olivová zelená, pás vzoriek priamo pod fotkou</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#ddac44" data-hex="#ddac44" title="#ddac44 · kopírovať" aria-label="Farba #ddac44, kopírovať"></button><button class="sw" style="background:#901f02" data-hex="#901f02" title="#901f02 · kopírovať" aria-label="Farba #901f02, kopírovať"></button><button class="sw" style="background:#a65408" data-hex="#a65408" title="#a65408 · kopírovať" aria-label="Farba #a65408, kopírovať"></button><button class="sw" style="background:#6a7604" data-hex="#6a7604" title="#6a7604 · kopírovať" aria-label="Farba #6a7604, kopírovať"></button><button class="sw" style="background:#192404" data-hex="#192404" title="#192404 · kopírovať" aria-label="Farba #192404, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="visual" data-id="dribbble:27887342" data-item='{"author": "Knacky Studio", "date": "2026-11-14", "id": "dribbble:27887342", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/44c9783054d165ee7de0.jpg", "note": "\u2665 136 \u00b7 \ud83d\udc41 7.9k", "palette": ["#000000", "#ffffff"], "section": "visual", "source": "Dribbble", "take": "Logo z dvoch odtie\u0148ov oran\u017eovej, ktor\u00e9 tvoria 3D zlom \u2014 h\u013abka bez gradientu", "title": "Abtstact - T logo", "url": "https://dribbble.com/shots/27887342-Abtstact-T-logo", "why": "Oran\u017eov\u00e9 geometrick\u00e9 T, be\u017en\u00e9 logo"}'>
+  <a class="shot" href="https://dribbble.com/shots/27887342-Abtstact-T-logo" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/44c9783054d165ee7de0.jpg" alt="Abtstact - T logo" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://dribbble.com/shots/27887342-Abtstact-T-logo" target="_blank" rel="noopener">Abtstact - T logo</a></h3>
+      <div class="meta">
+        Dribbble · Knacky Studio      </div>
+<p class="why">Logo z dvoch odtieňov oranžovej, ktoré tvoria 3D zlom — hĺbka bez gradientu</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#000000" data-hex="#000000" title="#000000 · kopírovať" aria-label="Farba #000000, kopírovať"></button><button class="sw" style="background:#ffffff" data-hex="#ffffff" title="#ffffff · kopírovať" aria-label="Farba #ffffff, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="visual" data-id="dribbble:27886301" data-item='{"author": "Zikospace", "date": "2026-11-14", "id": "dribbble:27886301", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/d6577a03fbead97fe5a2.jpg", "note": "\u2665 131 \u00b7 \ud83d\udc41 10.7k", "palette": ["#182a2f", "#fbfbe1", "#708281", "#928041", "#969e92"], "section": "visual", "source": "Dribbble", "take": "Brand board: znak na krajine, svetlo\u017elt\u00e1 + bridlicov\u00e1 siv\u00e1 + tmav\u00e1 petrolejov\u00e1 ako syst\u00e9m", "title": "Solar logo, Letter F logo", "url": "https://dribbble.com/shots/27886301-Solar-logo-Letter-F-logo"}'>
+  <a class="shot" href="https://dribbble.com/shots/27886301-Solar-logo-Letter-F-logo" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/d6577a03fbead97fe5a2.jpg" alt="Solar logo, Letter F logo" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://dribbble.com/shots/27886301-Solar-logo-Letter-F-logo" target="_blank" rel="noopener">Solar logo, Letter F logo</a></h3>
+      <div class="meta">
+        Dribbble · Zikospace      </div>
+<p class="why">Brand board: znak na krajine, svetložltá + bridlicová sivá + tmavá petrolejová ako systém</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#182a2f" data-hex="#182a2f" title="#182a2f · kopírovať" aria-label="Farba #182a2f, kopírovať"></button><button class="sw" style="background:#fbfbe1" data-hex="#fbfbe1" title="#fbfbe1 · kopírovať" aria-label="Farba #fbfbe1, kopírovať"></button><button class="sw" style="background:#708281" data-hex="#708281" title="#708281 · kopírovať" aria-label="Farba #708281, kopírovať"></button><button class="sw" style="background:#928041" data-hex="#928041" title="#928041 · kopírovať" aria-label="Farba #928041, kopírovať"></button><button class="sw" style="background:#969e92" data-hex="#969e92" title="#969e92 · kopírovať" aria-label="Farba #969e92, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+    </div>
+  </section>
+  <section class="block" id="ui">
+    <h2>UI komponenty<small class="n">3</small></h2>
+    <div class="grid">
+<article class="card" data-section="ui" data-id="21st:felipemenezes098/hero-04" data-item='{"author": "felipemenezes098", "date": "2026-11-14", "id": "21st:felipemenezes098/hero-04", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/403e0fdc0d5fc6c66bbd.jpg", "note": "cta \u00b7 \u2661 486", "palette": ["#ffffff", "#cdc7b8", "#e9e5de", "#938e86"], "section": "ui", "source": "21st.dev", "take": "Serifov\u00fd nadpis v\u013eavo, vpravo prekr\u00fdvaj\u00face sa naklonen\u00e9 ma\u013eby \u2014 kol\u00e1\u017e namiesto mockupu", "title": "Editorial Collage Hero", "url": "https://21st.dev/@felipemenezes098/components/hero-04"}'>
+  <a class="shot" href="https://21st.dev/@felipemenezes098/components/hero-04" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/403e0fdc0d5fc6c66bbd.jpg" alt="Editorial Collage Hero" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://21st.dev/@felipemenezes098/components/hero-04" target="_blank" rel="noopener">Editorial Collage Hero</a></h3>
+      <div class="meta">
+        21st.dev · felipemenezes098      </div>
+<p class="why">Serifový nadpis vľavo, vpravo prekrývajúce sa naklonené maľby — koláž namiesto mockupu</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#ffffff" data-hex="#ffffff" title="#ffffff · kopírovať" aria-label="Farba #ffffff, kopírovať"></button><button class="sw" style="background:#cdc7b8" data-hex="#cdc7b8" title="#cdc7b8 · kopírovať" aria-label="Farba #cdc7b8, kopírovať"></button><button class="sw" style="background:#e9e5de" data-hex="#e9e5de" title="#e9e5de · kopírovať" aria-label="Farba #e9e5de, kopírovať"></button><button class="sw" style="background:#938e86" data-hex="#938e86" title="#938e86 · kopírovať" aria-label="Farba #938e86, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="ui" data-id="21st:serafimcloud/testimonials-with-marquee" data-item='{"author": "serafimcloud", "date": "2026-11-14", "id": "21st:serafimcloud/testimonials-with-marquee", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/adb754b9203c7adec81b.jpg", "note": "testimonials \u00b7 \u2661 2412", "palette": ["#09090b", "#27272b", "#4e4d52", "#b4b3b5"], "section": "ui", "source": "21st.dev", "take": "Recenzie v nekone\u010dnom marquee s fade na okrajoch \u2014 ve\u013ea d\u00f4kazov bez gridu na cel\u00fa v\u00fd\u0161ku", "title": "Testimonials with Marquee", "url": "https://21st.dev/@serafimcloud/components/testimonials-with-marquee"}'>
+  <a class="shot" href="https://21st.dev/@serafimcloud/components/testimonials-with-marquee" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/adb754b9203c7adec81b.jpg" alt="Testimonials with Marquee" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://21st.dev/@serafimcloud/components/testimonials-with-marquee" target="_blank" rel="noopener">Testimonials with Marquee</a></h3>
+      <div class="meta">
+        21st.dev · serafimcloud      </div>
+<p class="why">Recenzie v nekonečnom marquee s fade na okrajoch — veľa dôkazov bez gridu na celú výšku</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#09090b" data-hex="#09090b" title="#09090b · kopírovať" aria-label="Farba #09090b, kopírovať"></button><button class="sw" style="background:#27272b" data-hex="#27272b" title="#27272b · kopírovať" aria-label="Farba #27272b, kopírovať"></button><button class="sw" style="background:#4e4d52" data-hex="#4e4d52" title="#4e4d52 · kopírovať" aria-label="Farba #4e4d52, kopírovať"></button><button class="sw" style="background:#b4b3b5" data-hex="#b4b3b5" title="#b4b3b5 · kopírovať" aria-label="Farba #b4b3b5, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="ui" data-id="21st:felipemenezes098/hero-08" data-item='{"author": "felipemenezes098", "date": "2026-11-14", "id": "21st:felipemenezes098/hero-08", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/e1cf8e2692426c722d98.jpg", "note": "cta \u00b7 \u2661 439", "palette": ["#ffffff", "#888c89", "#533a2b", "#b6b0a2", "#64665f"], "section": "ui", "source": "21st.dev", "take": "Split hero: serif v\u013eavo, avatary + \u010d\u00edslo vpravo, pod t\u00fdm karty kurzov s ma\u013ebami ako foto", "title": "Split Hero With Image Cards", "url": "https://21st.dev/@felipemenezes098/components/hero-08"}'>
+  <a class="shot" href="https://21st.dev/@felipemenezes098/components/hero-08" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/e1cf8e2692426c722d98.jpg" alt="Split Hero With Image Cards" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://21st.dev/@felipemenezes098/components/hero-08" target="_blank" rel="noopener">Split Hero With Image Cards</a></h3>
+      <div class="meta">
+        21st.dev · felipemenezes098      </div>
+<p class="why">Split hero: serif vľavo, avatary + číslo vpravo, pod tým karty kurzov s maľbami ako foto</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#ffffff" data-hex="#ffffff" title="#ffffff · kopírovať" aria-label="Farba #ffffff, kopírovať"></button><button class="sw" style="background:#888c89" data-hex="#888c89" title="#888c89 · kopírovať" aria-label="Farba #888c89, kopírovať"></button><button class="sw" style="background:#533a2b" data-hex="#533a2b" title="#533a2b · kopírovať" aria-label="Farba #533a2b, kopírovať"></button><button class="sw" style="background:#b6b0a2" data-hex="#b6b0a2" title="#b6b0a2 · kopírovať" aria-label="Farba #b6b0a2, kopírovať"></button><button class="sw" style="background:#64665f" data-hex="#64665f" title="#64665f · kopírovať" aria-label="Farba #64665f, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+    </div>
+  </section>
+  <section class="block" id="type">
+    <h2>Typo <small>písmo v praxi</small><small class="n">3</small></h2>
+    <div class="grid">
+<article class="card" data-section="type" data-id="fontsinuse:80907" data-item='{"author": "Guillaume Pinatel, Bourico", "date": "2026-11-14", "fonts": ["Chaumont Script", "FT88 School", "Jean-Luc"], "id": "fontsinuse:80907", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/ed00682683e05dda07b0.jpg", "note": "2026", "palette": ["#000000", "#ffffff", "#cf1a1c", "#aca2a2", "#cdc7c7"], "section": "type", "source": "Fonts In Use", "take": "FT88 bitmap + Chaumont Script + hust\u00e9 \u010db kol\u00e1\u017ee s \u010derven\u00fdmi pr\u00fa\u017ekami \u2014 retro inzer\u00e1t", "title": "\u201cT\u00e9l\u00e9tec recrute\u201d poster", "url": "https://fontsinuse.com/uses/80907/teletec-recrute-poster", "why": "Retro bitmapov\u00e9 p\u00edsmo, po\u010d\u00edta\u010d a kol\u00e1\u017e v \u0161t\u00fdle 80. rokov"}'>
+  <a class="shot" href="https://fontsinuse.com/uses/80907/teletec-recrute-poster" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/ed00682683e05dda07b0.jpg" alt="“Télétec recrute” poster" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://fontsinuse.com/uses/80907/teletec-recrute-poster" target="_blank" rel="noopener">“Télétec recrute” poster</a></h3>
+      <div class="meta">
+        Fonts In Use · Guillaume Pinatel, Bourico      </div>
+<p class="why">FT88 bitmap + Chaumont Script + husté čb koláže s červenými prúžkami — retro inzerát</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#000000" data-hex="#000000" title="#000000 · kopírovať" aria-label="Farba #000000, kopírovať"></button><button class="sw" style="background:#ffffff" data-hex="#ffffff" title="#ffffff · kopírovať" aria-label="Farba #ffffff, kopírovať"></button><button class="sw" style="background:#cf1a1c" data-hex="#cf1a1c" title="#cf1a1c · kopírovať" aria-label="Farba #cf1a1c, kopírovať"></button><button class="sw" style="background:#aca2a2" data-hex="#aca2a2" title="#aca2a2 · kopírovať" aria-label="Farba #aca2a2, kopírovať"></button><button class="sw" style="background:#cdc7c7" data-hex="#cdc7c7" title="#cdc7c7 · kopírovať" aria-label="Farba #cdc7c7, kopírovať"></button></span><span class="fonts" title="Chaumont Script, FT88 School, Jean-Luc">Chaumont Script · FT88 School · Jean-Luc</span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="type" data-id="fontsinuse:80932" data-item='{"author": "studio vu-huu", "date": "2026-11-14", "fonts": ["BVH Eddi Grotesk"], "id": "fontsinuse:80932", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/ef3839b7f43da9431cb7.jpg", "note": "2026", "palette": ["#ad9885", "#f20525", "#ebecf1", "#76716a", "#d5c7bd"], "section": "type", "source": "Fonts In Use", "take": "Naviga\u010dn\u00fd syst\u00e9m z \u010derven\u00fdch a modr\u00fdch polkruhov, obr\u00ed grotesk Eddi orezan\u00fd hranou panelu", "title": "Maison de la musique Nanterre wayfinding", "url": "https://fontsinuse.com/uses/80932/maison-de-la-musique-nanterre-wayfinding", "why": "Navig\u00e1cia s obr\u00edm Bienvenue a \u010derveno-modr\u00fdmi obl\u00fakmi"}'>
+  <a class="shot" href="https://fontsinuse.com/uses/80932/maison-de-la-musique-nanterre-wayfinding" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/ef3839b7f43da9431cb7.jpg" alt="Maison de la musique Nanterre wayfinding" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://fontsinuse.com/uses/80932/maison-de-la-musique-nanterre-wayfinding" target="_blank" rel="noopener">Maison de la musique Nanterre wayfinding</a></h3>
+      <div class="meta">
+        Fonts In Use · studio vu-huu      </div>
+<p class="why">Navigačný systém z červených a modrých polkruhov, obrí grotesk Eddi orezaný hranou panelu</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#ad9885" data-hex="#ad9885" title="#ad9885 · kopírovať" aria-label="Farba #ad9885, kopírovať"></button><button class="sw" style="background:#f20525" data-hex="#f20525" title="#f20525 · kopírovať" aria-label="Farba #f20525, kopírovať"></button><button class="sw" style="background:#ebecf1" data-hex="#ebecf1" title="#ebecf1 · kopírovať" aria-label="Farba #ebecf1, kopírovať"></button><button class="sw" style="background:#76716a" data-hex="#76716a" title="#76716a · kopírovať" aria-label="Farba #76716a, kopírovať"></button><button class="sw" style="background:#d5c7bd" data-hex="#d5c7bd" title="#d5c7bd · kopírovať" aria-label="Farba #d5c7bd, kopírovať"></button></span><span class="fonts" title="BVH Eddi Grotesk">BVH Eddi Grotesk</span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="type" data-id="fontsinuse:81030" data-item='{"author": "Noah Drilling, Bureau Regular", "date": "2026-11-14", "fonts": ["Parfumerie Script", "DGM Typeset"], "id": "fontsinuse:81030", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/9cafafc77562abe68147.jpg", "note": "2026", "palette": ["#bdc0c9", "#f43454", "#e26980", "#d693a3"], "section": "type", "source": "Fonts In Use", "take": "Jednofarebn\u00e1 \u010derven\u00e1 riso, pixelov\u00fd raster cez v\u00e1zu a Parfumerie Script pre d\u00e1tumy", "title": "Kunst, Design, Handwerk Markt 2026 flyer", "url": "https://fontsinuse.com/uses/81030/kunst-design-handwerk-markt-2026-flyer", "why": "\u010cerven\u00fd risograph s rozbit\u00fdm pixelov\u00fdm p\u00edsmom a v\u00e1zou"}'>
+  <a class="shot" href="https://fontsinuse.com/uses/81030/kunst-design-handwerk-markt-2026-flyer" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/9cafafc77562abe68147.jpg" alt="Kunst, Design, Handwerk Markt 2026 flyer" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://fontsinuse.com/uses/81030/kunst-design-handwerk-markt-2026-flyer" target="_blank" rel="noopener">Kunst, Design, Handwerk Markt 2026 flyer</a></h3>
+      <div class="meta">
+        Fonts In Use · Noah Drilling, Bureau Regular      </div>
+<p class="why">Jednofarebná červená riso, pixelový raster cez vázu a Parfumerie Script pre dátumy</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#bdc0c9" data-hex="#bdc0c9" title="#bdc0c9 · kopírovať" aria-label="Farba #bdc0c9, kopírovať"></button><button class="sw" style="background:#f43454" data-hex="#f43454" title="#f43454 · kopírovať" aria-label="Farba #f43454, kopírovať"></button><button class="sw" style="background:#e26980" data-hex="#e26980" title="#e26980 · kopírovať" aria-label="Farba #e26980, kopírovať"></button><button class="sw" style="background:#d693a3" data-hex="#d693a3" title="#d693a3 · kopírovať" aria-label="Farba #d693a3, kopírovať"></button></span><span class="fonts" title="Parfumerie Script, DGM Typeset">Parfumerie Script · DGM Typeset</span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+    </div>
+  </section>
+  <section class="block" id="retro">
+    <h2>Retro <small>z archívu</small><small class="n">3</small></h2>
+    <div class="grid">
+<article class="card" data-section="retro" data-id="webdesignmuseum:zune-media-player-and-flat-design-2009" data-item='{"date": "2026-11-14", "id": "webdesignmuseum:zune-media-player-and-flat-design-2009", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/fd7329b9e26b19c3a744.jpg", "note": "2006 \u00b7 hist\u00f3ria webu", "palette": ["#161616", "#ffffff", "#ccc7c8", "#515053", "#938c8f"], "section": "retro", "source": "Web Design Museum", "take": "Obr\u00ed tenk\u00fd lowercase nadpis a \u010dist\u00e9 \u010dierne plochy \u2014 Zune metro ako z\u00e1klad pre flat UI", "title": "Zune Media Player and Flat Design", "url": "https://www.webdesignmuseum.org/web-design-history/zune-media-player-and-flat-design-2009", "why": "Zune s obr\u00edm tenk\u00fdm p\u00edsmom, predchodca flat dizajnu"}'>
+  <a class="shot" href="https://www.webdesignmuseum.org/web-design-history/zune-media-player-and-flat-design-2009" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/fd7329b9e26b19c3a744.jpg" alt="Zune Media Player and Flat Design" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://www.webdesignmuseum.org/web-design-history/zune-media-player-and-flat-design-2009" target="_blank" rel="noopener">Zune Media Player and Flat Design</a></h3>
+      <div class="meta">
+        Web Design Museum      </div>
+<p class="why">Obrí tenký lowercase nadpis a čisté čierne plochy — Zune metro ako základ pre flat UI</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#161616" data-hex="#161616" title="#161616 · kopírovať" aria-label="Farba #161616, kopírovať"></button><button class="sw" style="background:#ffffff" data-hex="#ffffff" title="#ffffff · kopírovať" aria-label="Farba #ffffff, kopírovať"></button><button class="sw" style="background:#ccc7c8" data-hex="#ccc7c8" title="#ccc7c8 · kopírovať" aria-label="Farba #ccc7c8, kopírovať"></button><button class="sw" style="background:#515053" data-hex="#515053" title="#515053 · kopírovať" aria-label="Farba #515053, kopírovať"></button><button class="sw" style="background:#938c8f" data-hex="#938c8f" title="#938c8f · kopírovať" aria-label="Farba #938c8f, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="retro" data-id="webdesignmuseum:tim-berners-lee-created-the-first-website-1991" data-item='{"date": "2026-11-14", "id": "webdesignmuseum:tim-berners-lee-created-the-first-website-1991", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/976cb7efde307bc8a60f.jpg", "note": "1991 \u00b7 hist\u00f3ria webu", "palette": ["#ffffff", "#a7a2b9", "#cbcde1", "#8886ad"], "section": "retro", "source": "Web Design Museum", "take": "\u010cist\u00fd text s inline odkazmi bez dekor\u00e1cie \u2014 obsah ako navig\u00e1cia, nulov\u00e9 UI", "title": "Tim Berners-Lee created the first website", "url": "https://www.webdesignmuseum.org/web-design-history/tim-berners-lee-created-the-first-website-1991", "why": "Prv\u00e1 webstr\u00e1nka v\u00f4bec, modr\u00e9 odkazy na bielom"}'>
+  <a class="shot" href="https://www.webdesignmuseum.org/web-design-history/tim-berners-lee-created-the-first-website-1991" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/976cb7efde307bc8a60f.jpg" alt="Tim Berners-Lee created the first website" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://www.webdesignmuseum.org/web-design-history/tim-berners-lee-created-the-first-website-1991" target="_blank" rel="noopener">Tim Berners-Lee created the first website</a></h3>
+      <div class="meta">
+        Web Design Museum      </div>
+<p class="why">Čistý text s inline odkazmi bez dekorácie — obsah ako navigácia, nulové UI</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#ffffff" data-hex="#ffffff" title="#ffffff · kopírovať" aria-label="Farba #ffffff, kopírovať"></button><button class="sw" style="background:#a7a2b9" data-hex="#a7a2b9" title="#a7a2b9 · kopírovať" aria-label="Farba #a7a2b9, kopírovať"></button><button class="sw" style="background:#cbcde1" data-hex="#cbcde1" title="#cbcde1 · kopírovať" aria-label="Farba #cbcde1, kopírovať"></button><button class="sw" style="background:#8886ad" data-hex="#8886ad" title="#8886ad · kopírovať" aria-label="Farba #8886ad, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+<article class="card" data-section="retro" data-id="webdesignmuseum:internet-archive-1996" data-item='{"date": "2026-11-14", "id": "webdesignmuseum:internet-archive-1996", "image": "https://design-digest-feedback.newsdesign.workers.dev/img/f92b8fa53314ffa306a0.jpg", "note": "1996 \u00b7 hist\u00f3ria webu", "palette": ["#ffffff", "#000000", "#6d677e", "#a0a4ce", "#83879c"], "section": "retro", "source": "Web Design Museum", "take": "Dvojst\u013apcov\u00e1 \u010d\u00edtacia sadzba s bordov\u00fdm serifov\u00fdm nadpisom a grav\u00edrovan\u00fdm znakom \u2014 in\u0161tit\u00facia", "title": "Internet Archive", "url": "https://www.webdesignmuseum.org/web-design-history/internet-archive-1996", "why": "Ran\u00fd Internet Archive s grav\u00edrovan\u00fdm logom a serifom"}'>
+  <a class="shot" href="https://www.webdesignmuseum.org/web-design-history/internet-archive-1996" target="_blank" rel="noopener">
+    <img src="https://design-digest-feedback.newsdesign.workers.dev/img/f92b8fa53314ffa306a0.jpg" alt="Internet Archive" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="https://www.webdesignmuseum.org/web-design-history/internet-archive-1996" target="_blank" rel="noopener">Internet Archive</a></h3>
+      <div class="meta">
+        Web Design Museum      </div>
+<p class="why">Dvojstĺpcová čítacia sadzba s bordovým serifovým nadpisom a gravírovaným znakom — inštitúcia</p>      <div class="dna">
+<span class="swatches"><button class="sw" style="background:#ffffff" data-hex="#ffffff" title="#ffffff · kopírovať" aria-label="Farba #ffffff, kopírovať"></button><button class="sw" style="background:#000000" data-hex="#000000" title="#000000 · kopírovať" aria-label="Farba #000000, kopírovať"></button><button class="sw" style="background:#6d677e" data-hex="#6d677e" title="#6d677e · kopírovať" aria-label="Farba #6d677e, kopírovať"></button><button class="sw" style="background:#a0a4ce" data-hex="#a0a4ce" title="#a0a4ce · kopírovať" aria-label="Farba #a0a4ce, kopírovať"></button><button class="sw" style="background:#83879c" data-hex="#83879c" title="#83879c · kopírovať" aria-label="Farba #83879c, kopírovať"></button></span></div>
+
+    </div>
+    <div class="votes owner-only">
+  <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </button>
+  <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+</div>
+
+  </div>
+</article>
+    </div>
+  </section>
+
+  <section class="block saved owner-only" id="saved" hidden>
+    <h2>
+      <button class="saved-toggle" type="button" id="saved-toggle" aria-expanded="false" aria-controls="saved-grid">
+        Uložené <small id="saved-count"></small><span class="toggle-label">Zobraziť ↓</span>
+      </button>
+      <a class="n" href="kniznica.html?saved=1">V knižnici →</a>
+    </h2>
+    <div class="grid" id="saved-grid" data-ql="saved" hidden></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <section class="taste owner-only" id="vkus">
+      <h3>Tvoj vkus <button class="link-btn" id="taste-edit" hidden>Upraviť</button></h3>
+      <div class="taste-text" id="taste-text">Páči sa ti:
+- Obrovské bezpätkové nápisy cez celú šírku, orezané okrajom
+- Retro typografia 60.–70. rokov, vintage obaly platní a plagáty
+- Tekuté shadery, sklo, holografický lesk a dúhové prechody
+- Odvážne plné farby: červená, kobaltová, krémová; teplé zrno
+- Hravé maskoty, pixel-art, voxely a kinetická typografia
+Nebaví ťa:
+- Surové brutalistické stránky bez typografickej myšlienky
+- Generické SaaS, agentúrne a zdravotné landing pages s kartami
+- Fotorealistické 3D, scroll 3D galérie a deformácie portrétov
+- Šablónové komponenty: referencie, karusely, animované pozadia
+- Nevýrazné CV stránky a strohé textové rané weby bez charakteru</div>
+      <form id="taste-form" hidden>
+        <textarea aria-label="Tvoj vkus" placeholder="Páči sa ti:&#10;- …&#10;Nebaví ťa:&#10;- …"></textarea>
+        <button class="btn" type="submit">Uložiť</button>
+        <button class="link-btn" type="button" id="taste-cancel">Zrušiť</button>
+        <span id="taste-msg"></span>
+      </form>
+      <p class="hint" id="taste-hint">Claude ho raz týždenne prepíše podľa ♥ / ✕ a podľa neho vyberá. Čo tu upravíš, berie ako fakt.<span id="taste-howto"> Upraviť sa dá po otvorení stránky cez odkaz v maile.</span></p>
+    </section>
+
+    <h3>Archív</h3>
+    <div class="days">
+      <a href="d/2026-11-14.html" class="on">14. novembra 2026</a>
+      <a href="d/2026-11-13.html" class="">13. novembra 2026</a>
+      <a href="d/2026-11-12.html" class="">12. novembra 2026</a>
+      <a href="d/2026-11-11.html" class="">11. novembra 2026</a>
+      <a href="d/2026-11-10.html" class="">10. novembra 2026</a>
+      <a href="d/2026-11-09.html" class="">9. novembra 2026</a>
+      <a href="d/2026-11-08.html" class="">8. novembra 2026</a>
+      <a href="d/2026-11-07.html" class="">7. novembra 2026</a>
+      <a href="d/2026-11-06.html" class="">6. novembra 2026</a>
+      <a href="d/2026-11-05.html" class="">5. novembra 2026</a>
+      <a href="d/2026-11-04.html" class="">4. novembra 2026</a>
+      <a href="d/2026-11-03.html" class="">3. novembra 2026</a>
+      <a href="d/2026-11-02.html" class="">2. novembra 2026</a>
+      <a href="d/2026-11-01.html" class="">1. novembra 2026</a>
+      <a href="d/2026-10-31.html" class="">31. októbra 2026</a>
+      <a href="d/2026-10-30.html" class="">30. októbra 2026</a>
+      <a href="d/2026-10-29.html" class="">29. októbra 2026</a>
+      <a href="d/2026-10-28.html" class="">28. októbra 2026</a>
+      <a href="d/2026-10-27.html" class="">27. októbra 2026</a>
+      <a href="d/2026-10-26.html" class="">26. októbra 2026</a>
+      <a href="d/2026-10-25.html" class="">25. októbra 2026</a>
+      <a href="d/2026-10-24.html" class="">24. októbra 2026</a>
+      <a href="d/2026-10-23.html" class="">23. októbra 2026</a>
+      <a href="d/2026-10-22.html" class="">22. októbra 2026</a>
+      <a href="d/2026-10-21.html" class="">21. októbra 2026</a>
+      <a href="d/2026-10-20.html" class="">20. októbra 2026</a>
+      <a href="d/2026-10-19.html" class="">19. októbra 2026</a>
+      <a href="d/2026-10-18.html" class="">18. októbra 2026</a>
+      <a href="d/2026-10-17.html" class="">17. októbra 2026</a>
+      <a href="d/2026-10-16.html" class="">16. októbra 2026</a>
+      <a href="d/2026-10-15.html" class="">15. októbra 2026</a>
+      <a href="d/2026-10-14.html" class="">14. októbra 2026</a>
+      <a href="d/2026-10-13.html" class="">13. októbra 2026</a>
+      <a href="d/2026-10-12.html" class="">12. októbra 2026</a>
+      <a href="d/2026-10-11.html" class="">11. októbra 2026</a>
+      <a href="kniznica.html">Všetko v knižnici →</a>
+      <a href="taxonomia.html">Taxonómia →</a>
+    </div>
+    <div class="health">
+      <span class="" title="">✓ Codrops · 96        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 96"></b><b class="ok" title="2. novembra 2026: 96"></b><b class="ok" title="3. novembra 2026: 96"></b><b class="ok" title="4. novembra 2026: 96"></b><b class="ok" title="5. novembra 2026: 96"></b><b class="ok" title="6. novembra 2026: 96"></b><b class="ok" title="7. novembra 2026: 96"></b><b class="ok" title="8. novembra 2026: 96"></b><b class="ok" title="9. novembra 2026: 96"></b><b class="ok" title="10. novembra 2026: 96"></b><b class="ok" title="11. novembra 2026: 96"></b><b class="ok" title="12. novembra 2026: 96"></b><b class="ok" title="13. novembra 2026: 96"></b><b class="ok" title="14. novembra 2026: 96"></b></i></span>
+      <span class="" title="">✓ One Page Love · 10        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 10"></b><b class="ok" title="2. novembra 2026: 10"></b><b class="ok" title="3. novembra 2026: 10"></b><b class="ok" title="4. novembra 2026: 10"></b><b class="ok" title="5. novembra 2026: 10"></b><b class="ok" title="6. novembra 2026: 10"></b><b class="ok" title="7. novembra 2026: 10"></b><b class="ok" title="8. novembra 2026: 10"></b><b class="ok" title="9. novembra 2026: 10"></b><b class="ok" title="10. novembra 2026: 10"></b><b class="ok" title="11. novembra 2026: 10"></b><b class="ok" title="12. novembra 2026: 10"></b><b class="ok" title="13. novembra 2026: 10"></b><b class="ok" title="14. novembra 2026: 10"></b></i></span>
+      <span class="" title="">✓ Web Design Museum · 178        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 178"></b><b class="ok" title="2. novembra 2026: 178"></b><b class="ok" title="3. novembra 2026: 178"></b><b class="ok" title="4. novembra 2026: 178"></b><b class="ok" title="5. novembra 2026: 178"></b><b class="ok" title="6. novembra 2026: 178"></b><b class="ok" title="7. novembra 2026: 178"></b><b class="ok" title="8. novembra 2026: 178"></b><b class="ok" title="9. novembra 2026: 178"></b><b class="ok" title="10. novembra 2026: 178"></b><b class="ok" title="11. novembra 2026: 178"></b><b class="ok" title="12. novembra 2026: 178"></b><b class="ok" title="13. novembra 2026: 178"></b><b class="ok" title="14. novembra 2026: 178"></b></i></span>
+      <span class="" title="">✓ CSS Design Awards · 12        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 12"></b><b class="ok" title="2. novembra 2026: 12"></b><b class="ok" title="3. novembra 2026: 12"></b><b class="ok" title="4. novembra 2026: 12"></b><b class="ok" title="5. novembra 2026: 12"></b><b class="ok" title="6. novembra 2026: 12"></b><b class="ok" title="7. novembra 2026: 12"></b><b class="ok" title="8. novembra 2026: 12"></b><b class="ok" title="9. novembra 2026: 12"></b><b class="ok" title="10. novembra 2026: 12"></b><b class="ok" title="11. novembra 2026: 12"></b><b class="ok" title="12. novembra 2026: 12"></b><b class="ok" title="13. novembra 2026: 12"></b><b class="ok" title="14. novembra 2026: 12"></b></i></span>
+      <span class="" title="">✓ Land-book · 20        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 20"></b><b class="ok" title="2. novembra 2026: 20"></b><b class="ok" title="3. novembra 2026: 20"></b><b class="ok" title="4. novembra 2026: 20"></b><b class="ok" title="5. novembra 2026: 20"></b><b class="ok" title="6. novembra 2026: 20"></b><b class="ok" title="7. novembra 2026: 20"></b><b class="ok" title="8. novembra 2026: 20"></b><b class="ok" title="9. novembra 2026: 20"></b><b class="ok" title="10. novembra 2026: 20"></b><b class="ok" title="11. novembra 2026: 20"></b><b class="ok" title="12. novembra 2026: 20"></b><b class="ok" title="13. novembra 2026: 20"></b><b class="ok" title="14. novembra 2026: 20"></b></i></span>
+      <span class="" title="">✓ Fonts In Use · 59        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 59"></b><b class="ok" title="2. novembra 2026: 59"></b><b class="ok" title="3. novembra 2026: 59"></b><b class="ok" title="4. novembra 2026: 59"></b><b class="ok" title="5. novembra 2026: 59"></b><b class="ok" title="6. novembra 2026: 59"></b><b class="ok" title="7. novembra 2026: 59"></b><b class="ok" title="8. novembra 2026: 59"></b><b class="ok" title="9. novembra 2026: 59"></b><b class="ok" title="10. novembra 2026: 59"></b><b class="ok" title="11. novembra 2026: 59"></b><b class="ok" title="12. novembra 2026: 59"></b><b class="ok" title="13. novembra 2026: 59"></b><b class="ok" title="14. novembra 2026: 59"></b></i></span>
+      <span class="" title="">✓ Made in Webflow · 18        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 18"></b><b class="ok" title="2. novembra 2026: 18"></b><b class="ok" title="3. novembra 2026: 18"></b><b class="ok" title="4. novembra 2026: 18"></b><b class="ok" title="5. novembra 2026: 18"></b><b class="ok" title="6. novembra 2026: 18"></b><b class="ok" title="7. novembra 2026: 18"></b><b class="ok" title="8. novembra 2026: 18"></b><b class="ok" title="9. novembra 2026: 18"></b><b class="ok" title="10. novembra 2026: 18"></b><b class="ok" title="11. novembra 2026: 18"></b><b class="ok" title="12. novembra 2026: 18"></b><b class="ok" title="13. novembra 2026: 18"></b><b class="ok" title="14. novembra 2026: 18"></b></i></span>
+      <span class="" title="">✓ Awwwards · 31        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 30"></b><b class="ok" title="2. novembra 2026: 31"></b><b class="ok" title="3. novembra 2026: 31"></b><b class="ok" title="4. novembra 2026: 30"></b><b class="ok" title="5. novembra 2026: 30"></b><b class="ok" title="6. novembra 2026: 30"></b><b class="ok" title="7. novembra 2026: 31"></b><b class="ok" title="8. novembra 2026: 31"></b><b class="ok" title="9. novembra 2026: 31"></b><b class="ok" title="10. novembra 2026: 30"></b><b class="ok" title="11. novembra 2026: 30"></b><b class="ok" title="12. novembra 2026: 30"></b><b class="ok" title="13. novembra 2026: 30"></b><b class="ok" title="14. novembra 2026: 31"></b></i></span>
+      <span class="" title="">✓ Best Website Gallery · 10        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 10"></b><b class="ok" title="2. novembra 2026: 10"></b><b class="ok" title="3. novembra 2026: 10"></b><b class="ok" title="4. novembra 2026: 10"></b><b class="ok" title="5. novembra 2026: 10"></b><b class="ok" title="6. novembra 2026: 10"></b><b class="ok" title="7. novembra 2026: 10"></b><b class="ok" title="8. novembra 2026: 10"></b><b class="ok" title="9. novembra 2026: 10"></b><b class="ok" title="10. novembra 2026: 10"></b><b class="ok" title="11. novembra 2026: 10"></b><b class="ok" title="12. novembra 2026: 10"></b><b class="ok" title="13. novembra 2026: 10"></b><b class="ok" title="14. novembra 2026: 10"></b></i></span>
+      <span class="" title="">✓ Brutalist Websites · 1583        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 1583"></b><b class="ok" title="2. novembra 2026: 1583"></b><b class="ok" title="3. novembra 2026: 1583"></b><b class="ok" title="4. novembra 2026: 1583"></b><b class="ok" title="5. novembra 2026: 1583"></b><b class="ok" title="6. novembra 2026: 1583"></b><b class="ok" title="7. novembra 2026: 1583"></b><b class="ok" title="8. novembra 2026: 1583"></b><b class="ok" title="9. novembra 2026: 1583"></b><b class="ok" title="10. novembra 2026: 1583"></b><b class="ok" title="11. novembra 2026: 1583"></b><b class="ok" title="12. novembra 2026: 1583"></b><b class="ok" title="13. novembra 2026: 1583"></b><b class="ok" title="14. novembra 2026: 1583"></b></i></span>
+      <span class="" title="">✓ 21st.dev · 140        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 143"></b><b class="ok" title="2. novembra 2026: 144"></b><b class="ok" title="3. novembra 2026: 142"></b><b class="ok" title="4. novembra 2026: 143"></b><b class="ok" title="5. novembra 2026: 143"></b><b class="ok" title="6. novembra 2026: 139"></b><b class="ok" title="7. novembra 2026: 144"></b><b class="ok" title="8. novembra 2026: 131"></b><b class="ok" title="9. novembra 2026: 143"></b><b class="ok" title="10. novembra 2026: 141"></b><b class="ok" title="11. novembra 2026: 137"></b><b class="ok" title="12. novembra 2026: 143"></b><b class="ok" title="13. novembra 2026: 141"></b><b class="ok" title="14. novembra 2026: 140"></b></i></span>
+      <span class="" title="">✓ Godly · 20        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 20"></b><b class="ok" title="2. novembra 2026: 20"></b><b class="ok" title="3. novembra 2026: 20"></b><b class="ok" title="4. novembra 2026: 20"></b><b class="ok" title="5. novembra 2026: 20"></b><b class="ok" title="6. novembra 2026: 20"></b><b class="ok" title="7. novembra 2026: 20"></b><b class="ok" title="8. novembra 2026: 20"></b><b class="ok" title="9. novembra 2026: 20"></b><b class="ok" title="10. novembra 2026: 20"></b><b class="ok" title="11. novembra 2026: 20"></b><b class="ok" title="12. novembra 2026: 20"></b><b class="ok" title="13. novembra 2026: 20"></b><b class="ok" title="14. novembra 2026: 20"></b></i></span>
+      <span class="" title="">✓ Dark.design · 246        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 246"></b><b class="ok" title="2. novembra 2026: 246"></b><b class="ok" title="3. novembra 2026: 246"></b><b class="ok" title="4. novembra 2026: 246"></b><b class="ok" title="5. novembra 2026: 246"></b><b class="ok" title="6. novembra 2026: 246"></b><b class="ok" title="7. novembra 2026: 246"></b><b class="ok" title="8. novembra 2026: 246"></b><b class="ok" title="9. novembra 2026: 246"></b><b class="ok" title="10. novembra 2026: 246"></b><b class="ok" title="11. novembra 2026: 246"></b><b class="ok" title="12. novembra 2026: 246"></b><b class="ok" title="13. novembra 2026: 246"></b><b class="ok" title="14. novembra 2026: 246"></b></i></span>
+      <span class="" title="">✓ Minimal Gallery · 10        <i class="hist" aria-hidden="true"><b class="bad" title="1. novembra 2026: RuntimeError: 0 vecí"></b><b class="ok" title="2. novembra 2026: 10"></b><b class="ok" title="3. novembra 2026: 10"></b><b class="ok" title="4. novembra 2026: 10"></b><b class="ok" title="5. novembra 2026: 10"></b><b class="ok" title="6. novembra 2026: 10"></b><b class="ok" title="7. novembra 2026: 10"></b><b class="ok" title="8. novembra 2026: 10"></b><b class="ok" title="9. novembra 2026: 10"></b><b class="ok" title="10. novembra 2026: 10"></b><b class="ok" title="11. novembra 2026: 10"></b><b class="ok" title="12. novembra 2026: 10"></b><b class="ok" title="13. novembra 2026: 10"></b><b class="ok" title="14. novembra 2026: 10"></b></i></span>
+      <span class="" title="">✓ GSAP Showcase · 36        <i class="hist" aria-hidden="true"><b class="bad" title="1. novembra 2026: RuntimeError: nothing extracted from https://gsap.com/showcase/"></b><b class="ok" title="2. novembra 2026: 36"></b><b class="ok" title="3. novembra 2026: 36"></b><b class="ok" title="4. novembra 2026: 35"></b><b class="ok" title="5. novembra 2026: 35"></b><b class="ok" title="6. novembra 2026: 35"></b><b class="ok" title="7. novembra 2026: 35"></b><b class="ok" title="8. novembra 2026: 35"></b><b class="ok" title="9. novembra 2026: 35"></b><b class="ok" title="10. novembra 2026: 36"></b><b class="ok" title="11. novembra 2026: 36"></b><b class="ok" title="12. novembra 2026: 36"></b><b class="ok" title="13. novembra 2026: 36"></b><b class="ok" title="14. novembra 2026: 36"></b></i></span>
+      <span class="" title="">✓ Cosmos · 4        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 5"></b><b class="ok" title="2. novembra 2026: 5"></b><b class="ok" title="3. novembra 2026: 3"></b><b class="ok" title="4. novembra 2026: 4"></b><b class="ok" title="5. novembra 2026: 3"></b><b class="ok" title="6. novembra 2026: 3"></b><b class="ok" title="7. novembra 2026: 3"></b><b class="ok" title="8. novembra 2026: 4"></b><b class="ok" title="9. novembra 2026: 4"></b><b class="ok" title="10. novembra 2026: 3"></b><b class="ok" title="11. novembra 2026: 3"></b><b class="ok" title="12. novembra 2026: 3"></b><b class="ok" title="13. novembra 2026: 3"></b><b class="ok" title="14. novembra 2026: 4"></b></i></span>
+      <span class="" title="">✓ Dribbble · 48        <i class="hist" aria-hidden="true"><b class="ok" title="1. novembra 2026: 48"></b><b class="ok" title="2. novembra 2026: 46"></b><b class="ok" title="3. novembra 2026: 48"></b><b class="ok" title="4. novembra 2026: 49"></b><b class="ok" title="5. novembra 2026: 49"></b><b class="ok" title="6. novembra 2026: 46"></b><b class="ok" title="7. novembra 2026: 49"></b><b class="ok" title="8. novembra 2026: 49"></b><b class="ok" title="9. novembra 2026: 49"></b><b class="ok" title="10. novembra 2026: 49"></b><b class="ok" title="11. novembra 2026: 47"></b><b class="ok" title="12. novembra 2026: 49"></b><b class="ok" title="13. novembra 2026: 49"></b><b class="ok" title="14. novembra 2026: 48"></b></i></span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="ql" id="ql" aria-label="Náhľad">
+  <div class="ql-body" tabindex="-1">
+    <div class="ql-bar">
+      <span class="ql-pos" id="ql-pos"></span>
+      <button class="ql-ico" id="ql-prev" type="button" aria-label="Predošlé" title="Predošlé (←)">←</button>
+      <button class="ql-ico" id="ql-next" type="button" aria-label="Ďalšie" title="Ďalšie (→)">→</button>
+      <button class="ql-ico" id="ql-close" type="button" aria-label="Zavrieť" title="Zavrieť (Esc)">✕</button>
+    </div>
+    <a class="ql-shot" id="ql-shot" target="_blank" rel="noopener"><img alt="" referrerpolicy="no-referrer"><span class="go">Otvoriť web ↗</span></a>
+    <div class="ql-side" id="ql-side"></div>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  const DD = window.DD = {};
+  const MAC = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
+  const store = DD.store = {
+    get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+  };
+
+  // the owner key arrives through the email's links (#k=…) and stays on this device
+  const hash = new URLSearchParams(location.hash.slice(1));
+  DD.goTo = null;
+  if (hash.get("k")) {
+    store.set("dd-key", hash.get("k"));
+    DD.goTo = hash.get("go");
+    history.replaceState(null, "", location.pathname + location.search + (DD.goTo ? "#" + DD.goTo : ""));
+  }
+  const KEY = DD.KEY = store.get("dd-key", "");
+  const FEEDBACK = DD.FEEDBACK = "https://design-digest-feedback.newsdesign.workers.dev";
+  const PREFIX = "";
+  // a list of pairs: tojson would sort an object's keys and lose the section order
+  const NAMES = DD.NAMES = Object.fromEntries([["wow", "WOW"], ["web", "Web"], ["visual", "Vizu\u00e1l \u0026 shots"], ["ui", "UI komponenty"], ["type", "Typo"], ["retro", "Retro"]]);
+  const MONTHS = ["januára", "februára", "marca", "apríla", "mája", "júna", "júla", "augusta", "septembra", "októbra", "novembra", "decembra"];
+  const owner = () => document.body.classList.contains("owner");
+  const esc = DD.esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const itemOf = card => { try { return JSON.parse(card.dataset.item); } catch { return null; } };
+  const ymd = iso => String(iso || "").split("-").map(Number);
+  DD.longDate = iso => { const [y, m, d] = ymd(iso); return d ? `${d}. ${MONTHS[m - 1]} ${y}` : ""; };
+  DD.shortDate = iso => { const [, m, d] = ymd(iso); return d ? `${d}. ${m}.` : ""; };
+
+  // the whole archive (site/items.json), newest first — for the saved view and the library
+  let archive;
+  DD.archive = () => archive ||= fetch(PREFIX + "items.json").then(r => r.json()).catch(() => []);
+
+  // ── ♥ / ✕ votes. With a feedback worker they sync everywhere and tune tomorrow's picks;
+  //    without one they just live in this browser.
+  let votes = store.get("dd-votes", {});            // {id: {v, at, item?}}
+  const listeners = [];
+  DD.votes = () => votes;
+  DD.onVotes = fn => listeners.push(fn);
+  DD.paint = () => document.querySelectorAll(".card[data-id]").forEach(card => {
+    const v = votes[card.dataset.id]?.v || 0;
+    card.querySelector(".vote.up")?.setAttribute("aria-pressed", String(v === 1));
+    card.querySelector(".vote.down")?.setAttribute("aria-pressed", String(v === -1));
+    card.classList.toggle("hidden-vote", v === -1);
+  });
+  const changed = () => { DD.paint(); paintLookVotes(); listeners.forEach(fn => fn(votes)); };
+  DD.vote = (it, v) => {
+    v = votes[it.id]?.v === v ? 0 : v;              // the same button again = undo
+    if (v) votes[it.id] = { v, at: new Date().toISOString(),
+                            item: { id: it.id, title: it.title, url: it.url, image: it.image, source: it.source, section: it.section } };
+    else delete votes[it.id];
+    store.set("dd-votes", votes);
+    changed();
+    if (FEEDBACK) {
+      fetch(FEEDBACK + "/vote", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: it.id, v, k: KEY }),
+      }).catch(() => {});
+    }
+    return v;
+  };
+  if (FEEDBACK && KEY) {
+    // the worker is the source of truth (votes from email or other devices)
+    fetch(FEEDBACK + "/votes", { headers: { Authorization: "Bearer " + KEY } }).then(r => r.json()).then(remote => {
+      votes = Object.fromEntries(Object.entries(remote).map(([id, x]) => [id, { ...x, item: votes[id]?.item }]));
+      store.set("dd-votes", votes);
+      changed();
+    }).catch(() => {});
+  }
+
+  // ── copy + a small confirmation
+  const toastEl = Object.assign(document.createElement("div"), { className: "toast" });
+  toastEl.setAttribute("role", "status");
+  let toastTimer;
+  // a modal dialog covers everything else, so the toast goes into the topmost open one
+  const layer = () => [...document.querySelectorAll("dialog[open]")].pop() || document.body;
+  DD.toast = msg => {
+    layer().appendChild(toastEl);
+    toastEl.textContent = msg;
+    requestAnimationFrame(() => toastEl.classList.add("on"));
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toastEl.classList.remove("on"), 1600);
+  };
+  DD.copy = (text, msg) => {
+    const fallback = () => {
+      const ta = Object.assign(document.createElement("textarea"), { value: text });
+      ta.style.cssText = "position:fixed;opacity:0";
+      layer().appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); DD.toast(msg); } catch {}
+      ta.remove();
+    };
+    if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).then(() => DD.toast(msg), fallback);
+    else fallback();
+  };
+
+  // ── "copy as prompt": a brief for Claude / v0 to build something in this spirit
+  const LEAD = {
+    web: t => `Navrhni a nakóduj úvodnú obrazovku webu v duchu „${t}“.`,
+    wow: t => `Navrhni a nakóduj experimentálnu úvodnú obrazovku webu v duchu „${t}“.`,
+    visual: t => `Navrhni a nakóduj rozhranie inšpirované shotom „${t}“.`,
+    ui: t => `Nakóduj UI komponent inšpirovaný „${t}“.`,
+    type: t => `Navrhni a nakóduj typografickú kompozíciu (hero alebo plagát) inšpirovanú projektom „${t}“.`,
+    retro: t => `Navrhni a nakóduj súčasný web, ktorý si požičia ducha starého webu „${t}“.`,
+  };
+  DD.prompt = it => {
+    const out = [(LEAD[it.section] || LEAD.web)(it.title || "bez názvu"), "", `Referencia: ${it.link || it.url}`];
+    if (it.take) out.push(`Čo z neho zobrať: ${it.take}`);
+    if (it.why && it.why !== it.take) out.push(`Čím vyniká: ${it.why}`);
+    if (it.fonts?.length) out.push(`Písmo: ${it.fonts.join(", ")} (ak nie je dostupné, použi najbližšiu alternatívu z Google Fonts)`);
+    if (it.palette?.length) out.push(`Farby (od najpoužívanejšej): ${it.palette.join(", ")}`);
+    if (it.tech?.length) out.push(`Technika a pohyb: ${it.tech.join(", ")}`);
+    if (it.section === "retro" && /\d{4}/.test(it.note || "")) out.push(`Obdobie: ${it.note}`);
+    out.push("",
+      "Nekopíruj ho — zober princíp (kompozíciu, typografickú hierarchiu, prácu s farbou a pohybom) a použi ho na vlastný obsah.",
+      "Výstup: jeden HTML súbor s inline CSS a JS, responzívny, s premysleným pohybom pri načítaní a scrollovaní, ktorý rešpektuje prefers-reduced-motion.");
+    return out.join("\n");
+  };
+  const copyPrompt = it => DD.copy(DD.prompt(it), "Prompt skopírovaný");
+
+  // ── the card, in JS (mirrors templates/_card.html)
+  const HEART = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 4.5 6.2 4.5c2.2 0 3.6 1.2 4.3 2.3h1c.7-1.1 2.1-2.3 4.3-2.3 3.9 0 5.8 4.1 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg>';
+  DD.cardHTML = (it, { date = false } = {}) => {
+    const meta = [date && it.date ? DD.shortDate(it.date) : "", it.source, it.author].filter(Boolean).map(esc).join(" · ");
+    const pal = it.palette?.length ? `<span class="swatches">${it.palette.map(c =>
+      `<button class="sw" style="background:${esc(c)}" data-hex="${esc(c)}" title="${esc(c)} · kopírovať" aria-label="Farba ${esc(c)}, kopírovať"></button>`).join("")}</span>` : "";
+    const fonts = it.fonts?.length ? `<span class="fonts" title="${esc(it.fonts.join(", "))}">${esc(it.fonts.join(" · "))}</span>` : "";
+    return `<article class="card" data-section="${esc(it.section)}" data-id="${esc(it.id)}" data-item="${esc(JSON.stringify(it))}">
+  <a class="shot" href="${esc(it.url)}" target="_blank" rel="noopener"><img src="${esc(it.image)}" alt="${esc(it.title)}" loading="lazy" referrerpolicy="no-referrer"></a>
+  <div class="row">
+    <div class="text">
+      <h3 class="title"><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title || "Bez názvu")}</a></h3>
+      <div class="meta">${meta}${it.link ? ` · <a href="${esc(it.link)}" target="_blank" rel="noopener">web ↗</a>` : ""}</div>
+      ${it.take || it.why ? `<p class="why">${esc(it.take || it.why)}</p>` : ""}
+      ${pal || fonts ? `<div class="dna">${pal}${fonts}</div>` : ""}
+      ${it.tech?.length ? `<div class="tech">${esc(it.tech.join(" · "))}</div>` : ""}
+    </div>
+    <div class="votes owner-only">
+      <button class="vote up" data-v="1" aria-pressed="false" aria-label="Páči sa mi" title="Viac takého">${HEART}</button>
+      <button class="vote down" data-v="-1" aria-pressed="false" aria-label="Nepáči sa mi" title="Už nikdy">✕</button>
+    </div>
+  </div>
+</article>`;
+  };
+
+  // ── quick look: the clicked card's group ([data-ql]) is the list to page through
+  const ql = document.getElementById("ql"), body = ql.querySelector(".ql-body");
+  const shot = document.getElementById("ql-shot"), img = shot.querySelector("img"), side = document.getElementById("ql-side");
+  const pos = document.getElementById("ql-pos"), prev = document.getElementById("ql-prev"), next = document.getElementById("ql-next");
+  let list = [], idx = 0, afterClose = null;
+
+  function listFor(card) {
+    const group = card.closest("[data-ql]");
+    if (group?.qlItems) return group.qlItems();
+    return [...(group || document).querySelectorAll(".card[data-item]")]
+      .filter(c => c.closest("[data-ql]") === group)   // not the cards of a nested group (saved)
+      .map(itemOf).filter(Boolean);
+  }
+  const lookAt = card => {
+    const it = itemOf(card);
+    if (!it) return;
+    const items = listFor(card), i = items.findIndex(x => x.id === it.id);
+    DD.look(i < 0 ? [it] : items, Math.max(i, 0));
+  };
+  DD.look = (items, i) => {
+    list = items; idx = i;
+    render();
+    if (!ql.open) {
+      ql.showModal();
+      document.documentElement.style.overflow = "hidden";
+      // a history entry, so the phone's back gesture closes the look instead of leaving the page
+      history.pushState({ ql: 1 }, "", location.pathname + location.search + "#i=" + encodeURIComponent(list[idx].id));
+    }
+    body.focus({ preventScroll: true });
+  };
+  const closeLook = then => {
+    afterClose = then || null;
+    if (history.state?.ql) history.back();
+    else closeNow();
+  };
+  function closeNow() {
+    if (ql.open) ql.close();
+    document.documentElement.style.overflow = "";
+    const fn = afterClose; afterClose = null;
+    fn?.();
+  }
+  window.addEventListener("popstate", () => { if (ql.open && !history.state?.ql) closeNow(); });
+  ql.addEventListener("cancel", e => { e.preventDefault(); closeLook(); });     // Esc
+  ql.addEventListener("click", e => { if (e.target === ql) closeLook(); });    // the backdrop
+  document.getElementById("ql-close").addEventListener("click", () => closeLook());
+  const go = d => { const n = idx + d; if (n >= 0 && n < list.length) { idx = n; render(); } };
+  prev.addEventListener("click", () => go(-1));
+  next.addEventListener("click", () => go(1));
+
+  // #i=<id> opens that item (shared links, reloads)
+  DD.openFromHash = items => {
+    const m = location.hash.match(/^#i=(.+)$/);
+    if (!m) return;
+    const id = decodeURIComponent(m[1]);
+    history.replaceState(null, "", location.pathname + location.search);
+    if (items) {
+      const i = items.findIndex(x => x.id === id);
+      if (i >= 0) DD.look(items, i);
+      return;
+    }
+    const card = [...document.querySelectorAll(".card[data-id]")].find(c => c.dataset.id === id);
+    if (card) lookAt(card);
+  };
+
+  const termChip = t => `<a class="chip" href="${PREFIX}taxonomia.html#t-${encodeURIComponent(t.k)}" data-filter="term" data-value="${esc(t.k)}">${esc(t.n)}</a>`;
+  const chip = (type, v) => `<a class="chip" href="${PREFIX}kniznica.html?${type}=${encodeURIComponent(v)}" data-filter="${type}" data-value="${esc(v)}">${esc(v)}</a>`;
+  function render() {
+    const it = list[idx], href = it.link || it.url;
+    pos.textContent = list.length > 1 ? `${idx + 1} / ${list.length}` : "";
+    prev.disabled = idx === 0;
+    next.disabled = idx === list.length - 1;
+    shot.href = href;
+    shot.dataset.section = it.section || "";
+    if (img.getAttribute("src") !== it.image) {
+      img.classList.add("loading");
+      img.onload = img.onerror = () => img.classList.remove("loading");
+      img.src = it.image;
+    }
+    img.alt = it.title || "";
+    if (history.state?.ql) history.replaceState({ ql: 1 }, "", location.pathname + location.search + "#i=" + encodeURIComponent(it.id));
+
+    const facts = [["Písmo", it.fonts, "font"], ["Tech", it.tech, "tech"]]
+      .filter(([, v]) => v?.length)
+      .map(([label, v, type]) => `<dt>${label}</dt><dd>${v.map(x => chip(type, x)).join("")}</dd>`).join("")
+      + (it.terms?.length ? `<dt>Pojmy</dt><dd>${it.terms.map(termChip).join("")}</dd>` : "");
+    const kicker = [NAMES[it.section], it.source, it.author, DD.longDate(it.date)].filter(Boolean).map(esc).join(" · ");
+    side.innerHTML = `
+      <p class="ql-kicker">${kicker}</p>
+      <h2 class="ql-title">${esc(it.title || "Bez názvu")}</h2>
+      ${it.take ? `<p class="ql-take">${esc(it.take)}</p>` : ""}
+      ${it.why && it.why !== it.take ? `<p class="${it.take ? "ql-why" : "ql-take"}">${esc(it.why)}</p>` : ""}
+      ${it.palette?.length ? `<div class="ql-pal">${it.palette.map(c =>
+        `<button class="ql-sw" type="button" data-hex="${esc(c)}" title="Kopírovať ${esc(c)}"><i style="background:${esc(c)}"></i>${esc(c)}</button>`).join("")}</div>` : ""}
+      ${facts ? `<dl class="ql-facts">${facts}</dl>` : ""}
+      <div class="ql-actions">
+        <a class="btn solid lg" href="${esc(href)}" target="_blank" rel="noopener">Otvoriť web ↗</a>
+        ${it.link && it.url !== it.link ? `<a class="btn lg" href="${esc(it.url)}" target="_blank" rel="noopener">V galérii ↗</a>` : ""}
+        <button class="btn lg" type="button" data-prompt>Kopírovať prompt</button>
+      </div>
+      ${owner() ? `<div class="ql-votes">
+        <button class="btn" type="button" data-qv="1" aria-pressed="false">${HEART} Páči sa mi</button>
+        <button class="btn" type="button" data-qv="-1" aria-pressed="false">✕ Už nikdy</button>
+      </div>` : ""}
+      <p class="ql-keys"><kbd>←</kbd><kbd>→</kbd> listovať · ${owner() ? "<kbd>L</kbd> ♥ · <kbd>X</kbd> ✕ · " : ""}<kbd>O</kbd> / <kbd>${MAC ? "⌘" : "Ctrl"}</kbd><kbd>Enter</kbd> otvoriť · <kbd>P</kbd> prompt · <kbd>Esc</kbd> zavrieť</p>`;
+    side.scrollTop = 0;
+    body.scrollTop = 0;
+    paintLookVotes();
+    for (const n of [list[idx - 1], list[idx + 1]]) if (n?.image) new Image().src = n.image;   // instant paging
+  }
+  function paintLookVotes() {
+    if (!ql.open && !list.length) return;
+    const v = votes[list[idx]?.id]?.v || 0;
+    side.querySelectorAll("[data-qv]").forEach(b => b.setAttribute("aria-pressed", String(Number(b.dataset.qv) === v)));
+  }
+  side.addEventListener("click", e => {
+    const b = e.target.closest("[data-qv]");
+    if (b) DD.vote(list[idx], Number(b.dataset.qv));
+    if (e.target.closest("[data-prompt]")) copyPrompt(list[idx]);
+  });
+
+  // keyboard: ← → page, L / X vote and move on (fast triage), O or ⌘/ctrl+Enter open, P prompt
+  document.addEventListener("keydown", e => {
+    if (ql.open && e.key === "Enter" && (e.metaKey || e.ctrlKey) && !e.altKey) {
+      e.preventDefault();
+      const it = list[idx];
+      if (it) window.open(it.link || it.url, "_blank", "noopener");
+      return;
+    }
+    if (!ql.open || e.metaKey || e.ctrlKey || e.altKey || e.target.closest?.("input, textarea")) return;
+    const k = e.key.toLowerCase(), it = list[idx];
+    if (k === "arrowright" || k === "j") go(1);
+    else if (k === "arrowleft" || k === "k") go(-1);
+    else if (k === "o") window.open(it.link || it.url, "_blank", "noopener");
+    else if (k === "p") copyPrompt(it);
+    else if (owner() && (k === "l" || k === "x")) {
+      if (DD.vote(it, k === "l" ? 1 : -1) && idx < list.length - 1) setTimeout(() => go(1), 220);
+    } else return;
+    e.preventDefault();
+  });
+
+  // swipe left / right on phones
+  let touch = null;
+  ql.addEventListener("touchstart", e => { const t = e.touches[0]; touch = { x: t.clientX, y: t.clientY }; }, { passive: true });
+  ql.addEventListener("touchend", e => {
+    if (!touch) return;
+    const t = e.changedTouches[0], dx = t.clientX - touch.x, dy = t.clientY - touch.y;
+    touch = null;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.6) go(dx < 0 ? 1 : -1);
+  }, { passive: true });
+
+  // ── clicks on cards anywhere on the page
+  document.addEventListener("click", e => {
+    const vote = e.target.closest(".card[data-id] .vote");
+    if (vote) { const it = itemOf(vote.closest(".card")); if (it) DD.vote(it, Number(vote.dataset.v)); return; }
+
+    const sw = e.target.closest(".sw, .ql-sw");
+    if (sw) {
+      DD.copy(sw.dataset.hex, `${sw.dataset.hex} skopírované`);
+      sw.classList.add("copied");
+      setTimeout(() => sw.classList.remove("copied"), 900);
+      return;
+    }
+
+    const card = e.target.closest(".card[data-id]");
+    if (card && e.target.closest("[data-prompt]")) { const it = itemOf(card); if (it) copyPrompt(it); return; }
+    if (card && e.target.closest("[data-look]")) { lookAt(card); return; }
+    // the picture opens the quick look; ⌘ / ctrl / middle click still open the site in a new tab
+    if (card && e.target.closest(".shot") && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey && e.button === 0) {
+      e.preventDefault();
+      lookAt(card);
+      return;
+    }
+
+    // font / tech chips: the library filters in place, other pages go there
+    const f = e.target.closest("a[data-filter]");
+    if (f && DD.onFilter && !e.metaKey && !e.ctrlKey) {
+      e.preventDefault();
+      const apply = () => DD.onFilter(f.dataset.filter, f.dataset.value);
+      ql.open ? closeLook(apply) : apply();
+    }
+  });
+})();
+</script><script>
+(() => {
+  // saved (♥) — also things liked on earlier days or straight from the email
+  const savedGrid = document.getElementById("saved-grid");
+  let archive = {};
+  function paintSaved(votes) {
+    const list = Object.entries(votes)
+      .filter(([, x]) => x.v === 1)
+      .map(([id, x]) => ({ ...(archive[id] || x.item || {}), at: x.at }))
+      .filter(it => it.url)
+      .sort((a, b) => String(b.at).localeCompare(String(a.at)));
+    document.getElementById("saved").hidden = !list.length;
+    document.getElementById("saved-link").hidden = !list.length;
+    document.getElementById("saved-count").textContent = list.length || "";
+    document.getElementById("saved-n").textContent = list.length || "";
+    savedGrid.innerHTML = list.map(({ at, ...it }) => DD.cardHTML(it, { date: true })).join("");
+    DD.paint();
+  }
+  DD.onVotes(paintSaved);
+  const savedToggle = document.getElementById("saved-toggle");
+  const openSaved = open => {
+    savedGrid.hidden = !open;
+    document.getElementById("saved").classList.toggle("open", open);
+    savedToggle.setAttribute("aria-expanded", String(open));
+    savedToggle.querySelector(".toggle-label").textContent = open ? "Skryť ↑" : "Zobraziť ↓";
+  };
+  savedToggle.addEventListener("click", () => openSaved(savedGrid.hidden));
+  document.getElementById("saved-link").addEventListener("click", () => openSaved(true));
+  if (location.hash === "#saved" || DD.goTo === "saved") openSaved(true);
+  if (document.body.classList.contains("owner")) {
+    DD.archive().then(items => {
+      archive = Object.fromEntries(items.map(it => [it.id, it]));
+      paintSaved(DD.votes());
+    });
+  }
+
+  // section bar: a line under it once it sticks, the section in view highlighted
+  const nav = document.querySelector(".secnav"), navIn = nav.firstElementChild;
+  const sentinel = document.createElement("div");
+  nav.before(sentinel);
+  new IntersectionObserver(([e]) => nav.classList.toggle("stuck", !e.isIntersecting)).observe(sentinel);
+  const links = [...navIn.querySelectorAll('a[href^="#"]')];
+  const targets = links.map(a => document.getElementById(a.getAttribute("href").slice(1))).filter(Boolean);
+  const inView = new Set();
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting ? inView.add(e.target.id) : inView.delete(e.target.id));
+    const cur = targets.find(t => inView.has(t.id));
+    let active;
+    links.forEach(a => {
+      const on = !!cur && a.getAttribute("href") === "#" + cur.id;
+      a.classList.toggle("on", on);
+      if (on) active = a;
+    });
+    if (active && navIn.scrollWidth > navIn.clientWidth) {
+      navIn.scrollTo({ left: active.offsetLeft - navIn.clientWidth / 2 + active.offsetWidth / 2, behavior: "smooth" });
+    }
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  targets.forEach(t => spy.observe(t));
+})();
+</script>
+<script>
+(() => {
+  const { FEEDBACK, KEY } = DD;
+
+  // taste profile — editable on the owner's devices
+  const tasteText = document.getElementById("taste-text"), tasteForm = document.getElementById("taste-form");
+  const tasteEdit = document.getElementById("taste-edit"), tasteMsg = document.getElementById("taste-msg");
+  const area = tasteForm.querySelector("textarea");
+  let tasteValue = "P\u00e1\u010di sa ti:\n- Obrovsk\u00e9 bezp\u00e4tkov\u00e9 n\u00e1pisy cez cel\u00fa \u0161\u00edrku, orezan\u00e9 okrajom\n- Retro typografia 60.\u201370. rokov, vintage obaly platn\u00ed a plag\u00e1ty\n- Tekut\u00e9 shadery, sklo, holografick\u00fd lesk a d\u00fahov\u00e9 prechody\n- Odv\u00e1\u017ene pln\u00e9 farby: \u010derven\u00e1, kobaltov\u00e1, kr\u00e9mov\u00e1; tepl\u00e9 zrno\n- Hrav\u00e9 maskoty, pixel-art, voxely a kinetick\u00e1 typografia\nNebav\u00ed \u0165a:\n- Surov\u00e9 brutalistick\u00e9 str\u00e1nky bez typografickej my\u0161lienky\n- Generick\u00e9 SaaS, agent\u00farne a zdravotn\u00e9 landing pages s kartami\n- Fotorealistick\u00e9 3D, scroll 3D gal\u00e9rie a deform\u00e1cie portr\u00e9tov\n- \u0160abl\u00f3nov\u00e9 komponenty: referencie, karusely, animovan\u00e9 pozadia\n- Nev\u00fdrazn\u00e9 CV str\u00e1nky a stroh\u00e9 textov\u00e9 ran\u00e9 weby bez charakteru";
+  if (FEEDBACK && KEY) {
+    tasteEdit.hidden = false;
+    document.getElementById("taste-howto").hidden = true;
+  }
+  const showTaste = t => { tasteValue = t; if (t) tasteText.textContent = t; };
+  tasteEdit.addEventListener("click", () => {
+    area.value = tasteValue;
+    tasteForm.hidden = false; tasteText.hidden = true; tasteEdit.hidden = true; tasteMsg.textContent = "";
+    area.focus();
+  });
+  const closeEditor = () => { tasteForm.hidden = true; tasteText.hidden = false; tasteEdit.hidden = false; };
+  document.getElementById("taste-cancel").addEventListener("click", closeEditor);
+  tasteForm.addEventListener("submit", e => {
+    e.preventDefault();
+    tasteMsg.textContent = "Ukladám…";
+    fetch(FEEDBACK + "/taste", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: area.value, s: KEY, by: "user" }),
+    }).then(r => r.json()).then(r => {
+      if (!r.ok) throw new Error(r.error);
+      showTaste(r.text); closeEditor();
+    }).catch(() => { tasteMsg.textContent = "Neuložilo sa — otvor stránku znova cez odkaz v maile."; });
+  });
+  if (FEEDBACK && KEY) fetch(FEEDBACK + "/taste", { headers: { Authorization: "Bearer " + KEY } }).then(r => r.json()).then(t => showTaste(t.text || "")).catch(() => {});
+
+  // newsletter: the form shows up once the worker can send mail (a verified domain in Resend)
+  const sub = document.getElementById("subscribe");
+  if (FEEDBACK && sub && !KEY) {
+    fetch(FEEDBACK + "/subscribe").then(r => r.json()).then(r => { sub.hidden = !r.enabled; }).catch(() => {});
+    sub.addEventListener("submit", e => {
+      e.preventDefault();
+      const msg = document.getElementById("sub-msg"), btn = sub.querySelector("button");
+      btn.disabled = true;
+      msg.textContent = "Posielam…";
+      fetch(FEEDBACK + "/subscribe", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: sub.email.value, website: sub.website.value }),
+      }).then(r => r.json()).then(r => {
+        msg.textContent = r.ok ? r.message || "Skontroluj si mail a potvrď odber." : r.error;
+        if (r.ok) sub.email.value = "";
+      }).catch(() => { msg.textContent = "Nepodarilo sa, skús to prosím neskôr."; })
+        .finally(() => { btn.disabled = false; });
+    });
+  }
+
+  if (DD.goTo) document.getElementById(DD.goTo)?.scrollIntoView();
+  DD.paint();
+  DD.openFromHash();
+})();
+</script>
+</body>
+</html>
